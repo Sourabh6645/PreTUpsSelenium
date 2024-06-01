@@ -1,0 +1,1857 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 2, 2022 04:19:58 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>7</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>7</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='16.867%'>14</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='83.133%'>69</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]USERPINMANAGEMENT</span>
+						<span class='test-time'>Mar 2, 2022 04:20:02 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 2, 2022 04:20:02 PM</span>
+	<span class='label end-time'>Mar 2, 2022 04:22:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 40s+858ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:02 PM</span>
+						<span class='node-duration'>0h 0m 2s+640ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:03 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:04 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxODU2Ljc2My40MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzkzNiwianRpIjoiYjRjNmQ4NzQtMzY2ZC00MjhlLTkwM2YtM2VhZDI1ZWQyNDdkIn0.siy4O6yigCwfORxPMhJIvbl1Xym-47AQYZWH97lrGg4","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxODU2Ljc2My40MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzkzNiwianRpIjoiYTA0M2YyZTQtZDE2Zi00ZWE0LTkxMDItMGM3M2ZlYTI4MmI0In0.wA2_9Qy7bDGDrKuoc7rh1CFPzR8v3WYY-P8a3aeSHrA","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:04 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:04 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218205163.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218205163.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT1: To check if User Pin Management API is working successfully for Super Distributor with loginid.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:05 PM</span>
+						<span class='node-duration'>0h 0m 21s+335ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'>resetPin : Y</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:20:05 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_01_Test_Success_LoginId(UserPinManagement.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:20:26 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:20:26 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218227058.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218227058.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:27 PM</span>
+						<span class='node-duration'>0h 0m 0s+868ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:27 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:27 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxOTE5Ljg0OC42MzAxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzk1OSwianRpIjoiMjNmMzA4MWQtYjIwOS00YWM2LWE0NjAtOTE3OWU2OWMyMWViIn0.zKQV--SkOpyVOHFJn3DjdIe_iCUzYCtWtUDCsabkp8c","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxOTE5Ljg0OC42MzAxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzk1OSwianRpIjoiYTc4YmIyODItN2M0MC00YzM3LTllYjMtMjJlMGMxNzVhMzQ2In0.8dBalixPODd5kR5n4EZFW3v-UOVgi-JNHM9vsLy9D5w","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:27 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:27 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218228289.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218228289.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT2: To check if User Pin Management API is working successfully for Super Distributor with msisdn.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:28 PM</span>
+						<span class='node-duration'>0h 0m 21s+260ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'>resetPin : Y</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:20:28 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_02_Test_Success_Msisdn_ResetPin(UserPinManagement.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:20:49 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:20:49 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218250110.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218250110.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:50 PM</span>
+						<span class='node-duration'>0h 0m 0s+948ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:50 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:50 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxOTQyLjc4MC40MTcxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzk4MiwianRpIjoiOTJkZTlkMjYtODc2My00MWU3LWE0YjAtNThiYmIyNTk1YjUwIn0.UuvpFmnTtV9mQsS8tJJ5VYY86tw-MNLTsSKBUAx-_h0","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYxOTQyLjc4MC40MTcxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzNzk4MiwianRpIjoiNGUxZmUzOTgtZDE0MS00MWZlLTk2MTAtN2RlZTMyZDliNWZhIn0.HjHEb-SBjLS6wUTUquVSPBrAVTUGwqY45f-iabUDP-s","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:50 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:50 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218251185.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218251185.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT3: To check if User Pin Management API is working successfully for Super Distributor with reset pin as N.</div>						
+						<span class='node-time'>Mar 2, 2022 04:20:51 PM</span>
+						<span class='node-duration'>0h 0m 21s+280ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'>resetPin : N</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:20:51 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_03_Test_Success_Msisdn(UserPinManagement.java:233)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:21:12 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:12 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218273027.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218273027.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:13 PM</span>
+						<span class='node-duration'>0h 0m 0s+799ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDA1LjUwOC40OTA5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODAwNSwianRpIjoiMjI2OGU1NDktNDc4OS00NWE0LWI5NjktZmRkYmZmN2FmMjcwIn0.l5j5nLaJqloA9xPhd1cw-974FBDrhlVgc1Jc5hBXPi8","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDA1LjUwOC40OTA5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODAwNSwianRpIjoiZDUxYzY5OWQtMzk5Zi00YjNkLWIxNjItNDZiZTAxNGMzODI0In0.ZLrlBOhwQGCRQrBcEUDROI-odsU7eJjuIOyWYwC3YAI","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218273952.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218273952.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT4: To check if User Pin Management API is not working successfully for Super Distributor with wrong network code.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:13 PM</span>
+						<span class='node-duration'>0h 0m 21s+278ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:13 PM</td>
+													<td class='step-details'>resetPin : N</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:14 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:14 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_04_Test_NetworkCode_Invalid(UserPinManagement.java:275)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:21:35 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:35 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218295835.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218295835.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:35 PM</span>
+						<span class='node-duration'>0h 0m 0s+825ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:35 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDI4LjI4MS4yNjUzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODAyOCwianRpIjoiMjE1ZDkzMzktODBhMC00MmY5LTk0NzUtYWZjNzc5MGJmZGM4In0.TxXrKhHFLAb9w8r9YIyCabvGqrojeuGgEl62Xa8xyTI","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDI4LjI4MS4yNjUzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODAyOCwianRpIjoiMDM3MTkxYTgtODI3ZC00YzNlLWJkNWQtZGNhZjlmZjc5NTI1In0.NtoV-HxN5EEij1ZQEb0SsjAGVemA3tC_opQS-JY675o","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218296755.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218296755.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT5: To check if User Pin Management API is not working successfully for Super Distributor with wrong user.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:36 PM</span>
+						<span class='node-duration'>0h 0m 21s+255ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'>resetPin : N</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:36 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_05_Test_IdentifierType_Invalid(UserPinManagement.java:315)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218318573.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218318573.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:58 PM</span>
+						<span class='node-duration'>0h 0m 0s+749ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDUxLjAxMC40MjU1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODA1MSwianRpIjoiMDk3ZmM1MGEtODViMC00ZjZlLWEzNDMtNTMyNjE4MTc5MTZlIn0.8zrpsdAw2W9pSyZSJwJ51AzXGs7CVjvIbEnzXaPDbIU","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMDUxLjAxMC40MjU1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODA1MSwianRpIjoiOWU4N2Y0NzYtMGJiMy00NjM2LTgxYjMtMGE1Y2ZmYzMzZDFjIn0.SofPI-DeaQaQ5UvmPCDX4H7md5xvcFfhc2YS2rOhDPI","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:58 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218319411.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218319411.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT6: To check if User Pin Management API is not working successfully for Super Distributor with empty remarks.</div>						
+						<span class='node-time'>Mar 2, 2022 04:21:59 PM</span>
+						<span class='node-duration'>0h 0m 21s+246ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'>resetPin : N</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'>{"status":400,"messageCode":"1021050","message":"Entered login ID is same as yours.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:21:59 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_06_Test_EmptyRemarks(UserPinManagement.java:357)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:22:20 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:22:20 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218341266.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218341266.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 2, 2022 04:22:21 PM</span>
+						<span class='node-duration'>0h 0m 0s+803ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:21 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:21 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMTEzLjg2NC4yOTE1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODA3MywianRpIjoiMzI3NDI4NWQtMmEzOC00NDljLWI2MzktMjIyNWRhNmMwNzE4In0.F4E3j2QVQRi1nVri-7Sx3bAfrm7Uk2CJ5g-uxIReFTI","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzAyMTYyMTEzLjg2NC4yOTE1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjIzODA3MywianRpIjoiOWQ1NTMwYzgtZDlkYi00NDdhLWE5ZjUtNzdjMWJiNzJlYmY2In0.9ionX8WBooPJalBd0iOZ1jLB7bx9QlCH48vbaXaI5ao","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:21 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:21 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:22 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646218342293.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218342293.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>USERPINMANAGEMENT7: To check if User Pin Management API is not working successfully for Super Distributor with empty msisdn.</div>						
+						<span class='node-time'>Mar 2, 2022 04:22:22 PM</span>
+						<span class='node-duration'>0h 0m 21s+63ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:22 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/userServices/pinManagement</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:22 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:22:22 PM</td>
+													<td class='step-details'>resetPin : N</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:22:22 PM</td>
+													<td class='step-details'><pre>java.lang.IllegalArgumentException: accessToken cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:56)
+	at io.restassured.internal.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at io.restassured.internal.AuthenticationSpecificationImpl.oauth2(AuthenticationSpecificationImpl.groovy:157)
+	at io.restassured.specification.AuthenticationSpecification$oauth2.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at io.restassured.specification.AuthenticationSpecification$oauth2.callCurrent(Unknown Source)
+	at io.restassured.internal.AuthenticationSpecificationImpl.oauth2(AuthenticationSpecificationImpl.groovy:150)
+	at restassuredapi.api.userpinmanagement.UserPinManagementAPI.executeRequest(UserPinManagementAPI.java:71)
+	at restassuredapi.api.BaseAPI.perform(BaseAPI.java:62)
+	at restassuredapi.test.UserPinManagement.A_07_Test_InvalidUser(UserPinManagement.java:387)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:22:43 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>4:22:43 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646218363926.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646218363926.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>7</span>
+							<span class='label fail'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 7</span>
+							<span class='label red lighten-1 white-text'>Failed: 7</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 2, 2022 04:20:02 PM</td>
+										<td class='linked' test-id='2'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:20:05 PM</td>
+										<td class='linked' test-id='3'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT1: To check if User Pin Management API is working successfully for Super Distributor with loginid.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:20:27 PM</td>
+										<td class='linked' test-id='4'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:20:28 PM</td>
+										<td class='linked' test-id='5'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT2: To check if User Pin Management API is working successfully for Super Distributor with msisdn.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:20:50 PM</td>
+										<td class='linked' test-id='6'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:20:51 PM</td>
+										<td class='linked' test-id='7'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT3: To check if User Pin Management API is working successfully for Super Distributor with reset pin as N.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:13 PM</td>
+										<td class='linked' test-id='8'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:13 PM</td>
+										<td class='linked' test-id='9'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT4: To check if User Pin Management API is not working successfully for Super Distributor with wrong network code.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:35 PM</td>
+										<td class='linked' test-id='10'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:36 PM</td>
+										<td class='linked' test-id='11'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT5: To check if User Pin Management API is not working successfully for Super Distributor with wrong user.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:58 PM</td>
+										<td class='linked' test-id='12'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:21:59 PM</td>
+										<td class='linked' test-id='13'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT6: To check if User Pin Management API is not working successfully for Super Distributor with empty remarks.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:22:21 PM</td>
+										<td class='linked' test-id='14'>[REST]USERPINMANAGEMENT.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 2, 2022 04:22:22 PM</td>
+										<td class='linked' test-id='15'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT7: To check if User Pin Management API is not working successfully for Super Distributor with empty msisdn.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>6</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:20:05 PM</td>
+                                                        <td class='linked' test-id='3'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT1: To check if User Pin Management API is working successfully for Super Distributor with loginid.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_01_Test_Success_LoginId(UserPinManagement.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:20:28 PM</td>
+                                                        <td class='linked' test-id='5'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT2: To check if User Pin Management API is working successfully for Super Distributor with msisdn.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_02_Test_Success_Msisdn_ResetPin(UserPinManagement.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:20:51 PM</td>
+                                                        <td class='linked' test-id='7'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT3: To check if User Pin Management API is working successfully for Super Distributor with reset pin as N.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_03_Test_Success_Msisdn(UserPinManagement.java:233)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:21:13 PM</td>
+                                                        <td class='linked' test-id='9'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT4: To check if User Pin Management API is not working successfully for Super Distributor with wrong network code.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_04_Test_NetworkCode_Invalid(UserPinManagement.java:275)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:21:36 PM</td>
+                                                        <td class='linked' test-id='11'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT5: To check if User Pin Management API is not working successfully for Super Distributor with wrong user.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_05_Test_IdentifierType_Invalid(UserPinManagement.java:315)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:21:59 PM</td>
+                                                        <td class='linked' test-id='13'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT6: To check if User Pin Management API is not working successfully for Super Distributor with empty remarks.</td>
+                                                        <td><pre><textarea>java.lang.AssertionError: expected:<true> but was:<false>
+	at org.junit.Assert.fail(Assert.java:93)
+	at org.junit.Assert.failNotEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:128)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at restassuredapi.test.UserPinManagement.A_06_Test_EmptyRemarks(UserPinManagement.java:357)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.IllegalArgumentException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 2, 2022 04:22:22 PM</td>
+                                                        <td class='linked' test-id='15'>[REST]USERPINMANAGEMENT.USERPINMANAGEMENT7: To check if User Pin Management API is not working successfully for Super Distributor with empty msisdn.</td>
+                                                        <td><pre><pre>java.lang.IllegalArgumentException: accessToken cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:56)
+	at io.restassured.internal.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at io.restassured.internal.AuthenticationSpecificationImpl.oauth2(AuthenticationSpecificationImpl.groovy:157)
+	at io.restassured.specification.AuthenticationSpecification$oauth2.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+	at io.restassured.specification.AuthenticationSpecification$oauth2.callCurrent(Unknown Source)
+	at io.restassured.internal.AuthenticationSpecificationImpl.oauth2(AuthenticationSpecificationImpl.groovy:150)
+	at restassuredapi.api.userpinmanagement.UserPinManagementAPI.executeRequest(UserPinManagementAPI.java:71)
+	at restassuredapi.api.BaseAPI.perform(BaseAPI.java:62)
+	at restassuredapi.test.UserPinManagement.A_07_Test_InvalidUser(UserPinManagement.java:387)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>83</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 2, 2022 04:19:58 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 2, 2022 04:22:43 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>165,878ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>7</td>
+							<td>7</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 7,
+				failParent: 7,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 7,
+				
+				passChild: 0,
+				failChild: 14,
+				fatalChild: 0,
+				errorChild: 7,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 62,
+				exceptionsChild: 21,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

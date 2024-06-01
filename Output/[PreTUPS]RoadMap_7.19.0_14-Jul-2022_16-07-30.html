@@ -1,0 +1,2007 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jul 14, 2022 04:09:43 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>Pre-Requisite</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>6</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='2.12%'><span class='strong'>6</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='97.88%'>277</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf error' status='error' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[Pre-Requisite]GIFT Recharge Revamp</span>
+						<span class='test-time'>Jul 14, 2022 04:10:03 PM</span>
+						<span class='test-status right error'>error</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 14, 2022 04:10:03 PM</span>
+	<span class='label end-time'>Jul 14, 2022 04:14:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 33s+305ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf error' status='error' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor category user is able to perform C2S Gift Recharge.</div>						
+						<span class='node-time'>Jul 14, 2022 04:10:03 PM</span>
+						<span class='node-duration'>0h 1m 59s+248ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2STransfer(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:03 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:04 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:05 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:09 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 725563845472765</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>User entered Subscriber MSISDN: 725563845472765</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Current Balance of user: 412.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Entered Amount: 41</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>Trying to select Sub Service</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:13 PM</td>
+													<td class='step-details'>SubService selected successfully as: CVG</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>User clicked Gift Recharge checkbox button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 728704977665355</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>User entered Gifter MSISDN: 728704977665355</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>The generated Gifter Name is ::AUTeiFgL</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>User entered Gifter Name: AUTeiFgL</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:14 PM</td>
+													<td class='step-details'>User will enter Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:15 PM</td>
+													<td class='step-details'>User entered Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:15 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:15 PM</td>
+													<td class='step-details'>getTransactionStatusByKey() :: select query: select value from key_values where type = ? and key = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:16 PM</td>
+													<td class='step-details'>Trying to get transfer ID.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:16 PM</td>
+													<td class='step-details'>Transfer ID fetched as : G220714.1600.100001</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:17 PM</td>
+													<td class='step-details'>Entered :: fetchTransferStatus()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:17 PM</td>
+													<td class='step-details'>Trying to get transfer Status.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:17 PM</td>
+													<td class='step-details'>Transfer status fetched as : Recharge Successful</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:17 PM</td>
+													<td class='step-details'><span class='label white-text green'>Transaction Status Found as: Recharge Successful with TXN ID: G220714.1600.100001, hence Transaction Successful</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:17 PM</td>
+													<td class='step-details'>Trying to get logs path.</td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:10:38 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:38 PM</td>
+													<td class='step-details'>Path for ChannelRequestDailyLog: null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:38 PM</td>
+													<td class='step-details'>Path for OneLineTXNLogC2S: null</td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:10:59 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:59 PM</td>
+													<td class='step-details'><pre>ChannelRequestDailyLogs:
+null</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:10:59 PM</td>
+													<td class='step-details'>Trying to get logs path.</td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:11:20 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:11:20 PM</td>
+													<td class='step-details'>Path for ChannelRequestDailyLog: null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:11:20 PM</td>
+													<td class='step-details'>Path for OneLineTXNLogC2S: null</td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:11:41 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:11:41 PM</td>
+													<td class='step-details'><pre>OneLineTXNLogsC2S:
+null</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:12:02 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:12:02 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:02 PM</td>
+													<td class='step-details'>User clicked Done Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:02 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2STransfer()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf error' status='error' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if subscriber Amount is blank.</div>						
+						<span class='node-time'>Jul 14, 2022 04:12:03 PM</span>
+						<span class='node-duration'>0h 0m 28s+266ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2SGiftRechargeBlankAmount(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:03 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:04 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:06 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:09 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:09 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:09 PM</td>
+													<td class='step-details'>Entered Amount:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:09 PM</td>
+													<td class='step-details'>Trying to select Sub Service</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'>SubService selected successfully as: CVG</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'>User clicked Gift Recharge checkbox button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'>Trying to get Error Validation messaged from GUI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Amount is required.<br><b>Found: </b>Amount is required.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:10 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795330731.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795330731.jpg'></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:12:31 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:12:31 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:31 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2SGiftRechargeBlankAmount()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf error' status='error' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is alphanumeric.</div>						
+						<span class='node-time'>Jul 14, 2022 04:12:32 PM</span>
+						<span class='node-duration'>0h 0m 28s+419ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2SGiftRechargeAlphaNumericAmount(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:32 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:33 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:36 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'>Entered Amount: eeee</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'>Trying to get Error Validation messaged from GUI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Amount cannot be alphanumeric.<br><b>Found: </b>Amount cannot be alphanumeric.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:12:39 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795359774.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795359774.jpg'></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:13:00 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:13:00 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:00 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2SGiftRechargeAlphaNumericAmount()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf error' status='error' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is negative.</div>						
+						<span class='node-time'>Jul 14, 2022 04:13:01 PM</span>
+						<span class='node-duration'>0h 0m 28s+472ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2SGiftRechargeNegativeAmount(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:01 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:02 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:04 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:07 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Entered Amount: -41</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Trying to select Sub Service</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>SubService selected successfully as: CVG</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>User clicked Gift Recharge checkbox button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'>Trying to get Error Validation messaged from GUI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Amount cannot be alphanumeric.<br><b>Found: </b>Amount cannot be alphanumeric.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:08 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795388853.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795388853.jpg'></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:13:29 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:13:29 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:29 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2SGiftRechargeNegativeAmount()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf error' status='error' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is Zero.</div>						
+						<span class='node-time'>Jul 14, 2022 04:13:30 PM</span>
+						<span class='node-duration'>0h 0m 30s+492ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2SGiftRechargeZeroAmount(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:30 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:31 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:33 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 720300447570016</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>User entered Subscriber MSISDN: 720300447570016</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>Entered Amount: 0000</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:36 PM</td>
+													<td class='step-details'>Trying to select Sub Service</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>SubService selected successfully as: CVG</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>User clicked Gift Recharge checkbox button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 720268942925187</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>User entered Gifter MSISDN: 720268942925187</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>The generated Gifter Name is ::AUTmaBGK</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>User entered Gifter Name: AUTmaBGK</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:37 PM</td>
+													<td class='step-details'>User will enter Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:38 PM</td>
+													<td class='step-details'>User entered Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:38 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'>Trying to get transfer Status.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'>Transfer status fetched as : Recharge Failed</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'>Invalid Pin error fetched from popup - Requested amount invalid. it should be greater than zero.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>REQUESTED AMOUNT INVALID. IT SHOULD BE GREATER THAN ZERO.<br><b>Found: </b>ZERO</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795419524.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795419524.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'>Will Click TRY AGAIN when recharge failed with invalid PIN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'>Clicked TRY AGTIAN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:13:39 PM</td>
+													<td class='step-details'><span class='label white-text green'>Transaction Not Successful with ZERO Amount</span></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:14:00 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:14:00 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:00 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795440945.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795440945.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:00 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2SGiftRechargeZeroAmount()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf error' status='error' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if blank PIN is given.</div>						
+						<span class='node-time'>Jul 14, 2022 04:14:01 PM</span>
+						<span class='node-duration'>0h 0m 35s+120ms</span>
+						<span class='test-status right error'>error</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>Pre-Requisite</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Category Code for Super Distributor: DIST</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Entered webInterface(Super Distributor)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Database Returns: WEB_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Exited webInterface()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Entered performC2SGiftRechargeBlankPIN(Root, Super Distributor, 2468, GRC)</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>LoginID found as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Password found as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:01 PM</td>
+													<td class='step-details'>Username found as: AUTFN1393 AUTLN2379</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Trying to select Language</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Language selected successfully as: English</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Trying to enter Login ID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Login ID entered successfully as: AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Trying to enter Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Password entered successfully as: com@2468</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:02 PM</td>
+													<td class='step-details'>Trying to click Login Button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:03 PM</td>
+													<td class='step-details'>Login button clicked successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:03 PM</td>
+													<td class='step-details'>Error Message Found on Login Screen:</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:08 PM</td>
+													<td class='step-details'>User clicked Recharged Heading Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>User clicked Prepaid Recharged Link.</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Service name is =C2S Gift Recharge</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 722753481741808</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>User entered Subscriber MSISDN: 722753481741808</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:11 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Current Balance of user: 371.0</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Entered Amount: 41</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>Trying to select Sub Service</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>SubService selected successfully as: CVG</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>User clicked Gift Recharge checkbox button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>GenerateMSISDN class Returns: Remaining MSISDNLength (13)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>The generated MSISDN is :: 729959030948446</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>User entered Gifter MSISDN: 729959030948446</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>The generated Gifter Name is ::AUTPJbVM</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>User entered Gifter Name: AUTPJbVM</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:12 PM</td>
+													<td class='step-details'>User will enter Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'>User entered Channel User Pin</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'>User clicked Recharge button</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'>getTransactionStatusByKey() :: select query: select value from key_values where type = ? and key = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'>Check if Recharge button is clickable again with blank PIN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'>RECHARGE BUTTON IS NOT AVAILABLE TO CLICK</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:14 PM</td>
+													<td class='step-details'><span class='label white-text green'>RECHARGE BUTTON DISABLED WHEN BLANK PIN PROVIDED</span></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>4:14:35 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>4:14:35 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='green'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:35 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1657795475506.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1657795475506.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:36 PM</td>
+													<td class='step-details'>Trying to Close Enter PIN Popup</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:36 PM</td>
+													<td class='step-details'>Closed PIN Popup Successfully</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>4:14:36 PM</td>
+													<td class='step-details'><span class='label white-text grey'>Exited performC2SGiftRechargeBlankPIN()</span></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Pre-Requisite</span>
+						<span class='category-status right'>
+							<span class='label others'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							
+							<span class='label yellow darken-2 white-text'>Others: 6</span>
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jul 14, 2022 04:10:03 PM</td>
+										<td class='linked' test-id='2'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor category user is able to perform C2S Gift Recharge.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+									<tr>
+										<td>Jul 14, 2022 04:12:03 PM</td>
+										<td class='linked' test-id='3'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if subscriber Amount is blank.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+									<tr>
+										<td>Jul 14, 2022 04:12:32 PM</td>
+										<td class='linked' test-id='4'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is alphanumeric.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+									<tr>
+										<td>Jul 14, 2022 04:13:01 PM</td>
+										<td class='linked' test-id='5'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is negative.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+									<tr>
+										<td>Jul 14, 2022 04:13:30 PM</td>
+										<td class='linked' test-id='6'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if Amount is Zero.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+									<tr>
+										<td>Jul 14, 2022 04:14:01 PM</td>
+										<td class='linked' test-id='7'>[Pre-Requisite]GIFT Recharge Revamp.To verify that Super Distributor is not able to perform Gift Customer Recharge through WEB if blank PIN is given.</td>
+										<td><span class='test-status error'>error</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>6</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>283</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 14, 2022 04:09:43 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 14, 2022 04:14:36 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>293,622ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:9747/pretups-ui/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>Pre-Requisite</td>
+							<td>0</td>
+							<td>0</td>
+							<td>6</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 0,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 6,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 6,
+				
+				passChild: 6,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 10,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 267,
+				exceptionsChild: 10,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

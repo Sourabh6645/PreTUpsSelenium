@@ -1,0 +1,2135 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Feb 16, 2022 03:46:12 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>12</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>4</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='5.839%'>8</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='94.161%'>129</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]O2C_GET_SEARCH_DETAILS</span>
+						<span class='test-time'>Feb 16, 2022 03:46:16 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2022 03:46:16 PM</span>
+	<span class='label end-time'>Feb 16, 2022 03:47:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 40s+181ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:16 PM</span>
+						<span class='node-duration'>0h 0m 1s+926ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:17 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NDU5LjU1OC44MDczIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjI5OSwianRpIjoiNGFiMDU2MDUtOTNmMS00MjQyLWJjZjctODA2YjQ3NDlhZmMxIn0.WzGEfPAY84Z64joGHJhXXjZr0C08AI75h4XGP4NC0xg","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NDU5LjU1OC44MDczIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjI5OSwianRpIjoiMmQ1OGRiYWUtMWQ2NC00YjdlLThjOTctZGYxMTVlMTMyMGMwIn0.MogbGbF_1_T_7kGxf1j8vfJfwA9YiHENbiv4GrdSj6Q","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006578777.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006578777.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD01: To check if Get Search Details API is working successfully for Operator user Channel Admin with LoginID.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:18 PM</span>
+						<span class='node-duration'>0h 0m 2s+566ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'>identifierValue : AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:18 PM</td>
+													<td class='step-details'>identifierType : LOGINID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:20 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"channelUserVO":{"showPassword":null,"confirmPassword":null,"allowedDays":"1,2,3,4,5,6,7","paymentTypes":"DD,CHQ,OTH,CASH,ONLINE","paymentTypesList":["Demand Draft","Cheque","Others","Cash","Online"],"createdOn":1610522449583,"categoryCodeDesc":null,"appintmentDate":null,"statusList":null,"userNamePrefixCode":null,"userNamePrefixList":null,"userNamePrefixDesc":null,"userLanguage":null,"userLanguageList":null,"userLanguageDesc":null,"isSerAssignChnlAdm":false,"geographicalList":null,"grphDomainTypeName":null,"geographicalCodeArray":null,"geographicalCode":"AUT7DBA","networkList":null,"roleFlag":null,"rolesMap":null,"roleType":null,"servicesList":null,"servicesTypes":null,"productsList":null,"productCodes":null,"addCommProfOTFDetailId":null,"otfValue":null,"otfCount":0,"allowedUserTypeCreation":null,"agentBalanceList":null,"shortName":"AUTSN1495","referenceID":null,"segmentList":null,"info1":null,"info2":null,"info3":null,"info4":null,"info5":null,"info6":null,"info7":null,"info8":null,"info9":null,"info10":null,"info11":null,"info12":null,"info13":null,"info14":null,"info15":null,"_commissionProfileApplicableFromAsString":null,"segments":null,"maxUserLevel":0,"serviceTypeList":null,"tokenLastUsedDate":null,"sosAllowed":"N","sosAllowedAmount":0,"sosThresholdLimit":0,"lastSosTransactionId":null,"lastSosStatus":null,"lastSosProductCode":null,"lrAllowed":null,"lrMaxAmount":0,"lrTransferAmount":0,"toCategoryCode":null,"toUserName":null,"fromUserName":null,"fromCategoryCode":null,"nameAndId":null,"userPhonesId":null,"dualCommissionType":"NC","pinRequired":null,"networkCode":null,"serviceTypes":null,"returnFlag":false,"geographicalCodeforNewuser":null,"gateway":null,"monthlyTransAmt":0,"groupRoleFlag":null,"parentStatus":null,"voucherTypes":null,"parentLoginID":null,"groupRoleCode":null,"recordNumber":null,"languageCode":null,"languageName":null,"invalidPinCount":0,"userGrade":"AUT60284","commissionProfileSetID":"3792","transferProfileID":"1100","inSuspend":"N","outSuspened":"N","commissionProfileSetName":"AUT58137","userGradeName":"AUT89321","commissionProfileSetVersion":"1","transferProfileName":"AUT21070","categoryName":null,"smsPin":null,"userlevel":null,"userIDPrefix":null,"geographicalDesc":"AUT63dCN","commissionProfileStatus":"Y","transferProfileStatus":"Y","transferRuleID":null,"outletCode":null,"subOutletCode":null,"activatedOn":null,"commissionProfileLang1Msg":"","commissionProfileLang2Msg":"","commissionProfileSuspendMsg":null,"transferCategory":null,"commissionProfileApplicableFrom":1610519220000,"userChargeGrouptypeCounters":null,"userControlGrouptypeCounters":null,"accessType":null,"applicationID":null,"mpayProfileID":null,"userProfileID":null,"mcommerceServiceAllow":null,"lowBalAlertAllow":null,"primaryMsisdn":null,"balance":0,"balanceStr":null,"previousBalance":0,"trnsfrdUserHierhyList":null,"prevBalanceStr":null,"prevParentName":null,"prevUserId":null,"prevUserName":null,"prevCategoryCode":null,"prevUserNameWithCategory":"","prevUserParentNameWithCategory":"","userBalance":null,"msisdnPrefix":null,"primaryMsisdnPin":null,"multipleMsisdnlist":null,"firstExternalUserModify":false,"smsMSisdn":null,"phoneProfile":null,"prefixId":0,"catLowBalanceAlertAllow":null,"catOutletAllowed":null,"parentLocale":null,"alertMsisdn":null,"alertType":null,"alertEmail":null,"trannferRuleTypeId":"C2CTRFRUL1","cellID":null,"switchID":null,"lmsProfile":null,"otp":null,"otpModifiedOn":null,"autoc2callowed":null,"autoc2cquantity":null,"channelUserID":null,"maxTxnAmount":0,"lmsProfileId":null,"parentGeographyCode":null,"decryptionKey":null,"asscMsisdnList":null,"asscMsisdnDate":null,"optInOutStatus":null,"controlGroup":null,"resetPinOTPMessage":null,"securityAnswer":null,"otpInvalidCount":0,"othCommSetId":null,"categoryList":null,"imei":null,"productCode":null,"networkName":"Network GGN","networkID":"NG","rolesMapSelectedCount":0,"documentType":null,"documentNo":null,"paymentType":null,"ownerCompany":null,"menuItemList":null,"msisdnList":null,"networkNamewithNetworkCode":"Network GGN-NG","ownerID":"NGD0000032308","parentID":"ROOT","parentName":null,"toTime":"23:59","validRequestURLs":"","passwordModifiedOn":null,"networkStatus":"Y","validStatus":0,"createdBy":"NGSB0000032298","allowedIps":null,"modifiedBy":"modified_by","modifiedOn":1610522449583,"email":"55adh@mail.com","previousStatus":null,"userNamewithUserId":"AUTFN1393 AUTLN2379(NGD0000032308)","userNamewithLoginId":"AUTFN1393 AUTLN2379(720231342216284)","contactNo":"287399","departmentCode":null,"departmentDesc":null,"designation":"","divisionCode":null,"divisionDesc":null,"userPhoneVO":null,"associatedServiceTypeList":null,"fullAddress":"Add16744 Add25655 City3438 State8409 Country19","fxedInfoStr":null,"usingNewSTK":false,"updateSimRequired":false,"createdOnAsString":null,"statusDesc":null,"level1ApprovedBy":null,"level1ApprovedOn":null,"level2ApprovedBy":null,"level2ApprovedOn":null,"createdByUserName":null,"ownerCategoryName":null,"ownerMsisdn":null,"ownerName":null,"parentMsisdn":null,"categoryVO":{"domainCodeforCategory":"DIST","grphDomainType":"AR","categoryType":"CHUSR","unctrlTransferAllowed":null,"restrictedMsisdns":null,"outletsAllowed":null,"multipleGrphDomains":"N","grphDomainSequenceNo":0,"webInterfaceAllowed":null,"maxTxnMsisdnInt":0,"maxTxnMsisdn":null,"smsInterfaceAllowed":null,"serviceAllowed":null,"hierarchyAllowed":"Y","parentCategoryCode":null,"domainAllowed":null,"fixedDomains":null,"numberOfCategoryForDomain":0,"transferToListOnly":null,"agentAllowed":null,"agentMaxLoginCount":0,"agentSmsInterfaceAllowed":null,"agentWebInterfaceAllowed":null,"categorySequenceNumber":0,"geographicalDomainSeqNo":0,"radioIndex":0,"recordCount":0,"categoryStatus":null,"displayAllowed":null,"fixedRoles":"N","modifyAllowed":null,"scheduledTransferAllowed":null,"viewOnNetworkBlock":"N","txnOutsideHierchy":null,"combinedKey":"DIST:DIST:1","productTypeAssociationAllowed":null,"productTypeAllowed":null,"allowedGatewayTypes":null,"agentAgentAllowed":null,"agentAllowedFlag":null,"agentCategoryCode":null,"agentCategoryName":null,"agentCategoryStatus":null,"agentCategoryStatusList":null,"agentCategoryType":null,"agentCheckArray":null,"agentDisplayAllowed":null,"agentDomainCodeforCategory":null,"agentDomainName":null,"agentFixedRoles":null,"agentGatewayName":null,"agentGatewayType":null,"agentGeographicalDomainList":null,"agentGrphDomainType":null,"agentHierarchyAllowed":null,"agentMaxTxnMsisdn":null,"agentMessageGatewayTypeList":null,"agentMultipleGrphDomains":null,"agentModifiedMessageGatewayTypeList":null,"agentModifyAllowed":null,"agentMultipleLoginAllowed":null,"agentOutletsAllowed":null,"agentProductTypeAssociationAllowed":null,"agentRestrictedMsisdns":null,"agentRoleName":null,"agentRolesMapSelected":null,"agentRoleTypeList":null,"agentScheduledTransferAllowed":null,"agentServiceAllowed":null,"agentUnctrlTransferAllowed":null,"agentUserIdPrefix":null,"agentViewOnNetworkBlock":null,"categoryTypeCode":null,"agentLowBalAlertAllow":null,"rechargeByParentOnly":null,"cp2pPayer":null,"cp2pPayee":null,"cp2pWithinList":null,"parentOrOwnerRadioValue":null,"agentRechargeByParentOnly":null,"agentCp2pPayer":null,"agentCp2pPayee":null,"agentCp2pWithinList":null,"agentParentOrOwnerRadioValue":null,"authenticationType":null,"trasnferKey":"DIST:DIST","userIdPrefix":"D","categoryName":"Super Distributor","lowBalAlertAllow":null,"maxLoginCount":10,"grphDomainTypeName":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"categoryCode":"DIST","multipleLoginAllowed":"N","sequenceNumber":1,"domainName":null,"domainTypeCode":"DISTB_CHAN","lastModifiedTime":0},"loggerMessage":null,"loginID":"720231342216284","userID":"NGD0000032308","password":"7eda411be5ea4a90917de90f9b1b8df5","sessionInfoVO":null,"categoryCode":"DIST","requestType":null,"webLoginID":"AUT_48675","divisionList":null,"departmentList":null,"associatedGeographicalList":null,"rsaRequired":false,"countryCode":null,"assType":null,"assoMsisdn":null,"associationCreatedOn":null,"associationModifiedOn":null,"authType":null,"message":"B","status":"Y","staffUserDetails":null,"longitude":null,"remoteAddress":null,"userType":"CHANNEL","domainID":"DIST","loginTime":null,"browserType":null,"currentRoleCode":null,"oldLastLoginOn":null,"c2sMisFromDate":null,"c2sMisToDate":null,"p2pMisFromDate":null,"p2pMisToDate":null,"contactPerson":"","staffUser":false,"activeUserID":null,"remarks":null,"batchName":null,"batchID":null,"creationType":null,"domainCodes":null,"passwordModifyFlag":false,"reportHeaderName":null,"invalidPasswordCount":0,"passwordCountUpdatedOn":null,"address1":"Add16744","address2":"Add25655","city":"City3438","country":"Country19","externalCode":"052013798","userCode":"720231342216284","ssn":"","userNamePrefix":"MR","msisdn":"720231342216284","empCode":"555349","fromTime":"00:00","geographicalAreaList":null,"lastLoginOn":1642741391485,"state":"State8409","userName":"AUTFN1393 AUTLN2379","parentCategoryName":null,"domainName":"Distributor","userBalanceList":null,"domainList":null,"serviceList":null,"voucherList":null,"geographicalCodeStatus":null,"associatedProductTypeList":[{"label":"Prepaid Product","value":"PREPROD","codeName":"PREPROD|Prepaid Product","labelWithValue":"Prepaid Product(PREPROD)","otherInfo2":null,"idvalue":null,"otherInfo":"PDTYP","typeName":null,"statusType":null,"singleStep":null,"status":null,"type":null}],"appointmentDate":null,"userNameWithCategory":"AUTFN1393 AUTLN2379 (DIST)","requetedByUserName":null,"requetedOnAsString":"13/01/2021 12:50:49","suspendedByUserName":null,"suspendedOnAsString":"13/01/2021 12:50:49","domainStatus":null,"currentModule":null,"domainTypeCode":"DISTB_CHAN","restrictedMsisdnAllow":null,"moduleCodeString":null,"pageCodeString":null,"passwordReset":null,"pinReset":null,"activeUserMsisdn":null,"activeUserPin":null,"activeUserLoginId":null,"latitude":null,"company":"","fax":"","firstName":"AUTFN1393","lastName":"AUTLN2379","language":null,"rsaFlag":null,"rsaAllowed":false,"rsavalidated":false,"otpvalidated":false,"authTypeAllowed":null,"lastModified":0},"ownerUsersList":null,"channelUsersList":null,"prodList":[{"unitValueAsString":"1","balanceAsString":"248.99","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12869","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":101,"productName":"eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"ETOPUP","moduleCode":"C2S","productUsage":"B","balance":24899,"productCode":"ETOPUP","shortName":"eTopUP"},{"unitValueAsString":"1","balanceAsString":"20.76","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12870","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":102,"productName":"Post eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"POSTETOPUP","moduleCode":"C2S","productUsage":"B","balance":2076,"productCode":"POSTETOPUP","shortName":"PeTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006581349.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006581349.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:21 PM</span>
+						<span class='node-duration'>0h 0m 0s+528ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTAzLjIxOC4xNjEiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjAyNjU5NDI0Njk0MDkiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ1MDI2MzAzLCJqdGkiOiIxNTBiZjE2OC1iYzhlLTQ2ODAtOWE2MS05YzE1MGY1ODAzOTMifQ.5aZVyOScNUuseH0Q6rn5nUY-wxNF_r64jMnPa5WFJwM","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTAzLjIxOC4xNjEiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjAyNjU5NDI0Njk0MDkiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ1MDI2MzAzLCJqdGkiOiJhY2I1ZDRiZi04ZTY3LTQzOTItYTAxNS02MjFjNjlmYzA4NmQifQ.HMIpxwv9FdQUxCHxfHqJQJpIVcpQ0PVijsLIyWsob7I","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:21 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006582249.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006582249.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD01: To check if Get Search Details API is working successfully for Operator user Channel Admin with LoginID.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:22 PM</span>
+						<span class='node-duration'>0h 0m 1s+330ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'>identifierValue : AUT_48675</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'>identifierType : LOGINID</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"channelUserVO":{"showPassword":null,"confirmPassword":null,"allowedDays":"1,2,3,4,5,6,7","paymentTypes":"DD,CHQ,OTH,CASH,ONLINE","paymentTypesList":["Demand Draft","Cheque","Others","Cash","Online"],"createdOn":1610522449583,"categoryCodeDesc":null,"appintmentDate":null,"statusList":null,"userNamePrefixCode":null,"userNamePrefixList":null,"userNamePrefixDesc":null,"userLanguage":null,"userLanguageList":null,"userLanguageDesc":null,"isSerAssignChnlAdm":false,"geographicalList":null,"grphDomainTypeName":null,"geographicalCodeArray":null,"geographicalCode":"AUT7DBA","networkList":null,"roleFlag":null,"rolesMap":null,"roleType":null,"servicesList":null,"servicesTypes":null,"productsList":null,"productCodes":null,"addCommProfOTFDetailId":null,"otfValue":null,"otfCount":0,"allowedUserTypeCreation":null,"agentBalanceList":null,"shortName":"AUTSN1495","referenceID":null,"segmentList":null,"info1":null,"info2":null,"info3":null,"info4":null,"info5":null,"info6":null,"info7":null,"info8":null,"info9":null,"info10":null,"info11":null,"info12":null,"info13":null,"info14":null,"info15":null,"_commissionProfileApplicableFromAsString":null,"segments":null,"maxUserLevel":0,"serviceTypeList":null,"tokenLastUsedDate":null,"sosAllowed":"N","sosAllowedAmount":0,"sosThresholdLimit":0,"lastSosTransactionId":null,"lastSosStatus":null,"lastSosProductCode":null,"lrAllowed":null,"lrMaxAmount":0,"lrTransferAmount":0,"toCategoryCode":null,"toUserName":null,"fromUserName":null,"fromCategoryCode":null,"nameAndId":null,"userPhonesId":null,"dualCommissionType":"NC","pinRequired":null,"networkCode":null,"serviceTypes":null,"returnFlag":false,"geographicalCodeforNewuser":null,"gateway":null,"monthlyTransAmt":0,"groupRoleFlag":null,"parentStatus":null,"voucherTypes":null,"parentLoginID":null,"groupRoleCode":null,"recordNumber":null,"languageCode":null,"languageName":null,"invalidPinCount":0,"userGrade":"AUT60284","commissionProfileSetID":"3792","transferProfileID":"1100","inSuspend":"N","outSuspened":"N","commissionProfileSetName":"AUT58137","userGradeName":"AUT89321","commissionProfileSetVersion":"1","transferProfileName":"AUT21070","categoryName":null,"smsPin":null,"userlevel":null,"userIDPrefix":null,"geographicalDesc":"AUT63dCN","commissionProfileStatus":"Y","transferProfileStatus":"Y","transferRuleID":null,"outletCode":null,"subOutletCode":null,"activatedOn":null,"commissionProfileLang1Msg":"","commissionProfileLang2Msg":"","commissionProfileSuspendMsg":null,"transferCategory":null,"commissionProfileApplicableFrom":1610519220000,"userChargeGrouptypeCounters":null,"userControlGrouptypeCounters":null,"accessType":null,"applicationID":null,"mpayProfileID":null,"userProfileID":null,"mcommerceServiceAllow":null,"lowBalAlertAllow":null,"primaryMsisdn":null,"balance":0,"balanceStr":null,"previousBalance":0,"trnsfrdUserHierhyList":null,"prevBalanceStr":null,"prevParentName":null,"prevUserId":null,"prevUserName":null,"prevCategoryCode":null,"prevUserNameWithCategory":"","prevUserParentNameWithCategory":"","userBalance":null,"msisdnPrefix":null,"primaryMsisdnPin":null,"multipleMsisdnlist":null,"firstExternalUserModify":false,"smsMSisdn":null,"phoneProfile":null,"prefixId":0,"catLowBalanceAlertAllow":null,"catOutletAllowed":null,"parentLocale":null,"alertMsisdn":null,"alertType":null,"alertEmail":null,"trannferRuleTypeId":"C2CTRFRUL1","cellID":null,"switchID":null,"lmsProfile":null,"otp":null,"otpModifiedOn":null,"autoc2callowed":null,"autoc2cquantity":null,"channelUserID":null,"maxTxnAmount":0,"lmsProfileId":null,"parentGeographyCode":null,"decryptionKey":null,"asscMsisdnList":null,"asscMsisdnDate":null,"optInOutStatus":null,"controlGroup":null,"resetPinOTPMessage":null,"securityAnswer":null,"otpInvalidCount":0,"othCommSetId":null,"categoryList":null,"imei":null,"productCode":null,"networkName":"Network GGN","networkID":"NG","rolesMapSelectedCount":0,"documentType":null,"documentNo":null,"paymentType":null,"ownerCompany":null,"menuItemList":null,"msisdnList":null,"networkNamewithNetworkCode":"Network GGN-NG","ownerID":"NGD0000032308","parentID":"ROOT","parentName":null,"toTime":"23:59","validRequestURLs":"","passwordModifiedOn":null,"networkStatus":"Y","validStatus":0,"createdBy":"NGSB0000032298","allowedIps":null,"modifiedBy":"modified_by","modifiedOn":1610522449583,"email":"55adh@mail.com","previousStatus":null,"userNamewithUserId":"AUTFN1393 AUTLN2379(NGD0000032308)","userNamewithLoginId":"AUTFN1393 AUTLN2379(720231342216284)","contactNo":"287399","departmentCode":null,"departmentDesc":null,"designation":"","divisionCode":null,"divisionDesc":null,"userPhoneVO":null,"associatedServiceTypeList":null,"fullAddress":"Add16744 Add25655 City3438 State8409 Country19","fxedInfoStr":null,"usingNewSTK":false,"updateSimRequired":false,"createdOnAsString":null,"statusDesc":null,"level1ApprovedBy":null,"level1ApprovedOn":null,"level2ApprovedBy":null,"level2ApprovedOn":null,"createdByUserName":null,"ownerCategoryName":null,"ownerMsisdn":null,"ownerName":null,"parentMsisdn":null,"categoryVO":{"domainCodeforCategory":"DIST","grphDomainType":"AR","categoryType":"CHUSR","unctrlTransferAllowed":null,"restrictedMsisdns":null,"outletsAllowed":null,"multipleGrphDomains":"N","grphDomainSequenceNo":0,"webInterfaceAllowed":null,"maxTxnMsisdnInt":0,"maxTxnMsisdn":null,"smsInterfaceAllowed":null,"serviceAllowed":null,"hierarchyAllowed":"Y","parentCategoryCode":null,"domainAllowed":null,"fixedDomains":null,"numberOfCategoryForDomain":0,"transferToListOnly":null,"agentAllowed":null,"agentMaxLoginCount":0,"agentSmsInterfaceAllowed":null,"agentWebInterfaceAllowed":null,"categorySequenceNumber":0,"geographicalDomainSeqNo":0,"radioIndex":0,"recordCount":0,"categoryStatus":null,"displayAllowed":null,"fixedRoles":"N","modifyAllowed":null,"scheduledTransferAllowed":null,"viewOnNetworkBlock":"N","txnOutsideHierchy":null,"combinedKey":"DIST:DIST:1","productTypeAssociationAllowed":null,"productTypeAllowed":null,"allowedGatewayTypes":null,"agentAgentAllowed":null,"agentAllowedFlag":null,"agentCategoryCode":null,"agentCategoryName":null,"agentCategoryStatus":null,"agentCategoryStatusList":null,"agentCategoryType":null,"agentCheckArray":null,"agentDisplayAllowed":null,"agentDomainCodeforCategory":null,"agentDomainName":null,"agentFixedRoles":null,"agentGatewayName":null,"agentGatewayType":null,"agentGeographicalDomainList":null,"agentGrphDomainType":null,"agentHierarchyAllowed":null,"agentMaxTxnMsisdn":null,"agentMessageGatewayTypeList":null,"agentMultipleGrphDomains":null,"agentModifiedMessageGatewayTypeList":null,"agentModifyAllowed":null,"agentMultipleLoginAllowed":null,"agentOutletsAllowed":null,"agentProductTypeAssociationAllowed":null,"agentRestrictedMsisdns":null,"agentRoleName":null,"agentRolesMapSelected":null,"agentRoleTypeList":null,"agentScheduledTransferAllowed":null,"agentServiceAllowed":null,"agentUnctrlTransferAllowed":null,"agentUserIdPrefix":null,"agentViewOnNetworkBlock":null,"categoryTypeCode":null,"agentLowBalAlertAllow":null,"rechargeByParentOnly":null,"cp2pPayer":null,"cp2pPayee":null,"cp2pWithinList":null,"parentOrOwnerRadioValue":null,"agentRechargeByParentOnly":null,"agentCp2pPayer":null,"agentCp2pPayee":null,"agentCp2pWithinList":null,"agentParentOrOwnerRadioValue":null,"authenticationType":null,"trasnferKey":"DIST:DIST","userIdPrefix":"D","categoryName":"Super Distributor","lowBalAlertAllow":null,"maxLoginCount":10,"grphDomainTypeName":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"categoryCode":"DIST","multipleLoginAllowed":"N","sequenceNumber":1,"domainName":null,"domainTypeCode":"DISTB_CHAN","lastModifiedTime":0},"loggerMessage":null,"loginID":"720231342216284","userID":"NGD0000032308","password":"7eda411be5ea4a90917de90f9b1b8df5","sessionInfoVO":null,"categoryCode":"DIST","requestType":null,"webLoginID":"AUT_48675","divisionList":null,"departmentList":null,"associatedGeographicalList":null,"rsaRequired":false,"countryCode":null,"assType":null,"assoMsisdn":null,"associationCreatedOn":null,"associationModifiedOn":null,"authType":null,"message":"B","status":"Y","staffUserDetails":null,"longitude":null,"remoteAddress":null,"userType":"CHANNEL","domainID":"DIST","loginTime":null,"browserType":null,"currentRoleCode":null,"oldLastLoginOn":null,"c2sMisFromDate":null,"c2sMisToDate":null,"p2pMisFromDate":null,"p2pMisToDate":null,"contactPerson":"","staffUser":false,"activeUserID":null,"remarks":null,"batchName":null,"batchID":null,"creationType":null,"domainCodes":null,"passwordModifyFlag":false,"reportHeaderName":null,"invalidPasswordCount":0,"passwordCountUpdatedOn":null,"address1":"Add16744","address2":"Add25655","city":"City3438","country":"Country19","externalCode":"052013798","userCode":"720231342216284","ssn":"","userNamePrefix":"MR","msisdn":"720231342216284","empCode":"555349","fromTime":"00:00","geographicalAreaList":null,"lastLoginOn":1642741391485,"state":"State8409","userName":"AUTFN1393 AUTLN2379","parentCategoryName":null,"domainName":"Distributor","userBalanceList":null,"domainList":null,"serviceList":null,"voucherList":null,"geographicalCodeStatus":null,"associatedProductTypeList":[{"label":"Prepaid Product","value":"PREPROD","codeName":"PREPROD|Prepaid Product","labelWithValue":"Prepaid Product(PREPROD)","otherInfo2":null,"idvalue":null,"otherInfo":"PDTYP","typeName":null,"statusType":null,"singleStep":null,"status":null,"type":null}],"appointmentDate":null,"userNameWithCategory":"AUTFN1393 AUTLN2379 (DIST)","requetedByUserName":null,"requetedOnAsString":"13/01/2021 12:50:49","suspendedByUserName":null,"suspendedOnAsString":"13/01/2021 12:50:49","domainStatus":null,"currentModule":null,"domainTypeCode":"DISTB_CHAN","restrictedMsisdnAllow":null,"moduleCodeString":null,"pageCodeString":null,"passwordReset":null,"pinReset":null,"activeUserMsisdn":null,"activeUserPin":null,"activeUserLoginId":null,"latitude":null,"company":"","fax":"","firstName":"AUTFN1393","lastName":"AUTLN2379","language":null,"rsaFlag":null,"rsaAllowed":false,"rsavalidated":false,"otpvalidated":false,"authTypeAllowed":null,"lastModified":0},"ownerUsersList":null,"channelUsersList":null,"prodList":[{"unitValueAsString":"1","balanceAsString":"248.99","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12869","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":101,"productName":"eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"ETOPUP","moduleCode":"C2S","productUsage":"B","balance":24899,"productCode":"ETOPUP","shortName":"eTopUP"},{"unitValueAsString":"1","balanceAsString":"20.76","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12870","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":102,"productName":"Post eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"POSTETOPUP","moduleCode":"C2S","productUsage":"B","balance":2076,"productCode":"POSTETOPUP","shortName":"PeTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:22 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006583081.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006583081.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Entered getCategoryName(DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>getCategoryName() :: select query: select DOMAIN_CODE from Categories where CATEGORY_CODE = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Database Returns: CATEGORY_NAME (DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Exiting getCategoryName()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccess.getUserWithAccesswithCategorywithDomain(UserAccess.java:153)
+	at restassuredapi.test.O2CSearchDetailsTest.TestDataFed(O2CSearchDetailsTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(null) | CATEGORY_NAME(Super Distributor) | USER_NAME(null) | LOGIN_ID(AUT_48675) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:23 PM</span>
+						<span class='node-duration'>0h 0m 0s+552ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA1LjEyMy42OTAyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwNSwianRpIjoiOTE2ODlmZTMtOThlNi00MTEzLWE3NDMtOWM5MDM1N2YxZWFmIn0.sB6dPcTPE-voTTJJAP3jVddno-IaRLoqbO_4n6j5BKY","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA1LjEyMy42OTAyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwNSwianRpIjoiMWI0YTJiMmYtMWFjMC00N2Y3LWIyNDgtNjM2NjlhZDljOTUzIn0.Ri78m67BNJTwpLqHc1vjLBUa4gP60pma0e8mkjbo8fA","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:23 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006584181.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006584181.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD02: To check if Get Search Details API is working successfully for Operator user Channel Admin with MSISDN.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:24 PM</span>
+						<span class='node-duration'>0h 0m 0s+777ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'>identifierValue : 720231342216284</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'>identifierType : MSISDN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"channelUserVO":{"showPassword":null,"confirmPassword":null,"allowedDays":"1,2,3,4,5,6,7","paymentTypes":"DD,CHQ,OTH,CASH,ONLINE","paymentTypesList":["Demand Draft","Cheque","Others","Cash","Online"],"createdOn":1610522449583,"categoryCodeDesc":null,"appintmentDate":null,"statusList":null,"userNamePrefixCode":null,"userNamePrefixList":null,"userNamePrefixDesc":null,"userLanguage":null,"userLanguageList":null,"userLanguageDesc":null,"isSerAssignChnlAdm":false,"geographicalList":null,"grphDomainTypeName":null,"geographicalCodeArray":null,"geographicalCode":"AUT7DBA","networkList":null,"roleFlag":null,"rolesMap":null,"roleType":null,"servicesList":null,"servicesTypes":null,"productsList":null,"productCodes":null,"addCommProfOTFDetailId":null,"otfValue":null,"otfCount":0,"allowedUserTypeCreation":null,"agentBalanceList":null,"shortName":"AUTSN1495","referenceID":null,"segmentList":null,"info1":null,"info2":null,"info3":null,"info4":null,"info5":null,"info6":null,"info7":null,"info8":null,"info9":null,"info10":null,"info11":null,"info12":null,"info13":null,"info14":null,"info15":null,"_commissionProfileApplicableFromAsString":null,"segments":null,"maxUserLevel":0,"serviceTypeList":null,"tokenLastUsedDate":null,"sosAllowed":"N","sosAllowedAmount":0,"sosThresholdLimit":0,"lastSosTransactionId":null,"lastSosStatus":null,"lastSosProductCode":null,"lrAllowed":null,"lrMaxAmount":0,"lrTransferAmount":0,"toCategoryCode":null,"toUserName":null,"fromUserName":null,"fromCategoryCode":null,"nameAndId":null,"userPhonesId":null,"dualCommissionType":"NC","pinRequired":null,"networkCode":null,"serviceTypes":null,"returnFlag":false,"geographicalCodeforNewuser":null,"gateway":null,"monthlyTransAmt":0,"groupRoleFlag":null,"parentStatus":null,"voucherTypes":null,"parentLoginID":null,"groupRoleCode":null,"recordNumber":null,"languageCode":null,"languageName":null,"invalidPinCount":0,"userGrade":"AUT60284","commissionProfileSetID":"3792","transferProfileID":"1100","inSuspend":"N","outSuspened":"N","commissionProfileSetName":"AUT58137","userGradeName":"AUT89321","commissionProfileSetVersion":"1","transferProfileName":"AUT21070","categoryName":null,"smsPin":null,"userlevel":null,"userIDPrefix":null,"geographicalDesc":"AUT63dCN","commissionProfileStatus":"Y","transferProfileStatus":"Y","transferRuleID":null,"outletCode":null,"subOutletCode":null,"activatedOn":null,"commissionProfileLang1Msg":"","commissionProfileLang2Msg":"","commissionProfileSuspendMsg":null,"transferCategory":null,"commissionProfileApplicableFrom":1610519220000,"userChargeGrouptypeCounters":null,"userControlGrouptypeCounters":null,"accessType":null,"applicationID":null,"mpayProfileID":null,"userProfileID":null,"mcommerceServiceAllow":null,"lowBalAlertAllow":null,"primaryMsisdn":null,"balance":0,"balanceStr":null,"previousBalance":0,"trnsfrdUserHierhyList":null,"prevBalanceStr":null,"prevParentName":null,"prevUserId":null,"prevUserName":null,"prevCategoryCode":null,"prevUserNameWithCategory":"","prevUserParentNameWithCategory":"","userBalance":null,"msisdnPrefix":null,"primaryMsisdnPin":null,"multipleMsisdnlist":null,"firstExternalUserModify":false,"smsMSisdn":null,"phoneProfile":null,"prefixId":0,"catLowBalanceAlertAllow":null,"catOutletAllowed":null,"parentLocale":null,"alertMsisdn":null,"alertType":null,"alertEmail":null,"trannferRuleTypeId":"C2CTRFRUL1","cellID":null,"switchID":null,"lmsProfile":null,"otp":null,"otpModifiedOn":null,"autoc2callowed":null,"autoc2cquantity":null,"channelUserID":null,"maxTxnAmount":0,"lmsProfileId":null,"parentGeographyCode":null,"decryptionKey":null,"asscMsisdnList":null,"asscMsisdnDate":null,"optInOutStatus":null,"controlGroup":null,"resetPinOTPMessage":null,"securityAnswer":null,"otpInvalidCount":0,"othCommSetId":null,"categoryList":null,"imei":null,"productCode":null,"networkName":"Network GGN","networkID":"NG","rolesMapSelectedCount":0,"documentType":null,"documentNo":null,"paymentType":null,"ownerCompany":null,"menuItemList":null,"msisdnList":null,"networkNamewithNetworkCode":"Network GGN-NG","ownerID":"NGD0000032308","parentID":"ROOT","parentName":null,"toTime":"23:59","validRequestURLs":"","passwordModifiedOn":null,"networkStatus":"Y","validStatus":0,"createdBy":"NGSB0000032298","allowedIps":null,"modifiedBy":"modified_by","modifiedOn":1610522449583,"email":"55adh@mail.com","previousStatus":null,"userNamewithUserId":"AUTFN1393 AUTLN2379(NGD0000032308)","userNamewithLoginId":"AUTFN1393 AUTLN2379(720231342216284)","contactNo":"287399","departmentCode":null,"departmentDesc":null,"designation":"","divisionCode":null,"divisionDesc":null,"userPhoneVO":null,"associatedServiceTypeList":null,"fullAddress":"Add16744 Add25655 City3438 State8409 Country19","fxedInfoStr":null,"usingNewSTK":false,"updateSimRequired":false,"createdOnAsString":null,"statusDesc":null,"level1ApprovedBy":null,"level1ApprovedOn":null,"level2ApprovedBy":null,"level2ApprovedOn":null,"createdByUserName":null,"ownerCategoryName":null,"ownerMsisdn":null,"ownerName":null,"parentMsisdn":null,"categoryVO":{"domainCodeforCategory":"DIST","grphDomainType":"AR","categoryType":"CHUSR","unctrlTransferAllowed":null,"restrictedMsisdns":null,"outletsAllowed":null,"multipleGrphDomains":"N","grphDomainSequenceNo":0,"webInterfaceAllowed":null,"maxTxnMsisdnInt":0,"maxTxnMsisdn":null,"smsInterfaceAllowed":null,"serviceAllowed":null,"hierarchyAllowed":"Y","parentCategoryCode":null,"domainAllowed":null,"fixedDomains":null,"numberOfCategoryForDomain":0,"transferToListOnly":null,"agentAllowed":null,"agentMaxLoginCount":0,"agentSmsInterfaceAllowed":null,"agentWebInterfaceAllowed":null,"categorySequenceNumber":0,"geographicalDomainSeqNo":0,"radioIndex":0,"recordCount":0,"categoryStatus":null,"displayAllowed":null,"fixedRoles":"N","modifyAllowed":null,"scheduledTransferAllowed":null,"viewOnNetworkBlock":"N","txnOutsideHierchy":null,"combinedKey":"DIST:DIST:1","productTypeAssociationAllowed":null,"productTypeAllowed":null,"allowedGatewayTypes":null,"agentAgentAllowed":null,"agentAllowedFlag":null,"agentCategoryCode":null,"agentCategoryName":null,"agentCategoryStatus":null,"agentCategoryStatusList":null,"agentCategoryType":null,"agentCheckArray":null,"agentDisplayAllowed":null,"agentDomainCodeforCategory":null,"agentDomainName":null,"agentFixedRoles":null,"agentGatewayName":null,"agentGatewayType":null,"agentGeographicalDomainList":null,"agentGrphDomainType":null,"agentHierarchyAllowed":null,"agentMaxTxnMsisdn":null,"agentMessageGatewayTypeList":null,"agentMultipleGrphDomains":null,"agentModifiedMessageGatewayTypeList":null,"agentModifyAllowed":null,"agentMultipleLoginAllowed":null,"agentOutletsAllowed":null,"agentProductTypeAssociationAllowed":null,"agentRestrictedMsisdns":null,"agentRoleName":null,"agentRolesMapSelected":null,"agentRoleTypeList":null,"agentScheduledTransferAllowed":null,"agentServiceAllowed":null,"agentUnctrlTransferAllowed":null,"agentUserIdPrefix":null,"agentViewOnNetworkBlock":null,"categoryTypeCode":null,"agentLowBalAlertAllow":null,"rechargeByParentOnly":null,"cp2pPayer":null,"cp2pPayee":null,"cp2pWithinList":null,"parentOrOwnerRadioValue":null,"agentRechargeByParentOnly":null,"agentCp2pPayer":null,"agentCp2pPayee":null,"agentCp2pWithinList":null,"agentParentOrOwnerRadioValue":null,"authenticationType":null,"trasnferKey":"DIST:DIST","userIdPrefix":"D","categoryName":"Super Distributor","lowBalAlertAllow":null,"maxLoginCount":10,"grphDomainTypeName":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"categoryCode":"DIST","multipleLoginAllowed":"N","sequenceNumber":1,"domainName":null,"domainTypeCode":"DISTB_CHAN","lastModifiedTime":0},"loggerMessage":null,"loginID":"720231342216284","userID":"NGD0000032308","password":"7eda411be5ea4a90917de90f9b1b8df5","sessionInfoVO":null,"categoryCode":"DIST","requestType":null,"webLoginID":"AUT_48675","divisionList":null,"departmentList":null,"associatedGeographicalList":null,"rsaRequired":false,"countryCode":null,"assType":null,"assoMsisdn":null,"associationCreatedOn":null,"associationModifiedOn":null,"authType":null,"message":"B","status":"Y","staffUserDetails":null,"longitude":null,"remoteAddress":null,"userType":"CHANNEL","domainID":"DIST","loginTime":null,"browserType":null,"currentRoleCode":null,"oldLastLoginOn":null,"c2sMisFromDate":null,"c2sMisToDate":null,"p2pMisFromDate":null,"p2pMisToDate":null,"contactPerson":"","staffUser":false,"activeUserID":null,"remarks":null,"batchName":null,"batchID":null,"creationType":null,"domainCodes":null,"passwordModifyFlag":false,"reportHeaderName":null,"invalidPasswordCount":0,"passwordCountUpdatedOn":null,"address1":"Add16744","address2":"Add25655","city":"City3438","country":"Country19","externalCode":"052013798","userCode":"720231342216284","ssn":"","userNamePrefix":"MR","msisdn":"720231342216284","empCode":"555349","fromTime":"00:00","geographicalAreaList":null,"lastLoginOn":1642741391485,"state":"State8409","userName":"AUTFN1393 AUTLN2379","parentCategoryName":null,"domainName":"Distributor","userBalanceList":null,"domainList":null,"serviceList":null,"voucherList":null,"geographicalCodeStatus":null,"associatedProductTypeList":[{"label":"Prepaid Product","value":"PREPROD","codeName":"PREPROD|Prepaid Product","labelWithValue":"Prepaid Product(PREPROD)","otherInfo2":null,"idvalue":null,"otherInfo":"PDTYP","typeName":null,"statusType":null,"singleStep":null,"status":null,"type":null}],"appointmentDate":null,"userNameWithCategory":"AUTFN1393 AUTLN2379 (DIST)","requetedByUserName":null,"requetedOnAsString":"13/01/2021 12:50:49","suspendedByUserName":null,"suspendedOnAsString":"13/01/2021 12:50:49","domainStatus":null,"currentModule":null,"domainTypeCode":"DISTB_CHAN","restrictedMsisdnAllow":null,"moduleCodeString":null,"pageCodeString":null,"passwordReset":null,"pinReset":null,"activeUserMsisdn":null,"activeUserPin":null,"activeUserLoginId":null,"latitude":null,"company":"","fax":"","firstName":"AUTFN1393","lastName":"AUTLN2379","language":null,"rsaFlag":null,"rsaAllowed":false,"rsavalidated":false,"otpvalidated":false,"authTypeAllowed":null,"lastModified":0},"ownerUsersList":null,"channelUsersList":null,"prodList":[{"unitValueAsString":"1","balanceAsString":"248.99","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12869","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":101,"productName":"eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"ETOPUP","moduleCode":"C2S","productUsage":"B","balance":24899,"productCode":"ETOPUP","shortName":"eTopUP"},{"unitValueAsString":"1","balanceAsString":"20.76","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12870","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":102,"productName":"Post eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"POSTETOPUP","moduleCode":"C2S","productUsage":"B","balance":2076,"productCode":"POSTETOPUP","shortName":"PeTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:24 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006584960.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006584960.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:25 PM</span>
+						<span class='node-duration'>0h 0m 0s+537ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA2LjUyOC4yNjk2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwNiwianRpIjoiYjUyMDUyYzUtZWU1Yi00ODIxLTk5MzUtOGM0ZWU1NWJlZjQwIn0.40Mt-VjVjrbScQz9tIC-WsEpMsOUV5mUjVmFSsAOgkY","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA2LjUyOC4yNjk2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwNiwianRpIjoiNmFkMGQxNzUtNTU3ZC00MjM1LWJjYmMtOGFiMDBiZWJjY2I3In0.jkmox3Cq9Yvrh9bL8mafBZAcE5OKMrWHdsuEuVGs0Rc","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006585575.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006585575.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD02: To check if Get Search Details API is working successfully for Operator user Channel Admin with MSISDN.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:25 PM</span>
+						<span class='node-duration'>0h 0m 1s+409ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>identifierValue : 720231342216284</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:25 PM</td>
+													<td class='step-details'>identifierType : MSISDN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"channelUserVO":{"showPassword":null,"confirmPassword":null,"allowedDays":"1,2,3,4,5,6,7","paymentTypes":"DD,CHQ,OTH,CASH,ONLINE","paymentTypesList":["Demand Draft","Cheque","Others","Cash","Online"],"createdOn":1610522449583,"categoryCodeDesc":null,"appintmentDate":null,"statusList":null,"userNamePrefixCode":null,"userNamePrefixList":null,"userNamePrefixDesc":null,"userLanguage":null,"userLanguageList":null,"userLanguageDesc":null,"isSerAssignChnlAdm":false,"geographicalList":null,"grphDomainTypeName":null,"geographicalCodeArray":null,"geographicalCode":"AUT7DBA","networkList":null,"roleFlag":null,"rolesMap":null,"roleType":null,"servicesList":null,"servicesTypes":null,"productsList":null,"productCodes":null,"addCommProfOTFDetailId":null,"otfValue":null,"otfCount":0,"allowedUserTypeCreation":null,"agentBalanceList":null,"shortName":"AUTSN1495","referenceID":null,"segmentList":null,"info1":null,"info2":null,"info3":null,"info4":null,"info5":null,"info6":null,"info7":null,"info8":null,"info9":null,"info10":null,"info11":null,"info12":null,"info13":null,"info14":null,"info15":null,"_commissionProfileApplicableFromAsString":null,"segments":null,"maxUserLevel":0,"serviceTypeList":null,"tokenLastUsedDate":null,"sosAllowed":"N","sosAllowedAmount":0,"sosThresholdLimit":0,"lastSosTransactionId":null,"lastSosStatus":null,"lastSosProductCode":null,"lrAllowed":null,"lrMaxAmount":0,"lrTransferAmount":0,"toCategoryCode":null,"toUserName":null,"fromUserName":null,"fromCategoryCode":null,"nameAndId":null,"userPhonesId":null,"dualCommissionType":"NC","pinRequired":null,"networkCode":null,"serviceTypes":null,"returnFlag":false,"geographicalCodeforNewuser":null,"gateway":null,"monthlyTransAmt":0,"groupRoleFlag":null,"parentStatus":null,"voucherTypes":null,"parentLoginID":null,"groupRoleCode":null,"recordNumber":null,"languageCode":null,"languageName":null,"invalidPinCount":0,"userGrade":"AUT60284","commissionProfileSetID":"3792","transferProfileID":"1100","inSuspend":"N","outSuspened":"N","commissionProfileSetName":"AUT58137","userGradeName":"AUT89321","commissionProfileSetVersion":"1","transferProfileName":"AUT21070","categoryName":null,"smsPin":null,"userlevel":null,"userIDPrefix":null,"geographicalDesc":"AUT63dCN","commissionProfileStatus":"Y","transferProfileStatus":"Y","transferRuleID":null,"outletCode":null,"subOutletCode":null,"activatedOn":null,"commissionProfileLang1Msg":"","commissionProfileLang2Msg":"","commissionProfileSuspendMsg":null,"transferCategory":null,"commissionProfileApplicableFrom":1610519220000,"userChargeGrouptypeCounters":null,"userControlGrouptypeCounters":null,"accessType":null,"applicationID":null,"mpayProfileID":null,"userProfileID":null,"mcommerceServiceAllow":null,"lowBalAlertAllow":null,"primaryMsisdn":null,"balance":0,"balanceStr":null,"previousBalance":0,"trnsfrdUserHierhyList":null,"prevBalanceStr":null,"prevParentName":null,"prevUserId":null,"prevUserName":null,"prevCategoryCode":null,"prevUserNameWithCategory":"","prevUserParentNameWithCategory":"","userBalance":null,"msisdnPrefix":null,"primaryMsisdnPin":null,"multipleMsisdnlist":null,"firstExternalUserModify":false,"smsMSisdn":null,"phoneProfile":null,"prefixId":0,"catLowBalanceAlertAllow":null,"catOutletAllowed":null,"parentLocale":null,"alertMsisdn":null,"alertType":null,"alertEmail":null,"trannferRuleTypeId":"C2CTRFRUL1","cellID":null,"switchID":null,"lmsProfile":null,"otp":null,"otpModifiedOn":null,"autoc2callowed":null,"autoc2cquantity":null,"channelUserID":null,"maxTxnAmount":0,"lmsProfileId":null,"parentGeographyCode":null,"decryptionKey":null,"asscMsisdnList":null,"asscMsisdnDate":null,"optInOutStatus":null,"controlGroup":null,"resetPinOTPMessage":null,"securityAnswer":null,"otpInvalidCount":0,"othCommSetId":null,"categoryList":null,"imei":null,"productCode":null,"networkName":"Network GGN","networkID":"NG","rolesMapSelectedCount":0,"documentType":null,"documentNo":null,"paymentType":null,"ownerCompany":null,"menuItemList":null,"msisdnList":null,"networkNamewithNetworkCode":"Network GGN-NG","ownerID":"NGD0000032308","parentID":"ROOT","parentName":null,"toTime":"23:59","validRequestURLs":"","passwordModifiedOn":null,"networkStatus":"Y","validStatus":0,"createdBy":"NGSB0000032298","allowedIps":null,"modifiedBy":"modified_by","modifiedOn":1610522449583,"email":"55adh@mail.com","previousStatus":null,"userNamewithUserId":"AUTFN1393 AUTLN2379(NGD0000032308)","userNamewithLoginId":"AUTFN1393 AUTLN2379(720231342216284)","contactNo":"287399","departmentCode":null,"departmentDesc":null,"designation":"","divisionCode":null,"divisionDesc":null,"userPhoneVO":null,"associatedServiceTypeList":null,"fullAddress":"Add16744 Add25655 City3438 State8409 Country19","fxedInfoStr":null,"usingNewSTK":false,"updateSimRequired":false,"createdOnAsString":null,"statusDesc":null,"level1ApprovedBy":null,"level1ApprovedOn":null,"level2ApprovedBy":null,"level2ApprovedOn":null,"createdByUserName":null,"ownerCategoryName":null,"ownerMsisdn":null,"ownerName":null,"parentMsisdn":null,"categoryVO":{"domainCodeforCategory":"DIST","grphDomainType":"AR","categoryType":"CHUSR","unctrlTransferAllowed":null,"restrictedMsisdns":null,"outletsAllowed":null,"multipleGrphDomains":"N","grphDomainSequenceNo":0,"webInterfaceAllowed":null,"maxTxnMsisdnInt":0,"maxTxnMsisdn":null,"smsInterfaceAllowed":null,"serviceAllowed":null,"hierarchyAllowed":"Y","parentCategoryCode":null,"domainAllowed":null,"fixedDomains":null,"numberOfCategoryForDomain":0,"transferToListOnly":null,"agentAllowed":null,"agentMaxLoginCount":0,"agentSmsInterfaceAllowed":null,"agentWebInterfaceAllowed":null,"categorySequenceNumber":0,"geographicalDomainSeqNo":0,"radioIndex":0,"recordCount":0,"categoryStatus":null,"displayAllowed":null,"fixedRoles":"N","modifyAllowed":null,"scheduledTransferAllowed":null,"viewOnNetworkBlock":"N","txnOutsideHierchy":null,"combinedKey":"DIST:DIST:1","productTypeAssociationAllowed":null,"productTypeAllowed":null,"allowedGatewayTypes":null,"agentAgentAllowed":null,"agentAllowedFlag":null,"agentCategoryCode":null,"agentCategoryName":null,"agentCategoryStatus":null,"agentCategoryStatusList":null,"agentCategoryType":null,"agentCheckArray":null,"agentDisplayAllowed":null,"agentDomainCodeforCategory":null,"agentDomainName":null,"agentFixedRoles":null,"agentGatewayName":null,"agentGatewayType":null,"agentGeographicalDomainList":null,"agentGrphDomainType":null,"agentHierarchyAllowed":null,"agentMaxTxnMsisdn":null,"agentMessageGatewayTypeList":null,"agentMultipleGrphDomains":null,"agentModifiedMessageGatewayTypeList":null,"agentModifyAllowed":null,"agentMultipleLoginAllowed":null,"agentOutletsAllowed":null,"agentProductTypeAssociationAllowed":null,"agentRestrictedMsisdns":null,"agentRoleName":null,"agentRolesMapSelected":null,"agentRoleTypeList":null,"agentScheduledTransferAllowed":null,"agentServiceAllowed":null,"agentUnctrlTransferAllowed":null,"agentUserIdPrefix":null,"agentViewOnNetworkBlock":null,"categoryTypeCode":null,"agentLowBalAlertAllow":null,"rechargeByParentOnly":null,"cp2pPayer":null,"cp2pPayee":null,"cp2pWithinList":null,"parentOrOwnerRadioValue":null,"agentRechargeByParentOnly":null,"agentCp2pPayer":null,"agentCp2pPayee":null,"agentCp2pWithinList":null,"agentParentOrOwnerRadioValue":null,"authenticationType":null,"trasnferKey":"DIST:DIST","userIdPrefix":"D","categoryName":"Super Distributor","lowBalAlertAllow":null,"maxLoginCount":10,"grphDomainTypeName":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"categoryCode":"DIST","multipleLoginAllowed":"N","sequenceNumber":1,"domainName":null,"domainTypeCode":"DISTB_CHAN","lastModifiedTime":0},"loggerMessage":null,"loginID":"720231342216284","userID":"NGD0000032308","password":"7eda411be5ea4a90917de90f9b1b8df5","sessionInfoVO":null,"categoryCode":"DIST","requestType":null,"webLoginID":"AUT_48675","divisionList":null,"departmentList":null,"associatedGeographicalList":null,"rsaRequired":false,"countryCode":null,"assType":null,"assoMsisdn":null,"associationCreatedOn":null,"associationModifiedOn":null,"authType":null,"message":"B","status":"Y","staffUserDetails":null,"longitude":null,"remoteAddress":null,"userType":"CHANNEL","domainID":"DIST","loginTime":null,"browserType":null,"currentRoleCode":null,"oldLastLoginOn":null,"c2sMisFromDate":null,"c2sMisToDate":null,"p2pMisFromDate":null,"p2pMisToDate":null,"contactPerson":"","staffUser":false,"activeUserID":null,"remarks":null,"batchName":null,"batchID":null,"creationType":null,"domainCodes":null,"passwordModifyFlag":false,"reportHeaderName":null,"invalidPasswordCount":0,"passwordCountUpdatedOn":null,"address1":"Add16744","address2":"Add25655","city":"City3438","country":"Country19","externalCode":"052013798","userCode":"720231342216284","ssn":"","userNamePrefix":"MR","msisdn":"720231342216284","empCode":"555349","fromTime":"00:00","geographicalAreaList":null,"lastLoginOn":1642741391485,"state":"State8409","userName":"AUTFN1393 AUTLN2379","parentCategoryName":null,"domainName":"Distributor","userBalanceList":null,"domainList":null,"serviceList":null,"voucherList":null,"geographicalCodeStatus":null,"associatedProductTypeList":[{"label":"Prepaid Product","value":"PREPROD","codeName":"PREPROD|Prepaid Product","labelWithValue":"Prepaid Product(PREPROD)","otherInfo2":null,"idvalue":null,"otherInfo":"PDTYP","typeName":null,"statusType":null,"singleStep":null,"status":null,"type":null}],"appointmentDate":null,"userNameWithCategory":"AUTFN1393 AUTLN2379 (DIST)","requetedByUserName":null,"requetedOnAsString":"13/01/2021 12:50:49","suspendedByUserName":null,"suspendedOnAsString":"13/01/2021 12:50:49","domainStatus":null,"currentModule":null,"domainTypeCode":"DISTB_CHAN","restrictedMsisdnAllow":null,"moduleCodeString":null,"pageCodeString":null,"passwordReset":null,"pinReset":null,"activeUserMsisdn":null,"activeUserPin":null,"activeUserLoginId":null,"latitude":null,"company":"","fax":"","firstName":"AUTFN1393","lastName":"AUTLN2379","language":null,"rsaFlag":null,"rsaAllowed":false,"rsavalidated":false,"otpvalidated":false,"authTypeAllowed":null,"lastModified":0},"ownerUsersList":null,"channelUsersList":null,"prodList":[{"unitValueAsString":"1","balanceAsString":"248.99","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12869","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":101,"productName":"eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"ETOPUP","moduleCode":"C2S","productUsage":"B","balance":24899,"productCode":"ETOPUP","shortName":"eTopUP"},{"unitValueAsString":"1","balanceAsString":"20.76","productUsageName":null,"status":"Y","commType":null,"initialRequestedQuantity":0,"initialRequestedQuantityStr":null,"productFirstApprovedQty":"0","productSecondApprovedQty":"0","productThirdApprovedQty":"0","userWallet":null,"totalReceiverBalance":0,"totalSenderBalance":0,"otfApplicableFrom":null,"otfApplicableTo":null,"otfTimeSlab":null,"otfTypePctOrAMt":null,"otfRate":0.0,"otfAmount":0,"otfCountsUpdated":false,"reversalRequest":false,"targetAchieved":false,"userOTFCountsVO":null,"payableAmountApproval":0,"netPayableAmountApproval":0,"voucherQuantity":0,"bundleID":null,"commissionValuePosi":0,"transactionType":null,"loginId":null,"transferID":null,"receiverCreditQty":0,"productMrpStr":null,"tax1Value":0,"tax2Value":0,"tax3Value":0,"commValue":0,"commQuantity":0,"othCommValue":0,"requiredQuantity":0,"firstApprovedQuantity":null,"secondApprovedQuantity":null,"thirdApprovedQuantity":null,"netPayableAmount":0,"payableAmount":0,"senderPostStock":0,"senderPreviousStock":0,"receiverPostStock":0,"receiverPreviousStock":0,"approvedQuantity":0,"senderDebitQty":0,"commProfileDetailID":"12870","afterTransSenderPreviousStock":0,"gradeName":null,"commissionValuePosiAsString":"0","networkStockAfterReversal":0,"reversalQty":0,"extTxnDate":null,"commissionProfileVer":null,"senderBalanceAsString":"0","payableAmountAsStringApproval":"0","commProfileProductID":null,"serialNum":0,"netPayableAmountAsStringApproval":"0","slabDefine":false,"afterTransReceiverPreviousStock":0,"tax3RateAsString":"0.0","commRateAsString":"0.0","taxOnC2CTransfer":null,"senderDebitQtyAsString":"0","afterTransCommisionSenderPreviousStock":0,"senderBalance":0,"startRange":0,"endRange":0,"bonusBalance":0,"balanceType":null,"previousBonusBalance":0,"afterTransSenderPreviousBonusStock":0,"bonusDebtQty":0,"mainDebitQty":0,"networkStockAsString":"0","senderPreviousBalAsString":"0","senderPostBalAsString":"0","receiverPreviousBalAsString":"0","receiverPostBalAsString":"0","othCommRate":0.0,"othCommType":null,"othCommProfType":null,"othCommProfValue":null,"othCommRateAsString":"0.0","othCommAsString":"0","othSlabDefine":false,"approvedQuantityAsString":"0","productTotalMRP":0,"extTxnNo":null,"commissionProfileSetId":null,"tax1Type":null,"tax1Rate":0.0,"tax2Type":null,"tax2Rate":0.0,"tax3Type":null,"tax3Rate":0.0,"tax1RateAsString":"0.0","tax1ValueAsString":"0","tax2RateAsString":"0.0","tax2ValueAsString":"0","commRate":0.0,"otfRateAsString":"0.0","otfAsString":"0","tax3ValueAsString":"0","receiverCreditQtyAsString":"0","payableAmountAsString":"0","netPayableAmountAsString":"0","productCost":"0","commAsString":"0","initiatorRemarks":null,"commQuantityAsString":"0","previousBalance":0,"othCommSetId":null,"cellId":null,"userCategory":null,"paymentType":null,"externalCode":null,"msisdn":null,"language1Message":null,"language2Message":null,"dataList":null,"alertingBalance":"","networkCode":null,"createdBy":null,"modifiedBy":null,"createdOn":null,"modifiedOn":null,"usage":null,"lastModifiedTime":0,"unitValue":100,"walletbalance":0,"productType":"PREPROD","requestedQuantity":null,"walletType":null,"productShortCode":102,"productName":"Post eTopUP","commProfDetailId":null,"productStatusName":null,"networkStock":0,"discountRate":0.0,"discountType":"PCT","transferMultipleOf":1,"discountValue":0,"taxOnChannelTransfer":"Y","taxOnFOCTransfer":"Y","networkFOCStock":0,"networkINCStock":0,"networkFOCStockAsString":"0","walletBalanceStr":"0","productId":null,"minTransferValueAsString":"1","minTransferValue":100,"maxTransferValueAsString":"900000000","maxTransferValue":90000000000,"reversalRequestedQuantity":null,"productCategory":"FLEX","erpProductCode":"POSTETOPUP","moduleCode":"C2S","productUsage":"B","balance":2076,"productCode":"POSTETOPUP","shortName":"PeTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006586463.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006586463.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Entered getCategoryName(DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>getCategoryName() :: select query: select DOMAIN_CODE from Categories where CATEGORY_CODE = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Database Returns: CATEGORY_NAME (DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Exiting getCategoryName()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccess.getUserWithAccesswithCategorywithDomain(UserAccess.java:153)
+	at restassuredapi.test.O2CSearchDetailsTest.TestDataFed(O2CSearchDetailsTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:26 PM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(null) | CATEGORY_NAME(Super Distributor) | USER_NAME(null) | LOGIN_ID(AUT_48675) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:27 PM</span>
+						<span class='node-duration'>0h 0m 0s+531ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA4LjUyOC42MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwOCwianRpIjoiZDQ2ZWRlYTAtM2JjNC00ZDYwLWEyMzEtODYxNjgzMzg0YTU2In0.0qL9inrFzNX0bJo63rJmsV6OiOhmyntszz5wtwoBTuE","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTA4LjUyOC42MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMwOCwianRpIjoiYjJjYjYwOGItMWExMi00NGUwLWFhZTYtNzdiNzIwNWVhMjEyIn0.qxA5b-drMrcIHRbsfacho1gG0rk97MJDdbwOWcugQtY","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006587568.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006587568.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:27 PM</span>
+						<span class='node-duration'>0h 0m 21s+540ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>Entered:: getUserId()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>Exception while fetching NAME:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserId(PostGreSQLRepository.java:4399)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>Query Repository Returns: user_Name (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>identifierValue : null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:27 PM</td>
+													<td class='step-details'>identifierType : USERNAME</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:28 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"400","messageCode":"error.status.processing","message":null,"errorMap":null,"successList":[],"channelUserVO":null,"ownerUsersList":null,"channelUsersList":null,"prodList":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:46:28 PM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1645006609505.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006609505.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:49 PM</span>
+						<span class='node-duration'>0h 0m 0s+665ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTMxLjA3MC4yNTI2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMzMSwianRpIjoiMTdiNmVjZDQtYWEwZi00NDE1LWE0MGItNzk3MjhhYTc0MmM4In0.DBvSaLw6ewXlZDJygSz9Q2OaQFqQWmbmXBb0sxfqTZ0","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTMxLjA3MC4yNTI2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjMzMSwianRpIjoiYWU5Mzk5ZDktMjI3Mi00MGIwLWIyOWUtZTFlOTg1NmI3OTMyIn0.tKepX5nsNhmyUNNJBcBUdo8g8xaK6KacMBPJ5DY_Hks","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:49 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006610247.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006610247.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</div>						
+						<span class='node-time'>Feb 16, 2022 03:46:50 PM</span>
+						<span class='node-duration'>0h 0m 22s+336ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>Entered:: getUserId()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>Exception while fetching NAME:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserId(PostGreSQLRepository.java:4399)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>Query Repository Returns: user_Name (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>identifierValue : null</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>identifierType : USERNAME</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"400","messageCode":"error.status.processing","message":null,"errorMap":null,"successList":[],"channelUserVO":null,"ownerUsersList":null,"channelUsersList":null,"prodList":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:46:50 PM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>3:47:11 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:11 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Entered getCategoryName(DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>getCategoryName() :: select query: select DOMAIN_CODE from Categories where CATEGORY_CODE = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Database Returns: CATEGORY_NAME (DIST)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Exiting getCategoryName()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccess.getUserWithAccesswithCategorywithDomain(UserAccess.java:153)
+	at restassuredapi.test.O2CSearchDetailsTest.TestDataFed(O2CSearchDetailsTest.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(null) | CATEGORY_NAME(Super Distributor) | USER_NAME(null) | LOGIN_ID(AUT_48675) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1645006632115.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006632115.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:47:12 PM</span>
+						<span class='node-duration'>0h 0m 0s+607ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTU0LjEzNi40MzY5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjM1NCwianRpIjoiMzE2MTg2MjktNDMxNS00NTI2LWI4MTYtZGM3YjdkY2MxNGNlIn0.zytq5zKTSJPXz4FdGjoH8y2pahZjR-AGJ8ErE1E5YiM","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA3MjUxIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NTU0LjEzNi40MzY5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIyNjk3MTI1NzM5MTgxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjM1NCwianRpIjoiYmEzNTExZmQtNjkxNC00NjliLThhZGUtNjRkNWI2MTFkYzc0In0.I4SKy-_NKnyBgvFC0Z_mxTf3rEz5l1PRmj6eYYaDmHA","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:12 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006633248.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006633248.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</div>						
+						<span class='node-time'>Feb 16, 2022 03:47:13 PM</span>
+						<span class='node-duration'>0h 0m 21s+322ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'>identifierValue :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'>identifierType : MSISDN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"400","messageCode":"241216","message":"User not found with Msisdn :  .","errorMap":null,"successList":[],"channelUserVO":null,"ownerUsersList":null,"channelUsersList":null,"prodList":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:13 PM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [241216] but found [241137]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_04_Test_Blank_identifierValue(O2CSearchDetailsTest.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>3:47:34 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:34 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1645006654971.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006654971.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</div>						
+						<span class='node-time'>Feb 16, 2022 03:47:35 PM</span>
+						<span class='node-duration'>0h 0m 0s+655ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NjE2LjUzNi4xMDUyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjM3NiwianRpIjoiYzFmOTg5YzUtNmI4OS00MjM3LThmM2MtODcwYTlkYmYxODcxIn0.IsDK13zjxZ-kPe0CKTdPzK2WxJ1SLolAgYUgUWsnh1c","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzAyNTEyIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE2MTU0NjE2LjUzNi4xMDUyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjY1OTQyNDY5NDA5IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NTAyNjM3NiwianRpIjoiZWJhM2Y0NjItMTQzYi00MTA3LTk1MDYtZDkxYzc2NzY5YmNjIn0.8CBj8RAIMH7J1rpjZh3U01tj2w0bExxRlVddv1Czn_s","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1645006655694.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006655694.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</div>						
+						<span class='node-time'>Feb 16, 2022 03:47:35 PM</span>
+						<span class='node-duration'>0h 0m 21s+329ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getSearchDetails</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>Query Params :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>identifierValue :</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>identifierType : MSISDN</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'>{"service":"searchApiResp","referenceId":null,"status":"400","messageCode":"241216","message":"User not found with Msisdn :  .","errorMap":null,"successList":[],"channelUserVO":null,"ownerUsersList":null,"channelUsersList":null,"prodList":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:35 PM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [241216] but found [241137]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_04_Test_Blank_identifierValue(O2CSearchDetailsTest.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>3:47:57 PM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:47:57 PM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1645006677420.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1645006677420.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>12</span>
+							<span class='label fail'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 12</span>
+							<span class='label red lighten-1 white-text'>Failed: 4</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 16, 2022 03:46:16 PM</td>
+										<td class='linked' test-id='2'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:18 PM</td>
+										<td class='linked' test-id='3'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD01: To check if Get Search Details API is working successfully for Operator user Channel Admin with LoginID.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:21 PM</td>
+										<td class='linked' test-id='4'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:22 PM</td>
+										<td class='linked' test-id='5'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD01: To check if Get Search Details API is working successfully for Operator user Channel Admin with LoginID.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:23 PM</td>
+										<td class='linked' test-id='6'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:24 PM</td>
+										<td class='linked' test-id='7'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD02: To check if Get Search Details API is working successfully for Operator user Channel Admin with MSISDN.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:25 PM</td>
+										<td class='linked' test-id='8'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:25 PM</td>
+										<td class='linked' test-id='9'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD02: To check if Get Search Details API is working successfully for Operator user Channel Admin with MSISDN.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:27 PM</td>
+										<td class='linked' test-id='10'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:27 PM</td>
+										<td class='linked' test-id='11'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:49 PM</td>
+										<td class='linked' test-id='12'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:46:50 PM</td>
+										<td class='linked' test-id='13'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:47:12 PM</td>
+										<td class='linked' test-id='14'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:47:13 PM</td>
+										<td class='linked' test-id='15'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:47:35 PM</td>
+										<td class='linked' test-id='16'>[REST]O2C_GET_SEARCH_DETAILS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 16, 2022 03:47:35 PM</td>
+										<td class='linked' test-id='17'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>4</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Feb 16, 2022 03:46:27 PM</td>
+                                                        <td class='linked' test-id='11'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 16, 2022 03:46:50 PM</td>
+                                                        <td class='linked' test-id='13'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD03: To check if Get Search Details API is working successfully for Operator user Channel Admin with User Name.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_03_Test_Success_UserName(O2CSearchDetailsTest.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 16, 2022 03:47:13 PM</td>
+                                                        <td class='linked' test-id='15'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [241216] but found [241137]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_04_Test_Blank_identifierValue(O2CSearchDetailsTest.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 16, 2022 03:47:35 PM</td>
+                                                        <td class='linked' test-id='17'>[REST]O2C_GET_SEARCH_DETAILS.O2CSD04: To check if Get Search Details API is not working successfully for Operator user Channel Admin with Empty Identifier Value.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [241216] but found [241137]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.O2CSearchDetailsTest.A_04_Test_Blank_identifierValue(O2CSearchDetailsTest.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>137</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 16, 2022 03:46:12 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 16, 2022 03:47:57 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>104,863ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>12</td>
+							<td>4</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 12,
+				failParent: 4,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 4,
+				
+				passChild: 0,
+				failChild: 8,
+				fatalChild: 0,
+				errorChild: 4,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 125,
+				exceptionsChild: 17,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

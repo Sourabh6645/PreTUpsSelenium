@@ -1,0 +1,598 @@
+package restassuredapi.test;
+
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.classes.BaseTest;
+import com.classes.CaseMaster;
+import com.classes.Login;
+import com.commons.ExcelI;
+import com.commons.MasterI;
+import com.dbrepository.DBHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reporting.extent.entity.ModuleManager;
+import com.testmanagement.core.TestManager;
+import com.utils.Assertion;
+import com.utils.ExcelUtility;
+import com.utils.GenerateMSISDN;
+import com.utils.Log;
+import com.utils.RandomGeneration;
+import com.utils._masterVO;
+import com.utils.constants.Module;
+
+import restassuredapi.api.channelAdmin_ModifyChannelUser.ChannelAdmin_ModifyChannelUserAPI;
+import restassuredapi.api.oauthentication.OAuthenticationAPI;
+import restassuredapi.pojo.channelAdminModifyChannelUserRequestPojo.ChannelAdminModifyChannelUserReqPojo;
+import restassuredapi.pojo.channelAdminModifyChannelUserRequestPojo.Data;
+import restassuredapi.pojo.channelAdminModifyChannelUserRequestPojo.Msisdn;
+import restassuredapi.pojo.channelAdminModifyChannelUserResponsePojo.ChannelAdminModifyChannelUserResPojo;
+import restassuredapi.pojo.oauthenticationrequestpojo.OAuthenticationRequestPojo;
+import restassuredapi.pojo.oauthenticationresponsepojo.OAuthenticationResponsePojo;
+
+@ModuleManager(name = Module.UPDATE_CHANNEL_USER)
+public class ChannelAdmin_ModifyChannelUser extends BaseTest{
+	
+	static String moduleCode;
+	OAuthenticationRequestPojo oAuthenticationRequestPojo = new OAuthenticationRequestPojo();
+	OAuthenticationResponsePojo oAuthenticationResponsePojo = new OAuthenticationResponsePojo();
+	ChannelAdminModifyChannelUserReqPojo channelAdminModifyChannelUserReqPojo = new ChannelAdminModifyChannelUserReqPojo();
+	ChannelAdminModifyChannelUserResPojo channelAdminModifyChannelUserResPojo = new ChannelAdminModifyChannelUserResPojo();
+
+	Data data = new Data();
+	Login login = new Login();
+	String loginId = null;
+
+	RandomGeneration randStr = new RandomGeneration();
+	GenerateMSISDN gnMsisdn = new GenerateMSISDN();
+	HashMap<String, String> transferDetails = new HashMap<String, String>();
+
+	@DataProvider(name = "userData")
+	public Object[][] TestDataFeed() {
+		String MasterSheetPath = _masterVO.getProperty("DataProvider");
+		ExcelUtility.setExcelFile(MasterSheetPath, ExcelI.OPERATOR_USERS_HIERARCHY_SHEET);
+
+		Object[][] Data = new Object[1][5];
+		int j = 0;
+		int i = 11;
+		Data[j][0] = ExcelUtility.getCellData(0, ExcelI.LOGIN_ID, i);
+		Data[j][1] = ExcelUtility.getCellData(0, ExcelI.PASSWORD, i);
+		Data[j][2] = ExcelUtility.getCellData(0, ExcelI.PARENT_NAME, i);
+		Data[j][3] = ExcelUtility.getCellData(0, ExcelI.CATEGORY_NAME, i);
+		Data[j][4] = ExcelUtility.getCellData(0, ExcelI.CATEGORY_CODE, i);
+		return Data;
+	}
+
+	Map<String, Object> headerMap = new HashMap<String, Object>();
+	
+	Map<String, String> channelUsers = new HashMap<String, String>();
+	
+	public void addChannelUserData() {
+		String MasterSheetPath = _masterVO.getProperty("DataProvider");
+		ExcelUtility.setExcelFile(MasterSheetPath, ExcelI.CHANNEL_USERS_HIERARCHY_SHEET);
+		channelUsers.put("login_id", ExcelUtility.getCellData(0, ExcelI.LOGIN_ID, 1));
+		channelUsers.put("password", ExcelUtility.getCellData(0, ExcelI.PASSWORD, 1));
+		channelUsers.put("external_code", ExcelUtility.getCellData(0, ExcelI.EXTERNAL_CODE, 1));
+		channelUsers.put("msisdn", ExcelUtility.getCellData(0, ExcelI.MSISDN, 1));
+		channelUsers.put("pin", ExcelUtility.getCellData(0, ExcelI.PIN, 1));
+		channelUsers.put("email_id", DBHandler.AccessHandler.getEmailIdByLoginId(channelUsers.get("login_id")));
+		Log.info("Printing data from HashMap: " + channelUsers);
+	}
+
+	public void setHeaders() {
+		headerMap.put("CLIENT_ID", _masterVO.getProperty("CLIENT_ID"));
+		headerMap.put("CLIENT_SECRET", _masterVO.getProperty("CLIENT_SECRET"));
+		headerMap.put("requestGatewayCode", _masterVO.getProperty("requestGatewayCode"));
+		headerMap.put("requestGatewayLoginId", _masterVO.getProperty("requestGatewayLoginID"));
+		headerMap.put("requestGatewayPsecure", _masterVO.getProperty("requestGatewayPasswordVMS"));
+		headerMap.put("requestGatewayType", _masterVO.getProperty("requestGatewayType"));
+		headerMap.put("scope", _masterVO.getProperty("scope"));
+		headerMap.put("servicePort", _masterVO.getProperty("servicePort"));
+	}
+
+	public void setupAuth(String data1, String data2) {
+		oAuthenticationRequestPojo.setIdentifierType(_masterVO.getProperty("identifierType"));
+		oAuthenticationRequestPojo.setIdentifierValue(data1);
+		oAuthenticationRequestPojo.setPasswordOrSmspin(data2);
+	}
+
+	public void setUpData() {
+		addChannelUserData();
+		data.setAddress1("");
+		data.setAddress2("");
+		data.setAllowedTimeFrom("");
+		data.setAllowedTimeTo("");
+		data.setAlloweddays("");
+		data.setAllowedip("");
+		data.setAppointmentdate("");
+		data.setCity("");
+		data.setCommissionProfileID(_masterVO.getProperty("commissionProfileID"));
+		data.setCompany("");
+		data.setContactNumber("");
+		data.setContactPerson("");
+		data.setControlGroup("N");
+		data.setCountry("");
+		data.setDesignation("");
+		data.setDocumentNo("");
+		data.setDocumentType("");
+		data.setEmailid(channelUsers.get("email_id"));
+		data.setEmpcode("");
+		data.setExtnwcode(_masterVO.getMasterValue(MasterI.NETWORK_CODE));
+		data.setFax("");
+		data.setFirstName(DBHandler.AccessHandler.getFirstNameByLoginId(channelUsers.get("login_id")));
+		data.setGeographyCode(_masterVO.getProperty("geography_code"));
+		data.setInsuspend("N");
+		data.setLanguage("en_US");
+		data.setLastName("");
+		data.setLatitude("");
+		data.setLmsProfileId("");
+		data.setLongitude("");
+		data.setLowbalalertother("Y");
+		data.setLowbalalertparent("Y");
+		data.setLowbalalertself("Y");
+
+		Msisdn msisdnDetails = new Msisdn();
+		msisdnDetails.setConfirmpin(channelUsers.get("pin"));
+		msisdnDetails.setDescription("");
+		msisdnDetails.setIsprimary("Y");
+		msisdnDetails.setPhoneNo(channelUsers.get("msisdn"));
+		msisdnDetails.setPin(channelUsers.get("pin"));
+		msisdnDetails.setStkProfile(_masterVO.getProperty("domainCode"));
+		List<Msisdn> msisdn = new ArrayList<Msisdn>();
+		msisdn.add(msisdnDetails);
+		data.setMsisdn(msisdn);
+		data.setNewExternalcode(channelUsers.get("external_code"));
+		data.setOtherEmail("");
+		data.setOutletCode("");
+		data.setOutsuspend("");
+		data.setPaymentType("");
+		data.setRoleType("N");
+		data.setRoles(_masterVO.getProperty("roles"));
+		data.setServices(_masterVO.getProperty("services"));
+		data.setShortName(DBHandler.AccessHandler.getFirstNameByLoginId(channelUsers.get("login_id")));
+		data.setSsn("");
+		data.setState("");
+		data.setSubOutletCode("");
+		data.setSubscriberCode("");
+		data.setTransferProfile(_masterVO.getProperty("transferProfile"));
+		data.setTransferRuleType(_masterVO.getProperty("transferRuleType"));
+		data.setUserCode(channelUsers.get("msisdn"));
+		data.setUserName(DBHandler.AccessHandler.getFirstNameByLoginId(channelUsers.get("login_id")));
+		data.setUserNamePrefix("CMPY");
+		data.setUsergrade(_masterVO.getProperty("usergrade"));
+		data.setVoucherTypes("");
+		data.setWebloginid(channelUsers.get("login_id"));
+		data.setWebpassword(channelUsers.get("password"));
+	}
+
+	protected static String accessToken;
+
+	public void BeforeMethod(String data1, String data2, String categoryName) throws Exception {
+		// if(accessToken==null) {
+		final String methodName = "Test_OAuthenticationTest";
+		Log.startTestCase(methodName);
+
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("OAUTHETICATION1");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+
+		setHeaders();
+		setupAuth(data1, data2);
+		OAuthenticationAPI oAuthenticationAPI = new OAuthenticationAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), headerMap);
+		oAuthenticationAPI.setContentType(_masterVO.getProperty("contentType"));
+		oAuthenticationAPI.addBodyParam(oAuthenticationRequestPojo);
+		oAuthenticationAPI.setExpectedStatusCode(200);
+		oAuthenticationAPI.perform();
+		oAuthenticationResponsePojo = oAuthenticationAPI.getAPIResponseAsPOJO(OAuthenticationResponsePojo.class);
+		long statusCode = oAuthenticationResponsePojo.getStatus();
+
+		accessToken = oAuthenticationResponsePojo.getToken();
+		Assert.assertEquals(statusCode, 200);
+		Assertion.assertEquals(Long.toString(statusCode), "200");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	@Test(dataProvider = "userData" , priority = 1)
+	@TestManager(TestKey = "PRETUPS-001")
+	public void channelAdmin_ModifyChannelUser_Positive(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_Positive";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER01");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		String name = new RandomGeneration().randomAlphabets(6);
+		data.setFirstName(name);
+		data.setShortName(name);
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 200);
+		Assert.assertEquals(message, "User "+channelUsers.get("login_id")+" has been successfully updated.");
+		Assertion.assertEquals(message, "User "+channelUsers.get("login_id")+" has been successfully updated.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	@Test(dataProvider = "userData" , priority = 2)
+	@TestManager(TestKey = "PRETUPS-002")
+	public void channelAdmin_ModifyChannelUser_BlankWebLoginId(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankWebLoginId";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER02");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setWebloginid("");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id")); 
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Email id is mandatory.");
+		Assertion.assertEquals(message, "Email id is mandatory.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	
+	@Test(dataProvider = "userData", priority = 3)
+	@TestManager(TestKey = "PRETUPS-003")
+	public void channelAdmin_ModifyChannelUser_BlankMsisdn(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankMsisdn";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER03");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		Msisdn msisdnDetails = new Msisdn();
+		msisdnDetails.setConfirmpin(channelUsers.get("pin"));
+		msisdnDetails.setDescription("");
+		msisdnDetails.setIsprimary("Y");
+		msisdnDetails.setPhoneNo("");
+		msisdnDetails.setPin(channelUsers.get("pin"));
+		msisdnDetails.setStkProfile(_masterVO.getProperty("domainCode"));
+		List<Msisdn> msisdn = new ArrayList<Msisdn>();
+		msisdn.add(msisdnDetails);
+		data.setMsisdn(msisdn);
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "User Registration failed.");
+		Assertion.assertEquals(message, "User Registration failed.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+
+	
+	
+	@Test(dataProvider = "userData" , priority = 4)
+	@TestManager(TestKey = "PRETUPS-004")
+	public void channelAdmin_ModifyChannelUser_AlphaMsisdn(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_AlphaMsisdn";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER04");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		Msisdn msisdnDetails = new Msisdn();
+		msisdnDetails.setConfirmpin(channelUsers.get("pin"));
+		msisdnDetails.setDescription("");
+		msisdnDetails.setIsprimary("Y");
+		msisdnDetails.setPhoneNo(new RandomGeneration().randomAlphaNumeric(10));
+		msisdnDetails.setPin(channelUsers.get("pin"));
+		msisdnDetails.setStkProfile(_masterVO.getProperty("domainCode"));
+		List<Msisdn> msisdn = new ArrayList<Msisdn>();
+		msisdn.add(msisdnDetails);
+		data.setMsisdn(msisdn);
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Invalid MSISDN");
+		Assertion.assertEquals(message, "Invalid MSISDN");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	
+	@Test(dataProvider = "userData" , priority = 5)
+	@TestManager(TestKey = "PRETUPS-005")
+	public void channelAdmin_ModifyChannelUser_BlankExtNumber(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankExtNumber";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER05");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setNewExternalcode("");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "User's EXTERNALCODE is either blank or length is more than allowed.");
+		Assertion.assertEquals(message, "User's EXTERNALCODE is either blank or length is more than allowed.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	@Test(dataProvider = "userData", priority = 6)
+	@TestManager(TestKey = "PRETUPS-006")
+	public void channelAdmin_ModifyChannelUser_SpecialCharExtNumber(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_SpecialCharExtNumber";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER06");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setNewExternalcode("@#%#$%#");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Special chars not allowed in external code.");
+		Assertion.assertEquals(message, "Special chars not allowed in external code.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+
+
+	
+	@Test(dataProvider = "userData", priority = 7)
+	@TestManager(TestKey = "PRETUPS-007")
+	public void channelAdmin_ModifyChannelUser_BlankEmailId(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankEmailId";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER07");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setEmailid("");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Email id is mandatory.");
+		Assertion.assertEquals(message, "Email id is mandatory.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	
+	@Test(dataProvider = "userData", priority = 8)
+	@TestManager(TestKey = "PRETUPS-008")
+	public void channelAdmin_ModifyChannelUser_InvalidEmailId(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_InvalidEmailId";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER08");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setEmailid(new RandomGeneration().randomAlphaNumeric(14));
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Invalid Email ID");
+		Assertion.assertEquals(message, "Invalid Email ID");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	@Test(dataProvider = "userData", priority = 9)
+	@TestManager(TestKey = "PRETUPS-009")
+	public void channelAdmin_ModifyChannelUser_BlankFirstName(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankFirstName";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER09");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setFirstName("");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "First Name is mandatory.");
+		Assertion.assertEquals(message, "First Name is mandatory.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	
+	@Test(dataProvider = "userData", priority = 10)
+	@TestManager(TestKey = "PRETUPS-010")
+	public void channelAdmin_ModifyChannelUser_BlankShortName(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ModifyChannelUser_BlankShortName";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMMODCHNLUSER10");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpData();
+		data.setShortName("");
+		channelAdminModifyChannelUserReqPojo.setData(data);
+		ChannelAdmin_ModifyChannelUserAPI channelAdminModifyChannelUserAPI = new ChannelAdmin_ModifyChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminModifyChannelUserAPI.setIdType("USERLOGIID");
+		channelAdminModifyChannelUserAPI.setIdValue(channelUsers.get("login_id"));
+		channelAdminModifyChannelUserAPI.addBodyParam(channelAdminModifyChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminModifyChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminModifyChannelUserAPI.setExpectedStatusCode(400);
+		channelAdminModifyChannelUserAPI.perform();
+		channelAdminModifyChannelUserResPojo = channelAdminModifyChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminModifyChannelUserResPojo.class);
+		String message = channelAdminModifyChannelUserResPojo.getMessage();
+		int statusCode = channelAdminModifyChannelUserResPojo.getStatus();
+		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(message, "Short Name is mandatory.");
+		Assertion.assertEquals(message, "Short Name is mandatory.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+}
+}

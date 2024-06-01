@@ -1,0 +1,1957 @@
+2022-07-04 13:06:02,656 [main] INFO com.classes.BaseTest - Loading all methods from -masterVO class
+2022-07-04 13:06:02,659 [main] INFO com.utils._masterVO - Loading Properties file from: .//src//test//resources//sysconfig//Constant.properties
+2022-07-04 13:06:02,662 [main] INFO com.utils._masterVO - Properties File Loaded successfully
+2022-07-04 13:06:02,663 [main] INFO com.utils._masterVO - Loading Master Sheet from: src//test//resources//config//DataProvider.xlsx
+2022-07-04 13:06:03,140 [main] INFO com.utils._masterVO - Master Sheet Loaded successfully
+2022-07-04 13:06:03,144 [main] INFO com.utils._masterVO - Loading Client Library for Client Versioning from: .//src//test//resources//sysconfig//ClientLib.properties
+2022-07-04 13:06:03,156 [main] INFO com.utils._masterVO - Client Library Loaded successfully
+2022-07-04 13:06:03,678 [main] INFO com.utils._masterVO - Loading test case file file from: .//src//test//resources//sysconfig//testCaseFile.properties
+2022-07-04 13:06:03,694 [main] INFO com.utils._masterVO - Test cases file Loaded successfully
+2022-07-04 13:06:03,695 [main] INFO com.utils._masterVO - Loading Web Cases Master file from: .//src//test//resources//config//testCaseFile.properties
+2022-07-04 13:06:03,711 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-07-04 13:06:03,734 [main] INFO com.dbrepository.DBHandler - Entered Access Handler :: Oracle
+2022-07-04 13:06:03,736 [main] INFO com.commons.CacheController - New Cache DAO Loaded :: UPDATECACHE_VER = 1
+2022-07-04 13:06:03,737 [main] INFO com.dbrepository.OracleRepository - Entered getNetworkName(NG)
+2022-07-04 13:06:03,755 [MLog-Init-Reporter] INFO com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2022-07-04 13:06:03,807 [main] INFO com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2022-07-04 13:06:03,862 [main] INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge148ap1jj4c761iy8501|25bfcafd, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge148ap1jj4c761iy8501|25bfcafd, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:oracle:thin:@172.30.38.232:1526:test, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2022-07-04 13:06:05,023 [main] INFO com.dbrepository.OracleRepository - getNetworkName() :: select query: Select network_name from networks where network_code = ?
+2022-07-04 13:06:05,151 [main] INFO com.dbrepository.OracleRepository - Database Returns: Network Name (Network GGN)
+2022-07-04 13:06:05,152 [main] INFO com.dbrepository.OracleRepository - Exiting getNetworkName()
+2022-07-04 13:06:05,153 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(AMOUNT_MULT_FACTOR)
+2022-07-04 13:06:05,154 [main] INFO com.dbrepository.DBConnectionPool - Active Size:1 Cache Size:2
+2022-07-04 13:06:05,155 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:05,257 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (100)
+2022-07-04 13:06:05,258 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:05,259 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(MSISDN_PREFIX_LENGTH)
+2022-07-04 13:06:05,260 [main] INFO com.dbrepository.DBConnectionPool - Active Size:2 Cache Size:1
+2022-07-04 13:06:05,261 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:05,365 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (2)
+2022-07-04 13:06:05,366 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:05,367 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(MAX_MSISDN_LENGTH)
+2022-07-04 13:06:05,368 [main] INFO com.dbrepository.DBConnectionPool - Active Size:3 Cache Size:0
+2022-07-04 13:06:05,847 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:05,948 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (15)
+2022-07-04 13:06:05,949 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:05,950 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(USER_PRODUCT_MULTIPLE_WALLET)
+2022-07-04 13:06:05,951 [main] INFO com.dbrepository.DBConnectionPool - Active Size:4 Cache Size:0
+2022-07-04 13:06:05,966 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:06,068 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (false)
+2022-07-04 13:06:06,070 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:06,070 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(EXTERNAL_DATE_FORMAT)
+2022-07-04 13:06:06,071 [main] INFO com.dbrepository.DBConnectionPool - Active Size:5 Cache Size:1
+2022-07-04 13:06:06,072 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:06,180 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (dd/MM/yy)
+2022-07-04 13:06:06,181 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:06,182 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DATE_FORMAT_CAL_JAVA)
+2022-07-04 13:06:06,182 [main] INFO com.dbrepository.DBConnectionPool - Active Size:6 Cache Size:0
+2022-07-04 13:06:06,838 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:06,937 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (dd/MM/yy)
+2022-07-04 13:06:06,937 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:06,938 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(OTH_COM_CHNL)
+2022-07-04 13:06:06,939 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:8
+2022-07-04 13:06:06,940 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:07,055 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (false)
+2022-07-04 13:06:07,056 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:07,057 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DW_ALLOWED_GATEWAYS)
+2022-07-04 13:06:07,058 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-07-04 13:06:07,059 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:07,153 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (EXTGW,DWEXTGW)
+2022-07-04 13:06:07,154 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:07,155 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DEFAULT_LANGUAGE)
+2022-07-04 13:06:07,155 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-07-04 13:06:07,156 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:07,263 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (en)
+2022-07-04 13:06:07,264 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:07,265 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DEFAULT_COUNTRY)
+2022-07-04 13:06:07,266 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-07-04 13:06:07,267 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:06:07,360 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (US)
+2022-07-04 13:06:07,361 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:06:07,362 [main] INFO com.utils._masterVO - Display Locale set to: en_US
+2022-07-04 13:06:28,417 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:06:28,426 [main] INFO com.utils._masterVO - Loading Messages Resource properties File from: .//src//test//resources//sysconfig//English-2.properties
+2022-07-04 13:06:28,451 [main] INFO com.utils._masterVO - Messages Resource Properties file Loaded successfully
+2022-07-04 13:06:28,451 [main] INFO com.utils._masterVO - Loading Messages Resource properties File from: .//src//test//resources//sysconfig//C2S_English-2.properties
+2022-07-04 13:06:28,460 [main] INFO com.utils._masterVO - Messages Resource Properties file Loaded successfully
+2022-07-04 13:06:28,461 [main] INFO com.dbrepository.OracleRepository - Entered getGatewayDetails('EXTGW','USSD','SMSC')
+2022-07-04 13:06:28,461 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:06:28,463 [main] INFO com.dbrepository.OracleRepository - getGatewayDetails() :: select query: SELECT rmg.gateway_code, mg.gateway_type, rmg.login_id, rmg.PASSWORD, rmg.content_type, rmg.service_port, mg.req_password_plain FROM message_gateway mg, req_message_gateway rmg WHERE mg.gateway_code = rmg.gateway_code AND rmg.gateway_code IN ('EXTGW','USSD','SMSC')
+2022-07-04 13:06:28,565 [main] INFO com.dbrepository.OracleRepository - Database Returns: [[Ljava.lang.Object;@34645867[{{EXTGW,EXTGW,pretups,0971500a350af5c3d1c0b12221a0558c,XML,190,Y},{SMSC,SMSC,pretups,0971500a350af5c3d1c0b12221a0558c,PLAIN,190,Y},{USSD,USSD,pretups,0971500a350af5c3d1c0b12221a0558c,XML,190,Y}}]
+2022-07-04 13:06:28,566 [main] INFO com.dbrepository.OracleRepository - Exiting getGatewayDetails()
+2022-07-04 13:06:28,569 [main] INFO com.utils._APIUtil - Entered getAPIServices(EXTGW)
+2022-07-04 13:06:28,576 [main] INFO com.utils._APIUtil - Exiting getAPIServices([])
+2022-07-04 13:06:28,578 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-07-04 13:06:28,690 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,696 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,697 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,708 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,742 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,769 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,770 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,782 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,783 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,784 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,784 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,787 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,788 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,788 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,789 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,827 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,828 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,832 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,832 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,833 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,833 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,834 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,834 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,834 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,835 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,835 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,836 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,836 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,836 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,837 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,837 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,838 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,838 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,840 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,842 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,843 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,843 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,844 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,844 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,846 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,846 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,847 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,847 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:28,848 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:06:29,136 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-07-04 13:06:29,137 [main] INFO com.utils._APIUtil - Entered getAPIServices(USSD)
+2022-07-04 13:06:29,139 [main] INFO com.utils._APIUtil - Exiting getAPIServices([])
+2022-07-04 13:06:29,141 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-07-04 13:06:29,285 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-07-04 13:06:29,287 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-07-04 13:06:29,404 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-07-04 13:06:50,474 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:06:50,484 [main] INFO com.classes.BaseTest - Completed loading all methods from -masterVO class
+2022-07-04 13:08:26,567 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:26,680 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:26,729 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:26,832 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:26,882 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:26,920 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp.TestDataFeed1(PreRequisite_C2CBuy_Revamp.java:600)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-07-04 13:08:27,075 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(TRF_RULE_USER_LEVEL_ALLOW)
+2022-07-04 13:08:27,086 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:08:27,087 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-07-04 13:08:27,277 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (true)
+2022-07-04 13:08:27,279 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-07-04 13:08:27,289 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - ------------------ Test Case Execution Started For A_01_Test_C2CBuyMobileBuyerType -------------------
+2022-07-04 13:08:27,289 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - Entered A_01_Test_C2CBuyMobileBuyerType(Dealer, Super Distributor, 8964109634, 2468, Distributor, Root, AR, 1)
+2022-07-04 13:08:27,293 [main] INFO com.dbrepository.OracleRepository - Entered getPreference(DIST, NG, MAX_APPROVAL_LEVEL_C2C_TRANSFER)
+2022-07-04 13:08:27,298 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:08:27,389 [main] INFO com.dbrepository.OracleRepository - Service Class Preference Not Found
+2022-07-04 13:08:27,390 [main] INFO com.dbrepository.OracleRepository - Trying to get Preference value from Control Preferences
+2022-07-04 13:08:27,478 [main] INFO com.dbrepository.OracleRepository - Query Repository Returns: DEFAULT_VALUE (3)
+2022-07-04 13:08:27,528 [main] INFO com.utils.CommonUtils - Category Code for Dealer: SE
+2022-07-04 13:08:27,562 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Dealer)
+2022-07-04 13:08:27,564 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:08:27,565 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-07-04 13:08:27,656 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-07-04 13:08:27,658 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-07-04 13:08:27,693 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CBuyMobileBuyerType(Dealer, Super Distributor, 8964109634, 2468)
+2022-07-04 13:08:27,754 [main] INFO angular.classes.LoginRevamp - Login ID Found as: newdealusrr
+2022-07-04 13:08:27,756 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-07-04 13:08:27,758 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : newdealusrr
+2022-07-04 13:08:27,780 [main] INFO angular.classes.LoginRevamp - LoginID found as: newdealusrr
+2022-07-04 13:08:27,782 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-07-04 13:08:27,784 [main] INFO angular.classes.LoginRevamp - Username found as: dealuser
+2022-07-04 13:08:28,226 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:08:38,494 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:08:38,505 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:08:38,653 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-07-04 13:08:38,654 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:08:38,792 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-07-04 13:08:38,793 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:08:38,881 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:08:38,919 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:08:50,615 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Heading
+2022-07-04 13:08:50,695 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Heading Link.
+2022-07-04 13:08:50,697 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:08:50,700 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:08:55,534 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Single Operation Heading.
+2022-07-04 13:08:55,548 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Buy Heading
+2022-07-04 13:08:55,685 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Buy Heading.
+2022-07-04 13:08:55,687 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on Etopup
+2022-07-04 13:08:55,781 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked Etopup.
+2022-07-04 13:08:55,782 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select C2C Buyer Type
+2022-07-04 13:08:55,963 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Buyer Type selected : //ng-select[@id='searchBy']//ng-dropdown-panel[contains(@class,'ng-star-inserted')]//span[text()='Mobile Number']
+2022-07-04 13:08:55,964 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entering C2C MSISDN
+2022-07-04 13:08:56,086 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered C2C MSISDN : 8964109634
+2022-07-04 13:09:06,087 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on PROCEED button on C2C
+2022-07-04 13:09:08,201 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked PROCEED button on C2C.
+2022-07-04 13:09:08,210 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to initiate C2C Topups
+2022-07-04 13:09:08,342 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:09:08,343 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:09:08,345 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:09:08,396 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 2
+2022-07-04 13:09:08,398 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 2
+2022-07-04 13:09:08,491 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:09:08,493 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:09:08,542 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 1
+2022-07-04 13:09:08,543 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 1
+2022-07-04 13:09:08,544 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:09:08,545 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Quantities: 
+2022-07-04 13:09:08,670 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Reference Number
+2022-07-04 13:09:08,819 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered Remarks
+2022-07-04 13:09:08,820 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment mode : Cash
+2022-07-04 13:09:09,016 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Selected Payment Mode : Cash
+2022-07-04 13:09:09,017 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment Instrument Number
+2022-07-04 13:09:09,125 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstNum: 124231
+2022-07-04 13:09:09,127 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Date
+2022-07-04 13:09:09,128 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to enter Payment Instrument Date
+2022-07-04 13:09:09,277 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstDate: 04/07/22
+2022-07-04 13:09:09,278 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:09:09,371 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:09:10,474 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:09:10,475 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to Enter Channel User PIN for C2C
+2022-07-04 13:09:10,572 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PIN: 2468
+2022-07-04 13:09:10,574 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:09:10,658 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:09:11,765 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:09:11,767 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Buy Request Initiated Message
+2022-07-04 13:09:11,827 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Transfer Buy Initiated Message : Stock Purchase Request Initiated
+2022-07-04 13:09:11,830 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to get C2C Topups Done
+2022-07-04 13:09:11,938 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]/following-sibling::label]
+2022-07-04 13:09:11,969 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]/following-sibling::label]
+2022-07-04 13:09:11,971 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers -  C2C TOPUPS Done and Info Printed Above
+2022-07-04 13:09:16,977 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Purchase Transaction ID
+2022-07-04 13:09:17,038 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Purchase Transaction ID : CT220704.1301.100001
+2022-07-04 13:09:38,075 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:09:38,207 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to Click DONE button after C2C Purchase initiated
+2022-07-04 13:09:38,321 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked Done for Initiated C2C
+2022-07-04 13:09:38,323 [main] INFO angular.feature.C2CBuyRevamp - Exiting performC2CBuyMobileBuyerType
+2022-07-04 13:09:38,325 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CTransferMobileBuyerType(Super Distributor, Dealer, 2468)
+2022-07-04 13:09:38,362 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-07-04 13:09:38,363 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-07-04 13:09:38,364 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : suser
+2022-07-04 13:09:38,381 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-07-04 13:09:38,382 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-07-04 13:09:38,383 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-07-04 13:09:38,565 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:09:48,938 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:09:48,948 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:09:49,088 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-07-04 13:09:49,089 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:09:49,225 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-07-04 13:09:49,226 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:09:49,311 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:09:49,361 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:09:59,029 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Heading
+2022-07-04 13:09:59,123 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Heading Link.
+2022-07-04 13:09:59,124 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Approval Level 1 Heading
+2022-07-04 13:09:59,289 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Approval Level 1 Heading Link.
+2022-07-04 13:09:59,290 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:09:59,291 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner
+2022-07-04 13:10:01,458 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner to stop
+2022-07-04 13:10:03,674 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Spinner stopped
+2022-07-04 13:10:03,684 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:10:03,762 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Single Operation Heading.
+2022-07-04 13:10:03,763 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on etopUp Heading
+2022-07-04 13:10:03,840 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked eTopup Heading Link.
+2022-07-04 13:10:03,841 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the TransactionId
+2022-07-04 13:10:04,209 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:10:04,210 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:10:04,320 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:10:04,321 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the remarks
+2022-07-04 13:10:04,443 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:10:05,459 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:10:05,549 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:10:05,551 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the yes button
+2022-07-04 13:10:07,638 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Yes Button.
+2022-07-04 13:10:08,749 [main] INFO angular.pageobjects.c2capproval.C2CApproval - PopUP is visible.
+2022-07-04 13:10:08,751 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the Success Msg
+2022-07-04 13:10:08,789 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully Retrieved Success Msg
+2022-07-04 13:10:08,791 [main] INFO com.utils.Assertion - <pre><b>Expected: </b>Transaction Approved<br><b>Found: </b>Transaction Approved</pre>
+2022-07-04 13:10:08,929 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the TxndID
+2022-07-04 13:10:08,980 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully retrieved TxnId
+2022-07-04 13:10:30,027 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:10:30,037 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to click Done Button
+2022-07-04 13:10:30,130 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Done Button successfully clicked
+2022-07-04 13:10:30,131 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CTransferMobileBuyerType(Super Distributor, Dealer, 2468)
+2022-07-04 13:10:30,170 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-07-04 13:10:30,171 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-07-04 13:10:30,172 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : suser
+2022-07-04 13:10:30,194 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-07-04 13:10:30,195 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-07-04 13:10:30,196 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-07-04 13:10:30,421 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:10:40,764 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:10:40,774 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:10:40,916 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-07-04 13:10:40,917 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:10:41,068 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-07-04 13:10:41,069 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:10:41,160 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:10:41,208 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:10:50,798 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Heading
+2022-07-04 13:10:50,940 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Heading Link.
+2022-07-04 13:10:50,941 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Approval Level 2 Heading
+2022-07-04 13:10:51,028 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Approval Level 2 Heading Link.
+2022-07-04 13:10:51,029 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:10:51,030 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner
+2022-07-04 13:10:51,098 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner to stop
+2022-07-04 13:10:52,738 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Spinner stopped
+2022-07-04 13:10:52,739 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:10:52,826 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Single Operation Heading.
+2022-07-04 13:10:52,827 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on etopUp Heading
+2022-07-04 13:10:52,900 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked eTopup Heading Link.
+2022-07-04 13:10:52,902 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the TransactionId
+2022-07-04 13:10:53,246 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:10:53,248 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:10:53,363 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:10:53,364 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the remarks
+2022-07-04 13:10:53,488 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:10:54,491 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:10:54,573 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:10:54,574 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the yes button
+2022-07-04 13:10:56,687 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Yes Button.
+2022-07-04 13:10:57,797 [main] INFO angular.pageobjects.c2capproval.C2CApproval - PopUP is visible.
+2022-07-04 13:10:57,798 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the Success Msg
+2022-07-04 13:10:57,839 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully Retrieved Success Msg
+2022-07-04 13:10:57,840 [main] INFO com.utils.Assertion - <pre><b>Expected: </b>Transaction Approved<br><b>Found: </b>Transaction Approved</pre>
+2022-07-04 13:10:57,952 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the TxndID
+2022-07-04 13:10:57,995 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully retrieved TxnId
+2022-07-04 13:11:19,036 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:11:19,046 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to click Done Button
+2022-07-04 13:11:19,138 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Done Button successfully clicked
+2022-07-04 13:11:19,139 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CTransferMobileBuyerType(Super Distributor, Dealer, 2468)
+2022-07-04 13:11:19,184 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-07-04 13:11:19,185 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-07-04 13:11:19,186 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : suser
+2022-07-04 13:11:19,205 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-07-04 13:11:19,206 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-07-04 13:11:19,208 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-07-04 13:11:19,415 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:11:29,825 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:11:29,835 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:11:29,978 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-07-04 13:11:29,979 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:11:30,113 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-07-04 13:11:30,114 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:11:30,205 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:11:30,253 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:11:39,838 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Heading
+2022-07-04 13:11:39,925 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Heading Link.
+2022-07-04 13:11:39,927 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Approval Level 3 Heading
+2022-07-04 13:11:40,063 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Approval Level 3 Heading Link.
+2022-07-04 13:11:40,065 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:11:40,066 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner
+2022-07-04 13:11:40,123 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner to stop
+2022-07-04 13:11:41,774 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Spinner stopped
+2022-07-04 13:11:41,775 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:11:41,862 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Single Operation Heading.
+2022-07-04 13:11:41,863 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on etopUp Heading
+2022-07-04 13:11:41,939 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked eTopup Heading Link.
+2022-07-04 13:11:41,941 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the TransactionId
+2022-07-04 13:11:42,278 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:11:42,279 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:11:42,385 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:11:42,387 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the remarks
+2022-07-04 13:11:42,508 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:11:43,521 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:11:43,604 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:11:43,606 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the yes button
+2022-07-04 13:11:45,705 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Yes Button.
+2022-07-04 13:11:46,805 [main] INFO angular.pageobjects.c2capproval.C2CApproval - PopUP is visible.
+2022-07-04 13:11:46,806 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the Success Msg
+2022-07-04 13:11:46,849 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully Retrieved Success Msg
+2022-07-04 13:11:46,851 [main] INFO com.utils.Assertion - <pre><b>Expected: </b>Transaction Approved<br><b>Found: </b>Transaction Approved</pre>
+2022-07-04 13:11:47,022 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the TxndID
+2022-07-04 13:11:47,063 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully retrieved TxnId
+2022-07-04 13:12:08,116 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:12:08,126 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to click Done Button
+2022-07-04 13:12:08,222 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Done Button successfully clicked
+2022-07-04 13:12:08,224 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp -  -----------------  Test Case Execution completed for A_01_Test_C2CBuyMobileBuyerType -----------------
+2022-07-04 13:12:08,535 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - ------------------ Test Case Execution Started For A_01_Test_C2CBuyMobileBuyerType -------------------
+2022-07-04 13:12:08,535 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - Entered A_01_Test_C2CBuyMobileBuyerType(Agent, Super Distributor, 8964109634, 2468, Distributor, Root, AR, 1)
+2022-07-04 13:12:08,537 [main] INFO com.dbrepository.OracleRepository - Entered getPreference(DIST, NG, MAX_APPROVAL_LEVEL_C2C_TRANSFER)
+2022-07-04 13:12:08,540 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:12:08,631 [main] INFO com.dbrepository.OracleRepository - Service Class Preference Not Found
+2022-07-04 13:12:08,632 [main] INFO com.dbrepository.OracleRepository - Trying to get Preference value from Control Preferences
+2022-07-04 13:12:08,723 [main] INFO com.dbrepository.OracleRepository - Query Repository Returns: DEFAULT_VALUE (3)
+2022-07-04 13:12:08,760 [main] INFO com.utils.CommonUtils - Category Code for Agent: AG
+2022-07-04 13:12:08,786 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Agent)
+2022-07-04 13:12:08,788 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:12:08,790 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-07-04 13:12:08,888 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-07-04 13:12:08,891 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-07-04 13:12:08,893 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CBuyMobileBuyerType(Agent, Super Distributor, 8964109634, 2468)
+2022-07-04 13:12:08,931 [main] INFO angular.classes.LoginRevamp - Login ID Found as: agusernew
+2022-07-04 13:12:08,933 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-07-04 13:12:08,934 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : agusernew
+2022-07-04 13:12:08,953 [main] INFO angular.classes.LoginRevamp - LoginID found as: agusernew
+2022-07-04 13:12:08,956 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-07-04 13:12:08,958 [main] INFO angular.classes.LoginRevamp - Username found as: agentuser
+2022-07-04 13:12:09,171 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:12:19,541 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:12:19,551 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:12:19,709 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: agusernew
+2022-07-04 13:12:19,711 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:12:19,856 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-07-04 13:12:19,858 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:12:19,946 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:12:19,992 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:12:28,090 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Heading
+2022-07-04 13:12:28,170 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Heading Link.
+2022-07-04 13:12:28,172 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:12:28,174 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:12:28,318 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Single Operation Heading.
+2022-07-04 13:12:28,319 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Buy Heading
+2022-07-04 13:12:28,448 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Buy Heading.
+2022-07-04 13:12:28,449 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on Etopup
+2022-07-04 13:12:28,544 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked Etopup.
+2022-07-04 13:12:28,545 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select C2C Buyer Type
+2022-07-04 13:12:28,742 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Buyer Type selected : //ng-select[@id='searchBy']//ng-dropdown-panel[contains(@class,'ng-star-inserted')]//span[text()='Mobile Number']
+2022-07-04 13:12:28,743 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entering C2C MSISDN
+2022-07-04 13:12:28,851 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered C2C MSISDN : 8964109634
+2022-07-04 13:12:38,866 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on PROCEED button on C2C
+2022-07-04 13:12:40,970 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked PROCEED button on C2C.
+2022-07-04 13:12:40,980 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to initiate C2C Topups
+2022-07-04 13:12:41,113 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:12:41,115 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:12:41,116 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:12:41,167 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 2
+2022-07-04 13:12:41,168 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 2
+2022-07-04 13:12:41,262 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:12:41,264 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:12:41,309 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 1
+2022-07-04 13:12:41,310 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 1
+2022-07-04 13:12:41,312 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:12:41,313 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Quantities: 
+2022-07-04 13:12:41,431 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Reference Number
+2022-07-04 13:12:41,619 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered Remarks
+2022-07-04 13:12:41,620 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment mode : Cash
+2022-07-04 13:12:41,818 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Selected Payment Mode : Cash
+2022-07-04 13:12:41,819 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment Instrument Number
+2022-07-04 13:12:41,924 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstNum: 124231
+2022-07-04 13:12:41,926 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Date
+2022-07-04 13:12:41,928 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to enter Payment Instrument Date
+2022-07-04 13:12:42,088 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstDate: 04/07/22
+2022-07-04 13:12:42,089 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:12:42,188 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:12:43,297 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:12:43,299 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to Enter Channel User PIN for C2C
+2022-07-04 13:12:43,397 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PIN: 2468
+2022-07-04 13:12:43,398 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:12:43,495 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:12:44,609 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:12:44,611 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Buy Request Initiated Message
+2022-07-04 13:12:44,667 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Transfer Buy Initiated Message : Stock Purchase Request Initiated
+2022-07-04 13:12:44,669 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to get C2C Topups Done
+2022-07-04 13:12:44,783 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]/following-sibling::label]
+2022-07-04 13:12:44,815 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]/following-sibling::label]
+2022-07-04 13:12:44,817 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers -  C2C TOPUPS Done and Info Printed Above
+2022-07-04 13:12:49,834 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Purchase Transaction ID
+2022-07-04 13:12:49,900 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Purchase Transaction ID : CT220704.1304.100001
+2022-07-04 13:13:10,947 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:13:11,114 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to Click DONE button after C2C Purchase initiated
+2022-07-04 13:13:11,246 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked Done for Initiated C2C
+2022-07-04 13:13:11,248 [main] INFO angular.feature.C2CBuyRevamp - Exiting performC2CBuyMobileBuyerType
+2022-07-04 13:13:11,249 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CTransferMobileBuyerType(Super Distributor, Agent, 2468)
+2022-07-04 13:13:11,292 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-07-04 13:13:11,293 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-07-04 13:13:11,294 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : suser
+2022-07-04 13:13:11,315 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-07-04 13:13:11,315 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-07-04 13:13:11,318 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-07-04 13:13:11,827 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:13:22,018 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:13:22,030 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:13:22,172 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-07-04 13:13:22,174 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:13:22,309 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-07-04 13:13:22,310 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:13:22,399 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:13:22,447 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:13:32,059 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Heading
+2022-07-04 13:13:32,136 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Heading Link.
+2022-07-04 13:13:32,138 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Approval Level 1 Heading
+2022-07-04 13:13:32,273 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Approval Level 1 Heading Link.
+2022-07-04 13:13:32,274 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:13:32,275 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner
+2022-07-04 13:13:32,326 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner to stop
+2022-07-04 13:13:35,191 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Spinner stopped
+2022-07-04 13:13:35,201 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:13:35,277 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Single Operation Heading.
+2022-07-04 13:13:35,278 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on etopUp Heading
+2022-07-04 13:13:35,354 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked eTopup Heading Link.
+2022-07-04 13:13:35,355 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the TransactionId
+2022-07-04 13:13:35,745 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:13:35,747 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:13:35,844 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:13:35,846 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to enter the remarks
+2022-07-04 13:13:35,969 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Entered the TransactionId
+2022-07-04 13:13:36,983 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the approve button
+2022-07-04 13:13:37,066 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Approve Button	.
+2022-07-04 13:13:37,068 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to Click the yes button
+2022-07-04 13:13:39,156 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked Yes Button.
+2022-07-04 13:13:40,267 [main] INFO angular.pageobjects.c2capproval.C2CApproval - PopUP is visible.
+2022-07-04 13:13:40,268 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the Success Msg
+2022-07-04 13:13:40,308 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully Retrieved Success Msg
+2022-07-04 13:13:40,310 [main] INFO com.utils.Assertion - <pre><b>Expected: </b>Transaction Approved<br><b>Found: </b>Transaction Approved</pre>
+2022-07-04 13:13:40,427 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to get the TxndID
+2022-07-04 13:13:40,468 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Successfully retrieved TxnId
+2022-07-04 13:14:01,500 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:14:01,512 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying to click Done Button
+2022-07-04 13:14:01,603 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Done Button successfully clicked
+2022-07-04 13:14:01,604 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CTransferMobileBuyerType(Super Distributor, Agent, 2468)
+2022-07-04 13:14:01,647 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-07-04 13:14:01,648 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-07-04 13:14:01,649 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : suser
+2022-07-04 13:14:01,675 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-07-04 13:14:01,676 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-07-04 13:14:01,677 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-07-04 13:14:01,894 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:14:12,232 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:14:12,243 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:14:12,384 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-07-04 13:14:12,385 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:14:12,520 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-07-04 13:14:12,521 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:14:12,608 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:14:12,657 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:14:22,292 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Heading
+2022-07-04 13:14:22,360 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Heading Link.
+2022-07-04 13:14:22,361 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Approval Level 2 Heading
+2022-07-04 13:14:22,508 [main] INFO angular.pageobjects.c2capproval.C2CApproval - User clicked C2C Approval Level 2 Heading Link.
+2022-07-04 13:14:22,509 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:14:22,510 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner
+2022-07-04 13:14:22,557 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Waiting for spinner to stop
+2022-07-04 13:14:24,219 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Spinner stopped
+2022-07-04 13:14:24,220 [main] INFO angular.pageobjects.c2capproval.C2CApproval - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:14:25,303 [main] INFO com.classes.BaseTest - org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="mat-button-toggle-button mat-focus-indicator" type="button" id="toggle-1-button" tabindex="0" aria-pressed="true" name="mat-button-toggle-group-2">...</button> is not clickable at point (312, 114). Other element would receive the click: <div _ngcontent-ivg-c3="" class="overlay ng-tns-c3-13 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating" style="background-color: rgba(0, 0, 0, 0.5); z-index: 99999; position: fixed;">...</div>
+  (Session info: chrome=103.0.5060.66)
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MCKL-20005142', ip: '192.168.1.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_291'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.66, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\SOURAB~1.AWA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:53096}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f9b5ed0c68e19bb8fe7619cbd7b0bea
+2022-07-04 13:14:46,325 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-07-04 13:14:46,615 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - ------------------ Test Case Execution Started For A_01_Test_C2CBuyMobileBuyerType -------------------
+2022-07-04 13:14:46,615 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_C2CBuy_Revamp - Entered A_01_Test_C2CBuyMobileBuyerType(Agent, Dealer, 9081573214, 2468, Distributor, Super Distributor, SA, 2)
+2022-07-04 13:14:46,616 [main] INFO com.dbrepository.OracleRepository - Entered getPreference(SE, NG, MAX_APPROVAL_LEVEL_C2C_TRANSFER)
+2022-07-04 13:14:46,620 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:14:46,707 [main] INFO com.dbrepository.OracleRepository - Service Class Preference Not Found
+2022-07-04 13:14:46,708 [main] INFO com.dbrepository.OracleRepository - Trying to get Preference value from Control Preferences
+2022-07-04 13:14:46,795 [main] INFO com.dbrepository.OracleRepository - Query Repository Returns: DEFAULT_VALUE (3)
+2022-07-04 13:14:46,830 [main] INFO com.utils.CommonUtils - Category Code for Agent: AG
+2022-07-04 13:14:46,850 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Agent)
+2022-07-04 13:14:46,851 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-07-04 13:14:46,853 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-07-04 13:14:46,944 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-07-04 13:14:46,946 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-07-04 13:14:46,947 [main] INFO angular.feature.C2CBuyRevamp - Entered performC2CBuyMobileBuyerType(Agent, Dealer, 9081573214, 2468)
+2022-07-04 13:14:46,979 [main] INFO angular.classes.LoginRevamp - Login ID Found as: agusernew
+2022-07-04 13:14:46,980 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-07-04 13:14:46,981 [main] INFO angular.feature.C2CBuyRevamp - LOGINID : agusernew
+2022-07-04 13:14:46,998 [main] INFO angular.classes.LoginRevamp - LoginID found as: agusernew
+2022-07-04 13:14:46,999 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-07-04 13:14:47,000 [main] INFO angular.classes.LoginRevamp - Username found as: agentuser
+2022-07-04 13:14:47,206 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-07-04 13:14:57,568 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-07-04 13:14:57,580 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-07-04 13:14:57,720 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: agusernew
+2022-07-04 13:14:57,722 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-07-04 13:14:57,861 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-07-04 13:14:57,863 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-07-04 13:14:57,955 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-07-04 13:14:58,001 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-07-04 13:15:06,538 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Heading
+2022-07-04 13:15:06,622 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Heading Link.
+2022-07-04 13:15:06,623 [main] INFO angular.feature.C2CBuyRevamp - C2C Heading and Transaction Heading is clicked
+2022-07-04 13:15:06,625 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Single Operation Heading
+2022-07-04 13:15:06,785 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Single Operation Heading.
+2022-07-04 13:15:06,786 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C Buy Heading
+2022-07-04 13:15:06,914 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User clicked C2C Buy Heading.
+2022-07-04 13:15:06,916 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on Etopup
+2022-07-04 13:15:07,009 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked Etopup.
+2022-07-04 13:15:07,011 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select C2C Buyer Type
+2022-07-04 13:15:07,213 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Buyer Type selected : //ng-select[@id='searchBy']//ng-dropdown-panel[contains(@class,'ng-star-inserted')]//span[text()='Mobile Number']
+2022-07-04 13:15:07,214 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entering C2C MSISDN
+2022-07-04 13:15:07,336 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered C2C MSISDN : 9081573214
+2022-07-04 13:15:17,341 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on PROCEED button on C2C
+2022-07-04 13:15:19,441 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked PROCEED button on C2C.
+2022-07-04 13:15:19,453 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to initiate C2C Topups
+2022-07-04 13:15:19,584 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:15:19,585 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:15:19,587 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:15:19,640 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 2
+2022-07-04 13:15:19,641 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 2
+2022-07-04 13:15:19,740 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - rowCount of c2c topups available on screen : 2
+2022-07-04 13:15:19,741 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : eTopUP
+2022-07-04 13:15:19,802 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - quantity : 3
+2022-07-04 13:15:19,804 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - String.valueOf(quantity) SEND KEYS : 3
+2022-07-04 13:15:19,806 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - sheetProductCode : PeTopUP
+2022-07-04 13:15:19,808 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Quantities: 
+2022-07-04 13:15:19,916 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Entered Reference Number
+2022-07-04 13:15:20,064 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered Remarks
+2022-07-04 13:15:20,066 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment mode : Cash
+2022-07-04 13:15:20,257 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Selected Payment Mode : Cash
+2022-07-04 13:15:20,258 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Payment Instrument Number
+2022-07-04 13:15:20,368 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstNum: 124231
+2022-07-04 13:15:20,369 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to select Date
+2022-07-04 13:15:20,371 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to enter Payment Instrument Date
+2022-07-04 13:15:20,521 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PaymentInstDate: 04/07/22
+2022-07-04 13:15:20,523 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:15:20,612 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:15:21,713 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:15:21,714 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to Enter Channel User PIN for C2C
+2022-07-04 13:15:21,811 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - User entered PIN: 2468
+2022-07-04 13:15:21,812 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying clicking on C2C TRANSFER button
+2022-07-04 13:15:21,897 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Clicked C2C Transfer Button
+2022-07-04 13:15:23,004 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - PIN PopUP is visible.
+2022-07-04 13:15:23,005 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Buy Request Initiated Message
+2022-07-04 13:15:23,062 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Transfer Buy Initiated Message : Stock Purchase Request Initiated
+2022-07-04 13:15:23,064 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Trying to get C2C Topups Done
+2022-07-04 13:15:23,177 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[1]/following-sibling::label]
+2022-07-04 13:15:23,208 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]] : [[ChromeDriver: chrome on WINDOWS (3f9b5ed0c68e19bb8fe7619cbd7b0bea)] -> xpath: (//label[@class='labelposPrd'])[2]/following-sibling::label]
+2022-07-04 13:15:23,209 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers -  C2C TOPUPS Done and Info Printed Above
+2022-07-04 13:15:28,223 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - Fetching C2C Purchase Transaction ID
+2022-07-04 13:15:28,289 [main] INFO angular.pageobjects.c2ctransfer.C2CTransfers - C2C Purchase Transaction ID : CT220704.1307.100001

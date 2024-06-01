@@ -1,0 +1,2630 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 4, 2022 11:41:19 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='91.667%'><span class='strong'>22</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='8.333%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.569%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='98.431%'>251</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]FOC_APPROVAL</span>
+						<span class='test-time'>Mar 4, 2022 11:41:25 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 4, 2022 11:41:25 AM</span>
+	<span class='label end-time'>Mar 4, 2022 11:42:41 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 16s+259ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:25 AM</span>
+						<span class='node-duration'>0h 0m 2s+831ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:26 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzODE5LjEyOS44MDYxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzg5OSwianRpIjoiNWFlNzk5MDctNDZkOC00MThlLTk0M2EtNzIwZDI4OGY5M2U5In0.9uAOC7TvY8vq1sAGf6lBfspa-9B3KGgfaYb1XPoPxug","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzODE5LjEyOS44MDYxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzg5OSwianRpIjoiZmMzNTAxN2ItYmRkZi00OWNmLTkyOWQtNzE1OWE2YjVmOWQ5In0.r5_i8cvr1eVt3K93PsOgJ0-LtBDbvhVUObZyrWtkimE","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374287946.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374287946.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:27 AM</span>
+						<span class='node-duration'>0h 0m 1s+347ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:27 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:28 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1138.100001.","errorMap":null,"transactionId":"OT220304.1138.100001"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:29 AM</span>
+						<span class='node-duration'>0h 0m 21s+833ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:29 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:41:30 AM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.FOCInitiateAndApproval.A_01_Test_success(FOCInitiateAndApproval.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:41:51 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:41:51 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646374311575.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374311575.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:52 AM</span>
+						<span class='node-duration'>0h 0m 0s+676ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzODQ0LjE2OS4yNDkiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2MzkzOTI0LCJqdGkiOiI1NzM4MzE5Mi0xZDRhLTRkZWItODQ1ZS1mOGM5NWUwNzk0YzAifQ._HI_ek1QuudaF7Lm9UTJWIhj1gFyNHdfZPsW29l97pA","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzODQ0LjE2OS4yNDkiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2MzkzOTI0LCJqdGkiOiI3NzlmOTdkNi1hYzhiLTQ1ZGYtOWY4OS1hM2E1MDM5M2YwNTQifQ.QIP1lqQH1p7ZTovsHICsteNmBrTNYAyYwBnmxsXi7AY","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374312769.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374312769.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:52 AM</span>
+						<span class='node-duration'>0h 0m 0s+612ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:52 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1138.100002.","errorMap":null,"transactionId":"OT220304.1138.100002"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</div>						
+						<span class='node-time'>Mar 4, 2022 11:41:53 AM</span>
+						<span class='node-duration'>0h 0m 22s+304ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:41:53 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:41:54 AM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.FOCInitiateAndApproval.A_01_Test_success(FOCInitiateAndApproval.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>select USER_NAME from users where LOGIN_ID = 'AUT_60804'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:15 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646374335416.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374335416.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:16 AM</span>
+						<span class='node-duration'>0h 0m 0s+667ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:16 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTA4Ljk3OC4yMzA2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk0OCwianRpIjoiNzIzZTJkYTEtOWE4Mi00MTJhLWEzOTYtNWQ5Nzc0ZTNkZTViIn0.T7q9gjB-noYYTUI4LjelAc7YL_M19RN9mUKc2eyUzbI","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTA4Ljk3OC4yMzA2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk0OCwianRpIjoiNmM5Y2RlNjEtM2IxNS00OGUxLWI1MmItYzgzNWYwMzZmNGVhIn0.MR_RHBHGY-EDarmxVM9swvIhetnBgzQduVnXOH8Q1_A","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374337564.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374337564.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:17 AM</span>
+						<span class='node-duration'>0h 0m 0s+592ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:17 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100001.","errorMap":null,"transactionId":"OT220304.1139.100001"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV2: To check if foc approval is not working successfully if txn id is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:18 AM</span>
+						<span class='node-duration'>0h 0m 0s+976ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:18 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374339136.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374339136.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:19 AM</span>
+						<span class='node-duration'>0h 0m 0s+657ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTExLjMxMy42NTIzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1MSwianRpIjoiNDk3MDgyNTUtZDFkMS00YWQ3LWFhNDEtOWI2N2VhOWZjYTJhIn0.FG0GIdSUROojeVTj3YA51iMXO698kxDA6sZJxnWsKfo","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTExLjMxMy42NTIzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1MSwianRpIjoiMTFmZWE3NWItOTc1NS00Yjg2LWE3ZDUtOTdkODcxYzg4N2MzIn0.fRA_n2pERL7Zr02YmAGpLit82-B3uThqPc2kuC_MFVA","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374339886.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374339886.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:19 AM</span>
+						<span class='node-duration'>0h 0m 0s+587ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:19 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100002.","errorMap":null,"transactionId":"OT220304.1139.100002"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV2: To check if foc approval is not working successfully if txn id is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:20 AM</span>
+						<span class='node-duration'>0h 0m 1s+313ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:20 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374341470.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374341470.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>select USER_NAME from users where LOGIN_ID = 'AUT_60804'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:21 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:22 AM</span>
+						<span class='node-duration'>0h 0m 0s+643ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:22 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTE0Ljk2MC4zNDE5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1NCwianRpIjoiYmVjYzU2OWQtMWVjOS00OWEzLWI5NmQtN2QxMWZjMDcyZDRjIn0.zmS0XIUC39eslXaP2wAvMFwqtumm9N5hi-ZNsij98ls","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTE0Ljk2MC4zNDE5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1NCwianRpIjoiZGZjZmJhZmYtNThlYS00ZmQ5LTgwZjUtMjVlYTBlNzczYmU3In0.1AVfn0AK5l-c5pTdfMoO6SxMRjzB0Bt6dIyS-KzB0vc","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374343524.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374343524.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:23 AM</span>
+						<span class='node-duration'>0h 0m 0s+753ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:23 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100003.","errorMap":null,"transactionId":"OT220304.1139.100003"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV3: To check if foc approval is not working successfully if approval level is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:24 AM</span>
+						<span class='node-duration'>0h 0m 1s+225ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:24 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:25 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:25 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:25 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:25 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374345507.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374345507.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:25 AM</span>
+						<span class='node-duration'>0h 0m 5s+638ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:25 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:30 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTE3Ljk0NC42NjA0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1NywianRpIjoiMjAwZjMwMWYtNWE0NS00NzNmLThiODktYTJmOWY2M2YwZWU1In0.tzSxRZTssgkV3J8W6Yu9Wj-CnlZoQacaSM9CxJQbdP4","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTE3Ljk0NC42NjA0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk1NywianRpIjoiNzliYmY1MzQtZjI4MS00M2VlLWI2NjYtOGZlODE3MWFkMmNmIn0.jAxUSUQqdwqnOHam5_49SPctvWDd2rorbJARGtlHkYQ","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:30 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:30 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:31 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374351231.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374351231.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:31 AM</span>
+						<span class='node-duration'>0h 0m 1s+421ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:31 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:31 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100004.","errorMap":null,"transactionId":"OT220304.1139.100004"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV3: To check if foc approval is not working successfully if approval level is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:32 AM</span>
+						<span class='node-duration'>0h 0m 1s+262ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:32 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241230","errorMsg":"dd/MM/yyyy is empty or invalid."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374353680.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374353680.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>select USER_NAME from users where LOGIN_ID = 'AUT_60804'</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:33 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:35 AM</span>
+						<span class='node-duration'>0h 0m 2s+14ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:35 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:36 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTI3LjQxNi41MTQyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk2NywianRpIjoiZDU1ZjFjZGYtYTU5Ny00NWFkLTlmNjgtYzJmODRmNGE4YmZjIn0.yY9gB2wIwaSSj_V0hBMkE6E8aFgMDWmWFk50tGrMlZs","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTI3LjQxNi41MTQyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk2NywianRpIjoiNDgwYjE3ZjMtODg1ZS00MTU5LTljNTYtYzNmYTlmMTQxMjUxIn0.XBNreT5_6zYEH98uZhAcPdcWnS6rdEbDnIxivyE6pyM","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:36 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:36 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374357037.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374357037.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:37 AM</span>
+						<span class='node-duration'>0h 0m 1s+74ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:37 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100005.","errorMap":null,"transactionId":"OT220304.1139.100005"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV4: To check if foc approval is not working successfully if toMsisdn is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:38 AM</span>
+						<span class='node-duration'>0h 0m 0s+976ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241193","errorMsg":"Invalid receiver's msisdn 12345."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:38 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374359100.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374359100.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='23'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:39 AM</span>
+						<span class='node-duration'>0h 0m 0s+635ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTMxLjI3MC41NjY2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk3MSwianRpIjoiYTE0M2UyYTktYjExOC00NGIyLWFiMWItNmFkMWU5ZjUzOTdlIn0.F0pmKp15CprrmI7rq04cyoqCpf57gOY2U2sQVnCwnLE","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzA0MTEzOTMxLjI3MC41NjY2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjM5Mzk3MSwianRpIjoiNThkODdjYWQtMjBkNS00MmE2LWEzMWQtNWVlODBlN2IyNGI5In0.-lFcUVrdoOoIDUhaLjm3O8XNtCbEGLgTv0isMytNfP8","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374359819.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374359819.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCINI1: To Check if foc request is working successfully for valid data or not.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:39 AM</span>
+						<span class='node-duration'>0h 0m 0s+567ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:39 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapiv1/foc/focInitiate</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>{"service":"FOCRESP","referenceId":null,"status":"200","messageCode":"200","message":"1 out of 1 record(s) processed successfully","errorMap":{"masterErrorList":null,"rowErrorMsgLists":null},"successList":[{"status":200,"messageCode":"241129","message":"Transfer request has been successfully initiated with transaction ID OT220304.1139.100006.","errorMap":null,"transactionId":"OT220304.1139.100006"}]}</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='25'>
+					<div class='collapsible-header'>
+						<div class='node-name'>FOCAPPRV4: To check if foc approval is not working successfully if toMsisdn is not valid for Super Channel Admin.</div>						
+						<span class='node-time'>Mar 4, 2022 11:42:40 AM</span>
+						<span class='node-duration'>0h 0m 0s+987ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/focApproval</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'>{"service":"focApproval","referenceId":null,"status":"400","messageCode":null,"message":"All records contain error.","errorMap":{"masterErrorList":null,"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":null,"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":null,"rowName":null,"masterErrorList":[{"errorCode":"241193","errorMsg":"Invalid receiver's msisdn 12345."}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>400<br><b>Found: </b>400</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:40 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:42:41 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646374361367.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646374361367.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>22</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 22</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 4, 2022 11:41:25 AM</td>
+										<td class='linked' test-id='2'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:41:27 AM</td>
+										<td class='linked' test-id='3'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:41:29 AM</td>
+										<td class='linked' test-id='4'>[REST]FOC_APPROVAL.FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:41:52 AM</td>
+										<td class='linked' test-id='5'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:41:52 AM</td>
+										<td class='linked' test-id='6'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:41:53 AM</td>
+										<td class='linked' test-id='7'>[REST]FOC_APPROVAL.FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:16 AM</td>
+										<td class='linked' test-id='8'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:17 AM</td>
+										<td class='linked' test-id='9'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:18 AM</td>
+										<td class='linked' test-id='10'>[REST]FOC_APPROVAL.FOCAPPRV2: To check if foc approval is not working successfully if txn id is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:19 AM</td>
+										<td class='linked' test-id='11'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:19 AM</td>
+										<td class='linked' test-id='12'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:20 AM</td>
+										<td class='linked' test-id='13'>[REST]FOC_APPROVAL.FOCAPPRV2: To check if foc approval is not working successfully if txn id is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:22 AM</td>
+										<td class='linked' test-id='14'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:23 AM</td>
+										<td class='linked' test-id='15'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:24 AM</td>
+										<td class='linked' test-id='16'>[REST]FOC_APPROVAL.FOCAPPRV3: To check if foc approval is not working successfully if approval level is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:25 AM</td>
+										<td class='linked' test-id='17'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:31 AM</td>
+										<td class='linked' test-id='18'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:32 AM</td>
+										<td class='linked' test-id='19'>[REST]FOC_APPROVAL.FOCAPPRV3: To check if foc approval is not working successfully if approval level is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:35 AM</td>
+										<td class='linked' test-id='20'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:37 AM</td>
+										<td class='linked' test-id='21'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:38 AM</td>
+										<td class='linked' test-id='22'>[REST]FOC_APPROVAL.FOCAPPRV4: To check if foc approval is not working successfully if toMsisdn is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:39 AM</td>
+										<td class='linked' test-id='23'>[REST]FOC_APPROVAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:39 AM</td>
+										<td class='linked' test-id='24'>[REST]FOC_APPROVAL.FOCINI1: To Check if foc request is working successfully for valid data or not.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 4, 2022 11:42:40 AM</td>
+										<td class='linked' test-id='25'>[REST]FOC_APPROVAL.FOCAPPRV4: To check if foc approval is not working successfully if toMsisdn is not valid for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 4, 2022 11:41:29 AM</td>
+                                                        <td class='linked' test-id='4'>[REST]FOC_APPROVAL.FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.FOCInitiateAndApproval.A_01_Test_success(FOCInitiateAndApproval.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 4, 2022 11:41:53 AM</td>
+                                                        <td class='linked' test-id='7'>[REST]FOC_APPROVAL.FOCAPPRV1: To check if Super Channel Admin can transfer FOC of amount to channel user Super Distributor successfully.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [400] but found [200]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at restassuredapi.test.FOCInitiateAndApproval.A_01_Test_success(FOCInitiateAndApproval.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>24</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>255</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 4, 2022 11:41:19 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 4, 2022 11:42:41 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>81,645ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>22</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 22,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				
+				passChild: 0,
+				failChild: 4,
+				fatalChild: 0,
+				errorChild: 2,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 249,
+				exceptionsChild: 6,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

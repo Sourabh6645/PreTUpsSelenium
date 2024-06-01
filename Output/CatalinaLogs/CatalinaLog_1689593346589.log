@@ -1,0 +1,1001 @@
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1426)
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1331)
+	at org.jacoco.agent.rt.internal_932a715.asm.MethodWriter.visitMaxs(MethodWriter.java:1475)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readCode(ClassReader.java:1554)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readMethod(ClassReader.java:1017)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:693)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:506)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.toByteArray(ClassWriter.java:995)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:84)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:101)
+	... 77 more
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:40:41.478
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b471e2332e54baf79d2b6fe1045081a5c1284e8b489ff549c93a3612a273f28a008a7217fbdccdd41125e36f18b95a9c3b21d7c76d9f123d8e2efd605591b50c33d8e70cf6f94a2f4234467ee1723db42e903035892388fb48db17ed6d2a25a4212bc4ef68ecb24eb71c0e5113644d96ee5f097e4b1719a874e72c607f2a5c88a1b94ae1669e1e00293025fc8abd51be887ca2d66a35ea3b15c8c79bc30bac463ddc9c6b925d166669e4251ef1c280468f53c7c83e636715118e1bb0edb6a6fbd4d6ff00b53934ddec.cf3f7c9c1aec823a41d5a0814e1048e3edaca0187e4f3092d9d9985695f7bb26, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b471e2332e54baf79d2b6fe1045081a5c1284e8b489ff549c93a3612a273f28a008a7217fbdccdd41125e36f18b95a9c3b21d7c76d9f123d8e2efd605591b50c33d8e70cf6f94a2f4234467ee1723db42e903035892388fb48db17ed6d2a25a4212bc4ef68ecb24eb7cb096fba51ce87a34af7bb4a6d5f97223d122582b07622bba03dda677e1f6ff5c1e8354a0a863839bc1c6d965638137e389fee2f2e718172132a9eed84e861f313b6535a0d5aa4b3ac32d390a062262ad79c2185b3a7ae3ebb185386e81e2b2c.a3e494387d6dc462e4f073ce7e17696aaf3fd8844ca5ce62334ac81d84b83fdc, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:43:30.65
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4312e21be02634ccbe045986cf996fb42de0760b054ffaa73b2ad53684c8a20bad5d07d2249f406a7d8498de585d600dff865491f12e55c073e3bb0df3d35c82268c4ea2d79836279ec77fdff05c43af787b64114dcb02c57d4e08e7a84d3e61efd5ff94dc8b1da06f4b52141f1ab2f637b8a91a1015ff34d6614975bbeda0d9f1f9a6e7c5e7c9419f74601a14a1dd689253327c07a8c2dd8b95efd2df79acee0811100a10df4ead444ffa728fc9bb068fb815dd1afa9f3891e88a2b2e79c819a242f676cd372b524.9ab5c41b44af4f6d8d8e2e54910056aed9e8ad8d824ab89ca7c1f1e5abba842c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4312e21be02634ccbe045986cf996fb42de0760b054ffaa73b2ad53684c8a20bad5d07d2249f406a7d8498de585d600dff865491f12e55c073e3bb0df3d35c82268c4ea2d79836279ec77fdff05c43af787b64114dcb02c57d4e08e7a84d3e61efd5ff94dc8b1da0664f06feef14c37ee6487caff430604fa7d95b698694db8cd0ccef6c71eadaae1e03991acb829e47b3b3d446a3d4acc857439957f90ea120ab6fc82555f102d4ca4b6e7c22a90dd7e092ea8550adcd8a14a5fe303f282a62ffa83dbad2b5fb418.3fd30fba01a3f7f15660b4ef1f7b27573095787be71238065358301ce21ce3d2, status=200, messageCode=9020, message=Success]
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:44:23.482
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4c142c956ea8cb235a1fe6415b23076ae42207eaaebe0a7b7a3cdd44b2adebec19925e15f18827145806666ca2b941edd4c6f63ba93f862ca92730ddc24a669cee244d4cc2a220ce2d8d121217e67e53543e13625188386439eaea658a650638885df1e7b61c9bcb728d9a4fa36beb8ffc4a3979c3b1c1eda2d36b6881fe25ca82c0ea8d4bcaa943602f0106aacafbbe4430bdc4f97b4debe57859c609da5325828671829db68e9297fee53e4d03594bd147ab531c147e2e2875b3d1bd1d2942590d459ad8fb57f39.3250fbc9a52a3e86a84c0e00815cba668cc2e6b37cff5c866933a2f068c7d622, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4c142c956ea8cb235a1fe6415b23076ae42207eaaebe0a7b7a3cdd44b2adebec19925e15f18827145806666ca2b941edd4c6f63ba93f862ca92730ddc24a669cee244d4cc2a220ce2d8d121217e67e53543e13625188386439eaea658a650638885df1e7b61c9bcb75a09c0660f98174b57013edf60a2350bbc43a56610e451e1ad9411b1f574e983bb3335f819e5813ff092ddc06a17b6d85b7c381dd937906da9ef51a13ff55468151ffb14f926ed5eeb430f038963bc9ce3f764518dd38bfebc83bfb66aa36fa4.983915c43b4f29e154f66c5424119e50d60f2965d7696c477de650cbcd791054, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting class org/apache/jsp/jsp/user/addOperatorUser_jsp.
+	at org.jacoco.agent.rt.internal_932a715.CoverageTransformer.transform(CoverageTransformer.java:86)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:128)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:59)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:159)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:193)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:414)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1056)
+	at org.apache.struts.action.RequestProcessor.processForwardConfig(RequestProcessor.java:388)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:231)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1164)
+	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:415)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ValidateSalt.doFilter(ValidateSalt.java:50)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.LoadSalt.doFilter(LoadSalt.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ParamWrapperFilter.doFilter(ParamWrapperFilter.java:74)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ParamFilter.doFilter(ParamFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Error while instrumenting class org/apache/jsp/jsp/user/addOperatorUser_jsp.
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrumentError(Instrumenter.java:152)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:103)
+	at org.jacoco.agent.rt.internal_932a715.CoverageTransformer.transform(CoverageTransformer.java:84)
+	... 72 more
+Caused by: java.lang.RuntimeException: java.lang.ClassNotFoundException: javax.servlet.jsp.PageContext
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.getCommonSuperClass(ClassWriter.java:1684)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.getMergedType(ClassWriter.java:1654)
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1426)
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1331)
+	at org.jacoco.agent.rt.internal_932a715.asm.MethodWriter.visitMaxs(MethodWriter.java:1475)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readCode(ClassReader.java:1554)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readMethod(ClassReader.java:1017)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:693)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:506)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.toByteArray(ClassWriter.java:995)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:84)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:101)
+	... 73 more
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:48:59.057
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4ad82cf998fbe3011bec9d171c103eb626371cf005ac72e01c6ac31859d62c65817868db503afbd87af106a73a2af1f7b5416a8fc10c188406d9048e23201279154dc7207203748bce604f8905ae75e71e0cfd219ce7cd2f17ca4f45037ca9756438f722634bfc910e1ac8fd6dfdc6b0d649ae247f70132b53e5a974ef2136fdd78ff4427444d415269bb39cdd317a24993db00c881bb3013d05d8d9013d753724e4368093ddf8b7ce088eb86a873d000739264a2e8dd51d9052932db887de583d04aa49f37022f70.da2c936342a9a7cde1655a050253de512b0218822841dcb7e48c9b1ecd1bcf5e, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca11b671fb45566b4ad82cf998fbe3011bec9d171c103eb626371cf005ac72e01c6ac31859d62c65817868db503afbd87af106a73a2af1f7b5416a8fc10c188406d9048e23201279154dc7207203748bce604f8905ae75e71e0cfd219ce7cd2f17ca4f45037ca9756438f722634bfc910ab3303e5bedd31ddbe70bcbcd0a36fb7528d21aa3da1f9625e05b4b640f416dd6de61eff42b9e4c8af0489020af98dcfa89c65698746e5adc8ef508e01c2b90c4dad4589de95fe87cd14624a0cb2349972bbc77f290fdc74e9269e7d9842711c.efcbc40dfae22cda522d5cedd39e754fe5c670376d89b810afb489c9a803504a, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+OK
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:54:57.692
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c8de3073de9844b18b0e70f0efa79f2b2e1fa12c19f2b17ad788ff649324c73cd2e1ac9ce4f635af0700e0c4fae10cbd97da7e6d3d6e522d807fb212f2debafaf679faae20f3b34ae11d52cdd73327179d1a72fa209cc8a96bba090b0d53bcd01a39f2cacdc04af71ff1d6b4d37106908eae6cfedee4ef013858bc72b7ba746b80bfc5292b4afce69ffbb47ccbe6763ba9c8159736b02079b19803d23a95828034d32c9c3fedc093a5c1c462dd688bffb194feb2b6bcc2be835b40d6cf6e3f54dd4b196a8992c1e7e14214ed5d4004892.aac31eccaeddba5f901d3853777ee5a9bb40d51e80bd60ae123406e9a367182d, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c8de3073de9844b18b0e70f0efa79f2b2e1fa12c19f2b17ad788ff649324c73cd2e1ac9ce4f635af0700e0c4fae10cbd97da7e6d3d6e522d807fb212f2debafaf679faae20f3b34ae11d52cdd73327179d1a72fa209cc8a96bba090b0d53bcd01a39f2cacdc04af71ff1d6b4d371069083adf7e38ebca282fc2edce40e48e4d4caa6dbbdcc8fdc76c99beb38b222799436fc61af6d1bf99af15df9ce42e53bbbc075569b55f6d587a026f085d13fd6c087af476469fbae159b1f70cdbc031a74c66fcca0317a09b09e03ea7a7f0a354fe.e9dd427b975e10f6b46db891422a6e197f539b90fcfab45a7e30a69f3dd98fcd, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 15:57:23.878
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c8de3073de9844b1867d4961193ab1fd57c28a786075cc9e5d3297385d017c3a20eb54bd413b72255252756e500b45390ceb23049dc22f33fe8797b8340f2f30145ed4fb6da0eed19041fc161a8038692939b15f588391e487279f3c60e99bb6e597322bbb2bc95e84919746915dc7fbfd4cd7755850fb7cd151b33e3a48ec84f0c02088a8ef8693f69279efd62a2094f0a141350d811f5650db9cabb05dd55590f2b730c46bcb58dea621d10e64f333f7844124795270ddc4ae5c482ae7c98f43db9088c90cccb9d2d13e8616427c2da.b7e117616d4798baaed08f7d7095ef752a6c1ddd665cac419186989db0667744, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c8de3073de9844b1867d4961193ab1fd57c28a786075cc9e5d3297385d017c3a20eb54bd413b72255252756e500b45390ceb23049dc22f33fe8797b8340f2f30145ed4fb6da0eed19041fc161a8038692939b15f588391e487279f3c60e99bb6e597322bbb2bc95e84919746915dc7fbf3acc6d5629051c6815123ada01baf94a406d4938bc37f7490d46bc1935a301cc7477b9dd75d764a69a9c46de88b83fdda0b8d321a3d79d98f40a8e91f8d2e2e203b7f556ec5c950ce140a577b43cef69b7e5385ffd40d6472981cc81f241fafb.91c5f407caf6f3067ac0b2e63ea6e3a09de12e18958c0fcc394f7895264e8d6f, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:03:56.206
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c7293364dfac80a60c2f15db9433a9806c6a4d9a1f2502fac52bbdd1ea5dd0100a87b6f48b7c14aa8104c3a93d40056460484239930f83f909bc226a554411a6e17eef8fb0985c69de3d159d0b32613b0cfafc2cf97c49cf3214c2aeef8e53f629d578293d768e4313f801ee72800a2e23fe85ddb93a132189302c98bfe6bcd6256de7dc315332bf1229bd3c62b366bb04559efc6a732cd6d846ff3a1685c238061e8ed93ee06d20c20f17e1e6d2c2c383a80044979130ba429ce1fd39d2eae557f74c9574c796f6c1a94c5aab80312b7.24d4725f9204c1437e927f32520fdf59578e6a6550a0554afe27d5c099bcaf6e, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c7293364dfac80a60c2f15db9433a9806c6a4d9a1f2502fac52bbdd1ea5dd0100a87b6f48b7c14aa8104c3a93d40056460484239930f83f909bc226a554411a6e17eef8fb0985c69de3d159d0b32613b0cfafc2cf97c49cf3214c2aeef8e53f629d578293d768e4313f801ee72800a2e2adf4068279a876dfc25509456f3d4d54c5b89b4864eeaea9b967f44ce4c7875fff9579f8f699a55ff3e6898b5b151ace0209e4d0f811688b29583e41a441597c2b9eec399908f65c5f14ee3eb46550f7b733f6429e92bae5ad20132f8759d720.43da4289ac2793bac0fdc792eabb4c9b5fe8acb2fb1488b0ab7899fb348dd781, status=200, messageCode=9020, message=Success]
+OK
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:08:15.126
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c7293364dfac80a609de1b8c2041d6528b2f27c18904c9d0503a1875784f6b21b3e322ed45b6f14697bede943c353b1d61e146bd8d86f912d606861a4d67b006cb18eee98ebbba3cb3ac3d5c885a6e4e7462055112fb61a513df12aa49b400657a17dd97411a90e5b6c756d17269db1abaaf375b8e328b2e59d3dbc18cddf1d14696196747dea17f6cf89f884da6214590f9077300ba96f3f845d85d371e66741e0e4828a376c289dc956e52e2d825f656708df01e2bbc5287208cd02a96d75df0c91f17e11e43f7c2d20b34ca0ceace8.9d1b1f3a0988fa3ab13ef69e6990c995282cfdf8c60d25ca2b04b4aa33acd3de, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c7293364dfac80a609de1b8c2041d6528b2f27c18904c9d0503a1875784f6b21b3e322ed45b6f14697bede943c353b1d61e146bd8d86f912d606861a4d67b006cb18eee98ebbba3cb3ac3d5c885a6e4e7462055112fb61a513df12aa49b400657a17dd97411a90e5b6c756d17269db1abd10fd5c1bc7c7b98eb1ad7cdd2302cafff9597b6e1cccb8b0c3d09832c368affec13b710545b8d771c3450377ce77b09352fc935bd10470f356b395a9f2f0b784381852a24da803c2185d5f43b82e5bd2e4fa4dc0cfb85149521e09391b780ef.03b4129cf650449d6133ffa9ea1ffdd56bc0ef8003bede98a507e3386fc2e08b, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:12:32.222
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c9b4b2a395d745e75259059fa5576e91857ae8e60a5166770e330155c9480b8e62b60ee5136ddb438cbf8b730794bbcfff336f353659dcb51be37210195ef3c5eddd87919cc94f6390bf54753ed9aa1845137a742c2eb334178838d6e42a48da1aaaf9f96fd4066bccdb32e1c26f0fdef5f012b3df7bb29544a51a037e90fafff3e511732ff21a7fbc05435d6fdef460c771ab2476df42720ccfc038717f1c7bdc75c0344da41da4a76e923f8bfc49a946cba706d20664ff271cce0e57f4cd0f369a7ba63800a6c4ba74b3167b6b655.dd125bf91a643e6fa8d6eff31022e40b11c7eb203cfacf59ff2f333b47acf081, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c9b4b2a395d745e75259059fa5576e91857ae8e60a5166770e330155c9480b8e62b60ee5136ddb438cbf8b730794bbcfff336f353659dcb51be37210195ef3c5eddd87919cc94f6390bf54753ed9aa1845137a742c2eb334178838d6e42a48da1aaaf9f96fd4066bccdb32e1c26f0fd8cd66d60b1757af51286101a8105dc3deec048369e03489ff25cdf06beec3e4da0729184af0c918a98e54e8ff28f753628b6fb84dcb16fd8567228f778abe849598557af73815dcb28ab544b2c3abf6515ad4dc9db97c4c26d4ebc1df1f64276.0ece7c27922e55022c3ef24b56103c448f72cd6ec8d9cbc636fb9d6015b195f0, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000007124
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:14:09.523
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288b3eab68e2d7e10a830c4a4014063121dff5977b92a9fb106fa564539fa1996afc2922643a558d514bf9cae45d864cb4079428fb84bfac8ad3a0667080984a428ceaf7c3e57b575a658049bdb78f807c5fa3bb8e61db440554ab347be07adfde362f4061e7629b9ef1e34bc00c4261a5bf70c56ca9a11928ddf948f50cf9bf57e0ed37ba5a014582b9f2f37aeb5b7f8948bde557a6663fc962e04dce02bbddb99e27d49d15a3127d6bddb351501c45f4980832e0c561fceec4216e818b40672298c058e4894013574dce8fe8dda47480aa4d8a0c242d9ba35b2310cda10a07c701d5e92b217dd37f7b5522c6ca65210c5760cbc3c9397839edd8f0f39cd4c93e6bff1aaa3a7acec85dfd068ddbb702c97.10762e5d5e560b8647c8084da2424140a9642b51d8c7c2da48a9053fcc0fe222, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288b3eab68e2d7e10a830c4a4014063121dff5977b92a9fb106fa564539fa1996afc2922643a558d514bf9cae45d864cb4079428fb84bfac8ad3a0667080984a428ceaf7c3e57b575a658049bdb78f807c5fa3bb8e61db440554ab347be07adfde362f4061e7629b9ef1e34bc00c4261a5bf70c56ca9a11928ddf948f50cf9bf57e0ed37ba5a014582b9f2f37aeb5b7f8948bde557a6663fc962e04dce02bbddb99e27d49d15a3127d6270688cd3cc25a1d3df5953b73e1834e0192a3f7b5b321ab896c3d0da3edc676406dd158d3babe084f9dee483240dd8a2aeffa2ad50965cb072403f06700c2abfb83cf7546b1d69aedcdef4f686525cc8702eb6c0299a9afedca8ffa2785d3ea6f5f59eb7427c979.93fafbaaaab623e3bca7ac26659fabc69670b3cfc83492c1c01d460d6a69f766, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:14:52.139
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c9b4b2a395d745e7fd6510651ebaa159c5a913624221addd6b504ba2f60bfd533fd432405b43c585e6652856d2cdd817198be6c7386bdc4bd948412d542e982e4838e5e72fd930dc476e86208a5974ae926ad21364d11e0022d501019da9a9f5d939623374364fa5ea819961e634df79bf77c784865581addbc3ce0af1ab011d0ead5cd1f7fc32415b5266414830ab17c93ded4b0076be635eb7b1dc7f3ff7fca60f28d0c48ac7030401c034f03cf15130df6e18374d8ac2055301e60a2684277f712743a8cb6eaaa97063e146d1fc8.d105adcfd27c49e63739c9ed710743f79499ad5d8cde974f12266feda76b2723, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c9b4b2a395d745e7fd6510651ebaa159c5a913624221addd6b504ba2f60bfd533fd432405b43c585e6652856d2cdd817198be6c7386bdc4bd948412d542e982e4838e5e72fd930dc476e86208a5974ae926ad21364d11e0022d501019da9a9f5d939623374364fa5ea819961e634df7ea6a1d74051f65de0156704aa4f545993a4b194e293864a0367743f98ad6d7de0b9cb868eb79a20deb4082cb50af2e03df8330c5c0cba03c06c6341e73f24dee093d972e9f74e4dadacec8e19babf133848c3b798fa04aa7c37a6d352627ddb9.daa4240d8bf11270e24945cf141f9ffa10433d6a1b71635607a22fe0d667a37a, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:23:08.089
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc83777701a2be8de47a8063350d0bfe90fb0c9263989b7732c52b1b941bef9dfbd828725fa3acb8007dcb4117d10079160cd8aeaee9229e53d4faa52a1ded7e03a38d168e894c6ebe8ab57a96e24942832abb1287d231842d0ccab4729925e66e7e4640a7af242758f51808de7912c4e65f7c11ec59f4d9e4ccded7c8eec68fa4590084952b8f9d78d7559bf72b2fb57cfe4270e8c00ad9bc9a34177825f59b9d77fc72f007d6a45fb839a46e6f054d2efa36666627da87b6b5c3cc856d8f6694457b24ff4bc8b75fd38f89038f79529.6c8fdcfffceace11a70e5c82e07f444a030cf3cac0d8ce399114b98f39226c23, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc83777701a2be8de47a8063350d0bfe90fb0c9263989b7732c52b1b941bef9dfbd828725fa3acb8007dcb4117d10079160cd8aeaee9229e53d4faa52a1ded7e03a38d168e894c6ebe8ab57a96e24942832abb1287d231842d0ccab4729925e66e7e4640a7af242758f51808de7912c4ee533e3a21e906ca83066df4cb952d3400ea6bb8df37178b635c03504059b82b79c2ac71ebcc1cf334b70c6122b0599bebf60faa5f5cb265a78102cccef7aa6483c14a05c2b024cbb964ee2bf4111ed0d41587a04f131ab3e1ec0b61a37d6698f.aac129b804e1566d106f2e4ea56b6f29b5bf57dbebe3f7a13c260a8166a50a8b, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:23:56.806
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc83777701a2be8de7b593539a94743562b7acb13994fcad3a344be399579849258f1c6a02f77c0f5426c014a142e2ce90cbab846e0b4332d65887d3549bea4bef6176170123f24d7f3bffe15d1a12947cf974d4895701cb5254c7908dc8afbe6ee8c59e1e72c1e05704701947806725e5afde7e277b871f0309f009013e373a349dae82da8a6f1fd99dfb76ed06121a0eecb7425e238f10bc0b649b2dec5a68448e90ca48c43e9c72ea37a49478f0fb5601831b635923b6565e28cec7446de8534e328f138cf1e42fbbcd1b0716c40cf.79669eff3c298505a848efc263ede53ae33abe11fd6f855fc9cf21a40c6b8dbf, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc83777701a2be8de7b593539a94743562b7acb13994fcad3a344be399579849258f1c6a02f77c0f5426c014a142e2ce90cbab846e0b4332d65887d3549bea4bef6176170123f24d7f3bffe15d1a12947cf974d4895701cb5254c7908dc8afbe6ee8c59e1e72c1e05704701947806725e1cd1ebd1bc8d9e4d573de8dfec86e6d4fbf767297a3aaacd405a2f3dd5fc62b9ca5e5b359e90126cc9963544e301d7f6888b24567158a04e72fad8726529de82a1fc6990dbb8a33f9c1d4e9e5b53357a51f6b0997f353562e978158a1557624d.391a61cbb694ffca8c794960c86275026b83ac8bded733f7182c040b60ab06cf, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:30:42.862
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c4a57c0dc3d5f2f39b71e85ee42cb015b5b0577843f32c604338c0c4d4e21858eb1695c56e14dd7e69ed9e3e6765fb0d09602afede43ec7f9bbb23f76e68bf782d5fd9f8350a54bf6d1042d4aa0602f96cb7543fcf0737cb2e9c4685324698f307e41342d5f0bc7e9a8133d786fba2726170dc901a8c50ada48590c13643a379a40ce0a6d1654258888bb50a1a2bf32c3ea7c3d64383d14fcbc0169cb6e424111462ec53ba8ddca1300983045b2ce712f3563a5ed9970b0a55111c2b0d155128e14b968d93959839ae6e7002a70d7dc8c.614f71d047b054331294bef9ee073c685607a80e0a4efee3c493563902297004, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c4a57c0dc3d5f2f39b71e85ee42cb015b5b0577843f32c604338c0c4d4e21858eb1695c56e14dd7e69ed9e3e6765fb0d09602afede43ec7f9bbb23f76e68bf782d5fd9f8350a54bf6d1042d4aa0602f96cb7543fcf0737cb2e9c4685324698f307e41342d5f0bc7e9a8133d786fba2726cb29f5afdadbddd28dcd37893791b82fa117b057f4d2545682bf8d9e51292cebd8f81e03514dfc36f61e5dca0bf6579a7773f6c4b2a9d0ab7e3e03a1b2600d0fd15c65c14e57bedbabc92fce755081472700de0cdde354b6bd368b53d2be3aaa.e85c2bdd102d207b79f530c0edc2936372e4c4eb89fb25216fdb401fe34e35a5, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ((ROLES.role_code             =PAGE_ROLES.role_code ) OR PAGES.IS_DEFAULT='Y') 
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-07-17 16:32:30.613
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c4a57c0dc3d5f2f3921e0341ddcdc27f00a1af19a2fbbf1be58e22ac8324db546b06b06d5a4ab9fa80535aa04ccda39ce50818b74b390927cb657e33b3acf4e27ad9d4da6717dfaf58743f240cae255f86e9632fdd1fc82e60e32ff656756cd9c3fa274723505e5040a94f662eb49c0dcedc011f6cff4dd4875b8d6e1cd840c33a96e08db18653a9b9086a559fefaaa39b20de241cd5005d21b85cf13f1516fc2afb8e2ad610631544ca46c8f175d54c39b1dc1129a075edbfd51c3897a0c38cc2f3ab227db1d484305211a22dd8888f7.be7e8b0b8967e1a6e2766e54efb244ab1e8fb14f05754c624dbf106fa482ec31, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c4a57c0dc3d5f2f3921e0341ddcdc27f00a1af19a2fbbf1be58e22ac8324db546b06b06d5a4ab9fa80535aa04ccda39ce50818b74b390927cb657e33b3acf4e27ad9d4da6717dfaf58743f240cae255f86e9632fdd1fc82e60e32ff656756cd9c3fa274723505e5040a94f662eb49c0dc513ec779a0dabb681d9edba296150d51506536799374a2b800b5d2eac7c0eb86f3087f7e988feb2441d749d05724a373be691c5fe64528fb545e99b513eb3635430cad9ad83dd3a4c2ed14ea11ce3b5505aff65104d29ecd3a44bd4421955edb.c2043bb19f562069bbab8a4719eb199d43c52367095da9c359c46f67442a5e1e, status=200, messageCode=9020, message=Success]
+POST
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+POST
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=null,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=null,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=1,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=CVG,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=2,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=C,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=4,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=ppp,bundleType=null,restrictedOnIN=Y,
+[User,ERROR ,7/17 16:45:47,#00003] Exception occurs at loadMessageGatewayCacheQry {}
+[User,ERROR ,7/17 16:45:47,#00003] javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1423)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.query.Query.getResultList(Query.java:146)
+[User,TRACE ,7/17 16:45:47,#00003] 	at sun.reflect.GeneratedMethodAccessor260.invoke(Unknown Source)
+[User,TRACE ,7/17 16:45:47,#00003] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:379)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.sun.proxy.$Proxy189.getResultList(Unknown Source)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.MessageGatewayRepositoryImpl.loadMessageGatewayCacheQry(MessageGatewayRepositoryImpl.java:105)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.VMSCacheRepositoryImpl.loadMessageGatewayCacheQry(VMSCacheRepositoryImpl.java:385)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.LoginService.parseRequest(LoginService.java:843)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:226)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$f03d2d43.execute(<generated>)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:251)
+[User,TRACE ,7/17 16:45:47,#00003] 	at sun.reflect.GeneratedMethodAccessor530.invoke(Unknown Source)
+[User,TRACE ,7/17 16:45:47,#00003] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+[User,TRACE ,7/17 16:45:47,#00003] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+[User,TRACE ,7/17 16:45:47,#00003] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:45:47,#00003] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.lang.Thread.run(Thread.java:745)
+[User,TRACE ,7/17 16:45:47,#00003] Caused by: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:109)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:145)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:171)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:147)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1985)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1915)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1893)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.doQuery(Loader.java:938)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:341)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.doList(Loader.java:2692)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.doList(Loader.java:2675)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2507)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.Loader.list(Loader.java:2502)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:392)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1490)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1445)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1414)
+[User,TRACE ,7/17 16:45:47,#00003] 	... 61 more
+[User,TRACE ,7/17 16:45:47,#00003] Caused by: org.postgresql.util.PSQLException: FATAL: sorry, too many clients already
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:514)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:141)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.Driver.makeConnection(Driver.java:454)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.postgresql.Driver.connect(Driver.java:256)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[User,TRACE ,7/17 16:45:47,#00003] 	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:154)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:145)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+[User,TRACE ,7/17 16:45:47,#00003] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+[User,TRACE ,7/17 16:45:47,#00003] 	... 81 more
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=1,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=CVG,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=2,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=C,bundleType=null,restrictedOnIN=Y,
+Type=CardGroupSetVO Data cardGroupSetID=null,version=null,cardGroupID=null,bundleID=4,type=AMT,bonusValidity=0,bonusValue=0,multFactor=1,bonusName=ppp,bundleType=null,restrictedOnIN=Y,
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+[User,ERROR ,7/17 16:48:54,#00004] Exception occurs at loadMessageGatewayCacheQry {}
+[User,ERROR ,7/17 16:48:54,#00004] javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1423)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.query.Query.getResultList(Query.java:146)
+[User,TRACE ,7/17 16:48:54,#00004] 	at sun.reflect.GeneratedMethodAccessor260.invoke(Unknown Source)
+[User,TRACE ,7/17 16:48:54,#00004] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:379)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.sun.proxy.$Proxy189.getResultList(Unknown Source)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.MessageGatewayRepositoryImpl.loadMessageGatewayCacheQry(MessageGatewayRepositoryImpl.java:105)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.VMSCacheRepositoryImpl.loadMessageGatewayCacheQry(VMSCacheRepositoryImpl.java:385)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.LoginService.parseRequest(LoginService.java:843)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:226)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$f03d2d43.execute(<generated>)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:251)
+[User,TRACE ,7/17 16:48:54,#00004] 	at sun.reflect.GeneratedMethodAccessor530.invoke(Unknown Source)
+[User,TRACE ,7/17 16:48:54,#00004] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+[User,TRACE ,7/17 16:48:54,#00004] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+[User,TRACE ,7/17 16:48:54,#00004] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:48:54,#00004] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.lang.Thread.run(Thread.java:745)
+[User,TRACE ,7/17 16:48:54,#00004] Caused by: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:109)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:145)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:171)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:147)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1985)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1915)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1893)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.doQuery(Loader.java:938)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:341)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.doList(Loader.java:2692)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.doList(Loader.java:2675)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2507)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.Loader.list(Loader.java:2502)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:392)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1490)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1445)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1414)
+[User,TRACE ,7/17 16:48:54,#00004] 	... 61 more
+[User,TRACE ,7/17 16:48:54,#00004] Caused by: org.postgresql.util.PSQLException: FATAL: sorry, too many clients already
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:514)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:141)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.Driver.makeConnection(Driver.java:454)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.postgresql.Driver.connect(Driver.java:256)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[User,TRACE ,7/17 16:48:54,#00004] 	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:154)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:145)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+[User,TRACE ,7/17 16:48:54,#00004] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+[User,TRACE ,7/17 16:48:54,#00004] 	... 81 more
+java.lang.NullPointerException
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.unAuthorisedAccessCommon_jsp._jspService(unAuthorisedAccessCommon_jsp.java:737)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:477)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+POST
+java.lang.NullPointerException
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.unAuthorisedAccessCommon_jsp._jspService(unAuthorisedAccessCommon_jsp.java:737)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:477)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+POST
+[User,ERROR ,7/17 16:51:39,#00002] Exception occurs at loadMessageGatewayCacheQry {}
+[User,ERROR ,7/17 16:51:39,#00002] javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1423)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.query.Query.getResultList(Query.java:146)
+[User,TRACE ,7/17 16:51:39,#00002] 	at sun.reflect.GeneratedMethodAccessor260.invoke(Unknown Source)
+[User,TRACE ,7/17 16:51:39,#00002] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:379)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.sun.proxy.$Proxy189.getResultList(Unknown Source)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.MessageGatewayRepositoryImpl.loadMessageGatewayCacheQry(MessageGatewayRepositoryImpl.java:105)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.VMSCacheRepositoryImpl.loadMessageGatewayCacheQry(VMSCacheRepositoryImpl.java:385)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.LoginService.parseRequest(LoginService.java:843)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:226)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$f03d2d43.execute(<generated>)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:251)
+[User,TRACE ,7/17 16:51:39,#00002] 	at sun.reflect.GeneratedMethodAccessor530.invoke(Unknown Source)
+[User,TRACE ,7/17 16:51:39,#00002] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+[User,TRACE ,7/17 16:51:39,#00002] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+[User,TRACE ,7/17 16:51:39,#00002] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:39,#00002] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.lang.Thread.run(Thread.java:745)
+[User,TRACE ,7/17 16:51:39,#00002] Caused by: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:109)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:145)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:171)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:147)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1985)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1915)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1893)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.doQuery(Loader.java:938)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:341)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.doList(Loader.java:2692)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.doList(Loader.java:2675)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2507)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.Loader.list(Loader.java:2502)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:392)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1490)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1445)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1414)
+[User,TRACE ,7/17 16:51:39,#00002] 	... 61 more
+[User,TRACE ,7/17 16:51:39,#00002] Caused by: org.postgresql.util.PSQLException: FATAL: sorry, too many clients already
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:514)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:141)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.Driver.makeConnection(Driver.java:454)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.postgresql.Driver.connect(Driver.java:256)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[User,TRACE ,7/17 16:51:39,#00002] 	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:154)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:145)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+[User,TRACE ,7/17 16:51:39,#00002] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+[User,TRACE ,7/17 16:51:39,#00002] 	... 81 more
+[User,ERROR ,7/17 16:51:43,#00005] Exception occurs at loadMessageGatewayCacheQry {}
+[User,ERROR ,7/17 16:51:43,#00005] javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1423)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.query.Query.getResultList(Query.java:146)
+[User,TRACE ,7/17 16:51:43,#00005] 	at sun.reflect.GeneratedMethodAccessor260.invoke(Unknown Source)
+[User,TRACE ,7/17 16:51:43,#00005] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:379)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.sun.proxy.$Proxy189.getResultList(Unknown Source)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.MessageGatewayRepositoryImpl.loadMessageGatewayCacheQry(MessageGatewayRepositoryImpl.java:105)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.VMSCacheRepositoryImpl.loadMessageGatewayCacheQry(VMSCacheRepositoryImpl.java:385)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.LoginService.parseRequest(LoginService.java:843)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:226)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$f03d2d43.execute(<generated>)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:251)
+[User,TRACE ,7/17 16:51:43,#00005] 	at sun.reflect.GeneratedMethodAccessor530.invoke(Unknown Source)
+[User,TRACE ,7/17 16:51:43,#00005] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.lang.reflect.Method.invoke(Method.java:497)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+[User,TRACE ,7/17 16:51:43,#00005] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+[User,TRACE ,7/17 16:51:43,#00005] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:43,#00005] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.lang.Thread.run(Thread.java:745)
+[User,TRACE ,7/17 16:51:43,#00005] Caused by: org.hibernate.exception.GenericJDBCException: Unable to acquire JDBC Connection
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:109)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:47)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:145)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:171)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:147)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1985)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1915)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1893)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.doQuery(Loader.java:938)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:341)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.doList(Loader.java:2692)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.doList(Loader.java:2675)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2507)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.Loader.list(Loader.java:2502)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:502)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:392)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:216)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1490)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1445)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1414)
+[User,TRACE ,7/17 16:51:43,#00005] 	... 61 more
+[User,TRACE ,7/17 16:51:43,#00005] Caused by: org.postgresql.util.PSQLException: FATAL: sorry, too many clients already
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:514)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:141)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:195)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.Driver.makeConnection(Driver.java:454)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.postgresql.Driver.connect(Driver.java:256)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+[User,TRACE ,7/17 16:51:43,#00005] 	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:154)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:145)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:205)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:169)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+[User,TRACE ,7/17 16:51:43,#00005] 	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+[User,TRACE ,7/17 16:51:43,#00005] 	... 81 more
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+.....2
+

@@ -1,0 +1,1902 @@
+2022-06-28 12:50:36,083 [main] INFO com.classes.BaseTest - Loading all methods from -masterVO class
+2022-06-28 12:50:36,091 [main] INFO com.utils._masterVO - Loading Properties file from: .//src//test//resources//sysconfig//Constant.properties
+2022-06-28 12:50:36,098 [main] INFO com.utils._masterVO - Properties File Loaded successfully
+2022-06-28 12:50:36,100 [main] INFO com.utils._masterVO - Loading Master Sheet from: src//test//resources//config//DataProvider.xlsx
+2022-06-28 12:50:36,925 [main] INFO com.utils._masterVO - Master Sheet Loaded successfully
+2022-06-28 12:50:36,930 [main] INFO com.utils._masterVO - Loading Client Library for Client Versioning from: .//src//test//resources//sysconfig//ClientLib.properties
+2022-06-28 12:50:36,944 [main] INFO com.utils._masterVO - Client Library Loaded successfully
+2022-06-28 12:50:37,811 [main] INFO com.utils._masterVO - Loading test case file file from: .//src//test//resources//sysconfig//testCaseFile.properties
+2022-06-28 12:50:37,837 [main] INFO com.utils._masterVO - Test cases file Loaded successfully
+2022-06-28 12:50:37,842 [main] INFO com.utils._masterVO - Loading Web Cases Master file from: .//src//test//resources//config//testCaseFile.properties
+2022-06-28 12:50:37,877 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-06-28 12:50:37,932 [main] INFO com.dbrepository.DBHandler - Entered Access Handler :: Oracle
+2022-06-28 12:50:37,954 [main] INFO com.commons.CacheController - New Cache DAO Loaded :: UPDATECACHE_VER = 1
+2022-06-28 12:50:37,958 [main] INFO com.dbrepository.OracleRepository - Entered getNetworkName(NG)
+2022-06-28 12:50:38,035 [MLog-Init-Reporter] INFO com.mchange.v2.log.MLog - MLog clients using log4j logging.
+2022-06-28 12:50:38,196 [main] INFO com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2022-06-28 12:50:38,303 [main] INFO com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge148ap1axxdxusszfqe|18ece7f4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> oracle.jdbc.driver.OracleDriver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge148ap1axxdxusszfqe|18ece7f4, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:oracle:thin:@172.30.38.232:1526:test, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 10, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2022-06-28 12:50:40,162 [main] INFO com.dbrepository.OracleRepository - getNetworkName() :: select query: Select network_name from networks where network_code = ?
+2022-06-28 12:50:40,328 [main] INFO com.dbrepository.OracleRepository - Database Returns: Network Name (Network GGN)
+2022-06-28 12:50:40,330 [main] INFO com.dbrepository.OracleRepository - Exiting getNetworkName()
+2022-06-28 12:50:40,331 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(AMOUNT_MULT_FACTOR)
+2022-06-28 12:50:40,334 [main] INFO com.dbrepository.DBConnectionPool - Active Size:1 Cache Size:2
+2022-06-28 12:50:40,336 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:40,415 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (100)
+2022-06-28 12:50:40,418 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:40,422 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(MSISDN_PREFIX_LENGTH)
+2022-06-28 12:50:40,424 [main] INFO com.dbrepository.DBConnectionPool - Active Size:2 Cache Size:1
+2022-06-28 12:50:40,428 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:40,524 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (2)
+2022-06-28 12:50:40,527 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:40,531 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(MAX_MSISDN_LENGTH)
+2022-06-28 12:50:40,535 [main] INFO com.dbrepository.DBConnectionPool - Active Size:3 Cache Size:0
+2022-06-28 12:50:40,855 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:40,936 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (15)
+2022-06-28 12:50:40,938 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:40,940 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(USER_PRODUCT_MULTIPLE_WALLET)
+2022-06-28 12:50:40,944 [main] INFO com.dbrepository.DBConnectionPool - Active Size:4 Cache Size:2
+2022-06-28 12:50:40,947 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,036 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (false)
+2022-06-28 12:50:41,038 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,040 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(EXTERNAL_DATE_FORMAT)
+2022-06-28 12:50:41,042 [main] INFO com.dbrepository.DBConnectionPool - Active Size:5 Cache Size:1
+2022-06-28 12:50:41,045 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,130 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (dd/MM/yy)
+2022-06-28 12:50:41,133 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,137 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DATE_FORMAT_CAL_JAVA)
+2022-06-28 12:50:41,140 [main] INFO com.dbrepository.DBConnectionPool - Active Size:6 Cache Size:0
+2022-06-28 12:50:41,638 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,719 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (dd/MM/yy)
+2022-06-28 12:50:41,721 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,723 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(OTH_COM_CHNL)
+2022-06-28 12:50:41,725 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-06-28 12:50:41,726 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,805 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (false)
+2022-06-28 12:50:41,808 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,810 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DW_ALLOWED_GATEWAYS)
+2022-06-28 12:50:41,812 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-06-28 12:50:41,814 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,896 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (EXTGW,DWEXTGW)
+2022-06-28 12:50:41,897 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,900 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DEFAULT_LANGUAGE)
+2022-06-28 12:50:41,901 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-06-28 12:50:41,903 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:41,988 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (en)
+2022-06-28 12:50:41,989 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:41,991 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(DEFAULT_COUNTRY)
+2022-06-28 12:50:41,992 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:9
+2022-06-28 12:50:41,994 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:50:42,075 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (US)
+2022-06-28 12:50:42,080 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:50:42,083 [main] INFO com.utils._masterVO - Display Locale set to: en_US
+2022-06-28 12:51:03,145 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:51:03,166 [main] INFO com.utils._masterVO - Loading Messages Resource properties File from: .//src//test//resources//sysconfig//English-2.properties
+2022-06-28 12:51:03,277 [main] INFO com.utils._masterVO - Messages Resource Properties file Loaded successfully
+2022-06-28 12:51:03,281 [main] INFO com.utils._masterVO - Loading Messages Resource properties File from: .//src//test//resources//sysconfig//C2S_English-2.properties
+2022-06-28 12:51:03,318 [main] INFO com.utils._masterVO - Messages Resource Properties file Loaded successfully
+2022-06-28 12:51:03,322 [main] INFO com.dbrepository.OracleRepository - Entered getGatewayDetails('EXTGW','USSD','SMSC')
+2022-06-28 12:51:03,325 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:51:03,329 [main] INFO com.dbrepository.OracleRepository - getGatewayDetails() :: select query: SELECT rmg.gateway_code, mg.gateway_type, rmg.login_id, rmg.PASSWORD, rmg.content_type, rmg.service_port, mg.req_password_plain FROM message_gateway mg, req_message_gateway rmg WHERE mg.gateway_code = rmg.gateway_code AND rmg.gateway_code IN ('EXTGW','USSD','SMSC')
+2022-06-28 12:51:03,434 [main] INFO com.dbrepository.OracleRepository - Database Returns: [[Ljava.lang.Object;@6622fc65[{{EXTGW,EXTGW,pretups,0971500a350af5c3d1c0b12221a0558c,XML,190,Y},{SMSC,SMSC,pretups,0971500a350af5c3d1c0b12221a0558c,PLAIN,190,Y},{USSD,USSD,pretups,0971500a350af5c3d1c0b12221a0558c,XML,190,Y}}]
+2022-06-28 12:51:03,437 [main] INFO com.dbrepository.OracleRepository - Exiting getGatewayDetails()
+2022-06-28 12:51:03,448 [main] INFO com.utils._APIUtil - Entered getAPIServices(EXTGW)
+2022-06-28 12:51:03,478 [main] INFO com.utils._APIUtil - Exiting getAPIServices([])
+2022-06-28 12:51:03,485 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-06-28 12:51:03,862 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:03,874 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:03,879 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:03,909 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:03,985 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,032 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,033 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,054 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,056 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,057 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,058 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,067 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,067 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,068 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,068 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,125 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,126 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,138 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,139 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,140 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,140 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,142 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,143 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,145 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,145 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,147 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,148 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,149 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,150 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,151 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,151 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,153 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,153 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,154 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,157 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,159 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,160 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,161 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,163 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,163 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,164 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,166 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,166 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,166 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at com.utils._masterVO.loadGatewayCases(_masterVO.java:115)
+	at com.utils._masterVO.loadExternalServices(_masterVO.java:448)
+	at com.utils._masterVO.loadVO(_masterVO.java:81)
+	at com.classes.BaseTest.setupReporter(BaseTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:401)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:51:04,998 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-06-28 12:51:05,003 [main] INFO com.utils._APIUtil - Entered getAPIServices(USSD)
+2022-06-28 12:51:05,008 [main] INFO com.utils._APIUtil - Exiting getAPIServices([])
+2022-06-28 12:51:05,013 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-06-28 12:51:05,553 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-06-28 12:51:05,558 [main] INFO com.utils._masterVO - Loading Gateway Cases Master file from: .//src//test//resources//config//GatewayMaster.xlsx
+2022-06-28 12:51:05,887 [main] INFO com.utils._masterVO - Gateway Cases Master File Loaded successfully
+2022-06-28 12:51:26,921 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:51:26,956 [main] INFO com.classes.BaseTest - Completed loading all methods from -masterVO class
+2022-06-28 12:53:02,292 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:02,469 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:02,663 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:03,073 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:03,221 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:03,570 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+	at com.utils.ExcelUtility.getCellData(ExcelUtility.java:311)
+	at angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp.TestDataFeed1(PreRequisite_AccessManagementChannelUser_Revamp.java:270)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+2022-06-28 12:53:04,536 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(TRF_RULE_USER_LEVEL_ALLOW)
+2022-06-28 12:53:04,563 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:53:04,567 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:53:04,652 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (true)
+2022-06-28 12:53:04,656 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:53:04,702 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:53:04,702 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Super Distributor, Dealer, 9081573214, 2468, newdealusrr, Super Distributor, SA, 2)
+2022-06-28 12:53:04,852 [main] INFO com.utils.CommonUtils - Category Code for Super Distributor: DIST
+2022-06-28 12:53:04,937 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Super Distributor)
+2022-06-28 12:53:04,940 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:53:04,943 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:53:05,027 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:53:05,032 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:53:05,067 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Super Distributor, Dealer, 9081573214, 2468, Root, 2, Super Distributor)
+2022-06-28 12:53:05,196 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-06-28 12:53:05,198 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-06-28 12:53:05,202 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : suser
+2022-06-28 12:53:05,265 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-06-28 12:53:05,268 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-06-28 12:53:05,270 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-06-28 12:53:06,422 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:53:16,801 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:53:16,830 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:53:17,069 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-06-28 12:53:17,075 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:53:17,305 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-06-28 12:53:17,309 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:53:17,452 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:53:17,517 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:53:17,523 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:53:17,584 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:53:26,706 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:53:26,743 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Channel User Heading..
+2022-06-28 12:53:27,968 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked  Channel User Heading.
+2022-06-28 12:53:27,972 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:53:28,030 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:53:28,635 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:53:28,640 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to enter search by field Of Child User..
+2022-06-28 12:53:33,851 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Field entered :9081573214
+2022-06-28 12:53:33,879 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Access Management Button..
+2022-06-28 12:53:34,048 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked Access Management Button.
+2022-06-28 12:53:34,052 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to click the View More button
+2022-06-28 12:53:34,144 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked on the View More button
+2022-06-28 12:53:34,150 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Contact Person
+2022-06-28 12:53:34,244 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Contact Person of Child User :
+2022-06-28 12:53:34,250 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the SSN
+2022-06-28 12:53:34,331 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched SSN of Child User :
+2022-06-28 12:53:34,336 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Network Name
+2022-06-28 12:53:34,412 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Network Name of Child User :
+2022-06-28 12:53:34,418 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:53:34,513 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Login ID
+2022-06-28 12:53:34,605 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Login ID of Child User :
+2022-06-28 12:53:34,610 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Login fetched from DataProvider :newdealusrr
+2022-06-28 12:53:34,614 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Address
+2022-06-28 12:53:34,704 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Address of Child User :
+2022-06-28 12:53:34,708 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the City
+2022-06-28 12:53:34,797 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched City of Child User :
+2022-06-28 12:53:34,803 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the State
+2022-06-28 12:53:34,881 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched State of Child User :
+2022-06-28 12:53:34,886 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Country
+2022-06-28 12:53:34,952 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Country of Child User :
+2022-06-28 12:53:34,956 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:53:55,996 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:53:56,301 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp -  -----------------  Test Case Execution completed for TC_01_Test_PerformSendPasswordChannelUser -----------------
+2022-06-28 12:53:56,717 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:53:56,717 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Super Distributor, Agent, 7802617823, 2468, agusernew, Super Distributor, SA, 3)
+2022-06-28 12:53:56,778 [main] INFO com.utils.CommonUtils - Category Code for Super Distributor: DIST
+2022-06-28 12:53:56,818 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Super Distributor)
+2022-06-28 12:53:56,820 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:53:56,823 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:53:56,904 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:53:56,906 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:53:56,908 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Super Distributor, Agent, 7802617823, 2468, Root, 3, Super Distributor)
+2022-06-28 12:53:56,969 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-06-28 12:53:56,970 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-06-28 12:53:56,972 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : suser
+2022-06-28 12:53:57,000 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-06-28 12:53:57,002 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-06-28 12:53:57,005 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-06-28 12:53:57,746 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:54:08,163 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:54:08,191 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:54:08,435 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-06-28 12:54:08,440 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:54:08,686 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-06-28 12:54:08,688 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:54:08,840 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:54:08,909 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:54:08,913 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:54:08,970 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:54:18,606 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:54:18,640 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Channel User Heading..
+2022-06-28 12:54:18,767 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked  Channel User Heading.
+2022-06-28 12:54:18,769 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:54:49,058 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Element not found
+2022-06-28 12:54:49,092 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:54:49,093 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to enter search by field Of Child User..
+2022-06-28 12:54:49,516 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Field entered :7802617823
+2022-06-28 12:54:49,518 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Access Management Button..
+2022-06-28 12:54:49,663 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked Access Management Button.
+2022-06-28 12:54:49,666 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to click the View More button
+2022-06-28 12:54:49,712 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked on the View More button
+2022-06-28 12:54:49,716 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Contact Person
+2022-06-28 12:54:49,794 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Contact Person of Child User :
+2022-06-28 12:54:49,796 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the SSN
+2022-06-28 12:54:49,867 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched SSN of Child User :
+2022-06-28 12:54:49,869 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Network Name
+2022-06-28 12:54:49,940 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Network Name of Child User :
+2022-06-28 12:54:49,945 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:54:50,015 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Login ID
+2022-06-28 12:54:50,090 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Login ID of Child User :
+2022-06-28 12:54:50,093 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Login fetched from DataProvider :agusernew
+2022-06-28 12:54:50,095 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Address
+2022-06-28 12:54:50,178 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Address of Child User :
+2022-06-28 12:54:50,181 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the City
+2022-06-28 12:54:50,269 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched City of Child User :
+2022-06-28 12:54:50,272 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the State
+2022-06-28 12:54:50,344 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched State of Child User :
+2022-06-28 12:54:50,348 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Country
+2022-06-28 12:54:50,393 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Country of Child User :
+2022-06-28 12:54:50,397 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:55:11,440 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:55:11,733 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp -  -----------------  Test Case Execution completed for TC_01_Test_PerformSendPasswordChannelUser -----------------
+2022-06-28 12:55:11,874 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:55:11,874 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Super Distributor, Agent, 8905169743, 2468, sourabhagent, Dealer, SA, 4)
+2022-06-28 12:55:11,928 [main] INFO com.utils.CommonUtils - Category Code for Super Distributor: DIST
+2022-06-28 12:55:11,965 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Super Distributor)
+2022-06-28 12:55:11,967 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:55:11,970 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:55:12,057 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:55:12,060 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:55:12,062 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Super Distributor, Agent, 8905169743, 2468, Root, 4, Dealer)
+2022-06-28 12:55:12,106 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-06-28 12:55:12,107 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-06-28 12:55:12,109 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : suser
+2022-06-28 12:55:12,139 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-06-28 12:55:12,141 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-06-28 12:55:12,144 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-06-28 12:55:12,832 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:55:23,168 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:55:23,202 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:55:23,475 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-06-28 12:55:23,478 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:55:23,734 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-06-28 12:55:23,737 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:55:23,900 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:55:23,962 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:55:23,964 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:55:24,008 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:55:34,253 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:55:34,287 [main] INFO com.utils.Assertion - Access Management of Channel User cannot be performed by Super Distributor for Agent [ For Parent Dealer ]
+2022-06-28 12:55:34,398 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:55:34,398 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Super Distributor, Retailer, 8051782315, 2468, sourabhretailer, Agent, SA, 5)
+2022-06-28 12:55:34,448 [main] INFO com.utils.CommonUtils - Category Code for Super Distributor: DIST
+2022-06-28 12:55:34,477 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Super Distributor)
+2022-06-28 12:55:34,479 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:55:34,480 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:55:34,562 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:55:34,565 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:55:34,567 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Super Distributor, Retailer, 8051782315, 2468, Root, 5, Agent)
+2022-06-28 12:55:34,648 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-06-28 12:55:34,650 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-06-28 12:55:34,652 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : suser
+2022-06-28 12:55:34,675 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-06-28 12:55:34,677 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-06-28 12:55:34,679 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-06-28 12:55:35,034 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:55:45,398 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:55:45,431 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:55:45,704 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-06-28 12:55:45,709 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:55:45,954 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-06-28 12:55:45,958 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:55:46,129 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:55:46,204 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:55:46,206 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:55:46,251 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:55:57,407 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:55:57,439 [main] INFO com.utils.Assertion - Access Management of Channel User cannot be performed by Super Distributor for Agent [ For Parent Agent ]
+2022-06-28 12:55:57,535 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:55:57,536 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Dealer, Agent, 7802617823, 2468, agusernew, Super Distributor, SA, 3)
+2022-06-28 12:55:57,580 [main] INFO com.utils.CommonUtils - Category Code for Dealer: SE
+2022-06-28 12:55:57,602 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Dealer)
+2022-06-28 12:55:57,603 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:55:57,605 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:55:57,689 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:55:57,693 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:55:57,698 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Dealer, Agent, 7802617823, 2468, Super Distributor, 3, Super Distributor)
+2022-06-28 12:55:57,751 [main] INFO angular.classes.LoginRevamp - Login ID Found as: newdealusrr
+2022-06-28 12:55:57,754 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-06-28 12:55:57,756 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : newdealusrr
+2022-06-28 12:55:57,787 [main] INFO angular.classes.LoginRevamp - LoginID found as: newdealusrr
+2022-06-28 12:55:57,789 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-06-28 12:55:57,791 [main] INFO angular.classes.LoginRevamp - Username found as: dealuser
+2022-06-28 12:55:58,204 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:56:08,491 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:56:08,518 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:56:08,816 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-06-28 12:56:08,819 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:56:09,059 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-06-28 12:56:09,062 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:56:09,231 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:56:09,305 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:56:09,311 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:56:09,364 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:56:25,016 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:56:25,047 [main] INFO com.utils.Assertion - Access Management of Channel User cannot be performed by Dealer for Agent [ For Parent Super Distributor ]
+2022-06-28 12:56:25,163 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:56:25,163 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Dealer, Agent, 8905169743, 2468, sourabhagent, Dealer, SA, 4)
+2022-06-28 12:56:25,210 [main] INFO com.utils.CommonUtils - Category Code for Dealer: SE
+2022-06-28 12:56:25,240 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Dealer)
+2022-06-28 12:56:25,243 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:56:25,244 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:56:25,362 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:56:25,363 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:56:25,366 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Dealer, Agent, 8905169743, 2468, Super Distributor, 4, Dealer)
+2022-06-28 12:56:25,442 [main] INFO angular.classes.LoginRevamp - Login ID Found as: newdealusrr
+2022-06-28 12:56:25,445 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-06-28 12:56:25,447 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : newdealusrr
+2022-06-28 12:56:25,477 [main] INFO angular.classes.LoginRevamp - LoginID found as: newdealusrr
+2022-06-28 12:56:25,480 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-06-28 12:56:25,483 [main] INFO angular.classes.LoginRevamp - Username found as: dealuser
+2022-06-28 12:56:25,784 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:56:36,162 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:56:36,193 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:56:36,481 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-06-28 12:56:36,485 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:56:36,725 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-06-28 12:56:36,727 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:56:36,884 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:56:36,961 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:56:36,963 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:56:37,027 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:56:46,541 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:56:46,571 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Channel User Heading..
+2022-06-28 12:56:46,667 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked  Channel User Heading.
+2022-06-28 12:56:46,669 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:56:46,755 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:56:47,324 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:56:47,328 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to enter search by field Of Child User..
+2022-06-28 12:56:49,259 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Field entered :8905169743
+2022-06-28 12:56:49,262 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Access Management Button..
+2022-06-28 12:56:49,374 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked Access Management Button.
+2022-06-28 12:56:49,378 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to click the View More button
+2022-06-28 12:56:49,457 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked on the View More button
+2022-06-28 12:56:49,459 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Contact Person
+2022-06-28 12:56:49,506 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Contact Person of Child User :
+2022-06-28 12:56:49,508 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the SSN
+2022-06-28 12:56:49,555 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched SSN of Child User :
+2022-06-28 12:56:49,557 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Network Name
+2022-06-28 12:56:49,623 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Network Name of Child User :
+2022-06-28 12:56:49,625 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:56:49,673 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Login ID
+2022-06-28 12:56:49,722 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Login ID of Child User :
+2022-06-28 12:56:49,724 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Login fetched from DataProvider :sourabhagent
+2022-06-28 12:56:49,727 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Address
+2022-06-28 12:56:49,818 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Address of Child User :
+2022-06-28 12:56:49,823 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the City
+2022-06-28 12:56:49,912 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched City of Child User :
+2022-06-28 12:56:49,916 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the State
+2022-06-28 12:56:49,962 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched State of Child User :
+2022-06-28 12:56:49,965 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Country
+2022-06-28 12:56:50,018 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Country of Child User :
+2022-06-28 12:56:50,021 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:57:11,063 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:57:11,369 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp -  -----------------  Test Case Execution completed for TC_01_Test_PerformSendPasswordChannelUser -----------------
+2022-06-28 12:57:11,499 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:57:11,499 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Dealer, Retailer, 8051782315, 2468, sourabhretailer, Agent, SA, 5)
+2022-06-28 12:57:11,545 [main] INFO com.utils.CommonUtils - Category Code for Dealer: SE
+2022-06-28 12:57:11,568 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Dealer)
+2022-06-28 12:57:11,570 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:57:11,572 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:57:11,653 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:57:11,656 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:57:11,659 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Dealer, Retailer, 8051782315, 2468, Super Distributor, 5, Agent)
+2022-06-28 12:57:11,699 [main] INFO angular.classes.LoginRevamp - Login ID Found as: newdealusrr
+2022-06-28 12:57:11,702 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-06-28 12:57:11,704 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : newdealusrr
+2022-06-28 12:57:11,727 [main] INFO angular.classes.LoginRevamp - LoginID found as: newdealusrr
+2022-06-28 12:57:11,730 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-06-28 12:57:11,731 [main] INFO angular.classes.LoginRevamp - Username found as: dealuser
+2022-06-28 12:57:12,326 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:57:22,803 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:57:22,834 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:57:23,090 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-06-28 12:57:23,093 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:57:23,369 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-06-28 12:57:23,372 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:57:23,530 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:57:23,598 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:57:23,602 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:57:23,662 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:57:32,203 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:57:32,206 [main] INFO com.utils.Assertion - Access Management of Channel User cannot be performed by Dealer for Agent [ For Parent Agent ]
+2022-06-28 12:57:32,329 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_01_Test_PerformSendPasswordChannelUser -------------------
+2022-06-28 12:57:32,329 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_01_Test_PerformSendPasswordChannelUser(Agent, Retailer, 8051782315, 2468, sourabhretailer, Agent, SA, 5)
+2022-06-28 12:57:32,375 [main] INFO com.utils.CommonUtils - Category Code for Agent: AG
+2022-06-28 12:57:32,398 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Agent)
+2022-06-28 12:57:32,401 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:57:32,403 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:57:32,498 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:57:32,503 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:57:32,508 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Agent, Retailer, 8051782315, 2468, Super Distributor, 5, Agent)
+2022-06-28 12:57:32,581 [main] INFO angular.classes.LoginRevamp - Login ID Found as: agusernew
+2022-06-28 12:57:32,584 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2468
+2022-06-28 12:57:32,588 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : agusernew
+2022-06-28 12:57:32,626 [main] INFO angular.classes.LoginRevamp - LoginID found as: agusernew
+2022-06-28 12:57:32,628 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2468
+2022-06-28 12:57:32,630 [main] INFO angular.classes.LoginRevamp - Username found as: agentuser
+2022-06-28 12:57:32,981 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:57:43,311 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:57:43,340 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:57:43,613 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: agusernew
+2022-06-28 12:57:43,618 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:57:43,882 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2468
+2022-06-28 12:57:43,887 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:57:44,068 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:57:44,138 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:57:44,142 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:57:44,201 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:57:51,687 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:57:51,727 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Channel User Heading..
+2022-06-28 12:57:52,495 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked  Channel User Heading.
+2022-06-28 12:57:52,499 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:57:52,630 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop
+2022-06-28 12:57:53,239 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Spinner stopped
+2022-06-28 12:57:53,243 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to enter search by field Of Child User..
+2022-06-28 12:57:54,812 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Field entered :8051782315
+2022-06-28 12:57:54,817 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying clicking Access Management Button..
+2022-06-28 12:57:55,004 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked Access Management Button.
+2022-06-28 12:57:55,008 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to click the View More button
+2022-06-28 12:57:55,096 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - User clicked on the View More button
+2022-06-28 12:57:55,100 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Contact Person
+2022-06-28 12:57:55,173 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Contact Person of Child User :
+2022-06-28 12:57:55,179 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the SSN
+2022-06-28 12:57:55,261 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched SSN of Child User :
+2022-06-28 12:57:55,267 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Network Name
+2022-06-28 12:57:55,354 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Network Name of Child User :
+2022-06-28 12:57:55,358 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:57:55,421 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Login ID
+2022-06-28 12:57:55,516 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Login ID of Child User :
+2022-06-28 12:57:55,523 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Login fetched from DataProvider :sourabhretailer
+2022-06-28 12:57:55,527 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Address
+2022-06-28 12:57:55,611 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Address of Child User :
+2022-06-28 12:57:55,617 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the City
+2022-06-28 12:57:55,704 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched City of Child User :
+2022-06-28 12:57:55,708 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the State
+2022-06-28 12:57:55,783 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched State of Child User :
+2022-06-28 12:57:55,786 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Trying to get the Country
+2022-06-28 12:57:55,857 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Fetched Country of Child User :
+2022-06-28 12:57:55,863 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Fields are empty
+2022-06-28 12:58:16,912 [main] ERROR com.sshmanager.SSHService - Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect
+2022-06-28 12:58:17,220 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp -  -----------------  Test Case Execution completed for TC_01_Test_PerformSendPasswordChannelUser -----------------
+2022-06-28 12:58:17,666 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:17,793 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:17,921 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:18,172 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:18,291 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:18,607 [main] INFO com.utils.ExcelUtility - java.lang.NullPointerException
+
+2022-06-28 12:58:19,426 [main] INFO com.dbrepository.OracleRepository - Entered getSystemPreference(TRF_RULE_USER_LEVEL_ALLOW)
+2022-06-28 12:58:19,456 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:58:19,462 [main] INFO com.dbrepository.OracleRepository - getSystemPreference() :: select query: select DEFAULT_VALUE from system_preferences where PREFERENCE_CODE = ?
+2022-06-28 12:58:19,562 [main] INFO com.dbrepository.OracleRepository - Database Returns: DEFAULT_VALUE (true)
+2022-06-28 12:58:19,566 [main] INFO com.dbrepository.OracleRepository - Exiting getSystemPreference()
+2022-06-28 12:58:19,572 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - ------------------ Test Case Execution Started For TC_02_Test_PerformUnBlockPasswordChannelUser -------------------
+2022-06-28 12:58:19,572 [main] INFO angular.testscripts.prereuisitesangular.PreRequisite_AccessManagementChannelUser_Revamp - Entered TC_02_Test_PerformUnBlockPasswordChannelUser(Super Distributor, Dealer, 9081573214, 2468, newdealusrr, Super Distributor, SA, 2)
+2022-06-28 12:58:19,707 [main] INFO com.utils.CommonUtils - Category Code for Super Distributor: DIST
+2022-06-28 12:58:19,775 [main] INFO com.dbrepository.OracleRepository - Entered webInterface(Super Distributor)
+2022-06-28 12:58:19,778 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:58:19,782 [main] INFO com.dbrepository.OracleRepository - webInterface() :: select query: Select WEB_INTERFACE_ALLOWED from categories where category_name= ?
+2022-06-28 12:58:19,877 [main] INFO com.dbrepository.OracleRepository - Database Returns: WEB_INTERFACE_ALLOWED (Y)
+2022-06-28 12:58:19,882 [main] INFO com.dbrepository.OracleRepository - Exited webInterface()
+2022-06-28 12:58:19,887 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Entered PerformSendPasswordChannelUser(Super Distributor, Dealer, 9081573214, 2468, Root, 2, Super Distributor)
+2022-06-28 12:58:19,949 [main] INFO com.dbrepository.OracleRepository - Entered maxPasswordBlockCount(Dealer)
+2022-06-28 12:58:19,953 [main] INFO com.dbrepository.DBConnectionPool - Active Size:0 Cache Size:10
+2022-06-28 12:58:19,957 [main] INFO com.dbrepository.OracleRepository - maxPasswordBlockCount() :: select query: select VALUE from control_preferences where CONTROL_CODE = ? and PREFERENCE_CODE = 'MAX_PWD_BLOCK_COUNT'
+2022-06-28 12:58:20,067 [main] INFO com.dbrepository.OracleRepository - maxPasswordBlockCount() :: select query: select default_value from system_preferences where preference_code='MAX_PWD_BLOCK_COUNT'
+2022-06-28 12:58:20,194 [main] INFO com.dbrepository.OracleRepository - Database Returns: Value (2)
+2022-06-28 12:58:20,199 [main] INFO com.dbrepository.OracleRepository - Exiting maxPasswordBlockCount()
+2022-06-28 12:58:20,204 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Invalid attempt: 1
+2022-06-28 12:58:20,770 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:58:31,168 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:58:31,197 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:58:31,477 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-06-28 12:58:31,482 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:58:31,736 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: *invalidpwd*
+2022-06-28 12:58:31,741 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:58:31,906 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:58:31,981 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:58:31,986 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Invalid attempt: 2
+2022-06-28 12:58:32,404 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:58:42,763 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:58:42,796 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:58:43,079 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: newdealusrr
+2022-06-28 12:58:43,084 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:58:43,343 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: *invalidpwd*
+2022-06-28 12:58:43,346 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:58:43,529 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:58:43,614 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:58:43,621 [main] INFO angular.feature.AccessManagementChannelUserRevamp - Error message for Login with Child User: 
+2022-06-28 12:58:43,734 [main] INFO angular.classes.LoginRevamp - Login ID Found as: suser
+2022-06-28 12:58:43,736 [main] INFO angular.classes.LoginRevamp - Password Found as: Com@2469
+2022-06-28 12:58:43,738 [main] INFO angular.feature.AccessManagementChannelUserRevamp - LOGINID : suser
+2022-06-28 12:58:43,787 [main] INFO angular.classes.LoginRevamp - LoginID found as: suser
+2022-06-28 12:58:43,793 [main] INFO angular.classes.LoginRevamp - Password found as: Com@2469
+2022-06-28 12:58:43,798 [main] INFO angular.classes.LoginRevamp - Username found as:  suser
+2022-06-28 12:58:44,213 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to select Language
+2022-06-28 12:58:54,538 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - <b>Language Selector Not Found:</b>
+2022-06-28 12:58:54,571 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Login ID
+2022-06-28 12:58:54,843 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login ID entered successfully as: suser
+2022-06-28 12:58:54,847 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to enter Password
+2022-06-28 12:58:55,076 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Password entered successfully as: Com@2469
+2022-06-28 12:58:55,079 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Trying to click Login Button
+2022-06-28 12:58:55,212 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Login button clicked successfully
+2022-06-28 12:58:55,277 [main] INFO angular.pageobjects.loginpages.LoginPageRevamp - Error Message Found on Login Screen: 
+2022-06-28 12:58:55,282 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner
+2022-06-28 12:58:55,333 [main] INFO angular.pageobjects.AccessManagementChannelUser.AccessManagementChannelUser - Waiting for spinner to stop

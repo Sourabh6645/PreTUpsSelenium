@@ -1,0 +1,1001 @@
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:23:45,781 : 89111440 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:23:45,781 : 89111440 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:23:45,781 : 89111440 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:23:45,781 : 89111440 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:23:45,782 : 89111441 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:23:45,782 : 89111441 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:23:45,782 : 89111441 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:23:45,782 : 89111441 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:23:45,783 : 89111442 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:23:45,783 : 89111442 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:23:45,783 : 89111442 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:23:45,784 : 89111443 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:23:45,784 : 89111443 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:23:45,784 : 89111443 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:23:55,786 : 89121445 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:23:55,787 : 89121446 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:23:55,788 : 89121447 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:23:55,788 : 89121447 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:23:55,788 : 89121447 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:23:55,788 : 89121447 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:23:55,789 : 89121448 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:23:55,789 : 89121448 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:23:55,840 : 89121499 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-06 10:23:55,840 : 89121499 [Thread-14525] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:23:55,840 : 89121499 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-06 10:23:55,843 : 89121502 [Thread-14525] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651812835|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:23:55,843 : 89121502 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-06 10:23:55,844 : 89121503 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-06 10:23:55,844 : 89121503 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-06 10:23:55,844 : 89121503 [Thread-14525] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-06 10:23:55,845 : 89121504 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:23:55,845 : 89121504 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:23:55,846 : 89121505 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:23:55,845 : 89121504 [Thread-14525] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-06 10:23:55,846 : 89121505 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:23:55,847 : 89121506 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:23:55,847 : 89121506 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:23:55,847 : 89121506 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:23:55,847 : 89121506 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:23:55,847 : 89121506 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:23:55,848 : 89121507 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:23:55,848 : 89121507 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:23:55,848 : 89121507 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:23:55,848 : 89121507 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:23:55,848 : 89121507 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:23:55,849 : 89121508 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:23:55,849 : 89121508 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:23:55,849 : 89121508 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:23:55,850 : 89121509 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:23:55,850 : 89121509 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:23:55,850 : 89121509 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:23:55,850 : 89121509 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:00,848 : 89126507 [Thread-14525] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:24:00,849 : 89126508 [Thread-14525] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+2022-05-06 10:24:05,859 : 89131518 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:05,860 : 89131519 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:05,861 : 89131520 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:05,862 : 89131521 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:05,862 : 89131521 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:05,863 : 89131522 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:05,863 : 89131522 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:24:05,864 : 89131523 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:05,865 : 89131524 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:05,865 : 89131524 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:05,865 : 89131524 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:05,866 : 89131525 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:05,867 : 89131526 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:05,867 : 89131526 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:05,868 : 89131527 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:05,868 : 89131527 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:15,879 : 89141538 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:15,880 : 89141539 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:15,881 : 89141540 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:15,882 : 89141541 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:15,882 : 89141541 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:15,883 : 89141542 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:15,883 : 89141542 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:24:15,883 : 89141542 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:15,884 : 89141543 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62393284 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:24:15,884 : 89141543 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:24:15,885 : 89141544 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62393284 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:24:15,885 : 89141544 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:15,885 : 89141544 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:24:15,886 : 89141545 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:24:15,886 : 89141545 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:15,886 : 89141545 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:15,887 : 89141546 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:24:15,887 : 89141546 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:15,887 : 89141546 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:15,888 : 89141547 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:24:15,888 : 89141547 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:15,888 : 89141547 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:15,889 : 89141548 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:15,889 : 89141548 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:15,890 : 89141549 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:15,890 : 89141549 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:15,891 : 89141550 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:15,891 : 89141550 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:15,891 : 89141550 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:25,901 : 89151560 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:25,902 : 89151561 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:25,903 : 89151562 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:25,903 : 89151562 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:25,904 : 89151563 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:25,904 : 89151563 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:25,904 : 89151563 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:24:25,904 : 89151563 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:25,905 : 89151564 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:25,905 : 89151564 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:25,905 : 89151564 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:25,906 : 89151565 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:25,906 : 89151565 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:25,906 : 89151565 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:25,906 : 89151565 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:25,907 : 89151566 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:35,912 : 89161571 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:35,913 : 89161572 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:35,914 : 89161573 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:35,914 : 89161573 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:35,914 : 89161573 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:35,915 : 89161574 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:35,915 : 89161574 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:24:35,915 : 89161574 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:35,966 : 89161625 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-06 10:24:35,967 : 89161626 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-06 10:24:35,967 : 89161626 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-06 10:24:35,967 : 89161626 [Thread-14526] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:24:35,967 : 89161626 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-06 10:24:35,970 : 89161629 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-06 10:24:35,971 : 89161630 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:24:35,971 : 89161630 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:24:35,970 : 89161629 [Thread-14526] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651812875|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:24:35,971 : 89161630 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:24:35,972 : 89161631 [Thread-14526] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-06 10:24:35,972 : 89161631 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:35,973 : 89161632 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:24:35,973 : 89161632 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:24:35,973 : 89161632 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:35,974 : 89161633 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:35,974 : 89161633 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:24:35,974 : 89161633 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:35,972 : 89161631 [Thread-14526] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-06 10:24:35,974 : 89161633 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:35,975 : 89161634 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:24:35,975 : 89161634 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:35,976 : 89161635 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:35,976 : 89161635 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:35,977 : 89161636 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:35,977 : 89161636 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:35,977 : 89161636 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:35,978 : 89161637 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:35,978 : 89161637 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:35,978 : 89161637 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:40,980 : 89166639 [Thread-14526] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:24:40,981 : 89166640 [Thread-14526] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+2022-05-06 10:24:45,980 : 89171639 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:45,981 : 89171640 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:45,982 : 89171641 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:45,983 : 89171642 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:45,983 : 89171642 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:45,984 : 89171643 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:45,984 : 89171643 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:24:45,985 : 89171644 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:45,985 : 89171644 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:45,986 : 89171645 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:45,986 : 89171645 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:45,987 : 89171646 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:45,987 : 89171646 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:45,988 : 89171647 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:45,988 : 89171647 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:45,989 : 89171648 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:24:55,991 : 89181650 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:24:55,992 : 89181651 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:55,993 : 89181652 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:24:55,994 : 89181653 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:55,994 : 89181653 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:55,994 : 89181653 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:24:55,995 : 89181654 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:24:55,995 : 89181654 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:24:55,995 : 89181654 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62393284 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:24:55,996 : 89181655 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:24:55,996 : 89181655 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62393284 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:24:55,996 : 89181655 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:55,996 : 89181655 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:24:55,997 : 89181656 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:24:55,997 : 89181656 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:55,997 : 89181656 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:24:55,998 : 89181657 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:24:55,998 : 89181657 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:55,998 : 89181657 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:24:55,998 : 89181657 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:24:55,999 : 89181658 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:24:55,999 : 89181658 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:55,999 : 89181658 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:24:56,000 : 89181659 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:24:56,000 : 89181659 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:24:56,000 : 89181659 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:24:56,001 : 89181660 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:56,001 : 89181660 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:24:56,002 : 89181661 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:06,013 : 89191672 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:06,014 : 89191673 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:06,015 : 89191674 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:06,016 : 89191675 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:06,016 : 89191675 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:06,017 : 89191676 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:06,017 : 89191676 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:25:06,017 : 89191676 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:06,018 : 89191677 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:06,018 : 89191677 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:06,018 : 89191677 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:06,019 : 89191678 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:06,019 : 89191678 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:06,019 : 89191678 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:06,020 : 89191679 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:06,020 : 89191679 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:16,027 : 89201686 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:16,028 : 89201687 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:16,029 : 89201688 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:16,029 : 89201688 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:16,029 : 89201688 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:16,030 : 89201689 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:16,030 : 89201689 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:25:16,030 : 89201689 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:16,081 : 89201740 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-06 10:25:16,082 : 89201741 [Thread-14527] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:16,082 : 89201741 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-06 10:25:16,085 : 89201744 [Thread-14527] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651812916|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:16,085 : 89201744 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-06 10:25:16,086 : 89201745 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-06 10:25:16,086 : 89201745 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-06 10:25:16,085 : 89201744 [Thread-14527] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-06 10:25:16,086 : 89201745 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:25:16,087 : 89201746 [Thread-14527] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-06 10:25:16,087 : 89201746 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:25:16,088 : 89201747 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:16,088 : 89201747 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:16,088 : 89201747 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:25:16,088 : 89201747 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:25:16,089 : 89201748 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:16,089 : 89201748 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:16,089 : 89201748 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:25:16,089 : 89201748 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:16,089 : 89201748 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:16,090 : 89201749 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:25:16,090 : 89201749 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:16,090 : 89201749 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:16,090 : 89201749 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:16,091 : 89201750 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:16,091 : 89201750 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:16,091 : 89201750 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:16,092 : 89201751 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:16,092 : 89201751 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:16,092 : 89201751 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:21,092 : 89206751 [Thread-14527] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:25:21,093 : 89206752 [Thread-14527] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+2022-05-06 10:25:26,098 : 89211757 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:26,100 : 89211759 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:26,101 : 89211760 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:26,101 : 89211760 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:26,101 : 89211760 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:26,102 : 89211761 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:26,102 : 89211761 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:25:26,102 : 89211761 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:26,103 : 89211762 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:26,103 : 89211762 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:26,104 : 89211763 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:26,104 : 89211763 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:26,104 : 89211763 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:26,105 : 89211764 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:26,105 : 89211764 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:26,105 : 89211764 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:36,116 : 89221775 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:36,117 : 89221776 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:36,118 : 89221777 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:36,118 : 89221777 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:36,119 : 89221778 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:36,119 : 89221778 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:36,120 : 89221779 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:25:36,120 : 89221779 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:36,121 : 89221780 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62393284 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:25:36,121 : 89221780 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:25:36,121 : 89221780 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62393284 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:36,122 : 89221781 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:36,123 : 89221782 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:25:36,123 : 89221782 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:25:36,123 : 89221782 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:36,124 : 89221783 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:36,124 : 89221783 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:25:36,125 : 89221784 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:36,125 : 89221784 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:36,125 : 89221784 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:25:36,126 : 89221785 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:36,126 : 89221785 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:36,126 : 89221785 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:36,126 : 89221785 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:36,127 : 89221786 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:36,127 : 89221786 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:36,128 : 89221787 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:36,128 : 89221787 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:36,128 : 89221787 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:46,139 : 89231798 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:46,141 : 89231800 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:46,142 : 89231801 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:46,143 : 89231802 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:46,143 : 89231802 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:46,144 : 89231803 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:46,145 : 89231804 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:25:46,145 : 89231804 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:46,146 : 89231805 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:46,146 : 89231805 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:46,147 : 89231806 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:46,148 : 89231807 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:46,148 : 89231807 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:46,148 : 89231807 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:46,149 : 89231808 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:46,149 : 89231808 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:25:56,160 : 89241819 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:25:56,161 : 89241820 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:56,165 : 89241824 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:25:56,166 : 89241825 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:56,166 : 89241825 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:56,166 : 89241825 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:25:56,167 : 89241826 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:25:56,167 : 89241826 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:25:56,219 : 89241878 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-06 10:25:56,219 : 89241878 [Thread-14528] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:56,219 : 89241878 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-06 10:25:56,222 : 89241881 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-06 10:25:56,222 : 89241881 [Thread-14528] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651812956|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:56,222 : 89241881 [Thread-14528] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-06 10:25:56,222 : 89241881 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-06 10:25:56,223 : 89241882 [Thread-14528] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-06 10:25:56,224 : 89241883 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-06 10:25:56,224 : 89241883 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:25:56,225 : 89241884 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:25:56,225 : 89241884 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:25:56,225 : 89241884 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:56,226 : 89241885 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:25:56,226 : 89241885 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:25:56,226 : 89241885 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:56,227 : 89241886 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:25:56,227 : 89241886 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:25:56,227 : 89241886 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:56,227 : 89241886 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:25:56,228 : 89241887 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:25:56,228 : 89241887 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:25:56,228 : 89241887 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:56,228 : 89241887 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:25:56,229 : 89241888 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:25:56,229 : 89241888 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:25:56,230 : 89241889 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:25:56,230 : 89241889 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:56,230 : 89241889 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:25:56,230 : 89241889 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:26:01,229 : 89246888 [Thread-14528] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:26:01,230 : 89246889 [Thread-14528] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+2022-05-06 10:26:06,238 : 89251897 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:26:06,239 : 89251898 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:26:06,240 : 89251899 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:26:06,240 : 89251899 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:26:06,240 : 89251899 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:26:06,240 : 89251899 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:26:06,241 : 89251900 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:26:06,241 : 89251900 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:26:06,241 : 89251900 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:26:06,241 : 89251900 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:26:06,242 : 89251901 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:26:06,242 : 89251901 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:26:06,243 : 89251902 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:26:06,243 : 89251902 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:26:06,243 : 89251902 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:26:06,243 : 89251902 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:26:16,255 : 89261914 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:26:16,256 : 89261915 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:26:16,257 : 89261916 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:26:16,257 : 89261916 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:26:16,257 : 89261916 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:26:16,258 : 89261917 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:26:16,258 : 89261917 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:26:16,258 : 89261917 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:26:16,258 : 89261917 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62393284 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:26:16,259 : 89261918 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:26:16,259 : 89261918 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62393284 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:26:16,259 : 89261918 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:26:16,259 : 89261918 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:26:16,260 : 89261919 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:26:16,260 : 89261919 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:26:16,260 : 89261919 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:26:16,260 : 89261919 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:26:16,261 : 89261920 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:26:16,261 : 89261920 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:26:16,261 : 89261920 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:26:16,261 : 89261920 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:26:16,262 : 89261921 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:26:16,262 : 89261921 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:26:16,262 : 89261921 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:26:16,263 : 89261922 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:26:16,263 : 89261922 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:26:16,263 : 89261922 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:26:16,264 : 89261923 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:26:16,264 : 89261923 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+

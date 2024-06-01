@@ -1,0 +1,2907 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Feb 28, 2022 11:35:27 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>10</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>10</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='10%'>20</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='90%'>180</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]O2CWITHDRAWAL</span>
+						<span class='test-time'>Feb 28, 2022 11:35:33 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 28, 2022 11:35:33 AM</span>
+	<span class='label end-time'>Feb 28, 2022 11:39:39 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 6s+13ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:35:33 AM</span>
+						<span class='node-duration'>0h 0m 3s+206ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:35 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:36 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNDI2LjYwNi4xODE3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODA2NiwianRpIjoiZGE0YjgyMzQtZDdkOS00M2FmLWFhNTEtODI5MWQ2ZWRjYTU1In0.hC0b15Hf5O9YHyLKeSrv1IonMBZQl_WnKOSn7qFaz2k","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNDI2LjYwNi4xODE3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODA2NiwianRpIjoiNDhjYzZhNDQtN2UwYy00MjA1LWI1NGEtYThhYjI3NzkxY2MxIn0.7b_N-ymkDpHnKvVMsiOXO62UXQz3YLVTKmXwi8f6cIk","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:36 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:36 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:37 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028337010.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028337010.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:35:37 AM</span>
+						<span class='node-duration'>0h 0m 24s+303ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:37 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:38 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:35:40 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:35:40 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_01_Test_success(O2CWithdrawal.java:371)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:36:01 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:01 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028361643.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028361643.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:02 AM</span>
+						<span class='node-duration'>0h 0m 0s+782ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:02 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:02 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNDUzLjAxNy41MDgyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODA5MywianRpIjoiMWY3NTdiYWItZmIxNS00MTQ1LWFlZTAtMTc4NDc5ODFjYTczIn0.wWXsMWUEcOk0mS5oUkGtZJtKroB3PsnGKHnIi5NPviU","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNDUzLjAxNy41MDgyIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODA5MywianRpIjoiMWZmZTY2OTctNzY1NC00MGNlLWE1OWMtN2EwYzRmYjY1MjhmIn0.2blOkKXsDeN8oz2W1CNCgkKTS86-jTCy-f2V4YBd3gY","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:02 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:02 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028363054.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028363054.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:03 AM</span>
+						<span class='node-duration'>0h 0m 23s+295ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:03 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:04 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:04 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_01_Test_success(O2CWithdrawal.java:371)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:36:25 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:25 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:25 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:25 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:26 AM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>11:36:26 AM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccessRevamp.getUserWithAccessRevamp(UserAccessRevamp.java:106)
+	at restassuredapi.test.O2CWithdrawal.TestDataFeed(O2CWithdrawal.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:26 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:26 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028385870.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028385870.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:26 AM</span>
+						<span class='node-duration'>0h 0m 1s+65ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:26 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:27 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNTE3LjU3Ni42OTgiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2MDQ4MTE3LCJqdGkiOiJlM2YzYzY5Yy00ZGFmLTRjZTAtODRlYi03ZGY3ZWNiMDU4MjAifQ.upe8bhLo-iLOlISxYaGglDXp6ET3KxTwZeGdjPL_DaU","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNTE3LjU3Ni42OTgiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2MDQ4MTE3LCJqdGkiOiI4YTU0YTU2MC0wZDkzLTQ5M2QtODU3YS0wOWMyOTI4ZmU3YjYifQ.dqiUaJBZO_978BTiPIvm8W_QdjETJRKAhR1ww8q1Ppc","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:27 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:27 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:27 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028387947.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028387947.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:27 AM</span>
+						<span class='node-duration'>0h 0m 22s+144ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:27 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:28 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:29 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:29 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_02_Blank_Product(O2CWithdrawal.java:469)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:36:50 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:50 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028410687.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028410687.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:50 AM</span>
+						<span class='node-duration'>0h 0m 0s+928ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:50 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNTQxLjQ0NS4yNTYxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE0MSwianRpIjoiODNhYjQwNTktM2FhMS00ZjViLWJiZmQtNDFlOTgyMjI4NmEzIn0.lW1F1JRvQZp7XkruFUrw7AjLRWDb49v_o3ea0K8OEyY","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNTQxLjQ0NS4yNTYxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE0MSwianRpIjoiZTQxYzdjZmQtNzlkMi00MTYyLTkzOGYtZTBhZTNiNmQ0MTljIn0.Vky6W_sXUDdZrnMoW76oM8nFxhVvq3SmMlu6aSou75E","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028411701.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028411701.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:36:51 AM</span>
+						<span class='node-duration'>0h 0m 22s+988ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:51 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:36:52 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_02_Blank_Product(O2CWithdrawal.java:469)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:37:13 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:37:13 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccessRevamp.getUserWithAccessRevamp(UserAccessRevamp.java:106)
+	at restassuredapi.test.O2CWithdrawal.TestDataFeed(O2CWithdrawal.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:14 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028434165.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028434165.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:37:15 AM</span>
+						<span class='node-duration'>0h 0m 0s+944ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:15 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:15 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjA1LjkxNy4xNjc3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE2NSwianRpIjoiNDJjNDRjMzAtOWU4NC00NDZiLWFkZjItODFiMTc5NDI5MjNkIn0.8LnIrn9QsQF7HtC5Kllfh4wz4-TqvyVCGq2dg5bhjYY","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjA1LjkxNy4xNjc3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE2NSwianRpIjoiYWJhYzk5ZTMtMWVjNi00YzE1LWIyYTYtOWUxYWNkZDg4NjhmIn0.39PxFTUNRYUbzxhnrAtlJX7RtY8qLQqTsxh_4QSqvDk","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:15 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:15 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028436181.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028436181.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:37:16 AM</span>
+						<span class='node-duration'>0h 0m 22s+225ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:16 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:17 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:37:17 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_03_Blank_Remarks(O2CWithdrawal.java:568)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:37:38 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:37:38 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028458928.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028458928.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:37:39 AM</span>
+						<span class='node-duration'>0h 0m 1s+65ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:39 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:39 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjI5LjgwMC4xNTg3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE4OSwianRpIjoiMDkwYWRmMDAtZjRlMy00NzdhLWFjOWUtYmJjYjZjOGYxOGNkIn0.x3oR-RS1YLVXr21q9agYWoRABJPzxIluvwC54Fnuwe8","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjI5LjgwMC4xNTg3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODE4OSwianRpIjoiYzdjMzZkNzUtZmNiNS00ZWM3LWE3NjgtZjU3MTA1NWFlYTc4In0.VAKx7M8mS68dvtCdxsBeIRtEwt_KJKvkTQSzOlN3m_E","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:39 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:39 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028460065.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028460065.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:37:40 AM</span>
+						<span class='node-duration'>0h 0m 23s+58ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:37:40 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_03_Blank_Remarks(O2CWithdrawal.java:568)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:38:02 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:02 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:02 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:02 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:03 AM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>11:38:03 AM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccessRevamp.getUserWithAccessRevamp(UserAccessRevamp.java:106)
+	at restassuredapi.test.O2CWithdrawal.TestDataFeed(O2CWithdrawal.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:03 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:03 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028482574.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028482574.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:03 AM</span>
+						<span class='node-duration'>0h 0m 1s+18ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:03 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjU0LjM3OS42NjIzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODIxNCwianRpIjoiY2Y2NzczNTctOWRkYy00ZWJmLWI4OTMtNTc5ZjY5YTVkMjE1In0.JOLqkQ7GvezyWqv9mBvm7oPt09-d2f5aRmCrtVvA3mw","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNjU0LjM3OS42NjIzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODIxNCwianRpIjoiMjRiZDdlMzEtMmMyZC00OTgwLWE2NDYtMGZmMDc2M2NjMWUxIn0.aimmLlaki-cL_TtaJPWAUhxfGGmsAJ0_sNnBSPXH0ac","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028484665.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028484665.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:04 AM</span>
+						<span class='node-duration'>0h 0m 22s+47ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:04 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:05 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_04_Blank_WalletType(O2CWithdrawal.java:666)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:38:26 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:26 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028507452.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028507452.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:27 AM</span>
+						<span class='node-duration'>0h 0m 1s+127ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:27 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNzE4LjMwNy40MjkwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODIzOCwianRpIjoiNjI2Y2U1NTAtNmU1ZS00MWI3LTk4NDktMzI3YzhjMTMzYWFkIn0.sOqXbqKkVMNoif-yBlkNqEl_o7wN-Jvaf-N_s9CV-Ss","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNzE4LjMwNy40MjkwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODIzOCwianRpIjoiYzJhNDk2YjItYTdjMy00YWIyLWJlMjUtZmJmOWJmMDQzMDU2In0.HhaZdR6kR7XBJqcFWkKZDxO4UXEOzDfMnFlo9PAGFiY","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028508729.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028508729.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:28 AM</span>
+						<span class='node-duration'>0h 0m 23s+437ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:28 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:29 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_04_Blank_WalletType(O2CWithdrawal.java:666)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:38:50 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:50 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:51 AM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:51 AM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:52 AM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>11:38:52 AM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccessRevamp.getUserWithAccessRevamp(UserAccessRevamp.java:106)
+	at restassuredapi.test.O2CWithdrawal.TestDataFeed(O2CWithdrawal.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:52 AM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:52 AM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028531659.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028531659.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:52 AM</span>
+						<span class='node-duration'>0h 0m 1s+47ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:52 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:53 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNzQzLjM5MC42NTM0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODI2MywianRpIjoiMjU5ZGZkNTAtODcxOS00NjQ4LWJmOTctYTkzZjRjZDUwNGY2In0.G4HWyEtcKKRcrwgSoGopRjFQ39ihsLx0Lixzcsi1lNU","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzNzQzLjM5MC42NTM0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODI2MywianRpIjoiNDcxODlhNDgtOWQ1YS00MGY1LWIyYzctOTFlYjE5NjNhZjE2In0.arRucHHfLWYwBKcNlkP_LN4qpE6zEKM4ah6NUIUi6tw","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:53 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:53 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:53 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028533669.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028533669.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:38:53 AM</span>
+						<span class='node-duration'>0h 0m 22s+224ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:53 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:38:54 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_05_Invalid_Pin(O2CWithdrawal.java:765)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:39:15 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:39:15 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028556426.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028556426.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:39:16 AM</span>
+						<span class='node-duration'>0h 0m 1s+137ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:16 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzODA3LjE0Ni40Mzc4IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODI4NywianRpIjoiZTllODI5MTItYTM2Zi00NzAwLWFiNDctZGQ3YjliMzY1N2E5In0.TSNJEZMgrMYecmXpDOwcn32D35KK5ZziwaEFx4N1xGM","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjI4MTEzODA3LjE0Ni40Mzc4IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjA0ODI4NywianRpIjoiODM4NzVmNjMtNjEwZS00MjRkLWE3ZmItYjNlMDI1YjQ4NTcxIn0.R5hG_3fOwGUHDJbK95Nj6n2GZCkRrAdtN6uiyXDoDaI","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646028557628.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028557628.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 28, 2022 11:39:17 AM</span>
+						<span class='node-duration'>0h 0m 22s+190ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'>Entered :: getSystemPreference(SYSTEM_DATE_FORMAT)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'>Query Repository Returns: DEFAULT_VALUE (dd/MM/yy)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'>Entered checkForLangCode(English)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:17 AM</td>
+													<td class='step-details'>checkForLangCode() :: select query: SELECT LANGUAGE_CODE from LOCALE_MASTER where NAME = ?</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>Database Returns: LanguageCode (0)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>Exiting checkForLangCode()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>Entered :: pinPreferenceForTXN()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>Query Repository Returns: SMS_INTERFACE_ALLOWED (Y)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/stockInitiateByOpt</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'>{"service":"O2CSTKINIMULRESP","referenceId":null,"status":"400","messageCode":null,"message":null,"errorMap":{"masterErrorList":[],"rowErrorMsgLists":[{"rowValue":"1","rowName":"Data1","masterErrorList":[],"rowErrorMsgList":[{"rowErrorMsgLists":[{"rowValue":"1","rowName":"Pay1","masterErrorList":[{"errorCode":"8047","errorMsg":"Invalid Date format"}],"rowErrorMsgList":null}]}]}]},"successList":[]}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:39:18 AM</td>
+													<td class='step-details'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_05_Invalid_Pin(O2CWithdrawal.java:765)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:39:39 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:39:39 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646028580376.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646028580376.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>10</span>
+							<span class='label fail'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 10</span>
+							<span class='label red lighten-1 white-text'>Failed: 10</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 28, 2022 11:35:33 AM</td>
+										<td class='linked' test-id='2'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:35:37 AM</td>
+										<td class='linked' test-id='3'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:02 AM</td>
+										<td class='linked' test-id='4'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:03 AM</td>
+										<td class='linked' test-id='5'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:26 AM</td>
+										<td class='linked' test-id='6'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:27 AM</td>
+										<td class='linked' test-id='7'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:50 AM</td>
+										<td class='linked' test-id='8'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:36:51 AM</td>
+										<td class='linked' test-id='9'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:37:15 AM</td>
+										<td class='linked' test-id='10'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:37:16 AM</td>
+										<td class='linked' test-id='11'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:37:39 AM</td>
+										<td class='linked' test-id='12'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:37:40 AM</td>
+										<td class='linked' test-id='13'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:03 AM</td>
+										<td class='linked' test-id='14'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:04 AM</td>
+										<td class='linked' test-id='15'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:27 AM</td>
+										<td class='linked' test-id='16'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:28 AM</td>
+										<td class='linked' test-id='17'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:52 AM</td>
+										<td class='linked' test-id='18'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:38:53 AM</td>
+										<td class='linked' test-id='19'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:39:16 AM</td>
+										<td class='linked' test-id='20'>[REST]O2CWITHDRAWAL.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 28, 2022 11:39:17 AM</td>
+										<td class='linked' test-id='21'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.IndexOutOfBoundsException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>10</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:35:37 AM</td>
+                                                        <td class='linked' test-id='3'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_01_Test_success(O2CWithdrawal.java:371)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:36:03 AM</td>
+                                                        <td class='linked' test-id='5'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_01_Test_success(O2CWithdrawal.java:371)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:36:27 AM</td>
+                                                        <td class='linked' test-id='7'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_02_Blank_Product(O2CWithdrawal.java:469)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:36:51 AM</td>
+                                                        <td class='linked' test-id='9'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_02_Blank_Product(O2CWithdrawal.java:469)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:37:16 AM</td>
+                                                        <td class='linked' test-id='11'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_03_Blank_Remarks(O2CWithdrawal.java:568)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:37:40 AM</td>
+                                                        <td class='linked' test-id='13'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_03_Blank_Remarks(O2CWithdrawal.java:568)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:38:04 AM</td>
+                                                        <td class='linked' test-id='15'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_04_Blank_WalletType(O2CWithdrawal.java:666)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:38:28 AM</td>
+                                                        <td class='linked' test-id='17'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_04_Blank_WalletType(O2CWithdrawal.java:666)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:38:53 AM</td>
+                                                        <td class='linked' test-id='19'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_05_Invalid_Pin(O2CWithdrawal.java:765)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Feb 28, 2022 11:39:17 AM</td>
+                                                        <td class='linked' test-id='21'>[REST]O2CWITHDRAWAL.O2CINIOPT1: To check if O2C Initiate By Opt API is working successfully for Super Channel Admin.</td>
+                                                        <td><pre><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at restassuredapi.test.O2CWithdrawal.A_05_Invalid_Pin(O2CWithdrawal.java:765)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>20</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>200</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 28, 2022 11:35:27 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 28, 2022 11:39:40 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>253,116ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>10</td>
+							<td>10</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 10,
+				failParent: 10,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 10,
+				
+				passChild: 0,
+				failChild: 20,
+				fatalChild: 0,
+				errorChild: 10,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 170,
+				exceptionsChild: 34,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

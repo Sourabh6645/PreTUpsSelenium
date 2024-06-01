@@ -1,0 +1,1001 @@
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:05,289 : 15930948 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:05,290 : 15930949 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1403.100002 Exception=FAILED
+2022-05-05 14:04:05,290 : 15930949 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:05,290 : 15930949 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1403.100002 Exception =FAILED
+2022-05-05 14:04:05,291 : 15930950 [pool-4-thread-27] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  724699085750159  Message Sending Exception:FAILED Gateway code=USSD Gateway type=USSD
+2022-05-05 14:04:05,291 : 15930950 [pool-4-thread-27] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:05,291 : 15930950 [pool-4-thread-27] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3961
+2022-05-05 14:04:05,292 : 15930951 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Entered : _msisdn=724699085750159 _message=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR. _transactionID=R220505.1403.100002 _messageType=PLAIN
+2022-05-05 14:04:05,292 : 15930951 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-05 14:04:05,292 : 15930951 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:05,293 : 15930952 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Using Gateway for _msisdn=724699085750159 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:05,293 : 15930952 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=724699085750159 p_message=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR. p_locale=en_US
+2022-05-05 14:04:05,293 : 15930952 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR.
+2022-05-05 14:04:05,294 : 15930953 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-05 14:04:05,294 : 15930953 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=724699085750159 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224724699085750159&text=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR.&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:05,294 : 15930953 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=R220505.1403.100002 p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224724699085750159&text=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR.&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:05,294 : 15930953 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224724699085750159&text=210%3ATransaction+number+R220505.1403.100002+to+recharge+200+INR+to+721337647040753+is+successful.+Your+new+balance+is+8601+INR.&smsc=SMSC&from=8080&mclass=2&pid=61 p_timeout=10000
+/pretups/rstapi/v1/c2sServices/userservicebal/GRC validNonce  true
+2022-05-05 14:04:06,146 : 15931805 [http-nio-6789-exec-99] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+2022-05-05 14:04:06,148 : 15931807 [http-nio-6789-exec-99] DEBUG com.btsl.security.EncodingFilter  -  :: skip security Header validation value : {} :: null
+2022-05-05 14:04:06,149 : 15931808 [http-nio-6789-exec-99] DEBUG com.btsl.security.EncodingFilter  - preHandle :: checksum hash validation enabled : {} :: false
+2022-05-05 14:04:06,149 : 15931808 [http-nio-6789-exec-99] DEBUG com.btsl.security.EncodingFilter  - preHandle :: uri /pretups/rstapi/v1/c2sServices/userservicebal/GRC :: false
+/pretups/rstapi/v1/c2sServices/userservicebal/GRC valid  true
+2022-05-05 14:04:06,158 : 15931817 [http-nio-6789-exec-99] DEBUG com.restapi.c2s.services.C2SServicesController  - processGetUserServiceBalanceRequest :: Entered 
+2022-05-05 14:04:06,159 : 15931818 [http-nio-6789-exec-99] DEBUG com.restapi.c2s.services.C2SServiceImpl  - processRequest :: Entered
+2022-05-05 14:04:06,160 : 15931819 [http-nio-6789-exec-99] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:06,161 : 15931820 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:06,163 : 15931822 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:06,164 : 15931823 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@33a9ca [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:06,165 : 15931824 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - validateTokenApi :: Entered 
+2022-05-05 14:04:06,166 : 15931825 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - host :: 172.30.38.232:6789
+2022-05-05 14:04:06,167 : 15931826 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - connection :: keep-alive
+2022-05-05 14:04:06,168 : 15931827 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - pragma :: no-cache
+2022-05-05 14:04:06,169 : 15931828 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - nonce :: c5444339cabefb6e
+2022-05-05 14:04:06,170 : 15931829 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - user-agent :: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+2022-05-05 14:04:06,171 : 15931830 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - accept :: application/json, text/plain, */*
+2022-05-05 14:04:06,172 : 15931831 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - cache-control :: no-store, no-cache
+2022-05-05 14:04:06,173 : 15931832 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - logheader :: {"logData":[]}
+2022-05-05 14:04:06,174 : 15931833 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - authorization :: Bearer f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b18994024f3843f68bf94561d3a5d1eb19291665f5f6089cff122d4a33c14a7feae58af5c493cd83bf73466b6b7c95b0095a32fadaa5df9bcd80a667b643ca7989873bfa2d3547279bed8cb80dad1a1f2179b4734302e01ed4c544baad25cd0efdf28057b1e8cec2f659596f741dda3c9523aea8179d735d4b7b3a1b18022c3bf19dd4552e4ca12dabb5457ee47aa1e72e65300d6570b6b016176d9f3d681c53f700e1aae7de29bcf2d91287e630402dba279c02adfd9f86307f17ee1b9b85c2eeb17d0976f66e3c48d2b5ab408e71571815987156af4e6d61fffb3b68ac6c2112ba1c76013b6091d7f02ab39910ac1bfd35f59a3d8ce2eac1c85805331c718bb0d7f53c00208eb0d6e4474.773dc8e59478f5234b46213a54d7d13ec8e4e724d3b53f2d5e4481c53d625e99
+2022-05-05 14:04:06,175 : 15931834 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - signature :: 
+2022-05-05 14:04:06,176 : 15931835 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - origin :: http://172.30.38.232:9747
+2022-05-05 14:04:06,177 : 15931836 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - referer :: http://172.30.38.232:9747/
+2022-05-05 14:04:06,178 : 15931837 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - accept-encoding :: gzip, deflate
+2022-05-05 14:04:06,179 : 15931838 [http-nio-6789-exec-99] DEBUG com.btsl.util.OAuthenticationUtil  - accept-language :: en-US,en;q=0.9
+2022-05-05 14:04:06,180 : 15931839 [http-nio-6789-exec-99] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:06,181 : 15931840 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:06,183 : 15931842 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:3 cache size:7
+2022-05-05 14:04:06,184 : 15931843 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@6604ad [wrapping: org.postgresql.jdbc.PgConnection@7d50ef] active size:3 cache size:7
+2022-05-05 14:04:06,186 : 15931845 [http-nio-6789-exec-99] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Entered: p_userVO=OAuthUser [loginId=null, msisdn=null, password=null, pin=null, reqGatewayType=null, reqGatewayCode=null, reqGatewayLoginId=null, reqGatewayPassword=null, servicePort=null, sourceType=null, data=OAuthUserData [loginid=null, msisdn=null, password=null, pin=null, extcode=null, userid=null]] ,token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b18994024f3843f68bf94561d3a5d1eb19291665f5f6089cff122d4a33c14a7feae58af5c493cd83bf73466b6b7c95b0095a32fadaa5df9bcd80a667b643ca7989873bfa2d3547279bed8cb80dad1a1f2179b4734302e01ed4c544baad25cd0efdf28057b1e8cec2f659596f741dda3c9523aea8179d735d4b7b3a1b18022c3bf19dd4552e4ca12dabb5457ee47aa1e72e65300d6570b6b016176d9f3d681c53f700e1aae7de29bcf2d91287e630402dba279c02adfd9f86307f17ee1b9b85c2eeb17d0976f66e3c48d2b5ab408e71571815987156af4e6d61fffb3b68ac6c2112ba1c76013b6091d7f02ab39910ac1bfd35f59a3d8ce2eac1c85805331c718bb0d7f53c00208eb0d6e4474.773dc8e59478f5234b46213a54d7d13ec8e4e724d3b53f2d5e4481c53d625e99
+2022-05-05 14:04:06,187 : 15931846 [http-nio-6789-exec-99] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Query: SELECT ou.request_gateway_type,ou.request_gateway_code,ou.request_gateway_login_id,ou.service_port,ou.request_gateway_password,ou.source_type,ou.login_id,ou.msisdn,ou.ext_code,ou.user_id,oat.modified_on, oat.expires from oauth_access_token  oat, oauth_users_login_info ou where oat.token_id = ou.token_id and oat.token_id = ?
+2022-05-05 14:04:06,188 : 15931847 [http-nio-6789-exec-99] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - tokenid :: 20220505140358.736.5398
+2022-05-05 14:04:06,191 : 15931850 [http-nio-6789-exec-99] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: get():: Entered getPinPassword:
+2022-05-05 14:04:06,193 : 15931852 [http-nio-6789-exec-99] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: Exiting userName:User ID =null,User Name =null,Network ID =null,Login ID =null,Category Code =null,Parent ID =null,Parent Name =null,Owner ID =null,Allowed IPs =null,Allowed Days =null,From Time =null,To Time =null,Last Log On =null,Parent ID =null,Emp Code =null,Status =null,Previous Status =null,Email =null,Password Modified On =null,Contact No =null,Designation =null,Division Code =null,Department Code =null,Msisdn =null,User Type =null,Cretated On =null,Created By =null,Address 1 =null,Address 2 =null,City=null,State =null,Country =null,SSN =null,User Name Prefix =null,External Code =null,User Code =null,Short Name =null,Reference ID =null,Domain ID =null,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =null,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =null,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment Typenull
+2022-05-05 14:04:06,195 : 15931854 [http-nio-6789-exec-99] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Exiting: insertCount=0
+2022-05-05 14:04:06,198 : 15931857 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Entered: Msisdn =728916899742500
+2022-05-05 14:04:06,199 : 15931858 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserPostgresQry  - loadChannelUserDetailsQry ::  SELECT u.user_id, u.password webpassword,u.user_name, u.network_code,u.login_id, u.category_code, u.parent_id, u.owner_id, u.msisdn, u.employee_code,u.status userstatus,u.created_by,u.created_on,u.email,u.modified_by,u.modified_on, cusers.contact_person,u.contact_no,u.designation,u.division,u.department,u.user_type,cusers.in_suspend,cusers.out_suspend, u.address1,u.address2,u.city,u.state,u.country,u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.LONGITUDE, cat.domain_code,dom.domain_type_code,cat.sequence_no catseq,cat.sms_interface_allowed,geo.grph_domain_code,gdomains.status geostatus,u.company,u.fax,u.firstname,u.lastname,  uphones.user_phones_id,uphones.primary_number, uphones.sms_pin, uphones.pin_required, uphones.phone_profile, uphones.phone_language phlang, uphones.country phcountry, uphones.invalid_pin_count, uphones.last_transaction_status, uphones.last_transaction_on, uphones.pin_modified_on,uphones.last_transfer_id, uphones.last_transfer_type,uphones.prefix_id,uphones.temp_transfer_id, uphones.first_invalid_pin_time,  cat.agent_allowed,cat.hierarchy_allowed, cat.category_type,cat.category_name,cat.grph_domain_type,cusers.comm_profile_set_id,cusers.transfer_profile_id, tp.profile_name, cusers.sos_allowed,cusers.sos_allowed_amount,cusers.sos_threshold_limit,cusers.lr_allowed,cusers.lr_max_amount, tp.status tpstatus,cusers.user_grade,cset.status csetstatus,  cset.language_1_message comprf_lang_1_msg,cset.language_2_message   comprf_lang_2_msg,cset.COMM_PROFILE_SET_NAME, cset.last_dual_comm_type,cat.restricted_msisdns,gdt.sequence_no grphSeq, cat.transfertolistonly, cat.USER_ID_PREFIX, cpsv.applicable_from, cpsv.comm_profile_set_version,  uphones.access_type, uphones.created_on, cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow,cusers.low_bal_alert_allow, uphones.created_on userphone_created_on  ,uphones.PIN_RESET,uphones.last_access_on,uphones.modified_on,uphones.modified_by,u.from_time,u.to_time,u.allowed_days,u.invalid_password_count,u.pswd_modified_on, cusers.auto_c2c_allow, cusers.auto_c2c_quantity  , cusers.trf_rule_type   , cusers.lms_profile   , ou.category_code own_category_code, ou.msisdn own_msisdn, ou.user_name owner_name, ou.company owner_company , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP, gdomains.GRPH_DOMAIN_NAME  FROM user_geographies geo,categories cat,domains dom, user_phones uphones right join users u on  u.user_id=uphones.user_id left join channel_users cusers on  cusers.user_id=u.user_id  left join transfer_profile tp on  cusers.transfer_profile_id=tp.profile_id  left join commission_profile_set cset on cusers.comm_profile_set_id=cset.comm_profile_set_id  ,geographical_domains gdomains,geographical_domain_types gdt,commission_profile_set_version cpsv  , users ou WHERE uphones.msisdn=? AND u.user_type=?  AND u.status <> ? AND u.status <> ?  AND u.category_code = cat.category_code AND u.user_id=geo.user_id AND geo.grph_domain_code=gdomains.grph_domain_code  AND cat.domain_code= dom.domain_code AND gdt.grph_domain_type=gdomains.grph_domain_type  AND cpsv.applicable_from = (select COALESCE ((select max( applicable_from ) from commission_profile_set_version where applicable_from <= ? and comm_profile_set_id = cusers.comm_profile_set_id ),cpsv.applicable_from))  AND ou.user_id=u.owner_id
+2022-05-05 14:04:06,201 : 15931860 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Before Result =728916899742500
+2022-05-05 14:04:06,219 : 15931878 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: After Result =728916899742500
+2022-05-05 14:04:06,221 : 15931880 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: entered p_categoryCode: AG
+2022-05-05 14:04:06,222 : 15931881 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: exited messageGatewayForCategoryList: [EXTGW, REST, SMSC, USSD, WEB]
+2022-05-05 14:04:06,223 : 15931882 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGAG0000032310
+2022-05-05 14:04:06,225 : 15931884 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-05 14:04:06,227 : 15931886 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:11
+2022-05-05 14:04:06,228 : 15931887 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Exiting channelUserVO:User ID =NGAG0000032310,User Name =AUTFN7086 AUTLN1035,Network ID =NG,Login ID =AUT_08837,Category Code =AG,Parent ID =NGD0000032308,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =null,Parent ID =NGD0000032308,Emp Code =201335,Status =Y,Previous Status =null,Email =8o87a@mail.com,Password Modified On =2022-04-05 10:51:02.817,Contact No =759465,Designation =,Division Code =null,Department Code =null,Msisdn =728916899742500,User Type =CHANNEL,Cretated On =Wed Jan 13 12:52:53 IST 2021,Created By =NGSB0000032298,Address 1 =Add12922,Address 2 =Add24913,City=City4203,State =State1730,Country =Country82,SSN =,User Name Prefix =MR,External Code =038641471,User Code =728916899742500,Short Name =AUTSN2508,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =Y,Appointment Date =null,Owner Msisdn720231342216284,Owner CategoryName =DIST,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =NGD0000032308,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT93258,TransferProfileID =1102,CommissionProfileSetID =3794,InSuspend =N,OutSuspened=N,GeographicalCode =AUTO2FM,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGAG0000032310,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=N,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = N, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-05 14:04:06,230 : 15931889 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.servicekeyword.businesslogic.ServiceKeywordDAO  - loadServiceCache() :: Entered
+2022-05-05 14:04:06,231 : 15931890 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.servicekeyword.businesslogic.ServiceKeywordDAO  - loadServiceCache() :: QUERY sqlSelect=SELECT SK.keyword, ST.module, SK.req_interface_type, ST.type, ST.message_format,  SK.service_port, ST.service_type, ST.request_handler, ST.unregistered_access_allowed,  ST.error_key, SK.allowed_version, SK.status, SK.modified_on as keywordmodified,  ST.modified_on  as keywordtypemodified , ST.name name1 , ST.external_interface extintface, ST.use_interface_language,ST.group_type,ST.sub_keyword_applicable,SK.sub_keyword  FROM   service_type ST , service_keywords SK  WHERE   ST.service_type = SK.service_type AND SK.status <> 'N' AND ST.status <> 'N' order by seq_no 
+2022-05-05 14:04:06,239 : 15931898 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getSingleConnection :: active size: 2 cache size:8
+2022-05-05 14:04:06,254 : 15931913 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.servicekeyword.businesslogic.ServiceKeywordDAO  - loadServiceCache() :: Exiting: Service Map size=456
+2022-05-05 14:04:06,256 : 15931915 [http-nio-6789-exec-99] DEBUG com.web.pretups.user.businesslogic.ChannelUserWebDAO  - loadChannelUserBalanceServiceWise :: Entered: p_userId=NGAG0000032310
+2022-05-05 14:04:06,257 : 15931916 [http-nio-6789-exec-99] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:06,258 : 15931917 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:06,261 : 15931920 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:3 cache size:7
+2022-05-05 14:04:06,262 : 15931921 [http-nio-6789-exec-99] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1e248f8 [wrapping: org.postgresql.jdbc.PgConnection@7d50ef] active size:3 cache size:7
+2022-05-05 14:04:06,263 : 15931922 [http-nio-6789-exec-99] DEBUG com.web.pretups.user.businesslogic.ChannelUserWebDAO  - loadChannelUserBalanceServiceWise :: Query = SELECT distinct PS.SERVICE_TYPE,UB.BALANCE,P.PRODUCT_CODE,UB.balance_type,UB.network_code  FROM USER_BALANCES UB, PRODUCT_SERVICE_TYPE_MAPPING PS,PRODUCTS P, USER_SERVICES US  WHERE UB.user_id=? AND UB.user_id=US.user_id AND US.SERVICE_TYPE=PS.SERVICE_TYPE AND  PS.PRODUCT_TYPE = P.PRODUCT_TYPE AND PS.PRODUCT_CODE=P.PRODUCT_CODE AND P.PRODUCT_CODE=UB.PRODUCT_CODE 
+2022-05-05 14:04:06,265 : 15931924 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,266 : 15931925 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,268 : 15931927 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,269 : 15931928 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,270 : 15931929 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,271 : 15931930 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=200
+2022-05-05 14:04:06,272 : 15931931 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,274 : 15931933 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,275 : 15931934 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=1561100
+2022-05-05 14:04:06,278 : 15931937 [http-nio-6789-exec-99] DEBUG com.web.pretups.user.businesslogic.ChannelUserWebDAO  - loadChannelUserBalanceServiceWise :: Exiting: showbalance:DVD:15611,EVD:15611,GRC:15611,INTRRC:15611,MVD:15611,PPB:2,PSTNRC:15611,RC:15611,RCREV:15611
+2022-05-05 14:04:06,280 : 15931939 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getOptionDesc :: Entered: p_code=GRC p_list=[ListValueBean[C2S Gift Recharge, GRC], ListValueBean[ELECTRONIC VOUCHER, EVD], ListValueBean[Postpaid Bill Payment, PPB], ListValueBean[Customer Recharge Reversal, RCREV], ListValueBean[Customer Recharge Fix line, PSTNRC], ListValueBean[Digital Voucher Distribution, DVD], ListValueBean[Multiple Voucher Distribution, MVD], ListValueBean[Customer Recharge, RC], ListValueBean[Digital Voucher Distribution, DVD], ListValueBean[Postpaid Bill Payment, PPB], ListValueBean[Internet, INTRRC], ListValueBean[Customer Recharge Fix line, PSTNRC], ListValueBean[Internet, INTRRC], ListValueBean[Customer Recharge, RC]]
+2022-05-05 14:04:06,281 : 15931940 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getOptionDesc :: Exited: vo=ListValueBean[C2S Gift Recharge, GRC]
+2022-05-05 14:04:06,282 : 15931941 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getOptionDesc :: Entered: p_code=GRC p_list=[ListValueBean[C2S Gift Recharge, GRC], ListValueBean[ELECTRONIC VOUCHER, EVD], ListValueBean[Postpaid Bill Payment, PPB], ListValueBean[Customer Recharge Reversal, RCREV], ListValueBean[Customer Recharge Fix line, PSTNRC], ListValueBean[Digital Voucher Distribution, DVD], ListValueBean[Multiple Voucher Distribution, MVD], ListValueBean[Customer Recharge, RC], ListValueBean[Digital Voucher Distribution, DVD], ListValueBean[Postpaid Bill Payment, PPB], ListValueBean[Internet, INTRRC], ListValueBean[Customer Recharge Fix line, PSTNRC], ListValueBean[Internet, INTRRC], ListValueBean[Customer Recharge, RC]]
+2022-05-05 14:04:06,283 : 15931942 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getOptionDesc :: Exited: vo=ListValueBean[C2S Gift Recharge, GRC]
+2022-05-05 14:04:06,285 : 15931944 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-05 14:04:06,286 : 15931945 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:06,288 : 15931947 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-05 14:04:06,289 : 15931948 [http-nio-6789-exec-99] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:06,291 : 15931950 [http-nio-6789-exec-99] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-05 14:04:06,292 : 15931951 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,293 : 15931952 [http-nio-6789-exec-99] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:06,294 : 15931953 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,295 : 15931954 [http-nio-6789-exec-99] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:06,296 : 15931955 [http-nio-6789-exec-99] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,298 : 15931957 [http-nio-6789-exec-99] DEBUG com.restapi.c2s.services.C2SServiceImpl  - processFile :: Exit
+2022-05-05 14:04:06,552 : 15932211 [http-nio-6789-exec-117] INFO  com.restapi.oauth.services.OAuthenticationController  - logout :: User Logout Request
+2022-05-05 14:04:06,566 : 15932225 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:06,567 : 15932226 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,568 : 15932227 [pool-4-thread-25] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:06,569 : 15932228 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1403.100001 Exception=FAILED
+2022-05-05 14:04:06,569 : 15932228 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,570 : 15932229 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1403.100001 Exception =FAILED
+2022-05-05 14:04:06,571 : 15932230 [pool-4-thread-25] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  720231342216284  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:06,571 : 15932230 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:06,572 : 15932231 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,572 : 15932231 [pool-4-thread-25] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:06,573 : 15932232 [pool-4-thread-25] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3962
+2022-05-05 14:04:06,573 : 15932232 [pool-4-thread-24] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:06,574 : 15932233 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1403.100001 Exception=FAILED
+2022-05-05 14:04:06,575 : 15932234 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,575 : 15932234 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1403.100001 Exception =FAILED
+2022-05-05 14:04:06,572 : 15932231 [http-nio-6789-exec-117] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:06,577 : 15932236 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:06,576 : 15932235 [pool-4-thread-24] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  720857185394468  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:06,579 : 15932238 [pool-4-thread-24] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:06,579 : 15932238 [pool-4-thread-24] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3963
+2022-05-05 14:04:06,574 : 15932233 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:06,580 : 15932239 [pool-4-thread-25] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,580 : 15932239 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:06,581 : 15932240 [pool-4-thread-24] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,579 : 15932238 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:06,583 : 15932242 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1247ee3 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:06,584 : 15932243 [http-nio-6789-exec-117] ERROR com.btsl.oauth.businesslogic.OAuthDao  - deleteToken :: EXCEPTION: 241018
+2022-05-05 14:04:06,585 : 15932244 [http-nio-6789-exec-117] ERROR com.btsl.oauth.businesslogic.OAuthDao  - deleteToken
+class=JWebTokenUtil,method=JWebTokenUtil,message=241018,date=2022-05-05errorCode=400
+	at com.btsl.util.JWebTokenUtil.retrieveTokenId(JWebTokenUtil.java:204)
+	at com.btsl.oauth.businesslogic.OAuthDao.deleteToken(OAuthDao.java:916)
+	at com.btsl.user.businesslogic.LogoutService.dealForceLogout(LogoutService.java:120)
+	at com.btsl.user.businesslogic.LogoutService.logoutprocess(LogoutService.java:142)
+	at com.btsl.user.businesslogic.LogoutService.execute(LogoutService.java:79)
+	at com.btsl.user.businesslogic.LogoutService$$FastClassBySpringCGLIB$$c041386e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.btsl.user.businesslogic.LogoutService$$EnhancerBySpringCGLIB$$24771e23.execute(<generated>)
+	at com.restapi.oauth.services.OAuthenticationController.logout(OAuthenticationController.java:211)
+	at sun.reflect.GeneratedMethodAccessor1572.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:352)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:06,587 : 15932246 [http-nio-6789-exec-117] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - deleteToken :: Exiting: insertCount=0
+2022-05-05 14:04:06,604 : 15932263 [http-nio-6789-exec-117] INFO  com.restapi.oauth.services.OAuthenticationController  - User Logout Response:  {} :: LogoutResponse [referenceId=null, externalRefId=null, status=200, message=ULAE0012]
+/pretups/rstapi/v1/v1//getLocaleList validNonce  true
+2022-05-05 14:04:06,762 : 15932421 [http-nio-6789-exec-93] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups/rstapi/v1/v1//getLocaleList valid  true
+2022-05-05 14:04:06,763 : 15932422 [http-nio-6789-exec-93] INFO  com.restapi.oauth.services.OAuthenticationController  - getLocaleList :: Login getLocaleList request
+/pretups//rstapi/v1/redis/getSublookupsCache validNonce  true
+2022-05-05 14:04:06,774 : 15932433 [http-nio-6789-exec-122] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups//rstapi/v1/redis/getSublookupsCache valid  true
+2022-05-05 14:04:06,776 : 15932435 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Entered se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@1a9a25f]
+2022-05-05 14:04:06,778 : 15932437 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Got ID as =36C7EEFC91DFCF73CDF181BBB56E0471
+2022-05-05 14:04:06,778 : 15932437 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Exiting se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@1a9a25f] Htable size=163
+2022-05-05 14:04:06,777 : 15932436 [http-nio-6789-exec-122] DEBUG com.restapi.redisapi.RedisController  - sublookupsCache :: Entered
+2022-05-05 14:04:06,780 : 15932439 [http-nio-6789-exec-122] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:06,782 : 15932441 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:06,783 : 15932442 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:06,784 : 15932443 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1db2ac0 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:06,785 : 15932444 [http-nio-6789-exec-122] DEBUG com.restapi.redisapi.RedisServiceImpl  - sublookupsCache :: Entered
+2022-05-05 14:04:06,786 : 15932445 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-05 14:04:06,787 : 15932446 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:06,788 : 15932447 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-05 14:04:06,789 : 15932448 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:06,790 : 15932449 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-05 14:04:06,791 : 15932450 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,792 : 15932451 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:06,793 : 15932452 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,794 : 15932453 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:06,794 : 15932453 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:06,795 : 15932454 [http-nio-6789-exec-122] DEBUG com.restapi.redisapi.RedisServiceImpl  - sublookupsCache :: Exiting
+2022-05-05 14:04:06,788 : 15932447 [http-nio-6789-exec-93] INFO  com.restapi.oauth.services.OAuthenticationController  - Login getLocalelist Response:  {} :: BaseResponse(referenceId=null, externalRefId=null, status=200, messageCode=, message=200)
+2022-05-05 14:04:06,796 : 15932455 [http-nio-6789-exec-122] DEBUG com.restapi.redisapi.RedisController  - sublookupsCache ::  Exited 
+2022-05-05 14:04:06,869 : 15932528 [http-nio-6789-exec-110] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Entered se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@6c4d47]
+2022-05-05 14:04:06,870 : 15932529 [http-nio-6789-exec-110] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Got ID as =DB35BA51B3624CBC089EEEE61DE25621
+2022-05-05 14:04:06,871 : 15932530 [http-nio-6789-exec-110] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Exiting se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@6c4d47] Htable size=164
+2022-05-05 14:04:06,965 : 15932624 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Entered se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@335a9f]
+2022-05-05 14:04:06,966 : 15932625 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Got ID as =42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,966 : 15932625 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Exiting se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@335a9f] Htable size=165
+2022-05-05 14:04:06,977 : 15932636 [http-nio-6789-exec-118] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=en  inString=ar,fa
+2022-05-05 14:04:06,979 : 15932638 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - decrementCounters :: Entered ::42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,980 : 15932639 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: Entered se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@335a9f]
+2022-05-05 14:04:06,981 : 15932640 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: Got ID as =42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,982 : 15932641 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - removeUserFromCounters :: Entered ::42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,982 : 15932641 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: Got ID as =42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,983 : 15932642 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - removeMonitorUserFromCounters :: Entered ::42A7FD87128D7001F300CDA3508F0502
+2022-05-05 14:04:06,984 : 15932643 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - removeMonitorUserFromCounters ::  Exiting 
+2022-05-05 14:04:06,985 : 15932644 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: After Removing User From Counters for 42A7FD87128D7001F300CDA3508F0502 Size=165
+2022-05-05 14:04:06,985 : 15932644 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: After Removing User From HashTable for 42A7FD87128D7001F300CDA3508F0502 Size=164
+2022-05-05 14:04:06,986 : 15932645 [http-nio-6789-exec-118] DEBUG com.btsl.util.SessionCounter  - sessionDestroyed :: Exiting se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@335a9f]
+/pretups/rstapi/v1/v1//login validNonce  true
+2022-05-05 14:04:07,638 : 15933297 [http-nio-6789-exec-117] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................POST
+/pretups/rstapi/v1/v1//login valid  true
+2022-05-05 14:04:07,643 : 15933302 [http-nio-6789-exec-117] INFO  com.restapi.oauth.services.OAuthenticationController  - login :: User Login Request
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+2022-05-05 14:04:07,932 : 15933591 [http-nio-6789-exec-117] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:07,934 : 15933593 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:07,936 : 15933595 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:07,937 : 15933596 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@7bbb42 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:07,941 : 15933600 [http-nio-6789-exec-117] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: loadInterfaceTypeId():: Entered with p_loginID:AUT_87570 p_password= locale=en
+2022-05-05 14:04:07,942 : 15933601 [http-nio-6789-exec-117] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query :  SELECT u.user_id, u.user_name, u.network_code,l.network_name,l.report_header_name, u.login_id, u.password,  u.category_code, u.parent_id,u.company,u.fax, u.owner_id, u.msisdn, u.allowed_ip,  u.allowed_days,u.from_time,u.to_time,u.firstname,u.lastname,  u.last_login_on,u.employee_code,u.status userstatus,u.email,u.created_by,u.created_on,u.modified_by,  u.modified_on,u.pswd_modified_on,  cusers.contact_person,u.contact_no,u.designation,u.division,u.department,  u.msisdn,u.user_type,cusers.in_suspend,cusers.out_suspend,u.address1,u.address2,u.city,u.state,u.country,  u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.invalid_password_count,u.password_count_updated_on, u.payment_type,  l.status networkstatus,l.language_1_message,l.language_2_message, cat.category_code,cat.category_name,  cat.domain_code,cat.sequence_no,cat.multiple_login_allowed, cat.max_login_count,cat.view_on_network_block,  cat.status catstatus, cat.max_txn_msisdn, cat.uncntrl_transfer_allowed, cat.scheduled_transfer_allowed, cat.restricted_msisdns,  cat.parent_category_code, cat.product_types_allowed,cat.category_type,cat.hierarchy_allowed, cat.transfertolistonly,  cat.grph_domain_type, cat.multiple_grph_domains, cat.fixed_roles, cat.user_id_prefix,cat.web_interface_allowed,  cat.services_allowed,cat.domain_allowed,cat.fixed_domains,cat.outlets_allowed,cat.status categorystatus,cusers.comm_profile_set_id,cusers.transfer_profile_id,cusers.user_grade,gdt.sequence_no grph_sequence_no,  gdt.grph_domain_type_name,dm.domain_name,dm.status domainstatus,dm.domain_type_code,up.sms_pin,up.PREFIX_ID,up.pin_required,up.invalid_pin_count,dt.restricted_msisdn restricted_msisdn_allow,up.pin_reset,   cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow, up.access_type , u.PSWD_RESET, up.PHONE_PROFILE , u.rsaflag,cat.SMS_INTERFACE_ALLOWED , u.AUTHENTICATION_ALLOWED,cat.authentication_type , cusers.trf_rule_type  , cusers.lms_profile   , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP  FROM users u left join channel_users cusers on cusers.user_id=u.user_id left join networks l on L.network_code=U.network_code left outer join user_phones up on (up.user_id=u.user_id and up.msisdn=u.msisdn),categories cat,geographical_domain_types gdt ,domains dm,domain_types dt   WHERE  UPPER(u.login_id)=? AND gdt.grph_domain_type = cat.grph_domain_type AND u.status <> ? AND u.status <> ?  AND cat.category_code=U.category_code AND cat.status <> ? AND dm.domain_code = cat.domain_code  AND dt.domain_type_code = dm.domain_type_code 
+2022-05-05 14:04:07,943 : 15933602 [http-nio-6789-exec-117] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query : select user_id,user_name from users where user_id in (?,?)
+2022-05-05 14:04:07,946 : 15933605 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en
+2022-05-05 14:04:07,948 : 15933607 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGAG0000032311
+2022-05-05 14:04:07,949 : 15933608 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-05 14:04:07,952 : 15933611 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:11
+2022-05-05 14:04:07,953 : 15933612 [http-nio-6789-exec-117] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: ::  Exiting channelUserVO=User ID =NGAG0000032311,User Name =AUTFN5575 AUTLN8034,Network ID =NG,Login ID =AUT_87570,Category Code =AG,Parent ID =NGSE0000032309,Parent Name =AUTFN6751 AUTLN4189,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =2022-04-04 15:48:27.777,Parent ID =NGSE0000032309,Emp Code =031908,Status =DR,Previous Status =null,Email =dd7la@mail.com,Password Modified On =2021-01-13 12:54:10.61,Contact No =612004,Designation =,Division Code =null,Department Code =null,Msisdn =723932049199625,User Type =CHANNEL,Cretated On =2021-01-13 12:53:56.255,Created By =NGAG0000032311,Address 1 =Add10288,Address 2 =Add29113,City=City2688,State =State8900,Country =Country71,SSN =,User Name Prefix =MR,External Code =075353926,User Code =723932049199625,Short Name =AUTSN1510,Reference ID =null,Domain ID =DIST,Domain Name =Distributor,Network Name =Network GGN,Message =B,Valid Request URLs =,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =NGSE0000032309,ParentName =AUTFN6751 AUTLN4189,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =2021-01-13 12:54:08.012,Report Header NameComvivaTechnologies,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT93258,TransferProfileID =1103,CommissionProfileSetID =3795,InSuspend =N,OutSuspened=N,GeographicalCode =null,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGAG0000032311,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+userId >>>>>>>>>>>>>>>>>>>>>>. NGAG0000032311
+userId >>>>>>>>>>>>>>>>>>>>>>. 2022-05-05 14:04:07.955
+2022-05-05 14:04:07,964 : 15933623 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=AG  inString=CCE
+POST
+2022-05-05 14:04:08,040 : 15933699 [http-nio-6789-exec-119] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:08,041 : 15933700 [http-nio-6789-exec-119] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:08,043 : 15933702 [http-nio-6789-exec-119] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:08,044 : 15933703 [http-nio-6789-exec-119] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@2d6cd1 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:08,044 : 15933703 [http-nio-6789-exec-119] DEBUG com.btsl.util.OAuthenticationUtil  - validateUserApi :: Entered 
+2022-05-05 14:04:08,046 : 15933705 [http-nio-6789-exec-119] DEBUG com.btsl.user.businesslogic.UserDAO  - loadUsersDetailsByLoginID :: Entered: identifierValue=AUT_87570
+2022-05-05 14:04:08,047 : 15933706 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Entered se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@15d4dce]
+2022-05-05 14:04:08,048 : 15933707 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Got ID as =4DC7CD42872C2277D19C40443342C841
+2022-05-05 14:04:08,049 : 15933708 [http-nio-6789-exec-119] DEBUG com.btsl.util.SessionCounter  - sessionCreated :: Exiting se:javax.servlet.http.HttpSessionEvent[source=org.apache.catalina.session.StandardSessionFacade@15d4dce] Htable size=165
+2022-05-05 14:04:08,050 : 15933709 [http-nio-6789-exec-119] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: loadInterfaceTypeId():: Entered with p_loginID:AUT_87570 p_password=Com@2468 locale=en_US
+2022-05-05 14:04:08,051 : 15933710 [http-nio-6789-exec-119] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query :  SELECT u.user_id, u.user_name, u.network_code,l.network_name,l.report_header_name, u.login_id, u.password,  u.category_code, u.parent_id,u.company,u.fax, u.owner_id, u.msisdn, u.allowed_ip,  u.allowed_days,u.from_time,u.to_time,u.firstname,u.lastname,  u.last_login_on,u.employee_code,u.status userstatus,u.email,u.created_by,u.created_on,u.modified_by,  u.modified_on,u.pswd_modified_on,  cusers.contact_person,u.contact_no,u.designation,u.division,u.department,  u.msisdn,u.user_type,cusers.in_suspend,cusers.out_suspend,u.address1,u.address2,u.city,u.state,u.country,  u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.invalid_password_count,u.password_count_updated_on, u.payment_type,  l.status networkstatus,l.language_1_message,l.language_2_message, cat.category_code,cat.category_name,  cat.domain_code,cat.sequence_no,cat.multiple_login_allowed, cat.max_login_count,cat.view_on_network_block,  cat.status catstatus, cat.max_txn_msisdn, cat.uncntrl_transfer_allowed, cat.scheduled_transfer_allowed, cat.restricted_msisdns,  cat.parent_category_code, cat.product_types_allowed,cat.category_type,cat.hierarchy_allowed, cat.transfertolistonly,  cat.grph_domain_type, cat.multiple_grph_domains, cat.fixed_roles, cat.user_id_prefix,cat.web_interface_allowed,  cat.services_allowed,cat.domain_allowed,cat.fixed_domains,cat.outlets_allowed,cat.status categorystatus,cusers.comm_profile_set_id,cusers.transfer_profile_id,cusers.user_grade,gdt.sequence_no grph_sequence_no,  gdt.grph_domain_type_name,dm.domain_name,dm.status domainstatus,dm.domain_type_code,up.sms_pin,up.PREFIX_ID,up.pin_required,up.invalid_pin_count,dt.restricted_msisdn restricted_msisdn_allow,up.pin_reset,   cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow, up.access_type , u.PSWD_RESET, up.PHONE_PROFILE , u.rsaflag,cat.SMS_INTERFACE_ALLOWED , u.AUTHENTICATION_ALLOWED,cat.authentication_type , cusers.trf_rule_type  , cusers.lms_profile   , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP  FROM users u left join channel_users cusers on cusers.user_id=u.user_id left join networks l on L.network_code=U.network_code left outer join user_phones up on (up.user_id=u.user_id and up.msisdn=u.msisdn),categories cat,geographical_domain_types gdt ,domains dm,domain_types dt   WHERE  UPPER(u.login_id)=? AND gdt.grph_domain_type = cat.grph_domain_type AND u.status <> ? AND u.status <> ?  AND cat.category_code=U.category_code AND cat.status <> ? AND dm.domain_code = cat.domain_code  AND dt.domain_type_code = dm.domain_type_code 
+2022-05-05 14:04:08,051 : 15933710 [http-nio-6789-exec-119] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query : select user_id,user_name from users where user_id in (?,?)
+2022-05-05 14:04:08,054 : 15933713 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,055 : 15933714 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGAG0000032311
+2022-05-05 14:04:08,056 : 15933715 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-05 14:04:08,058 : 15933717 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:11
+2022-05-05 14:04:08,059 : 15933718 [http-nio-6789-exec-119] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: ::  Exiting channelUserVO=User ID =NGAG0000032311,User Name =AUTFN5575 AUTLN8034,Network ID =NG,Login ID =AUT_87570,Category Code =AG,Parent ID =NGSE0000032309,Parent Name =AUTFN6751 AUTLN4189,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =2022-04-04 15:48:27.777,Parent ID =NGSE0000032309,Emp Code =031908,Status =DR,Previous Status =null,Email =dd7la@mail.com,Password Modified On =2021-01-13 12:54:10.61,Contact No =612004,Designation =,Division Code =null,Department Code =null,Msisdn =723932049199625,User Type =CHANNEL,Cretated On =2021-01-13 12:53:56.255,Created By =NGAG0000032311,Address 1 =Add10288,Address 2 =Add29113,City=City2688,State =State8900,Country =Country71,SSN =,User Name Prefix =MR,External Code =075353926,User Code =723932049199625,Short Name =AUTSN1510,Reference ID =null,Domain ID =DIST,Domain Name =Distributor,Network Name =Network GGN,Message =B,Valid Request URLs =,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =NGSE0000032309,ParentName =AUTFN6751 AUTLN4189,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =2021-01-13 12:54:08.012,Report Header NameComvivaTechnologies,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT93258,TransferProfileID =1103,CommissionProfileSetID =3795,InSuspend =N,OutSuspened=N,GeographicalCode =null,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGAG0000032311,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-05 14:04:08,062 : 15933721 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateClient :: Exiting: existFlag=false
+2022-05-05 14:04:08,064 : 15933723 [http-nio-6789-exec-119] DEBUG com.btsl.util.OAuthenticationUtil  - TOKEN_EXPIRE_TIME :: 300000
+2022-05-05 14:04:08,065 : 15933724 [http-nio-6789-exec-119] DEBUG com.btsl.util.OAuthenticationUtil  - REFRESH_TOKEN_EXPIRE_TIME :: 600000
+2022-05-05 14:04:08,066 : 15933725 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - generateToken :: Entered: oAuthTokenReq=com.btsl.user.businesslogic.OAuthTokenRequest@13c3ad8 oAuthTokenRes=OAuthTokenRes [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc481e2ee9c5ae95c8fd7249f78d94005d8c806e6c44e981247422e6a0537644af5023a4b9544d96a298db5ecbb85714ebb309485ab47a041f76a192ca7f9b98333db2c9d4180197e16ce7425f2a0106d18f31d9e9ea00188ba80522e9d92219ab7.c31ad9f5fd8e8cef7164b1a1996d59f50dc55a5f8b9d224dcb5349856c399352, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc482c4c338661277e6f81c6fde6ee29c19226147397f6d8d492763c7caf4440b6fc48eab05dc7fce13a75b6924a31c69d6d5615daecd7707abcb8d4cca4c2e383d6b9e9f6085047266231dda9fc95fa55fbd6cd90a678758abbeb752757ab5df92.fce77547e5c569483e44d2e55a82bcdc7a3971e2213e314f5f9c4b2a7ce3be21] expires=[Ljava.lang.Long;@1b18137 loginId=AUT_87570 msisdn=723932049199625 extCode=075353926 userId=NGAG0000032311 scope=All clientId=a
+2022-05-05 14:04:08,067 : 15933726 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthAccessTokens :: Entered: oAuthTokenReq=com.btsl.user.businesslogic.OAuthTokenRequest@13c3ad8
+2022-05-05 14:04:08,068 : 15933727 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthAccessTokens :: Query: INSERT INTO oauth_access_token ( token , scope, created_on, modified_on, expires, client_id, token_id )  VALUES (?::bytea,?,?,?,?,?,?)
+2022-05-05 14:04:08,071 : 15933730 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthAccessTokens :: Exiting: insertCount=1
+2022-05-05 14:04:08,072 : 15933731 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthRefreshTokens :: Entered: oAuthTokenReq=com.btsl.user.businesslogic.OAuthTokenRequest@13c3ad8
+2022-05-05 14:04:08,072 : 15933731 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthRefreshTokens :: Query: INSERT INTO oauth_refresh_token ( token , created_on, modified_on,expires, token_id ) VALUES (?::bytea,?,?,?,?)
+2022-05-05 14:04:08,074 : 15933733 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthRefreshTokens :: Exiting: insertCount=1
+2022-05-05 14:04:08,075 : 15933734 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthUsers :: Entered: oAuthTokenReq=com.btsl.user.businesslogic.OAuthTokenRequest@13c3ad8, loginId=AUT_87570, msisdn=723932049199625, extCode=075353926, userId=NGAG0000032311, tokenId=20220505140408.063.5508
+2022-05-05 14:04:08,076 : 15933735 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthUsers :: Query: INSERT INTO oauth_users_login_info (LOGIN_ID,MSISDN,REQUEST_GATEWAY_TYPE,REQUEST_GATEWAY_CODE,REQUEST_GATEWAY_LOGIN_ID,SERVICE_PORT,REQUEST_GATEWAY_PASSWORD,SOURCE_TYPE,CREATED_ON,MODIFIED_ON,EXT_CODE, USER_ID, TOKEN_ID )  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2022-05-05 14:04:08,077 : 15933736 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - updateOAuthUsers :: Exiting: insertCount=1
+2022-05-05 14:04:08,080 : 15933739 [http-nio-6789-exec-119] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - generateToken :: Exiting
+2022-05-05 14:04:08,081 : 15933740 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-05 14:04:08,082 : 15933741 [http-nio-6789-exec-119] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,083 : 15933742 [http-nio-6789-exec-119] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-05 14:04:08,083 : 15933742 [http-nio-6789-exec-119] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,084 : 15933743 [http-nio-6789-exec-119] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-05 14:04:08,085 : 15933744 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,086 : 15933745 [http-nio-6789-exec-119] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:08,087 : 15933746 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,088 : 15933747 [http-nio-6789-exec-119] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:08,088 : 15933747 [http-nio-6789-exec-119] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,089 : 15933748 [http-nio-6789-exec-119] DEBUG com.restapi.oauth.services.OAuthenticationController  - generateToken :: Exiting
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc481e2ee9c5ae95c8fd7249f78d94005d8c806e6c44e981247422e6a0537644af5023a4b9544d96a298db5ecbb85714ebb309485ab47a041f76a192ca7f9b98333db2c9d4180197e16ce7425f2a0106d18f31d9e9ea00188ba80522e9d92219ab7.c31ad9f5fd8e8cef7164b1a1996d59f50dc55a5f8b9d224dcb5349856c399352, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc482c4c338661277e6f81c6fde6ee29c19226147397f6d8d492763c7caf4440b6fc48eab05dc7fce13a75b6924a31c69d6d5615daecd7707abcb8d4cca4c2e383d6b9e9f6085047266231dda9fc95fa55fbd6cd90a678758abbeb752757ab5df92.fce77547e5c569483e44d2e55a82bcdc7a3971e2213e314f5f9c4b2a7ce3be21, status=200, messageCode=9020, message=Success]
+2022-05-05 14:04:08,244 : 15933903 [http-nio-6789-exec-117] INFO  com.restapi.oauth.services.OAuthenticationController  - login :: User Login Response:  {} :: BaseResponse(referenceId=null, externalRefId=JUWQW12321, status=SUCCESS, messageCode=SUCCESS, message=SUCCESS)
+/pretups//rstapi/v1/regex validNonce  true
+2022-05-05 14:04:08,559 : 15934218 [http-nio-6789-exec-93] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups//rstapi/v1/regex valid  true
+/pretups//rstapi/v1/login/passwordChangeOnLogin validNonce  true
+2022-05-05 14:04:08,561 : 15934220 [http-nio-6789-exec-122] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups//rstapi/v1/txPinManagement/isPinChangeOnTxRequired validNonce  true
+2022-05-05 14:04:08,562 : 15934221 [http-nio-6789-exec-93] DEBUG com.restapi.user.service.RegularExpressionController  - getRegularExpression :: Entered 
+2022-05-05 14:04:08,563 : 15934222 [http-nio-6789-exec-93] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:08,565 : 15934224 [http-nio-6789-exec-93] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:08,562 : 15934221 [http-nio-6789-exec-114] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................OPTIONS
+/pretups//rstapi/v1/txPinManagement/isPinChangeOnTxRequired valid  true
+2022-05-05 14:04:08,566 : 15934225 [http-nio-6789-exec-93] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:08,568 : 15934227 [http-nio-6789-exec-93] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@69e40c [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:08,562 : 15934221 [http-nio-6789-exec-122] DEBUG com.btsl.security.EncodingFilter  -  :: skip security Header validation value : {} :: null
+2022-05-05 14:04:08,570 : 15934229 [http-nio-6789-exec-122] DEBUG com.btsl.security.EncodingFilter  - preHandle :: checksum hash validation enabled : {} :: false
+2022-05-05 14:04:08,571 : 15934230 [http-nio-6789-exec-122] DEBUG com.btsl.security.EncodingFilter  - preHandle :: uri /pretups//rstapi/v1/login/passwordChangeOnLogin :: false
+/pretups//rstapi/v1/login/passwordChangeOnLogin valid  true
+2022-05-05 14:04:08,571 : 15934230 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=241083
+2022-05-05 14:04:08,573 : 15934232 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,573 : 15934232 [http-nio-6789-exec-122] DEBUG com.restapi.users.logiid.LoginController  - passwordChangeOnLogin :: Entered 
+2022-05-05 14:04:08,574 : 15934233 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 241083 args: null
+2022-05-05 14:04:08,576 : 15934235 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,577 : 15934236 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 241083
+2022-05-05 14:04:08,578 : 15934237 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,579 : 15934238 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:241083:min
+2022-05-05 14:04:08,580 : 15934239 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,581 : 15934240 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:241083:min
+2022-05-05 14:04:08,581 : 15934240 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,582 : 15934241 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=241084
+2022-05-05 14:04:08,583 : 15934242 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,575 : 15934234 [http-nio-6789-exec-122] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:08,585 : 15934244 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:08,584 : 15934243 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 241084 args: null
+2022-05-05 14:04:08,587 : 15934246 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,588 : 15934247 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 241084
+2022-05-05 14:04:08,589 : 15934248 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,590 : 15934249 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:241084:max
+2022-05-05 14:04:08,591 : 15934250 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,592 : 15934251 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:241084:max
+2022-05-05 14:04:08,593 : 15934252 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,594 : 15934253 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=241084
+2022-05-05 14:04:08,595 : 15934254 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,587 : 15934246 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:08,597 : 15934256 [http-nio-6789-exec-122] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1f65c94 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:08,596 : 15934255 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 241084 args: null
+2022-05-05 14:04:08,599 : 15934258 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,600 : 15934259 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 241084
+2022-05-05 14:04:08,598 : 15934257 [http-nio-6789-exec-122] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: loadInterfaceTypeId():: Entered with p_loginID:AUT_87570 p_password=passwordChangeOnLogin locale=en_US
+2022-05-05 14:04:08,601 : 15934260 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,603 : 15934262 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:241084:max
+2022-05-05 14:04:08,604 : 15934263 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,605 : 15934264 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:241084:max
+2022-05-05 14:04:08,605 : 15934264 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,602 : 15934261 [http-nio-6789-exec-122] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query :  SELECT u.user_id, u.user_name, u.network_code,l.network_name,l.report_header_name, u.login_id, u.password,  u.category_code, u.parent_id,u.company,u.fax, u.owner_id, u.msisdn, u.allowed_ip,  u.allowed_days,u.from_time,u.to_time,u.firstname,u.lastname,  u.last_login_on,u.employee_code,u.status userstatus,u.email,u.created_by,u.created_on,u.modified_by,  u.modified_on,u.pswd_modified_on,  cusers.contact_person,u.contact_no,u.designation,u.division,u.department,  u.msisdn,u.user_type,cusers.in_suspend,cusers.out_suspend,u.address1,u.address2,u.city,u.state,u.country,  u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.invalid_password_count,u.password_count_updated_on, u.payment_type,  l.status networkstatus,l.language_1_message,l.language_2_message, cat.category_code,cat.category_name,  cat.domain_code,cat.sequence_no,cat.multiple_login_allowed, cat.max_login_count,cat.view_on_network_block,  cat.status catstatus, cat.max_txn_msisdn, cat.uncntrl_transfer_allowed, cat.scheduled_transfer_allowed, cat.restricted_msisdns,  cat.parent_category_code, cat.product_types_allowed,cat.category_type,cat.hierarchy_allowed, cat.transfertolistonly,  cat.grph_domain_type, cat.multiple_grph_domains, cat.fixed_roles, cat.user_id_prefix,cat.web_interface_allowed,  cat.services_allowed,cat.domain_allowed,cat.fixed_domains,cat.outlets_allowed,cat.status categorystatus,cusers.comm_profile_set_id,cusers.transfer_profile_id,cusers.user_grade,gdt.sequence_no grph_sequence_no,  gdt.grph_domain_type_name,dm.domain_name,dm.status domainstatus,dm.domain_type_code,up.sms_pin,up.PREFIX_ID,up.pin_required,up.invalid_pin_count,dt.restricted_msisdn restricted_msisdn_allow,up.pin_reset,   cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow, up.access_type , u.PSWD_RESET, up.PHONE_PROFILE , u.rsaflag,cat.SMS_INTERFACE_ALLOWED , u.AUTHENTICATION_ALLOWED,cat.authentication_type , cusers.trf_rule_type  , cusers.lms_profile   , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP  FROM users u left join channel_users cusers on cusers.user_id=u.user_id left join networks l on L.network_code=U.network_code left outer join user_phones up on (up.user_id=u.user_id and up.msisdn=u.msisdn),categories cat,geographical_domain_types gdt ,domains dm,domain_types dt   WHERE  UPPER(u.login_id)=? AND gdt.grph_domain_type = cat.grph_domain_type AND u.status <> ? AND u.status <> ?  AND cat.category_code=U.category_code AND cat.status <> ? AND dm.domain_code = cat.domain_code  AND dt.domain_type_code = dm.domain_type_code 
+2022-05-05 14:04:08,607 : 15934266 [http-nio-6789-exec-122] DEBUG com.btsl.login.LoginDAO  - loadUserDetails ::  Query : select user_id,user_name from users where user_id in (?,?)
+2022-05-05 14:04:08,607 : 15934266 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-05 14:04:08,610 : 15934269 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,611 : 15934270 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,611 : 15934270 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-05 14:04:08,613 : 15934272 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,614 : 15934273 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-05 14:04:08,615 : 15934274 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,616 : 15934275 [http-nio-6789-exec-93] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:08,617 : 15934276 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,618 : 15934277 [http-nio-6789-exec-93] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-05 14:04:08,619 : 15934278 [http-nio-6789-exec-93] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,620 : 15934279 [http-nio-6789-exec-93] DEBUG com.restapi.user.service.RegularExpressionController  - getRegularExpression ::  Exited 
+2022-05-05 14:04:08,612 : 15934271 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGAG0000032311
+2022-05-05 14:04:08,622 : 15934281 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-05 14:04:08,624 : 15934283 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:11
+2022-05-05 14:04:08,626 : 15934285 [http-nio-6789-exec-122] DEBUG com.btsl.login.LoginDAO  - loadUserDetails :: ::  Exiting channelUserVO=User ID =NGAG0000032311,User Name =AUTFN5575 AUTLN8034,Network ID =NG,Login ID =AUT_87570,Category Code =AG,Parent ID =NGSE0000032309,Parent Name =AUTFN6751 AUTLN4189,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =2022-04-04 15:48:27.777,Parent ID =NGSE0000032309,Emp Code =031908,Status =DR,Previous Status =null,Email =dd7la@mail.com,Password Modified On =2021-01-13 12:54:10.61,Contact No =612004,Designation =,Division Code =null,Department Code =null,Msisdn =723932049199625,User Type =CHANNEL,Cretated On =2021-01-13 12:53:56.255,Created By =NGAG0000032311,Address 1 =Add10288,Address 2 =Add29113,City=City2688,State =State8900,Country =Country71,SSN =,User Name Prefix =MR,External Code =075353926,User Code =723932049199625,Short Name =AUTSN1510,Reference ID =null,Domain ID =DIST,Domain Name =Distributor,Network Name =Network GGN,Message =B,Valid Request URLs =,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =NGSE0000032309,ParentName =AUTFN6751 AUTLN4189,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =2021-01-13 12:54:08.012,Report Header NameComvivaTechnologies,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT93258,TransferProfileID =1103,CommissionProfileSetID =3795,InSuspend =N,OutSuspened=N,GeographicalCode =null,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGAG0000032311,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-05 14:04:08,627 : 15934286 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=AG  inString=CCE
+2022-05-05 14:04:08,628 : 15934287 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=2241325
+2022-05-05 14:04:08,629 : 15934288 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,630 : 15934289 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 2241325 args: null
+2022-05-05 14:04:08,631 : 15934290 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,631 : 15934290 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 2241325
+2022-05-05 14:04:08,633 : 15934292 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,634 : 15934293 [http-nio-6789-exec-122] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:2241325:Redirect to change password screen.
+2022-05-05 14:04:08,634 : 15934293 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,636 : 15934295 [http-nio-6789-exec-122] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:2241325:Redirect to change password screen.
+2022-05-05 14:04:08,636 : 15934295 [http-nio-6789-exec-122] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,638 : 15934297 [http-nio-6789-exec-122] DEBUG com.restapi.users.logiid.LoginController  - passwordChangeOnLogin :: Exiting:=passwordChangeOnLogin
+/pretups//rstapi/v1/txPinManagement/isPinChangeOnTxRequired validNonce  true
+2022-05-05 14:04:08,655 : 15934314 [http-nio-6789-exec-115] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups//rstapi/v1/txPinManagement/isPinChangeOnTxRequired valid  true
+2022-05-05 14:04:08,657 : 15934316 [http-nio-6789-exec-115] DEBUG com.restapi.channeluser.service.ChannelUserTransferController  - isPinChangeOnTxRequired :: Entered 
+2022-05-05 14:04:08,658 : 15934317 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - validateTokenApi :: Entered 
+2022-05-05 14:04:08,658 : 15934317 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - host :: 172.30.38.232:6789
+2022-05-05 14:04:08,659 : 15934318 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - connection :: keep-alive
+2022-05-05 14:04:08,660 : 15934319 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - pragma :: no-cache
+2022-05-05 14:04:08,661 : 15934320 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - nonce :: d38c34fcbe725d69
+2022-05-05 14:04:08,662 : 15934321 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - user-agent :: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+2022-05-05 14:04:08,663 : 15934322 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - accept :: application/json, text/plain, */*
+2022-05-05 14:04:08,664 : 15934323 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - cache-control :: no-store, no-cache
+2022-05-05 14:04:08,665 : 15934324 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - logheader :: {"logData":[]}
+2022-05-05 14:04:08,666 : 15934325 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - authorization :: Bearer f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc481e2ee9c5ae95c8fd7249f78d94005d8c806e6c44e981247422e6a0537644af5023a4b9544d96a298db5ecbb85714ebb309485ab47a041f76a192ca7f9b98333db2c9d4180197e16ce7425f2a0106d18f31d9e9ea00188ba80522e9d92219ab7.c31ad9f5fd8e8cef7164b1a1996d59f50dc55a5f8b9d224dcb5349856c399352
+2022-05-05 14:04:08,667 : 15934326 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - signature :: 5962e4160c255ffd55fc217d0c4074f0e349953f10975365b3b9bba51c966f85
+2022-05-05 14:04:08,668 : 15934327 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - origin :: http://172.30.38.232:9747
+2022-05-05 14:04:08,668 : 15934327 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - referer :: http://172.30.38.232:9747/
+2022-05-05 14:04:08,669 : 15934328 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - accept-encoding :: gzip, deflate
+2022-05-05 14:04:08,671 : 15934330 [http-nio-6789-exec-115] DEBUG com.btsl.util.OAuthenticationUtil  - accept-language :: en-US,en;q=0.9
+2022-05-05 14:04:08,672 : 15934331 [http-nio-6789-exec-115] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:08,674 : 15934333 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:08,675 : 15934334 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:08,677 : 15934336 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1998892 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:08,678 : 15934337 [http-nio-6789-exec-115] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Entered: p_userVO=OAuthUser [loginId=null, msisdn=null, password=null, pin=null, reqGatewayType=null, reqGatewayCode=null, reqGatewayLoginId=null, reqGatewayPassword=null, servicePort=null, sourceType=null, data=OAuthUserData [loginid=null, msisdn=null, password=null, pin=null, extcode=null, userid=null]] ,token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940f6b372615ab9c552c7b240c6aa3c204444dec625cfe837e43f5b5f117a0520f7416251a25e7ba92e83d0f5ceeffb648ea147d06828c0eebdb5641e83623cef15fc0c7258b65d0773cdb5024c6df2f7a8e1d8713097d61fa964b4b07459b81c280ae39e25b84cc5d618a36323670908988db28b64cb56d7f33ab76987ea74ee87155b9a8d28728f8ce3e08ab113d606ae29284e0c86251603cf21062719a2faa5690d783ea9141cc481e2ee9c5ae95c8fd7249f78d94005d8c806e6c44e981247422e6a0537644af5023a4b9544d96a298db5ecbb85714ebb309485ab47a041f76a192ca7f9b98333db2c9d4180197e16ce7425f2a0106d18f31d9e9ea00188ba80522e9d92219ab7.c31ad9f5fd8e8cef7164b1a1996d59f50dc55a5f8b9d224dcb5349856c399352
+2022-05-05 14:04:08,679 : 15934338 [http-nio-6789-exec-115] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Query: SELECT ou.request_gateway_type,ou.request_gateway_code,ou.request_gateway_login_id,ou.service_port,ou.request_gateway_password,ou.source_type,ou.login_id,ou.msisdn,ou.ext_code,ou.user_id,oat.modified_on, oat.expires from oauth_access_token  oat, oauth_users_login_info ou where oat.token_id = ou.token_id and oat.token_id = ?
+2022-05-05 14:04:08,680 : 15934339 [http-nio-6789-exec-115] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - tokenid :: 20220505140408.063.5508
+2022-05-05 14:04:08,683 : 15934342 [http-nio-6789-exec-115] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: get():: Entered getPinPassword:
+2022-05-05 14:04:08,685 : 15934344 [http-nio-6789-exec-115] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: Exiting userName:User ID =null,User Name =null,Network ID =null,Login ID =null,Category Code =null,Parent ID =null,Parent Name =null,Owner ID =null,Allowed IPs =null,Allowed Days =null,From Time =null,To Time =null,Last Log On =null,Parent ID =null,Emp Code =null,Status =null,Previous Status =null,Email =null,Password Modified On =null,Contact No =null,Designation =null,Division Code =null,Department Code =null,Msisdn =null,User Type =null,Cretated On =null,Created By =null,Address 1 =null,Address 2 =null,City=null,State =null,Country =null,SSN =null,User Name Prefix =null,External Code =null,User Code =null,Short Name =null,Reference ID =null,Domain ID =null,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =null,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =null,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment Typenull
+2022-05-05 14:04:08,686 : 15934345 [http-nio-6789-exec-115] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Exiting: insertCount=0
+2022-05-05 14:04:08,688 : 15934347 [http-nio-6789-exec-115] DEBUG com.restapi.user.service.TransactionPinManagementServiceImpl  - validatePinModifyRequired :: Entered msisdn : 723932049199625
+2022-05-05 14:04:08,689 : 15934348 [http-nio-6789-exec-115] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-05 14:04:08,690 : 15934349 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-05 14:04:08,692 : 15934351 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:8
+2022-05-05 14:04:08,693 : 15934352 [http-nio-6789-exec-115] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1913619 [wrapping: org.postgresql.jdbc.PgConnection@e13642] active size:2 cache size:8
+2022-05-05 14:04:08,694 : 15934353 [http-nio-6789-exec-115] DEBUG com.btsl.user.businesslogic.UserDAO  - loadUserDetailsCompletelyByMsisdn :: Entered: p_msisdn=723932049199625
+2022-05-05 14:04:08,694 : 15934353 [http-nio-6789-exec-115] DEBUG com.btsl.user.businesslogic.UserDAO  - loadUserDetailsCompletelyByMsisdn :: Query: SELECT U.address1, U.address2, U.allowed_days, U.allowed_ip, U.appointment_date, U.batch_id,U.creation_type, U.category_code, U.city, U.contact_no, U.contact_person, U.created_by, U.created_on, U.creation_type, U.department, U.designation, U.division, U.email, U.employee_code, U.external_code, U.from_time,  U.invalid_password_count, U.last_login_on, U.level1_approved_by, U.level1_approved_on, U.level2_approved_by, U.level2_approved_on, U.login_id, U.modified_by, U.modified_on, U.network_code,U.company,U.fax,U.firstname,U.lastname,  U.owner_id, U.parent_id, U.password, U.password_count_updated_on, U.previous_status, U.pswd_modified_on, U.reference_id, U.remarks, U.short_name, U.ssn,U.rsaflag, U.state, U.status userstatus, U.to_time, user_code, U.user_id, U.user_name, U.user_name_prefix, U.user_type, CU.activated_on, CU.comm_profile_set_id, CU.contact_person, CU.in_suspend, CU.out_suspend, CU.outlet_code, CU.suboutlet_code, CU.transfer_profile_id, CU.user_grade, C.agent_allowed, C.category_name, C.category_type, C.domain_allowed, C.domain_code, C.fixed_domains, C.fixed_roles, C.grph_domain_type, C.hierarchy_allowed, C.max_login_count, C.max_txn_msisdn, C.multiple_grph_domains, C.multiple_login_allowed, C.outlets_allowed,  C.parent_category_code, C.product_types_allowed, C.restricted_msisdns,C.scheduled_transfer_allowed, C.sequence_no catseq, C.services_allowed,  C.sms_interface_allowed, C.status, C.transfertolistonly, C.uncntrl_transfer_allowed,C.user_id_prefix, C.view_on_network_block, C.web_interface_allowed,  UP.msisdn,UP.primary_number, UP.description, UP.sms_pin, UP.pin_required, UP.phone_profile, UP.phone_language, UP.country, UP.invalid_pin_count, UP.last_transaction_status, UP.last_transaction_on, UP.pin_modified_on, UP.last_transfer_id, UP.last_transfer_type, UP.temp_transfer_id, UP.first_invalid_pin_time, UP.user_phones_id, UP.created_by,UP.created_on,UP.modified_by,UP.modified_on,UP.pin_reset,UP.last_transfer_type, CU.application_id, CU.mpay_profile_id, CU.user_profile_id, CU.mcommerce_service_allow, UP.PREFIX_ID,l.lookup_name, geo.GRPH_DOMAIN_CODE  FROM users U, channel_users CU, categories C, user_phones UP, lookups l, user_geographies geo  WHERE CU.user_id=U.user_id AND U.category_code=C.category_code AND UP.msisdn=? AND U.user_id=UP.user_id  AND U.status = l.lookup_code AND l.lookup_type= ? AND u.user_id=geo.user_id 
+2022-05-05 14:04:08,700 : 15934359 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: entered p_categoryCode: AG
+2022-05-05 14:04:08,701 : 15934360 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: exited messageGatewayForCategoryList: [EXTGW, REST, SMSC, USSD, WEB]
+2022-05-05 14:04:08,703 : 15934362 [http-nio-6789-exec-115] DEBUG com.btsl.user.businesslogic.UserDAO  - loadUserDetailsCompletelyByMsisdn :: Exiting channelUserVO:User ID =NGAG0000032311,User Name =AUTFN5575 AUTLN8034,Network ID =NG,Login ID =AUT_87570,Category Code =AG,Parent ID =NGSE0000032309,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =2022-04-04 15:48:27.777,Parent ID =NGSE0000032309,Emp Code =031908,Status =DR,Previous Status =null,Email =dd7la@mail.com,Password Modified On =2021-01-13 12:54:10.61,Contact No =612004,Designation =,Division Code =null,Department Code =null,Msisdn =723932049199625,User Type =CHANNEL,Cretated On =Wed Jan 13 12:53:56 IST 2021,Created By =NGSB0000032298,Address 1 =Add10288,Address 2 =Add29113,City=City2688,State =State8900,Country =NG,SSN =,User Name Prefix =MR,External Code =075353926,User Code =723932049199625,Short Name =AUTSN1510,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =NGD0000032308,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =NGSE0000032309,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDNGAG0000032311,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT93258,TransferProfileID =1103,CommissionProfileSetID =3795,InSuspend =N,OutSuspened=N,GeographicalCode =AUTO2FM,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGAG0000032311,AccessType=null,M-Commerce Service Allow=N,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-05 14:04:08,704 : 15934363 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=2241350
+2022-05-05 14:04:08,705 : 15934364 [http-nio-6789-exec-115] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-05 14:04:08,706 : 15934365 [http-nio-6789-exec-115] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 2241350 args: null
+2022-05-05 14:04:08,707 : 15934366 [http-nio-6789-exec-115] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-05 14:04:08,708 : 15934367 [http-nio-6789-exec-115] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 2241350
+2022-05-05 14:04:08,709 : 15934368 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,710 : 15934369 [http-nio-6789-exec-115] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:2241350:PIN change is required to perform this operation.
+2022-05-05 14:04:08,710 : 15934369 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,711 : 15934370 [http-nio-6789-exec-115] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:2241350:PIN change is required to perform this operation.
+2022-05-05 14:04:08,712 : 15934371 [http-nio-6789-exec-115] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:08,714 : 15934373 [http-nio-6789-exec-115] DEBUG com.restapi.user.service.TransactionPinManagementServiceImpl  - validatePinModifyRequired :: Exiting:=validatePinModifyRequired
+2022-05-05 14:04:08,715 : 15934374 [http-nio-6789-exec-115] DEBUG com.restapi.channeluser.service.ChannelUserTransferController  - isPinChangeOnTxRequired :: Exiting:=isPinChangeOnTxRequired
+/pretups/rstapi/v1/v1//getLocaleList validNonce  true
+2022-05-05 14:04:08,999 : 15934658 [http-nio-6789-exec-102] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+/pretups/rstapi/v1/v1//getLocaleList valid  true
+2022-05-05 14:04:09,002 : 15934661 [http-nio-6789-exec-102] INFO  com.restapi.oauth.services.OAuthenticationController  - getLocaleList :: Login getLocaleList request
+2022-05-05 14:04:09,021 : 15934680 [http-nio-6789-exec-102] INFO  com.restapi.oauth.services.OAuthenticationController  - Login getLocalelist Response:  {} :: BaseResponse(referenceId=null, externalRefId=null, status=200, messageCode=, message=200)
+2022-05-05 14:04:13,758 : 15939417 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:13,759 : 15939418 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-05 14:04:13,760 : 15939419 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:13,760 : 15939419 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-05 14:04:13,761 : 15939420 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-05 14:04:13,761 : 15939420 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-05 14:04:13,761 : 15939420 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-05 14:04:13,762 : 15939421 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-05 14:04:13,762 : 15939421 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:13,762 : 15939421 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:13,763 : 15939422 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-05 14:04:13,763 : 15939422 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-05 14:04:13,763 : 15939422 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-05 14:04:13,764 : 15939423 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-05 14:04:13,764 : 15939423 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-05 14:04:13,764 : 15939423 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-05 14:04:14,321 : 15939980 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:14,322 : 15939981 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:14,323 : 15939982 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:14,323 : 15939982 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1404.100001 Exception=FAILED
+2022-05-05 14:04:14,324 : 15939983 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:14,324 : 15939983 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1404.100001 Exception =FAILED
+2022-05-05 14:04:14,325 : 15939984 [pool-4-thread-28] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  726471464059530  Message Sending Exception:FAILED Gateway code=USSD Gateway type=USSD
+2022-05-05 14:04:14,325 : 15939984 [pool-4-thread-28] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:14,325 : 15939984 [pool-4-thread-28] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3964
+2022-05-05 14:04:14,326 : 15939985 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Entered : _msisdn=726471464059530 _message=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance. _transactionID=R220505.1404.100001 _messageType=PLAIN
+2022-05-05 14:04:14,326 : 15939985 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-05 14:04:14,326 : 15939985 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:14,327 : 15939986 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Using Gateway for _msisdn=726471464059530 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:14,327 : 15939986 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=726471464059530 p_message=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance. p_locale=en_US
+2022-05-05 14:04:14,328 : 15939987 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance.
+2022-05-05 14:04:14,328 : 15939987 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-05 14:04:14,328 : 15939987 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=726471464059530 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224726471464059530&text=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance.&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:14,329 : 15939988 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=R220505.1404.100001 p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224726471464059530&text=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance.&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:14,329 : 15939988 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224726471464059530&text=242%3ADear+customer%2C+your+request+for+200+INR+from+728916899742500+is+successful%2C+transaction+ID+is+R220505.1404.100001.+Please+check+your+balance.&smsc=SMSC&from=8080&mclass=2&pid=61 p_timeout=10000
+2022-05-05 14:04:14,336 : 15939995 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:14,337 : 15939996 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:14,338 : 15939997 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:14,338 : 15939997 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1404.100001 Exception=FAILED
+2022-05-05 14:04:14,339 : 15939998 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:14,339 : 15939998 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1404.100001 Exception =FAILED
+2022-05-05 14:04:14,339 : 15939998 [pool-4-thread-29] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  728916899742500  Message Sending Exception:FAILED Gateway code=USSD Gateway type=USSD
+2022-05-05 14:04:14,340 : 15939999 [pool-4-thread-29] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:14,340 : 15939999 [pool-4-thread-29] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3965
+2022-05-05 14:04:14,340 : 15939999 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Entered : _msisdn=728916899742500 _message=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45 _transactionID=R220505.1404.100001 _messageType=PLAIN
+2022-05-05 14:04:14,341 : 15940000 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-05 14:04:14,341 : 15940000 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:14,342 : 15940001 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: Using Gateway for _msisdn=728916899742500 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:14,342 : 15940001 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=728916899742500 p_message=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45 p_locale=ar_NG
+2022-05-05 14:04:14,343 : 15940002 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45
+2022-05-05 14:04:14,343 : 15940002 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-05 14:04:14,343 : 15940002 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=728916899742500 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224728916899742500&text=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:14,344 : 15940003 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=R220505.1404.100001 p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224728916899742500&text=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45&smsc=SMSC&from=8080&mclass=2&pid=61
+2022-05-05 14:04:14,344 : 15940003 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=224728916899742500&text=%00%32%00%31%00%30%25%00%33%00%41%25%00%30%00%30%25%00%35%00%34%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%64%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%31%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%38%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%36%00%37%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%32%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%34%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%30%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%36%00%36%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%32%00%45%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%35%00%39%25%00%30%00%30%25%00%36%00%66%25%00%30%00%30%25%00%37%00%35%25%00%30%00%30%25%00%37%00%32%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%37%00%37%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%32%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%63%25%00%30%00%30%25%00%36%00%31%25%00%30%00%30%25%00%36%00%65%25%00%30%00%30%25%00%36%00%33%25%00%30%00%30%25%00%36%00%35%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%36%00%39%25%00%30%00%30%25%00%37%00%33%25%00%30%00%30%25%00%32%00%30%25%00%37%00%42%00%33%25%00%37%00%44%25%00%30%00%30%25%00%32%00%30%25%00%30%00%30%25%00%34%00%39%25%00%30%00%30%25%00%34%00%65%25%00%30%00%30%25%00%35%00%32%25%00%30%00%30%25%00%32%00%45&smsc=SMSC&from=8080&mclass=2&pid=61 p_timeout=10000
+2022-05-05 14:04:15,290 : 15940949 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:15,291 : 15940950 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:15,292 : 15940951 [pool-4-thread-26] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:15,293 : 15940952 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1403.100002 Exception=FAILED
+2022-05-05 14:04:15,293 : 15940952 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:15,293 : 15940952 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1403.100002 Exception =FAILED
+2022-05-05 14:04:15,294 : 15940953 [pool-4-thread-26] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  721337647040753  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:15,294 : 15940953 [pool-4-thread-26] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:15,295 : 15940954 [pool-4-thread-26] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3966
+2022-05-05 14:04:15,295 : 15940954 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:15,295 : 15940954 [pool-4-thread-26] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:15,297 : 15940956 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:15,298 : 15940957 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:15,299 : 15940958 [pool-4-thread-27] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:15,300 : 15940959 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1403.100002 Exception=FAILED
+2022-05-05 14:04:15,300 : 15940959 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:15,300 : 15940959 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1403.100002 Exception =FAILED
+2022-05-05 14:04:15,301 : 15940960 [pool-4-thread-27] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  724699085750159  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:15,301 : 15940960 [pool-4-thread-27] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:15,301 : 15940960 [pool-4-thread-27] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3967
+2022-05-05 14:04:15,302 : 15940961 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:15,302 : 15940961 [pool-4-thread-27] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:23,771 : 15949430 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:23,772 : 15949431 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-05 14:04:23,776 : 15949435 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:23,776 : 15949435 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-05 14:04:23,776 : 15949435 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-05 14:04:23,777 : 15949436 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-05 14:04:23,777 : 15949436 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-05 14:04:23,777 : 15949436 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-05 14:04:23,830 : 15949489 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-05 14:04:23,830 : 15949489 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-05 14:04:23,831 : 15949490 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-05 14:04:23,830 : 15949489 [Thread-3391] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-05 14:04:23,831 : 15949490 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-05 14:04:23,834 : 15949493 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-05 14:04:23,834 : 15949493 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-05 14:04:23,834 : 15949493 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-05 14:04:23,834 : 15949493 [Thread-3391] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651739663|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-05 14:04:23,835 : 15949494 [Thread-3391] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-05 14:04:23,835 : 15949494 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-05 14:04:23,836 : 15949495 [Thread-3391] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-05 14:04:23,836 : 15949495 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-05 14:04:23,837 : 15949496 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-05 14:04:23,837 : 15949496 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-05 14:04:23,837 : 15949496 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-05 14:04:23,838 : 15949497 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-05 14:04:23,838 : 15949497 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-05 14:04:23,838 : 15949497 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-05 14:04:23,838 : 15949497 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-05 14:04:23,839 : 15949498 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-05 14:04:23,839 : 15949498 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-05 14:04:23,839 : 15949498 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:23,840 : 15949499 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-05 14:04:23,840 : 15949499 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-05 14:04:23,840 : 15949499 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-05 14:04:23,841 : 15949500 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-05 14:04:23,841 : 15949500 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-05 14:04:23,841 : 15949500 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-05 14:04:23,842 : 15949501 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-05 14:04:24,331 : 15949990 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:24,332 : 15949991 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:24,333 : 15949992 [pool-4-thread-28] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:24,333 : 15949992 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1404.100001 Exception=FAILED
+2022-05-05 14:04:24,334 : 15949993 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:24,334 : 15949993 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1404.100001 Exception =FAILED
+2022-05-05 14:04:24,335 : 15949994 [pool-4-thread-28] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  726471464059530  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:24,335 : 15949994 [pool-4-thread-28] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:24,335 : 15949994 [pool-4-thread-28] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3967
+2022-05-05 14:04:24,336 : 15949995 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:24,336 : 15949995 [pool-4-thread-28] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:24,355 : 15950014 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-05 14:04:24,356 : 15950015 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:24,356 : 15950015 [pool-4-thread-29] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-05 14:04:24,357 : 15950016 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=R220505.1404.100001 Exception=FAILED
+2022-05-05 14:04:24,357 : 15950016 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-05 14:04:24,358 : 15950017 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendSMSMessage :: _transactionID=R220505.1404.100001 Exception =FAILED
+2022-05-05 14:04:24,358 : 15950017 [pool-4-thread-29] DEBUG com.btsl.event.EventHandler  - handle :: Entered 2 System RAISED 1 PushMessage[pushGatewayMessage]  728916899742500  Message Sending Exception:FAILED Gateway code=SMSC Gateway type=SMSC
+2022-05-05 14:04:24,358 : 15950017 [pool-4-thread-29] DEBUG com.btsl.util.BTSLUtil  - isStringIn :: Entered string=1  inString=1,2,3,4,5
+2022-05-05 14:04:24,359 : 15950018 [pool-4-thread-29] DEBUG com.btsl.event.EventHandler  - handle :: _eventList size: 3968
+2022-05-05 14:04:24,359 : 15950018 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run :: Exception while sending message=FAILED
+2022-05-05 14:04:24,359 : 15950018 [pool-4-thread-29] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - run
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:588)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendSMSMessage(PushMessage.java:623)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.run(PushMessage.java:455)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+

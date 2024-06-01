@@ -1,0 +1,674 @@
+package restassuredapi.test;
+
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Priority;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import com.classes.BaseTest;
+import com.classes.CaseMaster;
+import com.classes.Login;
+import com.classes.UniqueChecker;
+import com.commons.ExcelI;
+import com.commons.MasterI;
+import com.dbrepository.DBHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reporting.extent.entity.ModuleManager;
+import com.testmanagement.core.TestManager;
+import com.utils.Assertion;
+import com.utils.ExcelUtility;
+import com.utils.GenerateMSISDN;
+import com.utils.Log;
+import com.utils.RandomGeneration;
+import com.utils._masterVO;
+import com.utils.constants.Module;
+
+import restassuredapi.api.channelAdmin_CreateChannelUser.ChannelAdmin_CreateChannelUserAPI;
+import restassuredapi.api.channelUserApproval.ChannelUserApprovalApi;
+import restassuredapi.api.channelUserApprovalList.ChannelUserApprovalListApi;
+import restassuredapi.api.oauthentication.OAuthenticationAPI;
+import restassuredapi.pojo.channelAdminCreateChannelUserRequestPojo.ChannelAdminCreateChannelUserReqPojo;
+import restassuredapi.pojo.channelAdminCreateChannelUserRequestPojo.Data;
+import restassuredapi.pojo.channelAdminCreateChannelUserRequestPojo.Msisdn;
+import restassuredapi.pojo.channelAdminCreateChannelUserResponsePojo.ChannelAdminCreateChannelUserResPojo;
+import restassuredapi.pojo.channelUserApprovalListRequestPojo.ChannelUserApprovalListRequestPojo;
+import restassuredapi.pojo.channelUserApprovalListResponsePojo.ChannelUserApprovalListResponsePojo;
+import restassuredapi.pojo.channelUserApprovalRequestPojo.ChannelUserApprovalRequestPojo;
+import restassuredapi.pojo.channelUserApprovalResponsePojo.ChannelUserApprovalResponsePojo;
+import restassuredapi.pojo.oauthenticationrequestpojo.OAuthenticationRequestPojo;
+import restassuredapi.pojo.oauthenticationresponsepojo.OAuthenticationResponsePojo;
+
+@ModuleManager(name = Module.APPROVE_CHANNEL_USER)
+public class ChannelAdmin_ApproveChannelUser extends BaseTest {
+
+	static String moduleCode;
+	OAuthenticationRequestPojo oAuthenticationRequestPojo = new OAuthenticationRequestPojo();
+	OAuthenticationResponsePojo oAuthenticationResponsePojo = new OAuthenticationResponsePojo();
+	ChannelAdminCreateChannelUserReqPojo channelAdminCreateChannelUserReqPojo = new ChannelAdminCreateChannelUserReqPojo();
+	ChannelAdminCreateChannelUserResPojo channelAdminCreateChannelUserResPojo = new ChannelAdminCreateChannelUserResPojo();
+	ChannelUserApprovalListRequestPojo channelUserApprovalListRequestPojo = new ChannelUserApprovalListRequestPojo();
+	ChannelUserApprovalListResponsePojo channelUserApprovalListResponsePojo = new ChannelUserApprovalListResponsePojo();
+	ChannelUserApprovalRequestPojo channelUserApprovalRequestPojo = new ChannelUserApprovalRequestPojo();
+	ChannelUserApprovalResponsePojo channelUserApprovalResponsePojo = new ChannelUserApprovalResponsePojo();
+
+	Data data = new Data();
+	restassuredapi.pojo.channelUserApprovalRequestPojo.Data data1 = new restassuredapi.pojo.channelUserApprovalRequestPojo.Data();
+	Login login = new Login();
+	String loginId = null;
+	String extCode = null;
+	String firstName = null;
+	String shortName = null;
+	String username = null;
+	String emailId = null;
+	String phNo = null;
+
+	RandomGeneration randStr = new RandomGeneration();
+	GenerateMSISDN gnMsisdn = new GenerateMSISDN();
+	HashMap<String, String> transferDetails = new HashMap<String, String>();
+
+	@DataProvider(name = "userData")
+	public Object[][] TestDataFeed() {
+		String MasterSheetPath = _masterVO.getProperty("DataProvider");
+		ExcelUtility.setExcelFile(MasterSheetPath, ExcelI.OPERATOR_USERS_HIERARCHY_SHEET);
+
+		Object[][] Data = new Object[1][5];
+		int j = 0;
+		int i = 11;
+		Data[j][0] = ExcelUtility.getCellData(0, ExcelI.LOGIN_ID, i);
+		Data[j][1] = ExcelUtility.getCellData(0, ExcelI.PASSWORD, i);
+		Data[j][2] = ExcelUtility.getCellData(0, ExcelI.PARENT_NAME, i);
+		Data[j][3] = ExcelUtility.getCellData(0, ExcelI.CATEGORY_NAME, i);
+		Data[j][4] = ExcelUtility.getCellData(0, ExcelI.CATEGORY_CODE, i);
+		return Data;
+	}
+
+	Map<String, Object> headerMap = new HashMap<String, Object>();
+
+	public void setHeaders() {
+		headerMap.put("CLIENT_ID", _masterVO.getProperty("CLIENT_ID"));
+		headerMap.put("CLIENT_SECRET", _masterVO.getProperty("CLIENT_SECRET"));
+		headerMap.put("requestGatewayCode", _masterVO.getProperty("requestGatewayCode"));
+		headerMap.put("requestGatewayLoginId", _masterVO.getProperty("requestGatewayLoginID"));
+		headerMap.put("requestGatewayPsecure", _masterVO.getProperty("requestGatewayPasswordVMS"));
+		headerMap.put("requestGatewayType", _masterVO.getProperty("requestGatewayType"));
+		headerMap.put("scope", _masterVO.getProperty("scope"));
+		headerMap.put("servicePort", _masterVO.getProperty("servicePort"));
+	}
+
+	public void setupAuth(String data1, String data2) {
+		oAuthenticationRequestPojo.setIdentifierType(_masterVO.getProperty("identifierType"));
+		oAuthenticationRequestPojo.setIdentifierValue(data1);
+		oAuthenticationRequestPojo.setPasswordOrSmspin(data2);
+	}
+
+	public void setUpChannelUserData() {
+
+		data.setAddress1("");
+		data.setAddress2("");
+		data.setAllowedTimeFrom("");
+		data.setAllowedTimeTo("");
+		data.setAlloweddays("");
+		data.setAllowedip("");
+		data.setAppointmentdate("");
+		data.setCity("");
+		data.setCommissionProfileID(_masterVO.getProperty("commissionProfileID"));
+		data.setCompany("");
+		data.setContactNumber("");
+		data.setContactPerson("");
+		data.setControlGroup("N");
+		data.setCountry("");
+		data.setDesignation("");
+		data.setDocumentNo("");
+		data.setDocumentType("");
+		data.setDomain("DIST");
+		emailId = randStr.randomAlphaNumeric(5).toLowerCase() + "@mail.com";
+		data.setEmailid(emailId);
+		data.setEmpcode("");
+		extCode = UniqueChecker.UC_EXTCODE();
+		data.setExternalCode(extCode);
+		data.setExtnwcode("NG");
+		data.setFax("");
+		firstName = randStr.randomAlphabets(5).toUpperCase();
+		data.setFirstName(firstName);
+		data.setGeographicalDomain("DELHI");
+		data.setGeographyCode("HARYANA");
+		data.setInsuspend("Y");
+		data.setLanguage("en_US");
+		data.setLastName("");
+		data.setLatitude("");
+		data.setLmsProfileId("");
+		data.setLongitude("");
+		data.setLowbalalertother("Y");
+		data.setLowbalalertparent("Y");
+		data.setLowbalalertself("Y");
+
+		Msisdn msisdnDetails = new Msisdn();
+		phNo = UniqueChecker.generate_subscriber_MSISDN("Prepaid");
+		msisdnDetails.setPhoneNo(phNo);
+		msisdnDetails.setPin(_masterVO.getProperty("PIN"));
+		msisdnDetails.setConfirmPin(_masterVO.getProperty("PIN"));
+		msisdnDetails.setDescription("");
+		msisdnDetails.setIsprimary("Y");
+		msisdnDetails.setStkProfile("DIST");
+		List<Msisdn> msisdn = new ArrayList<Msisdn>();
+		msisdn.add(msisdnDetails);
+		data.setMsisdn(msisdn);
+		data.setOtherEmail("");
+		data.setOutletCode("");
+		data.setSubOutletCode("");
+		data.setOutletCode("");
+		data.setOwnerUser("");
+		data.setParentCategory("DIST");
+		data.setParentUser("ROOT");
+		data.setPaymentType("");
+		data.setRoleType("N");
+		data.setRoles(_masterVO.getProperty("roles"));
+		data.setServices(_masterVO.getProperty("services"));
+		shortName = new RandomGeneration().randomAlphabets(4);
+		data.setShortName(shortName);
+		data.setSsn("");
+		data.setState("");
+		data.setSubscriberCode("");
+		data.setTransferProfile(_masterVO.getProperty("transferProfile"));
+		data.setTransferRuleType(_masterVO.getProperty("transferRuleType"));
+		data.setUserCatCode("DIST");
+		data.setUserCode(phNo);
+		username = randStr.randomAlphabets(5);
+		data.setUserName(username);
+		data.setUserNamePrefix("CMPY");
+		data.setUsergrade(_masterVO.getProperty("usergrade"));
+		data.setVoucherTypes("");
+		loginId = UniqueChecker.UC_LOGINID();
+		data.setWebloginid(loginId);
+		data.setWebpassword(_masterVO.getProperty("NewPassword"));
+		data.setConfirmwebpassword(_masterVO.getProperty("NewPassword"));
+	}
+
+	public void setUpChannelUserApprovalList(String loginId) {
+
+		channelUserApprovalListRequestPojo.setApprovalLevel("");
+		channelUserApprovalListRequestPojo.setCategory("ALL");
+		channelUserApprovalListRequestPojo.setDomain("ALL");
+		channelUserApprovalListRequestPojo.setGeography("ALL");
+		channelUserApprovalListRequestPojo.setLoggedInUserUserid(DBHandler.AccessHandler.getUserIdLoginID(loginId));
+		channelUserApprovalListRequestPojo.setLoginID("");
+		channelUserApprovalListRequestPojo.setMobileNumber("");
+		channelUserApprovalListRequestPojo.setReqTab("");
+	}
+
+	public void setUpChannelUserApprovalData() {
+		channelUserApprovalRequestPojo.setApprovalLevel("");
+		channelUserApprovalRequestPojo.setApproveUserID("");
+		data1.setAddress1("");
+		data1.setAddress2("");
+		data1.setAllowedTimeFrom("");
+		data1.setAllowedTimeTo("");
+		data1.setAlloweddays("");
+		data1.setAllowedip("");
+		data1.setAppointmentdate("");
+		data1.setCity("");
+		data1.setCommissionProfileID(_masterVO.getProperty("commissionProfileID"));
+		data1.setCompany("");
+		data1.setContactNumber("");
+		data1.setContactPerson("");
+		data1.setControlGroup("N");
+		data1.setCountry("");
+		data1.setDesignation("");
+		data1.setDocumentNo("");
+		data1.setDocumentType("");
+		data1.setDomain(_masterVO.getProperty("domainCode"));
+		data1.setEmailid(emailId);
+		data1.setEmpcode("");
+		data1.setExternalCode(extCode);
+		data1.setExtnwcode("NG");
+		data1.setFax("");
+		data1.setFirstName(firstName);
+		data1.setGeographicalDomain("DELHI");
+		data1.setGeographyCode(_masterVO.getProperty("geography_code"));
+		data1.setInsuspend("Y");
+		data1.setLanguage("en_US");
+		data1.setLastName("");
+		data1.setLatitude("");
+		data1.setLmsProfileId("");
+		data1.setLongitude("");
+		data1.setLowbalalertother("Y");
+		data1.setLowbalalertparent("Y");
+		data1.setLowbalalertself("Y");
+
+		restassuredapi.pojo.channelUserApprovalRequestPojo.Msisdn msisdnDetails = new restassuredapi.pojo.channelUserApprovalRequestPojo.Msisdn();
+		msisdnDetails.setPhoneNo(phNo);
+		msisdnDetails.setPin(_masterVO.getProperty("PIN"));
+		msisdnDetails.setConfirmPin(_masterVO.getProperty("PIN"));
+		msisdnDetails.setDescription("");
+		msisdnDetails.setIsprimary("Y");
+		msisdnDetails.setStkProfile("DIST");
+		List<restassuredapi.pojo.channelUserApprovalRequestPojo.Msisdn> msisdn = new ArrayList<restassuredapi.pojo.channelUserApprovalRequestPojo.Msisdn>();
+		msisdn.add(msisdnDetails);
+		data1.setMsisdn(msisdn);
+		data1.setOtherEmail("");
+		data1.setOutletCode("");
+		data1.setSubOutletCode("");
+		data1.setOutletCode("");
+		data1.setOwnerUser("");
+		data1.setParentCategory(_masterVO.getProperty("domainCode"));
+		data1.setParentUser("ROOT");
+		data1.setPaymentType(_masterVO.getProperty("paymentType"));
+		data1.setRoleType("N");
+		data1.setRoles(_masterVO.getProperty("roles"));
+		data1.setServices(_masterVO.getProperty("services"));
+		data1.setShortName(shortName);
+		data1.setSsn("");
+		data1.setState("");
+		data1.setSubscriberCode("");
+		data1.setTransferProfile(_masterVO.getProperty("transferProfile"));
+		data1.setTransferRuleType(_masterVO.getProperty("transferRuleType"));
+		data1.setUserCatCode(_masterVO.getProperty("domainCode"));
+		data1.setUserCode(phNo);
+		data1.setUserName(username);
+		data1.setUserNamePrefix("CMPY");
+		data1.setUsergrade(_masterVO.getProperty("usergrade"));
+		data1.setVoucherTypes("");
+		data1.setWebloginid(loginId);
+		data1.setWebpassword(_masterVO.getProperty("NewPassword"));
+		data1.setConfirmwebpassword(_masterVO.getProperty("NewPassword"));
+		channelUserApprovalRequestPojo.setUserAction("ADD");
+	}
+
+	protected static String accessToken;
+
+	public void BeforeMethod(String data1, String data2, String categoryName) throws Exception {
+		// if(accessToken==null) {
+		final String methodName = "Test_OAuthenticationTest";
+		Log.startTestCase(methodName);
+
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("OAUTHETICATION1");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+
+		setHeaders();
+		setupAuth(data1, data2);
+		OAuthenticationAPI oAuthenticationAPI = new OAuthenticationAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), headerMap);
+		oAuthenticationAPI.setContentType(_masterVO.getProperty("contentType"));
+		oAuthenticationAPI.addBodyParam(oAuthenticationRequestPojo);
+		oAuthenticationAPI.setExpectedStatusCode(200);
+		oAuthenticationAPI.perform();
+		oAuthenticationResponsePojo = oAuthenticationAPI.getAPIResponseAsPOJO(OAuthenticationResponsePojo.class);
+		long statusCode = oAuthenticationResponsePojo.getStatus();
+
+		accessToken = oAuthenticationResponsePojo.getToken();
+		Assert.assertEquals(statusCode, 200);
+		Assertion.assertEquals(Long.toString(statusCode), "200");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+
+	@Test(dataProvider = "userData", priority = 1)
+	@TestManager(TestKey = "PRETUPS-001")
+	public void channelAdmin_ApproveChannelUserViaLoginId_Positive(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ApproveChannelUserViaLoginId_Positive";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER01");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpChannelUserData();
+		channelAdminCreateChannelUserReqPojo.setData(data);
+		ChannelAdmin_CreateChannelUserAPI channelAdminCreateChannelUserAPI = new ChannelAdmin_CreateChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminCreateChannelUserAPI.addBodyParam(channelAdminCreateChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminCreateChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminCreateChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminCreateChannelUserAPI.perform();
+		channelAdminCreateChannelUserResPojo = channelAdminCreateChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminCreateChannelUserResPojo.class);
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setLoginID(channelAdminCreateChannelUserReqPojo.getData().getWebloginid());
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab1"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		Log.info("Entering ChannelUserApprovalApi Class");
+		ChannelUserApprovalApi channelUserApprovalApi = new ChannelUserApprovalApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		for (int i = 0; i < 2; i++) {
+			setUpChannelUserApprovalData();
+			if (i == 0) {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+			} else {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelTwo"));
+			}
+			String userId = DBHandler.AccessHandler.getUserIdFromMsisdn(phNo);
+			channelUserApprovalRequestPojo.setApproveUserID(userId);
+			channelUserApprovalRequestPojo.setData(data1);
+			channelUserApprovalApi.addBodyParam(channelUserApprovalRequestPojo);
+			ObjectMapper mapper2 = new ObjectMapper();
+			String reqBody2 = mapper2.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(channelUserApprovalRequestPojo);
+			Log.info("Request body: " + reqBody2);
+			channelUserApprovalApi.setExpectedStatusCode(200);
+			channelUserApprovalApi.perform();
+			channelUserApprovalResponsePojo = channelUserApprovalApi.getAPIResponseAsPOJO(ChannelUserApprovalResponsePojo.class);
+		}
+		String message = channelUserApprovalResponsePojo.getMessage().trim();
+		Log.info("Printing message :" + message);
+		Assert.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+		Assertion.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+
+	@Test(dataProvider = "userData", priority = 2)
+	@TestManager(TestKey = "PRETUPS-002")
+	public void channelAdmin_ApproveChannelUserWithoutGradeAndProfileInfo_Negative(String loginID, String password,
+			String parentName, String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ApproveChannelUserWithoutGradeAndProfileInfo_Negative";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER02");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpChannelUserData();
+		data.setCommissionProfileID("");
+		data.setTransferProfile("");
+		data.setTransferRuleType("");
+		data.setUsergrade("");
+		channelAdminCreateChannelUserReqPojo.setData(data);
+		ChannelAdmin_CreateChannelUserAPI channelAdminCreateChannelUserAPI = new ChannelAdmin_CreateChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminCreateChannelUserAPI.addBodyParam(channelAdminCreateChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminCreateChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminCreateChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminCreateChannelUserAPI.perform();
+		channelAdminCreateChannelUserResPojo = channelAdminCreateChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminCreateChannelUserResPojo.class);
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setLoginID(channelAdminCreateChannelUserReqPojo.getData().getWebloginid());
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab1"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		Log.info("Entering ChannelUserApprovalApi Class");
+		ChannelUserApprovalApi channelUserApprovalApi = new ChannelUserApprovalApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		for (int i = 0; i < 2; i++) {
+			setUpChannelUserApprovalData();
+			if (i == 0) {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+			} else {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelTwo"));
+			}
+			String userId = DBHandler.AccessHandler.getUserIdFromMsisdn(phNo);
+			channelUserApprovalRequestPojo.setApproveUserID(userId);
+			data1.setCommissionProfileID("");
+			data1.setPaymentType("");
+			data1.setRoles("");
+			data1.setTransferRuleType("");
+			data1.setTransferProfile("");
+			data1.setUsergrade("");
+			channelUserApprovalRequestPojo.setData(data1);
+			channelUserApprovalApi.addBodyParam(channelUserApprovalRequestPojo);
+			ObjectMapper mapper2 = new ObjectMapper();
+			String reqBody2 = mapper2.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(channelUserApprovalRequestPojo);
+			Log.info("Request body: " + reqBody2);
+			channelUserApprovalApi.setExpectedStatusCode(200);
+			channelUserApprovalApi.perform();
+			channelUserApprovalResponsePojo = channelUserApprovalApi.getAPIResponseAsPOJO(ChannelUserApprovalResponsePojo.class);
+			String message = channelUserApprovalResponsePojo.getMessage();
+			Assert.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+			Assertion.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+			Assertion.completeAssertions();
+			Log.endTestCase(methodName);
+		}
+	}
+
+	@Test(dataProvider = "userData", priority = 3)
+	@TestManager(TestKey = "PRETUPS-003")
+	public void channelAdmin_ApproveChannelUserWithMsisdn_Positive(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ApproveChannelUserWithMsisdn_Positive";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER03");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpChannelUserData();
+		channelAdminCreateChannelUserReqPojo.setData(data);
+		ChannelAdmin_CreateChannelUserAPI channelAdminCreateChannelUserAPI = new ChannelAdmin_CreateChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminCreateChannelUserAPI.addBodyParam(channelAdminCreateChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminCreateChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminCreateChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminCreateChannelUserAPI.perform();
+		channelAdminCreateChannelUserResPojo = channelAdminCreateChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminCreateChannelUserResPojo.class);
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setMobileNumber(phNo);
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab2"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		Log.info("Entering ChannelUserApprovalApi Class");
+		ChannelUserApprovalApi channelUserApprovalApi = new ChannelUserApprovalApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		for (int i = 0; i < 2; i++) {
+			setUpChannelUserApprovalData();
+			if (i == 0) {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+			} else {
+				channelUserApprovalRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelTwo"));
+			}
+			String userId = DBHandler.AccessHandler.getUserIdFromMsisdn(phNo);
+			channelUserApprovalRequestPojo.setApproveUserID(userId);
+			channelUserApprovalApi.addBodyParam(channelUserApprovalRequestPojo);
+			ObjectMapper mapper2 = new ObjectMapper();
+			String reqBody2 = mapper2.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(channelUserApprovalRequestPojo);
+			Log.info("Request body: " + reqBody2);
+			channelUserApprovalApi.setExpectedStatusCode(200);
+			channelUserApprovalApi.perform();
+			channelUserApprovalResponsePojo = channelUserApprovalApi.getAPIResponseAsPOJO(ChannelUserApprovalResponsePojo.class);
+		}
+		String message = channelUserApprovalResponsePojo.getMessage().trim();
+		Assert.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+		Assertion.assertEquals(message, "User " + loginId + " User " + firstName + " is successfully activated");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+
+	@Test(dataProvider = "userData", priority = 4)
+	@TestManager(TestKey = "PRETUPS-004")
+	public void channelAdmin_AlreadyApprovedChannelUser(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_AlreadyApprovedChannelUser";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER04");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setLoginID(_masterVO.getProperty("userLoginId"));
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab1"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListResponsePojo = channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		String message = channelUserApprovalListResponsePojo.getMessage();
+		Assert.assertEquals(message, "No channel approval records found.");
+		Assertion.assertEquals(message, "No channel approval records found.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	@Test(dataProvider = "userData", priority = 5)
+	@TestManager(TestKey = "PRETUPS-005")
+	public void channelAdmin_ApproveChannelUserAtLevel2(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_AlreadyApprovedChannelUser";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER05");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		setUpChannelUserData();
+		channelAdminCreateChannelUserReqPojo.setData(data);
+		ChannelAdmin_CreateChannelUserAPI channelAdminCreateChannelUserAPI = new ChannelAdmin_CreateChannelUserAPI(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		channelAdminCreateChannelUserAPI.addBodyParam(channelAdminCreateChannelUserReqPojo);
+		ObjectMapper mapper = new ObjectMapper();
+		String reqBody = mapper.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelAdminCreateChannelUserReqPojo);
+		Log.info("Request body: " + reqBody);
+		channelAdminCreateChannelUserAPI.setExpectedStatusCode(200);
+		channelAdminCreateChannelUserAPI.perform();
+		channelAdminCreateChannelUserResPojo = channelAdminCreateChannelUserAPI
+				.getAPIResponseAsPOJO(ChannelAdminCreateChannelUserResPojo.class);
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelTwo"));
+		channelUserApprovalListRequestPojo.setLoginID(channelAdminCreateChannelUserReqPojo.getData().getWebloginid());
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab1"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListResponsePojo = channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		String message = channelUserApprovalListResponsePojo.getMessage();
+		Assert.assertEquals(message, "No channel approval records found.");
+		Assertion.assertEquals(message, "No channel approval records found.");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	@Test(dataProvider = "userData", priority = 6)
+	@TestManager(TestKey = "PRETUPS-006")
+	public void channelAdmin_ApproveChannelUserWithInvalidLoginId(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ApproveChannelUserWithInvalidLoginId";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER06");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setLoginID("#$@FD@S");
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab1"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListResponsePojo = channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		String message = channelUserApprovalListResponsePojo.getMessage();
+		Assert.assertEquals(message, "Invalid login ID");
+		Assertion.assertEquals(message, "Invalid login ID");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+	
+	
+	@Test(dataProvider = "userData", priority = 7)
+	@TestManager(TestKey = "PRETUPS-007")
+	public void channelAdmin_ApproveChannelUserWithInvalidMsisdn(String loginID, String password, String parentName,
+			String categoryName, String categorCode) throws Exception {
+		final String methodName = "channelAdmin_ApproveChannelUserWithInvalidMsisdn";
+		Log.startTestCase(methodName);
+		BeforeMethod(loginID, password, categoryName);
+		CaseMaster CaseMaster = _masterVO.getCaseMasterByID("CADMAPPRCHNLUSER07");
+		moduleCode = CaseMaster.getModuleCode();
+		currentNode = test.createNode(MessageFormat.format(CaseMaster.getExtentCase(), categoryName));
+		currentNode.assignCategory("REST");
+		Log.info("Entering ChannelUserApprovalListApi Class");
+		ChannelUserApprovalListApi channelUserApprovalListApi = new ChannelUserApprovalListApi(
+				_masterVO.getMasterValue(MasterI.WEB_URL_REST_SWAGGER), accessToken);
+		setUpChannelUserApprovalList(loginID);
+		channelUserApprovalListRequestPojo.setApprovalLevel(_masterVO.getProperty("ApprovalLevelOne"));
+		channelUserApprovalListRequestPojo.setMobileNumber("#$@FD@S");
+		channelUserApprovalListRequestPojo.setReqTab(_masterVO.getProperty("reqTab2"));
+		channelUserApprovalListApi.addBodyParam(channelUserApprovalListRequestPojo);
+		ObjectMapper mapper1 = new ObjectMapper();
+		String reqBody1 = mapper1.writerWithDefaultPrettyPrinter()
+				.writeValueAsString(channelUserApprovalListRequestPojo);
+		Log.info("Request body: " + reqBody1);
+		channelUserApprovalListApi.setExpectedStatusCode(200);
+		channelUserApprovalListApi.perform();
+		channelUserApprovalListResponsePojo = channelUserApprovalListApi.getAPIResponseAsPOJO(ChannelUserApprovalListResponsePojo.class);
+		String message = channelUserApprovalListResponsePojo.getMessage();
+		Assert.assertEquals(message, "Invalid MSISDN");
+		Assertion.assertEquals(message, "Invalid MSISDN");
+		Assertion.completeAssertions();
+		Log.endTestCase(methodName);
+	}
+}

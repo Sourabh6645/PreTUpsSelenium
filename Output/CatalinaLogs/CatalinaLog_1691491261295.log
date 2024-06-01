@@ -1,0 +1,1001 @@
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+.....2
+POST
+POST
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:13:38.879
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c217ab23476634534870e8b89a444b70c0d86ac26b6b1bae1adceb0d6379171fed21cb146e50f2649902b53dc6df31c60891a9dc9fcbbc9d8a5900f459f87c04495b77cf8168d86835de80e264ccdf68788f4209a829ceb6660ab1dcdc3b613ba120d91f96b565185c317895eba31152983d44fc4d0fa3ddc05e9479bf15eac2b56a5ba861440ac187e0df882c77209cc4aab1fce6e3aa23f4d453968aa8611a96e86a7fa55fd518f400270ca0b4e8e7115d4bab3751e46109b5913e694c8f684b4c01ca8e708aa6901bd91d2e743eba3.1ec6b6769b2cb38198482db0d409011dc9d88adce1a63fe0cb9c7dc43f5a580c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c217ab23476634534870e8b89a444b70c0d86ac26b6b1bae1adceb0d6379171fed21cb146e50f2649902b53dc6df31c60891a9dc9fcbbc9d8a5900f459f87c04495b77cf8168d86835de80e264ccdf68788f4209a829ceb6660ab1dcdc3b613ba120d91f96b565185c317895eba3115290f747ed50be2ce3e29e326a6b10ec135c96e9294c8b6ce319882cc69d3dfaca54b3b95780820970995b1546fd6752d9f57e95eab6f3a3fbbc647b861730f2b0838e439ab2616661f822639cde20e549d641a488faecc0fb31efc236b64b34ea3.59ec88dd4110e260ba356bdd056ae77ceed50c52311f023856b23b4a937596e2, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:19:15.218
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c217ab23476634534c184c849a62ac94cc0d432ce1db20b65cc70b7bdd22323e9719aa46a09a1a3f88bb08bea91aa92809bdf31d79ca11e3254e015fdc19b278ed1a97e4cc9ad9e2859450d34422f88d2b2b8f54aabc691b8aae2c92509f671d4d46c2f101927d6d1bc7ed379313f90047bf6dafc4c05bc15ef7c592cd1296ec24ffff8c098d3aeef369064d71e761bde2bf8034c33977ddcdfbcf135d82bbb952477967252ff06c87879f9be55ead3293b047ccef925661514c86baaca9450f57c15fd2a849b2a399007adfd1c23dc32.c3ff951ab2a40ebfc2928caa6f8ebd5127620997ce348e048e5a082067a71890, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c217ab23476634534c184c849a62ac94cc0d432ce1db20b65cc70b7bdd22323e9719aa46a09a1a3f88bb08bea91aa92809bdf31d79ca11e3254e015fdc19b278ed1a97e4cc9ad9e2859450d34422f88d2b2b8f54aabc691b8aae2c92509f671d4d46c2f101927d6d1bc7ed379313f900452a5d444e2866de268cdb2352c887c3c968354a141dd8d16e452e8fe6d429e3cc9801e7d660bcfc2fe6093d2399166879c04a13b2e89585f81fb3b2a5861b3257b36f04a8acd8642015b3f72a6725507f06fe46ba21b8b6faac4fefeb1455d27.bcee075e888915fff6f60f1cc0b570686ed84e4089e933489d654250e8998b58, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:26:02.468
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2fd9c34c65bb343f22084e79575ea57a7f69a459a6b5164ea954a523b5aa95b19fb48a293857a7895f78687ab37c03d527797f7b0089d6acb266d065f0b696d03c6e6472f9a7619385331730e395f15b86d0171540ca4f01c5ccefd5b0b08a5f4bccaf0885355172dbe54937b61d0d9a145a70bd33cf88d626d4b0581cd922781387bb968f1dafa63ab2c0abb7390ec92f09672091943fd0d791e8e24f7dfd5af9e68968f8dbc95de6924c14209064e5bab2167d4fc3db0af5c199b0f1bb979298e7eda7b5eafe03844dda0228b49c89.21f2cc8f4f0ed14470aaef84d61673b8971edcfe9210ac0495717a80cc81a836, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2fd9c34c65bb343f22084e79575ea57a7f69a459a6b5164ea954a523b5aa95b19fb48a293857a7895f78687ab37c03d527797f7b0089d6acb266d065f0b696d03c6e6472f9a7619385331730e395f15b86d0171540ca4f01c5ccefd5b0b08a5f4bccaf0885355172dbe54937b61d0d9a7b00f1914f9fa3763e64f30f37168a8a80e1d07d00dfe1fb0f986147c0bf6d98e725d88b96e0f77039ef49454274e031818a67fadabb1aa1e98855aba36429f86d9907ee34c57ff4ae685ae76d2f65352eb15390882a79c6b3b6299f42227930.b64295c71431ddba25acb451980fffe5c78ddb853a91292b16fd15178b89d578, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:28:28.721
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2fd9c34c65bb343ffba3544c481ffc53609af4997c3a295bdbe5325ad9a853124bddf6ecf271720576f1561343f9d36e4ef29eba3838b860e3ef9c06b076820487ae0201a439167265530533f5e31bdf8f985b1b852524d238f4ac351f973b18a129ba66651f730473545de6af5657a8ee2b7b29f64386ddccd710b7700931c46111ad51cfdf1a2800b0b1c83c0edf452cf3dd4b69833c5ed958ba2dbde6abb76b551603f08058f368e7e4c78cadde037f7cd0bfa3fa6a0585fbf3cecbe172cad4a4fd8c387e9a3dcdd271ce62d60c2f.6202dfc27ceeb0d821c187cf879acc3ec2fac3a1f8f9ba8424e6bbacaf9befd2, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2fd9c34c65bb343ffba3544c481ffc53609af4997c3a295bdbe5325ad9a853124bddf6ecf271720576f1561343f9d36e4ef29eba3838b860e3ef9c06b076820487ae0201a439167265530533f5e31bdf8f985b1b852524d238f4ac351f973b18a129ba66651f730473545de6af5657a8a00d064ba3bfc126fe370e989d73368ed8f7b506f9513f0a48c062b530ae588b2f27b6df87d4836fa6b7868a5ba51960383e970163d8eda744ca945bd7a604ea499e96ca6a45865e6a6e2f100fbe9bf051880b9670221d4f15c1f0369cf4ef14.1f32e5d5047e0679496f6766ca19136feb3d33bb523d56c92f39bbdc55cbca94, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:29:09.073
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb7569e0a2633b05b9c3fa69dddcf909497f2f628d1153755ece0136e8dc7f910d3402252addeedcd08ba4d78934b1b4223f57a93498c4c03dfc551c23212651327ace5cc2ac4c7228b059a97de50ae2d4da008592e0465c5191d1f864dec8abb11cd1cb9bab14709a46358405735427568c9a2172899f1cdc77401dfd697a84f228017a6d78dd7e1696abaddadb716e53e5cec5bb5c9be8c1a5ef64eb7090d94ec5a6ff89619ffafe1b8bd1c761d6a214f42e24145ac85eeb0a07009cfc9660a87e5e7562b98bed810854413d7bef017276.cb6638a3730d09656fb8a22c7791788a4366aa16e2d1b4984e5512748d6d6547, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb7569e0a2633b05b9c3fa69dddcf909497f2f628d1153755ece0136e8dc7f910d3402252addeedcd08ba4d78934b1b4223f57a93498c4c03dfc551c23212651327ace5cc2ac4c7228b059a97de50ae2d4da008592e0465c5191d1f864dec8abb11cd1cb9bab14709a46b0e78a4e7c8aa3003a20bbf77f440bf3c06d1374fef60890cbd10e9e0a69e288ff71028469cb62f658c814f990cbd65a9fe61180c3f5f607e0ab9106902e0cd1a94bc085113c1ebf6992be29787ea7746b4bd478ed11269360323aa80fbd7b450dd9ea5d64ad7d2a.e0d14129d14c439e32eed11072ad496290dd01f4715b6809ebf219e750348e53, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:29:24.657
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb75e09c7d20955cfcf9080c48af3589b9ec0fb7ba7c3dc4138beb096776eec2ab7a436733e025d9a96d30112e2d1914a6aecbf6c7bbc39ed0579050e35cf28bc5cde993af13ce521374890cad308bc99118202191a358a2878a59f86d3f63881e3c307c16fe5363b5426b74f5fb9ae468a47be2a9a939ac60810e585d216944fbe532944fe79c608db61da717b023fa360a09983a31bae1132518ce767e418759793df0c609baf1d80903f1cad777769d51cfdde56ae99a6df8f999cedc3bcf86c3a4036c356296f7f2eb77284c79f1d473.0674d3662c7f8a5a1eeadf34cea20e5bf1f1525711bfa65628e83a95a56f1bab, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb75e09c7d20955cfcf9080c48af3589b9ec0fb7ba7c3dc4138beb096776eec2ab7a436733e025d9a96d30112e2d1914a6aecbf6c7bbc39ed0579050e35cf28bc5cde993af13ce521374890cad308bc99118202191a358a2878a59f86d3f63881e3c307c16fe5363b5421c32db5a3475213574d393acdddf02cb03519a8a56fddd807f5c2c0165bcc89f533612ef7d410f62e8e02e71393e296690d6d6c6a587131af71ca2a2e40d7ccff026f72efa4b4e237c80f67e7ad7c3f013aa9a8c32fddd1d555747373df5de111ddd71a7aec00424.a9e5c1629f025846c2dfb6cb634b141a4ecf357393ae7021f955ea16af719ed6, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:29:38.78
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb75c3481a943d6137c930f41851812ed94d9f5472ba8d81e056d4cd3e047d55a81eb064f056db2ffa337f4b191cac59a987de86b13be691191077d9fd5b5f8715a7af875f625505f77977071495bb36210e9244be8eb9fccccc6b7f8cd7db7c44d4f256097511267b65eb95d283f2e0b346d758dff83c825980bba6fe90ab37b6d50dcbd90e82958fdf99ceffcda45b2e63b45b57d0125173a26357669b3a98cc1c3149f6abb2376d7ac6283079c55634efac20cf6076e42a483ce497b6e9c97dbf392ebfc711ebe761e42b6b22b5218d27.b31e79fc8e92a5db929bdf8849d995f1a8e489536d9ffb89e66f17a079379e02, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb75c3481a943d6137c930f41851812ed94d9f5472ba8d81e056d4cd3e047d55a81eb064f056db2ffa337f4b191cac59a987de86b13be691191077d9fd5b5f8715a7af875f625505f77977071495bb36210e9244be8eb9fccccc6b7f8cd7db7c44d4f256097511267b654bdba293f3d52930447edf18162a9f13c078dd8c7f7642d5dcd056682755c6465ea218e89685948a7c71731caa44ab02c4e7e2cd064a51580a3e3c06c6072ba86d1432615020128a0daac2e73acaf5bc74ecc932026378f08d7a3ec5919ebc622c5f4997d1f8c082.af3a5a11ac710eca26ad66f2ebf9c071e388bc33d74ccdb34e026debc8da9c42, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:29:58.893
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb751a9d2f958f94e8bccb6266339049cd87299f89e9f2ab19e388f7ecf5a68e5d45c2a69409d3c4637b67782d03efe7ce7ba17f87de5570dace21c6ebf7390d55db0bfaf910f228482c05b871882c8da09b0f2fad66891fe8b518706c03c34f6a239e29b8cc628857b8a9885383311105dad4037b077922e61695e7bc8646584a9cc1ae4cbe89a5cc73a80eb2218e2f56fa1cbc95c2486cefb093aa2d2a38c8dc8fe28a2f51c315b14ce31193100887a9d07ec7534624759ec61a1d56ffbedeb7f1422b87c9d80293c19f106d10e3889536.bcf2173cde7581ebd74d2ed4143bd5fb4640f2eae72c43ec2360d6a095d488e6, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb751a9d2f958f94e8bccb6266339049cd87299f89e9f2ab19e388f7ecf5a68e5d45c2a69409d3c4637b67782d03efe7ce7ba17f87de5570dace21c6ebf7390d55db0bfaf910f228482c05b871882c8da09b0f2fad66891fe8b518706c03c34f6a239e29b8cc628857b86682afb6b7e97728ec5bdfe8f255af1969e7fc6a1b76d0cd616644ddcb23bbcb202128e1f4394c3399038e834e03c3a5630d1fb54cafc339f0b5af15e397603c5305d8e67f999dcd3acd14a22f376bc60239c698c1b28f5e20039713bd9a0ab3a3e7bca09dd84ea3.25fbf62b992960fc58dc02af700a6a8d6b14f380a16e573dc8affddcf680993f, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:30:14.823
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb754df5b3dd1e87ae9e3cf735a7a043c22a9e73756db45ce6ba2cfc8299daf3a8e7bf78eff19a363b91d89889b644ce4c203932649f8406981b692c1d1c040501d6175039bb1b53997cb524067a69ed171d5686cd99eab26d95af96287ab35fc1b2f132543cc04824645ea5be52ee70ff9201f7a1cda1a189baf90e7fd26ae4a097fe92ca4722da6cbf200a02bf92b7204c3e94d55bb4e69b5344be51dc140879cded7f1b2bc0ac84a4fd6fa1a83a1819d3f0e3db61d809227130c701cedbbc3e6abbfc0a32e730141d.62347ddc1848d93bcb82ae581f19402e4c906d53482eb558fcc7abdbcb34ca7b, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb754df5b3dd1e87ae9e3cf735a7a043c22a9e73756db45ce6ba2cfc8299daf3a8e7bf78eff19a363b91d89889b644ce4c203932649f8406981b692c1d1c040501d6175039bb1b53997cb524067a69ed171d5686cd99eab26d95af96287ab35fc1b2f132543cc04824643f0bfb240235b4565ebacd2ef2c11184e0f301c8dc2703b15dd82ab103565e93b03f16c85600f620c8078c106697b9a08bb87b3f3b4872f16940fd206a7f8c40de6e73c37c40f92de42766f3f205e22c37c3cf372d8241dd34b7a0c6378ba34c.ec5eb259a3f1ea598e3969c74b1ae18ac41f33c1cb1be62aa6d71ba926abdb50, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:30:41.729
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb752c09703c5895e02453a8a8e34b1b11fbc048c20464bbc31b4cacc53d5033519d824610c5ceb2dc324d2eefccb6677b0ecfb319ab9c647b0e71a979afa9cf6cce9170df53054b525c7dc1a241433133edee6f79b809e0778f6e17d34c423fafdfe846365e8ee764fe3e3e7a19c3aa7d7fbeb15cf26adfb00569659a29e7bc5b2aa70cdf3c9b6693ea89ff8d67e39be9aa334fad5eacf6fba4af355c9effeba418bf8223a072d889acb3cab38245449193751ff36bdaad402011e8100794d16ea8ae942657f9ef25236ac9d7c60c38b97d.4aa17b05007ce1bf8a744968c1fa3945229c6e22fae73b28c12ff64fd7f2b367, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb752c09703c5895e02453a8a8e34b1b11fbc048c20464bbc31b4cacc53d5033519d824610c5ceb2dc324d2eefccb6677b0ecfb319ab9c647b0e71a979afa9cf6cce9170df53054b525c7dc1a241433133edee6f79b809e0778f6e17d34c423fafdfe846365e8ee764fe4f1b201ebf6869d4ff084b55da749b0d093cc96a43a775cf14f0ac85a82fabc869d2f942a0c0e1309e649be53d4391a1c217330b1c9e13d106d0ba76573edbb2df30bdce513829d5adeed3788f11790b93773d8233492be622171af3813f8d2f2bd873b32dce0a45.cfd6bfd426dba1c816142b742606a78b7f01ec0162a3b885d3b611c878696f6b, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:37:11.646
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf3d62f91ce7636f7e6dcad7d0720c1cf45209977c8cf53bff9814fe8400d1854ad058dce2af4b1309bf52bfccd494f3fa97424be288d0215b6751283b5bdc109878665e8a6c20ce891b2499e06369d0e4d9bdfd4b669a393f4524cd5586ae855ff8502899715477cee3620b94163ee3a063d711eacf2f66fa0084bc7248f449b33ac833f8fea24048801c31d3fe5fa4b3df8e4b0edb742dd8417aec4514ee2c5c91c7074b0861e0064567ab93435a3d3220b7fd6a3ae79419fc54925bdb2cf353e1edf6e28c7b2a40c5d0b348c957f61.101827c04a728f83762058787894931d0903ef83d531f8141a8656477562ad24, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf3d62f91ce7636f7e6dcad7d0720c1cf45209977c8cf53bff9814fe8400d1854ad058dce2af4b1309bf52bfccd494f3fa97424be288d0215b6751283b5bdc109878665e8a6c20ce891b2499e06369d0e4d9bdfd4b669a393f4524cd5586ae855ff8502899715477cee3620b94163ee3a57d36271be21b53db751681ed1310f8edefeb791db813475917e0cc0496e086e9a0dfe5b92642a9a6eb3c29f615c5ba6072ea8ca52c73ffc82a9191c053a946a87d4b60cdc3b271c05be6ab2dcd36bd2025cdb5df962d7755fa52152f3f4a066.5d2d6d826538e610243691348d0d4f08a8f9013d60c541d909d18a597907f0ca, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:37:58.363
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf3d62f91ce7636f7a9b98b129f7377f45bc8bc6b143599e520b6d507ccc295cde74bdeb689e6e4f24d0ff8976d75c235ec55783353ae9054bdf482b7d9df6d98b7cafc1bbfdc3ae87f1f164e1c2f702dd0589b43340b1bb07b406b3c3abceab244851a025e1eeabab6f6e4d7000b6028a7a76ccb84c9a4aec1223d5133a560dd6942c3a9a103b7de771a8d1d88b74f9435201d3e0133d76d27ae2712121297f7d79a5cdf675eb8af3a0c47d2f38f1262ede59939ced55f65e86feca95c425049f407a52e6f70759b3a6224137dd42228.1892040a05f831e8a50ae7f1802f68d291110944713707ac7e8df8653c1e26f0, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf3d62f91ce7636f7a9b98b129f7377f45bc8bc6b143599e520b6d507ccc295cde74bdeb689e6e4f24d0ff8976d75c235ec55783353ae9054bdf482b7d9df6d98b7cafc1bbfdc3ae87f1f164e1c2f702dd0589b43340b1bb07b406b3c3abceab244851a025e1eeabab6f6e4d7000b6028b99c98d15e5633c452ed7fd48132e366d021e2a50ef2c7c0ad0cc58a910f2b9a02767a0ffb98ee621b1e7fde09f35e57d0b92f80d4180aed152692b1187f3bc00c1da6dfaf06f6f1994a504874e37993169f9b5442495508fab1c1aee56e17d2.b9799050fdb47a3711b971e380b719755411ba361c0a7da68effa28c77ac0429, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:40:09.933
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6e55d0dc9fb8835c7aebdda5124a55cc07676ef471be52ae2ff536cd75c8a60b0c1d18e58c5ab4cedd77d88397c6700de81a5f6d20b65a85092f1035b031477a170d222c837eb83d07ab1ce9a7cde39d0198b476bbd7e30b20924cea2c03533e7b8710586747cdc42d0935a38b2501b348174df2309738eb4119a501aab404758d10a06e1ebc4b8f3e77090f67fbd51f949043036502ead4bfca214c2faa49c980100359aeda402e6c862291df778d5f18f46264543af3382d11c757a336ca9fe980b332f4d4baba6d.1fbaf5748f5d7997f74b9bc9dea110563c4c05b77133700bf2cf5c7a2a8184ef, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6e55d0dc9fb8835c7aebdda5124a55cc07676ef471be52ae2ff536cd75c8a60b0c1d18e58c5ab4cedd77d88397c6700de81a5f6d20b65a85092f1035b031477a170d222c837eb83d07ab1ce9a7cde39d0198b476bbd7e30b20924cea2c03533e7b8710586747cdc42d1b7dc883b337f787c72f8b00d1574f77624aa84e95fc29f9914570023d75de7cbe725d4b506d37a76ffbaf849654792839d8a253db304aef458157ce62e8f020db101bbe8b9ae5fb2020e187a08fd5a9c992b69fe2d4adbca882bae10a0779c5.d8ebbc29c807c1f022beee269858edca1800e1e7de1152a54b93b24850e0541b, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:43:45.235
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6eb7744d511ec0f732dd20d47376d60aab9c381c5e843b358ae54da9884b700a6459d0fd84e5107202f235e91e0e0799d10b54ddfc015ce02269f68de4adf3f249fb992a910225ca8da3327ff598fc5cad682da5243a6865de3d0f1088e4dc9709faff1c16fe36cc5ae10f89c7019c83f34ff94227c3eea5e6d8be5e18ffa46ec2ee09ec1570ffe80e38de071e2cb56712dc18ea8dc5eebb5229bcb44da3aa40468262add18821075d7b6ca4b60b9b297c9a9670410224955f6d08f67caa2ea81f17a5bcde8735aea8.de32b3bcc1cc9f3f8ed2801a9852d23552e23c99e1d6d33b5b4108c607feb953, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6eb7744d511ec0f732dd20d47376d60aab9c381c5e843b358ae54da9884b700a6459d0fd84e5107202f235e91e0e0799d10b54ddfc015ce02269f68de4adf3f249fb992a910225ca8da3327ff598fc5cad682da5243a6865de3d0f1088e4dc9709faff1c16fe36cc5a4acec4fe30f60133593542d498b4f0cbd83d7d0409880d8b3b1304e9ebb4240f4d8be06d0e2bc99e34146b37d35e57bb017ad59b0adc4a8311963ad1f944582938a212cd89ec166917a7d8eb7d428c9f309f0ea7e7681c18357acb4d81e83102.f53720471a696785c1198c924be69a3a93b7b21e760785531ee29fe1549c9d73, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:49:57.977
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6e0f5f1963365cfa0193f9123a937a1e01799b5b67aac42b179a50d6844e19e13d8da23231a18bcc7ad87beb7d029f4a50e869206da508c32cfa966e1883e68de7c71fa7ea541278c89b02b7d62f3ebe7cddea7c4aa59d89256f17c834d02e62d3ba47263a0ffb3babcf331db57e33f00e17ca08b5e5ec2bd377aa322663c379457ae5e2e6a99030a7083640d85e441bba497b589f3eae8f4993668a394a52cc6af3a545b2519473161859cfecdedfe1eaf16f8d2bc978460488260a98495174b1685dfc63f3b8b8cb.6a90517adee44b1c2a4fdd3793878703649284cd299759428bdc1f680fcec64b, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5e2a4a1b3ac50b6e0f5f1963365cfa0193f9123a937a1e01799b5b67aac42b179a50d6844e19e13d8da23231a18bcc7ad87beb7d029f4a50e869206da508c32cfa966e1883e68de7c71fa7ea541278c89b02b7d62f3ebe7cddea7c4aa59d89256f17c834d02e62d3ba47263a0ffb3bab3cb64751c9a7acac78f8e80834372500c3b273572ef8ed0407f37bce8d4893b15f542f833e4c383d35ce6dce6cdabfe7a7f2cd9671fe67983975e0f65ad73a6bf0c9434e9cf90f633dda4e6f781f6aee7df248da2bb7b753db8cd41f5b58a150.b61109ae8811ffd0d599216ad5f7a670c90c3ee41d3e98d28faa457e1a05ecb5, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:50:21.437
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff5fd575080bf64083395e1ac5ed9d3d017802cd9e83a26573f63f6fc778c9506c388299bdfff4bf6c0d2959eb5c67ac0cc524414b1b6cf3c2a353c2fc1fa6993b9ffad7f71d761468b457a30d3bbdf3fbd01e503e315ff3e53e30342e6920d2f2871efb029668cbb7db625a682b21e9bdf1a51ec63fbb7eb10ec0de653527528676fc361803065be428519bf2384c5317327284dd551d76fa6b1e984b3cf4aa3b0a003547c9e08409894e89e8519dcd5dab11d54eea505a7f6bfcdfbcdae0f92067e7582f662bcab03.5ebf798984c7a4ea31d026f735a35272382d2d37b73fbf3038318b6dbd9ec489, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff5fd575080bf64083395e1ac5ed9d3d017802cd9e83a26573f63f6fc778c9506c388299bdfff4bf6c0d2959eb5c67ac0cc524414b1b6cf3c2a353c2fc1fa6993b9ffad7f71d761468b457a30d3bbdf3fbd01e503e315ff3e53e30342e6920d2f2871efb029668cbb7d7fcb6099f08d722fed2ffb64689f9274a70883a6fb28f91c3686816ea246289bc7f6c1f4e007ad6caf76880da6d3de1a82abb7aa1ff648fef54cc1df0fec2a00813a91f86f1c3035343b1e43562d503d010a2be00704d6e30644b47a4020de1b.68aa7a5ecd9c5839bff5716c486009e721e7e3f2030ce7879ea23fb645dd3ab4, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:54:10.88
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff5ae6fb05542d9b3ca65fc4b57482b7b09e5c0d4c34e257aa4028270cb0c1f580676dcfc1e73d1ba61cf52f129560ad0f1cbf8504ec10db75e5553e59b82bed94537e2241ec90897259471d327997a2b26ab2e835d82d3d3f716a61ead34f3a79e5e02999fd39e7f2e2a1dd9f824ee1556386d930335a9a9e05b13cb3e32a09f0a4532f34753dd0092b1f4350a2c37874fc797e2d843dc8240e6548b6b12079acd1a0e4ffef7911056c26e4a9c5743f2b9a5b75173b4d40451f4f9d38ba2d9a185e0f269631cdbe16d.b30438b0f9dc68ce9bd72f2761c985620eb06d437145620c4b25e44b9c833061, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff5ae6fb05542d9b3ca65fc4b57482b7b09e5c0d4c34e257aa4028270cb0c1f580676dcfc1e73d1ba61cf52f129560ad0f1cbf8504ec10db75e5553e59b82bed94537e2241ec90897259471d327997a2b26ab2e835d82d3d3f716a61ead34f3a79e5e02999fd39e7f2eab279d8b29c46eb01bf32c713f7065b83de146aea802c2bd345ab9e94bb8bafc0bf21ae736d6be0d5e839f96290f1988a704253b719e535da79d9b180123e58e8b2ad5ab418cf51b7911c179e348aad8a543775762de2ba554d69b39c41df788.6a96f8cfef39863c6115503c4c8ad29df2689c0eaa9478fe974d10d3eb0819bb, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:55:33.107
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb757ec7f8a5eadeb02226c67520b6fc2354980e9ef31a7ca1dddd1bc3f56d13b180a684354b2c7e1cf2f0fabc8e1d0d6feea5c875cec20dcc4f8613111749068b187d34766d38cea0f1024d242376aff4ed2adb625bd81ab18096178a47d5594cc416722f7c3ff276a44a0879f3fea733702eb925195f17bad8688933ed4c1634222e3ad6c0586406b33fd4c8e4c613c51fa37da1137f08d8368df2c1bb73f0bfc340b18d48ee1084c86a8151de744f1214bd840a10732982c2e361d0bec1036591405a6bd86c66ef8bdfdf4f765a7a1ab8.8110247cb44af1aba92d149ff96392eae8ec51d69ab2a6aa30f3d9a80346b81f, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec12600df8e89816dcb757ec7f8a5eadeb02226c67520b6fc2354980e9ef31a7ca1dddd1bc3f56d13b180a684354b2c7e1cf2f0fabc8e1d0d6feea5c875cec20dcc4f8613111749068b187d34766d38cea0f1024d242376aff4ed2adb625bd81ab18096178a47d5594cc416722f7c3ff276a4022b853fcb9f314c024822bd3a56218b7b36cccc960a62be9b4a3eba4e42cc80280cba50cf8518f1acc0691f95f7c955c57c875729008559bb8aeb12831717b7a6f72caf51f984c15391f2c91fd0779d98940897e70f0c7c53dd9f221223fa758743d3b4a990a917.cc4d987f3bc743d60e89cccf1224c6464e94d8e0938e86ffef83485d586fae61, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 14:57:15.444
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff59e9e6166d9f0488b0c4edf742f1b0b4615856d76868f81ad90019ca601108625e50602329f1f1c6e0468248e89a7eb271a5f74c2ce3a31afc82d7d2e4bc725fe2b44c23ae77f47aa002c83934b28fbabfc019a1e691a0f2c1ae9fe2790ec40eb8945fe23eafa5e7251bc31f843d9be0329d44abccbb55f601950305e403cf2494d43d338d33bdb101e124f6d725ec9f9848d4061a67b844f3f8c68aeea7138e39ac06b7092924e571ff3ace98a5bce0b8a0ab3c7c0be9eb2a6fb4e0f7dac62bc85debbf5bc2ad8bf.179451cb542fdd99e6be724058733965bb7f58adf60a0ac487813b7de65d9aff, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cfd07d2d918a01ff59e9e6166d9f0488b0c4edf742f1b0b4615856d76868f81ad90019ca601108625e50602329f1f1c6e0468248e89a7eb271a5f74c2ce3a31afc82d7d2e4bc725fe2b44c23ae77f47aa002c83934b28fbabfc019a1e691a0f2c1ae9fe2790ec40eb8945fe23eafa5e72a32e97876e45c7c81b7bec5b4c8452c496c1c2ecdabac4ede7df0cd1ea58e0c36c706ae3ae8dafce50e49866c70c2721212d8a8f2e4bce22d59007a60e1764352ebad3eb3263e8cb9ac7015bbce2cdb62e7681994b1a16a52db5be58ef1c3783.1444278d9ea306c6fbecb0d1d996a87f1770309a690041e9718c61cb862d9664, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:01:38.828
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c340ef975a9a632f8d9bebca418d4a4fb918b87b047f68e857f53c97d25bb463a0b6792e84d69954f56640a0926b495fbe5cebe17a7e836892f2e062eab5881ee3869f0ed41d79b67a327ac1c02bbff55fa02b355393823c6bec08d165863f5275cf594b54383234888d9a720ebac3cb3cabb914a420cf00d508dabb40bf01f71fc607ac0a3de499ea6c8f41ecbd51acc523124e2e87d0d37cad70bb74de698374c01c09e50218778a0787e0a388222dcedd53fdf37da18c0c5f3e90919833c7a7092af550d22babd4ba.96c824cb09db74c238ad2dd726939da42b8b893897cb3792bfb9fa43dbda1211, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c340ef975a9a632f8d9bebca418d4a4fb918b87b047f68e857f53c97d25bb463a0b6792e84d69954f56640a0926b495fbe5cebe17a7e836892f2e062eab5881ee3869f0ed41d79b67a327ac1c02bbff55fa02b355393823c6bec08d165863f5275cf594b54383234888dd684944a5a32a05137c91ccc4182f4c14521ac7ae76e71819dfcb7151f88e37030d5f4efcf36ed75f2cdedb468c2aa29c7c7e8925cecf86fa0e930dbcdf4964e23ee14451036d8111b66adb43811b7ac887ea3e8e8de9905109d00b9c7fabd0d.b3aed1487e4de3df754b0770a9052dfbe68e06a05a7cb96c2d0419ef1ed3ee4e, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:05:48.759
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c3404b6018025e0478cd295c81a3f83c699ba7ae4d80dd2d228f951456ed060e9809ecc101e83ce7c0007205c3a9b82a5b9063531f188ae0a2326fe38ede90681983750b52fa8063ccbe63aebcd2691f73a5dd7085001487f2ccba189c3cd79f964fb224b8f409d4cbf9ad82e99432d5728e396ad9b3d937560a65b3b88afab8f90f491dfca49c4a476a3285c6387dfe91e4d4d79f04127f57b7358ccdc31e3b8c7d638055650f1057a67d3561b925a854e7f7b2e85f81207322d6a2a0d488b4dda3faa841fc49e8f663.1d61b44daa5733d3c5d1ce8d3544f8ea9e10f3d2c93f8e979b3aba42fa83428a, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c3404b6018025e0478cd295c81a3f83c699ba7ae4d80dd2d228f951456ed060e9809ecc101e83ce7c0007205c3a9b82a5b9063531f188ae0a2326fe38ede90681983750b52fa8063ccbe63aebcd2691f73a5dd7085001487f2ccba189c3cd79f964fb224b8f409d4cbf9111421622b1e1d93e0b91a8f7152cada3baf7fd89b4c8e8a44b61aafcb1d8b9083429009677c7c6c9916485be1a9fed5e53eec6411cb8f8ae4437f09f2d9dacb8f74da26e21e9a8cb069c04be1ffd300ffd6e663f8c30214675a898235b88580.b60edc38a0837420f1f9cea5969820577822a5fa8c724846e80a339dabf83996, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:07:28.389
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c340aba8d9ab16394e3eddbf4d54fee68aa684a5d92b45c6c739a3fcb77a60004731a64d807048a61eec8821e411f4a91d7e38c8f54bce87387b2b401df45ce62d960a8fe0e2bfd0902395b229dbbb5e7d85cf4e0dd95271a300840c1b9abb459a7bbae34d2e79da7ff85f923046348c4eeec514426c2894404661e8c3ef4ddfc4256206df77e5e1d549469304720faae9ac1475c1359e896655e6b654e0464a830308548e959c00622493730d5b81a3f4d5cba3c37b03ebc08f7a90165394943a28e3e273b9259c797f.7fe9c3de0185785204d19fd44ad8eba3de686eb20898f594a7aaa47ed6c1fdeb, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ccf73dd267780c340aba8d9ab16394e3eddbf4d54fee68aa684a5d92b45c6c739a3fcb77a60004731a64d807048a61eec8821e411f4a91d7e38c8f54bce87387b2b401df45ce62d960a8fe0e2bfd0902395b229dbbb5e7d85cf4e0dd95271a300840c1b9abb459a7bbae34d2e79da7ff8ae44f06f3debd3bf89c6d0ff0806d4a580e6102d195b229e0acbdd30ad6629168c8d2382bb5d9d172d0ec558fd621bdcaab7c633a4dc6cdacbf307808c718aa6b59d236a4a1766552c45a3c90119dc05d199e4666a6582177a40d016165d2f1f.d39861f941846fbea158d08d5e76eff8e4df7255ce470d46dbcaa950b351cd5f, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:17:01.053
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf716b45f32624e2f4424a75cf6e86792b1b94b6aa019a97e52efa5ae56032083caed1240a93b6e60a9f824bc75ba3ee66f3b8523afb8377edb6d0c66d43a99556b49a63e041b8adf57dd7ae17348b2d56605333802dfe7885c3ebd093c4dbe3090e3a095971647de1b179c77d727b0f395c5d0a6a307bbfb778e02628d1578920323372f9d3b7f28ddcb70feb0e203f6f04b3234934c39ca472acccc9fbdb8497c82263a196ede6ff4d83590b57d949ad85c1da28ee661f314dfc2e6effd0a2cb6ae6277e23b1e5a8ac55f5c1a4940fc.e18f79def246221a4c5044c0a7e40c4fbf0326a44b947cca190301a8592c0a9c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf716b45f32624e2f4424a75cf6e86792b1b94b6aa019a97e52efa5ae56032083caed1240a93b6e60a9f824bc75ba3ee66f3b8523afb8377edb6d0c66d43a99556b49a63e041b8adf57dd7ae17348b2d56605333802dfe7885c3ebd093c4dbe3090e3a095971647de1b179c77d727b0f33b5f788dffb1b1cfa64cabe2b5026c86b508e44da5fd32dd39a11390ad034121904711384f7f6ab249541f4530cb91d82b35dff4a70931b578a8e9379286cf2e65d0f8266ac6e8f124c36ed5d72cfeeb2208533ab37c757409fe5bf469e5ae3c.3687048b9e4ff40203ecd5392d34b53794e17bd24d54c01b969e2b0a139d177e, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:18:03.532
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf716b45f32624e2f3e05d592fc13aa4ebe26cf22223fe898420cf67ef1f404cc9d6e24bc89b45b6dec071191074aa7b90edbf5efc6d06c858952b8321190b3a08eb14d0268bf6a12170bf932138710eba65d0d65e469f85e5f80e82ade1e432575d8d617015fa1516e88290d2b1b65470e87090726af22c093a1872b0143dc09dca60704792a5273b21053c430258d35655998a2f5ad6126a4c05ad63f0f078d6b554e8da35978fca400f7eb7d667ca727085fa6edd4c7024d1c1b810aa6997bd880d76fd5b75c1f553862c239c6b04a.de74adb3ffc9c992e32b89ddc86560bc5f994c03ac0ddb6abc388668695d7f77, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cf716b45f32624e2f3e05d592fc13aa4ebe26cf22223fe898420cf67ef1f404cc9d6e24bc89b45b6dec071191074aa7b90edbf5efc6d06c858952b8321190b3a08eb14d0268bf6a12170bf932138710eba65d0d65e469f85e5f80e82ade1e432575d8d617015fa1516e88290d2b1b65478025cd4ad6934d91429d3ff4417b04ecc724d94436843bb9a2b9b4be3a998d7bf418089a778c5bcd86130fd4ea438c29ddb459763aa88da3d43ead4c51188419ecf97ad5353262da07fa69bd0b61b0b91966d0b0af26d7462593b6e58105aedc.538c77731550c9e24b5c6aa7c962ed46cb14731ef7f63119447a88998aa529ee, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:20:39.272
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c809864faeb3400af897c7b6d18d568b8dd554022de20d38db39a94e6cd311701ac4baf6bad27a0e76a26d0aae64d199e4575e09ed40c20978aee4bab8cc86d3e88a38e6c20aa43fad85da6534632c63b5326d98e3b224abd184beca56f4e8b5a8686b9c937446bc42a210db366f6eddada03408a66dace9bef8fb2b88ea84b84dac8c32166fdf05c4c20cc37f7ac84b71ea6e0182e319a6d686ccee3aad799fda03dc7b3b911b94e0c3596be81a813fbe7020f5d1901b347ddef7f1e7b7790621edbdd5dd5cc284dca721.c6ba7dd0e996f06ec2fe1d9cdcb31dd5ea953f7b490625a7d445a21a519f9092, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c809864faeb3400af897c7b6d18d568b8dd554022de20d38db39a94e6cd311701ac4baf6bad27a0e76a26d0aae64d199e4575e09ed40c20978aee4bab8cc86d3e88a38e6c20aa43fad85da6534632c63b5326d98e3b224abd184beca56f4e8b5a8686b9c937446bc42a210eef8ca04e340d6bc9db57b0abf0382131c8bc665be80fdfac9edca69c2d71735a6389204d33bdc30c2bd9aedca05559aa356474b6e5431f446e8c4785aaca0ef081998a73e1bae1f187b096ad488d1d614524912362ee8f93f1243083bfa747c.b05c01132833e49d5843b278d810dcf59a04ecce8251d0f49dbb31ffec6afd58, status=200, messageCode=9020, message=Success]
+POST
+POST
+POST
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+.....2
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:29:03.708
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c809867ef36385a4b3717330aa6f15e52c0361f52d330f960eb1b686bc2b5f94a3a6164f28e80c492876f8b83a12716908fd2da65efdb2d8ccb4ebc8b6458e0ffe88ac5709ebaf23d4df14b0801aacb2911c2a65c681dce6bb024e1855d81e271ba9609a97a8ef7f1e00ddd46c4c124b38e30007341fed13b507156950e93a401bf4b5d59cfa8148a73cb2b3727fad5f2c66072c4b4acb4a3214339b8f92505d19c62a4393b6f20c6cbd6cd9f7ee96ac6740f7173a760c85ed073172637febd89b5cf48e5e287ba3546e51.97cc45d7866b4dcbf9ec2959a08d8b9d94c2f807893697991298bce399a1e5ab, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c809867ef36385a4b3717330aa6f15e52c0361f52d330f960eb1b686bc2b5f94a3a6164f28e80c492876f8b83a12716908fd2da65efdb2d8ccb4ebc8b6458e0ffe88ac5709ebaf23d4df14b0801aacb2911c2a65c681dce6bb024e1855d81e271ba9609a97a8ef7f1e00dde56ae0e1333ca54ee5b88f4eea220e9558983e6fb36d70e56ec9f172faad91143f3da08c7f966edcbe7bd5d7f34d6feeb27b1faebf184d2f7af0ac12eba8abd351d9d851851ab6915786fda6084bc13a9cd039529f4469e2ef4bc49e15c64104.67f81b4961d21d32f8c63cfaf11e04020ac08c65a888e42118427613e349f6ae, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:29:21.13
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c80986884e3532aa9f85a9342fdc580f70848bd388f0b7477719d4817a06381dfe0b54e79599a6e10a2cb1ecd53c9d08283c1074c8f256afa70d9678a3cd472545b9be519b7b5804198d5134a4e0167bedf9ab1b01892614ea9b72f4d818fd5cafcd2b5feff9569f85582c3287820cc71b391e2a130c4ec7236572c3a84988193456ede8156adf09de892b01ae4ee8d299e1b7344fcf84a6b79712ad106553d1caa930e1112289f140572d033a8d09448d5b866649d04d13825c165f955ba68cad77d550a1800b777b1a76.a8bfa81d697f146ba1d58419d87d62368defe9aee786a105a22371e6898bb4ca, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cdc4a8738f8c80986884e3532aa9f85a9342fdc580f70848bd388f0b7477719d4817a06381dfe0b54e79599a6e10a2cb1ecd53c9d08283c1074c8f256afa70d9678a3cd472545b9be519b7b5804198d5134a4e0167bedf9ab1b01892614ea9b72f4d818fd5cafcd2b5feff9569f85582cae5a1693f423750e7929eb71b97b3486a46d185f0ac10fce8d91be1851ccca2c22d6d4de1e1095b3adc261d0e14792250cb2e4dae1e320916b793def09cb4a3477cd9a68b8bc393d4a3d0978c62fe87aad54b4977297b1e9cbd2c8292edcb911.bd480c08e7c2c0e2b1f2a3ba553fc877a522ef9df9573f3883791a731fbc27bc, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:32:48.235
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f197100ca719f9379a0ea42f85fc738c4de7dfe34f0107cf69cebe52f5577df0a7bedf02a70a20145af7a0be103cd0be080ca83ac364380278b21916dadee30121f51eb143d73be586bb4e3fe54feaf09e0145cb4bba07ba818a142a22421d5a0efd8c6b4bb21a5a1d8da98462de04762d970a4f6d90e18642e904a1c3edeca821b00f25c6b5f952130138ef15afc38811e63eb78107171b5b784b3ba8b49befd371acede4a3a4078a2df6a3cdb48c956eaa504fd8e8664f2e14b1f9a230b2f89dae2c346e95bbae7883aab.6beb1104d4cc4fb91f082fe2a8cfceb4c5d848bcfa5b9a3b6de5ef0f7910bb0c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f197100ca719f9379a0ea42f85fc738c4de7dfe34f0107cf69cebe52f5577df0a7bedf02a70a20145af7a0be103cd0be080ca83ac364380278b21916dadee30121f51eb143d73be586bb4e3fe54feaf09e0145cb4bba07ba818a142a22421d5a0efd8c6b4bb21a5a1d8da9864f34648f04448f7a2d8407d43a9700aee570d416e1c869f342aa193f4c2cad725f77c71c48fd7a00a6f689d6b6ffc1d06cd2e8ec6f1e2dca060212a138be03a3965a99657cacab4bca895fa19937c9051ecd4ef957f7be838526f930f44f1e3.73bb173b99d66da861286c9584c650c56d08eabee9d7ac7c1f957dc066acc348, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:37:04.003
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f197100d778f2db37ebc47120cea7f90048616da452e88d4329eb2b0e00c276814fe460a622b52b75802a219f76a29762fbcc552d51c79980b8ed9b931810bfdbd461a736df8fb33dc722e19b09f4e2e2ae3bce2837feedc5d50189cee06e703460534e62085f45f7e1a59597b01b7d51f75753f32a27a59f80a198b0a6da273fd2bee53c8a471837d654f38c9b4969c236cbb8d3f1d7ccc8fa2517f9487a8ca7d64cb2f34620fb39804dba2d2d3eb8027124ececd9202215f465e4361dfec4d6d4b23ff201dd1ecf99aa74.42c4363ce34347a775e18ee9948b558c27124d999ba30aa52ae2dfd3bad06ccc, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f197100d778f2db37ebc47120cea7f90048616da452e88d4329eb2b0e00c276814fe460a622b52b75802a219f76a29762fbcc552d51c79980b8ed9b931810bfdbd461a736df8fb33dc722e19b09f4e2e2ae3bce2837feedc5d50189cee06e703460534e62085f45f7e1a5955e6860e23d93f0502a0a3e694faf89c699b1c3ad56237efe1583a53c1063caf18e7c7fbed29d3047b4f3ff59bc8d4dcfbfaf7b7f8471231ecedadc46b0c2002a628ab875765216eadb3b54b6ace0b793f9d027b53f3e656c89baa199016ad40d.c303018160f80a336fb21895a6350676dcf6ab760bee02307777994ee8a10202, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:37:45.452
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f1971005c6ee85c2ccb368dd34a18833cf18b0bf0264ea7f99f06a4f7634b6f93dbb99b0a56d356d8367f9993e2d9559eb74b626f234d2c1540adc43f0bbec710bac4cc75617c1583fd8630df5f85a13a669995f45f9edaee06b4e104ea9dc0fff63231a9daf7a60022164a56a535518d52afc1cb14850acfcadc2dc171910999f7a3273856b91c179106c0fdada464c83f218603df0bf4a7edd0d870aa2742f96edfd6863b8d843953955325249c116a94838d9379922ce3cd7cb270ebc376785785ffa85b2dc3e720df05.966304a4db9d84d133cb666778a193ef9334fb9d4d1b7610c94d25da4b5762ef, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c14c4a4761f1971005c6ee85c2ccb368dd34a18833cf18b0bf0264ea7f99f06a4f7634b6f93dbb99b0a56d356d8367f9993e2d9559eb74b626f234d2c1540adc43f0bbec710bac4cc75617c1583fd8630df5f85a13a669995f45f9edaee06b4e104ea9dc0fff63231a9daf7a60022164acb0744aa2da968c6dc47a2a698334012459b1cd06c1b63597c39543a089e83c132b4c708af4f6242b533fc21d6bd0410aa75d8b60daa876474fd1b88e2e107c0304287c2a1aa8f54fade7f974e96b92046d82ee5b47e1e52d7a0daf415ba95fc.8971a6bc83544f3708d1512774e5c7e57c4d66e49bee5a6439b5aa5b10372e83, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:39:01.673
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1264c561e9640dac999f2676cada700bd3ac5c22323b81463f819911a2e5fbed2fe5036014184d99b5cc081e3012dc3beaaac3515d33759ffbdbc7131f132ae9e4aa76882d22bf2ca93a68721ef8776786156d399536603eea401d5bd1e8eb3382c60a3caef22dbd950eeda7083af3eb52a82532a95b84fd21daa4855ea071b32f8c0f243254594c9a523f6c118be60714d6e4e7265f212cf0fd4b1ca40d0435734fecf5ba2c5943a29e70073b22c56bacfd5729a100083520b99648400e9ab28b46a57ba0d1e73a502574044348c2673d04e5693a281055af1.6b99a933c1b07cafd3b6f313f382a1fca3082c2403e54f5e8154d64c140627e3, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1264c561e9640dac999f2676cada700bd3ac5c22323b81463f819911a2e5fbed2fe5036014184d99b5cc081e3012dc3beaaac3515d33759ffbdbc7131f132ae9e4aa76882d22bf2ca93a68721ef8776786156d399536603eea401d5bd1e8eb3382c60a3caef22dbd950eeda7083af3eb52a4b05da28a31bcbcf0596e37d5a79aa1cb52818bbb835dac2bef648e9955490e0c9c218b3ef8dcedde32c7a8c2e4211389c9e97c840e4deaab83529a7b4ba92772c8081e9ab72df784f40fd0a15a736b8f8ee4d8b19409df80fcbd2cd37c810e3212071125317f6e5.db7b3a54d7a98835fb45a746e6bea621095cc3c65f4b0954cd85032284c2ef58, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:40:57.131
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd79c17b243b9df6a05bc76b41615de7fb32584c5384ffe75fedb3a4b80641c4f515f8785c6e829713cbd4d94daba900d8501931a4a190ee3cd2bf9435c6706b1e0bcfeed7079fb17f3218fc51d594178689d910421b9e6c6828b9aa78de7a62db05f08c4adb0501d1c88b50ac4841b0ecba2136176e3ed1d14ec6c43e7ebf6ad9fdb37a31a7d8b3c9aea7cd8f064beaa1cdfd8becdb9baeb96d8615e991f640e2c850943c8ee7f587aa672af35abea4ccdc569a156662b571acfb26be9dc4a6426e65808731880a99e49c64b9ae578d5.f9032d81255fd3725431cd5447d59e2bfbb75033f5aadeb290176734359d2c08, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd79c17b243b9df6a05bc76b41615de7fb32584c5384ffe75fedb3a4b80641c4f515f8785c6e829713cbd4d94daba900d8501931a4a190ee3cd2bf9435c6706b1e0bcfeed7079fb17f3218fc51d594178689d910421b9e6c6828b9aa78de7a62db05f08c4adb0501d1c88b50ac4841b0e74a0018d4a3bef89e3cdf6230d11bb4abab4402105723e7cab0ac3f9d5c8ef914217ec7da303dd10c83f390670e4e48ceef9fba1c9ee7ff47f442b95b2342ed58f5882d3abc417c8e6f18b155c144e1cf6b3c64a08dbce03009c8b4e7c42d4b4.7e3c25d7222e1cea74f992d928869d02dbfde93079124c0202d3e0fbca6cb85e, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:43:40.236
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1264c561e9640dac9997a2d5ab49a9766b03a305b5fc9cba2c2d95b6ff66643e49e3e4d2584cb562388f6e4a4dd45a1630e2c356c18fb8da30176b38121d438ca22c281fba2dc8ab10195b2ee90bcce0c402ff2f0b896d45bc6f0c5d4d5bc4381ff144f045890d2c806394b5756f07a2788e87129aa2e2a06e012f05e474ec6fc094f100314deb3e956f61dd182a7b6f2b2504686cf51d39cfdbacd6ac0e653265e3e83919126224d4f580840101116ca051bde605436efe5cd0ba9dc3cd33528d054f7ef7931e37415c9f7c5d8a0d2a95508469fb6b4e916c7.ef8644e214b30ef06aea9730d5ed83bf3efe792c940517b89ae300587b2e60ac, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1264c561e9640dac9997a2d5ab49a9766b03a305b5fc9cba2c2d95b6ff66643e49e3e4d2584cb562388f6e4a4dd45a1630e2c356c18fb8da30176b38121d438ca22c281fba2dc8ab10195b2ee90bcce0c402ff2f0b896d45bc6f0c5d4d5bc4381ff144f045890d2c806394b5756f07a27880ae12e49b5da230e468156aeeb2fc757bf697e2d633158391492a6dd84ececeb16628c863074f1333eed8f3843ad65a367f6f9f08273ca50a438694160d64fdc36ecc5162867a3f811ced186bd51a4bc5cb18f187f4eaaeaa880ed42134006798857518138b2fb67.2e596d6a85651bb050fbc7a3b9105bd8faef88e1d752d847f9a7fa51386555ca, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:48:36.995
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd79c17b243b9df6a488e95fd3f0a73f0ded0800f868577a224259073d3ee552c09c9c80a7562f7ab31bb639faa88f905bd979d1a32c96e26f3b763892bafea95ec168e75946e8d016cb6eb947eb91fc17a338566a61aed2d9a0524d3d75ab31a498febe6a97de94fcc5b65f7c7b4687443f1f365542eadf2bae15fd915b338c9a45c3baf533e94dfef7359b50cdf9a79bc8e9176ec85ab6c51bfe3b0a1e35ac74fa1af60d2c1b8095d6b90e6b502bb99ca95d233cb7c73824c4d28f78bfd1f176f6aa01e8cd729433e5016522efe7357.5290a5ea7040cc24a9874f4f0ed3aebf019c33008499dcc6e3a94c8728bb19ba, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd79c17b243b9df6a488e95fd3f0a73f0ded0800f868577a224259073d3ee552c09c9c80a7562f7ab31bb639faa88f905bd979d1a32c96e26f3b763892bafea95ec168e75946e8d016cb6eb947eb91fc17a338566a61aed2d9a0524d3d75ab31a498febe6a97de94fcc5b65f7c7b468748e52fd27b384d1cd2047774f8600261ba699455215c60501a94276c6a60c1b981c4d08c879d5ac1af716add4111314e649371f08726ea0b0112da082393f599549b799cf4462a11b303e5d6b9d12eda588297271859c31d9ddb7374c69dbb040.61154df17a0c4fb4e03fa2730a74ac8f89fdf02757201b7e1c44a5e2e8499937, status=200, messageCode=9020, message=Success]
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. SU0001
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 15:55:55.525
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ed2d72b3de0179fae576d7b83416c739367f9fd21126b9b019efeb3bb8741083aa41dff06f724c14544c6e06ab3998eb8fa810051070ff2d7d1371504359bc5e8f4b2169b4e95f7d269a34bea0f0db6c53369bb04f6de083d930f4bbceb00148072ee57fefd19b80ba545e6aa72b83c07f835f1c588dae2d0394e0349e675a16705784100dd46a8e6f4320303b388077c44872f14e3a2d41a75b08f69ccfb836fa45e5de3d3f40b12432b16c2f9e5e296ab7e370b541fd05ef4cff5e3a93bcc1f770cb87c007eac6e9d52e701caade793e0425f541049f207.59339d48ad9a93b8e82fe92f6300f11cfd70b578bd3e6907e98faee680838d10, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ed2d72b3de0179fae576d7b83416c739367f9fd21126b9b019efeb3bb8741083aa41dff06f724c14544c6e06ab3998eb8fa810051070ff2d7d1371504359bc5e8f4b2169b4e95f7d269a34bea0f0db6c53369bb04f6de083d930f4bbceb00148072ee57fefd19b80ba545e6aa72b83c07485c0ef01d12d5046816c8a54b0a01810b83b28650bb5ad835e7997d3941cdd86490e6ed656cf3deddd5f90ae6cd45b670b83b4f1aa0198488d2fafab7785c43bb8ce27519c73ee4ef019c0c1ce4cbeb9cab478b510cdc1174114586076c5a06bde942fbdfa2255f.a20da8debec3ed91fbed4fcbc1a01a26aedbc9d5e415b23bb5ca15699855977d, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES
+  --,MODULES MODULE
+WHERE 
+
+CATEGORY_ROLES.category_code= ? 
+AND CATEGORY_ROLES.role_code    =ROLES.role_code
+AND ROLES.domain_type           = ? 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND PAGES.PAGE_TYPE IS NULL 
+ORDER BY 
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:03:09.82
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126f7fd05a9ed90cc6462a6c39bc1550ffc97f07e0665276f79668f668ceae20d31fdad4e683642ded6e776946da7bec2fd35ed02b1564564a7543f88314954ccdb1a2451e29368c727330a789d34f4e8574db0fd5fd3b585729efa011e519604526101977db391a353961691ac07d8684df029b2b8ef52351de544a23a453a8057de3a03702c4750eb7e67ccf3d2bd91272cc389efb95ee959c534bf0003d786b87a13381aaaae2be7d57e6fd4d9a972576c4942a45d74418cbe665297d30fe014b34f45ede4788a3badc92ef800a5b5b71897ce73b9be6b3b.638524d6ad54248cee3531279a73ed747e8e46cdb95a8eff938cdaa7b8761fec, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126f7fd05a9ed90cc6462a6c39bc1550ffc97f07e0665276f79668f668ceae20d31fdad4e683642ded6e776946da7bec2fd35ed02b1564564a7543f88314954ccdb1a2451e29368c727330a789d34f4e8574db0fd5fd3b585729efa011e519604526101977db391a353961691ac07d8684d5c62d953adf7fab0618ecb967d956d68d773ffe9dcb6b99347df9fb5ec9c247a83823ef34fe20bc40fd80f3c202a3345d71c65ccfc02426ec0353e7f5c953852279b119aa462a8f1d33d67824045b90739059ba74558934bbb360dd149dd0aff7dc9fef64a8e719f.5fbe3a7ee3ac089497889b5cdfccdd6ee5f77e6e982f54a53577d52391b66a07, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:04:07.639
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae14886e22f0e5dbf32ecdbce60de35d66a747f66f8895202e90a529abf865363253b0433f9a0f385cd15146204110d1b444e1b313d168f57e469fd6ab2c5e2dd3acd611eed5b0e87c7aaa59582da0ff340f89815addcd477fdab74eb85526b6f15ff0aaa0648284640bbed07cba0c94e877f8929bf4467f06d33c3ebcc377bc2bd201e10d4fefcb335e3b7c33ba910baafdaa4f6c9f6733aa9da18092e73ed04f00df0448be8e21878b7891924d57d2b0160350dbfc05c5bd20231b0a39a34a4273972a3488ec0adf1afd.6e410452a8068c4634de1af124d1f6aa159c9096af9795865ca491a2d69543d4, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae14886e22f0e5dbf32ecdbce60de35d66a747f66f8895202e90a529abf865363253b0433f9a0f385cd15146204110d1b444e1b313d168f57e469fd6ab2c5e2dd3acd611eed5b0e87c7aaa59582da0ff340f89815addcd477fdab74eb85526b6f15ff0aaa0648284640bbeff77f21876a3bd07a04e2aae8f147a0964722dea9032e763c2c7cee8b793b7b072828c299787de00642f446501552abb79f5c05a6c84269d2e92dc574aa236a5ff240b0c1d1d2f598617fb590320e639e045c5640bca73c1faac766cf8cf2574.ffb051a6bbe4b6be471e2808167c9199d13af10a7959168c0834ca44f9c76225, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:04:15.595
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae1488d08969574f3d0c0611f73e7bf8c6b632ee110b17318624be6cad8853fb3af3705b63bde48dd277bb12ea8740d49c0c256205a2863b090117f9293745fd115745cc837bc0215c05d17570bac1c64d753f2079442b009c20dfcab4050ae93e3db8a8276adb369c0608e7ba4b463c5ee192c0f32ea8a3cfc6ebd7b63e89a246d0b8fa53245bdf479da6e76efdba9da8f93aa2250491f8c475b80660cdb751a867aa4a23a19d5f9f18fc4e8af76cd5779dbc7e519a84ac7712c1a7cdc3a135207d57a3a1fd2ec469b755.b6e21e71e0cf8dec954f9a3b89560a935addc6a95dec540c5eb9067b96e7c73e, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae1488d08969574f3d0c0611f73e7bf8c6b632ee110b17318624be6cad8853fb3af3705b63bde48dd277bb12ea8740d49c0c256205a2863b090117f9293745fd115745cc837bc0215c05d17570bac1c64d753f2079442b009c20dfcab4050ae93e3db8a8276adb369c0608c9835fa3ffdb724673b2ce2940cd32a73e790d8f34bfadb949d4a8c8c8a1927ff409175855bf341287991ecc75dbd2746ee56f6e065e9733e79ef0629745c67fa59748b71537453b0d5e69e8efffb43a152dfa4f96b7b649d8342993b61e2fb1.30ccb823d25bdc5e5e91e6883b6c3234121a92d5065da979d13b81b455802d03, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:05:37.457
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae1488beb712beeb179cefcba47a69bbf185832ba95a3c91fa357ec54e51bd2d67045ffe96d45a6756888b9cb5ada56dd3d4718b63a5110e084e4f03b02b1d1c03262090df2b20fb520022bda58b5558dc0e539f8845a9ab16e0ea268a5b1404d8f47bb23dda75c64ba14a8657572f1ae776d4670fa5553580627580f3e3db4f423f313b34f01db9c581f85f65cab86f316eff976bed468c6860701ca318b7a21f05873e36048c6cc3377e0c0235ba9933bd19693c241ee986581cd664482e7d49390fa1d1e7dc8656d5b8.b6870113aaacb21a1bdd928e419c9cc3fcc73b4fd2dd994878fb128c1ccba530, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae1488beb712beeb179cefcba47a69bbf185832ba95a3c91fa357ec54e51bd2d67045ffe96d45a6756888b9cb5ada56dd3d4718b63a5110e084e4f03b02b1d1c03262090df2b20fb520022bda58b5558dc0e539f8845a9ab16e0ea268a5b1404d8f47bb23dda75c64ba14a34398d481cbf9ca1390c44347b666cea08ef58d3377990db8ed462170537b76e1fe4c3e49dc7d1e41e9c71dcf1ced6a576caecbb147c1708eb9b1141e19e70a6782acf4d8c89b746b7f3b0da0d891eb0fc688d8b1ae1daf526a3ac9da750469a.b191acbe6e00a5967b9f41af78872bbd0374d675107fae8261d9589ae2b692cb, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. SU0001
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:05:48.753
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ed2d72b3de0179faefd381dbf0d251963f0c239db2f0cf37f05f517ccacec0a0bf05327905d05adff155dad7dab825b65884b015ebec64f6f202bd5b96fa7af4298e71da92bdca3d1d8e2f98c1b372d57802086b2a99e5b5281cf772f32e25297cec01ecb63bc3e28f5783022df7f8b7f2d3b0f7d2cfc62707191eee5256a220da06c964ac2770d5eef45bbda65acf49a41de5fbf46b888882e50428eb1add6becfef99dc7cc2e3b649ba34e791df825e7cf22bf6aaff04d936f14b56c0852ad697e327870360a0302bf3fdb26ce1d044dfe96089807e04c1.bb1004f423c46e44b0943e52053560ee8335f366a597ebf57e8b279d4071d395, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ed2d72b3de0179faefd381dbf0d251963f0c239db2f0cf37f05f517ccacec0a0bf05327905d05adff155dad7dab825b65884b015ebec64f6f202bd5b96fa7af4298e71da92bdca3d1d8e2f98c1b372d57802086b2a99e5b5281cf772f32e25297cec01ecb63bc3e28f5783022df7f8b7fe9db399940f3d92e2105cf97348b6ed0b76bedf5ae34c3670f9e56206660dd5f28ac8ef2cba0a5a2314834fbb784779932bfa48f1d85c18a7574b98eb45f56d2309df7a4703e57763c1495c779904c58a44ad6fed29ab285909cc33deb1fc75aaa63fa89225f46ac.334d9794872034ee0963313fdfc2fb2aa8d1b14ce2f1ae51cf019b3d813078d3, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES
+  --,MODULES MODULE
+WHERE 
+
+CATEGORY_ROLES.category_code= ? 
+AND CATEGORY_ROLES.role_code    =ROLES.role_code
+AND ROLES.domain_type           = ? 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND PAGES.PAGE_TYPE IS NULL 
+ORDER BY 
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-08 16:06:08.649
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae14885a663c90dd9ec44e916c06edfa725b2f4ccc6b27512db4d17078b074389ea835b4daf4b26a436b8f82f175c0392a8a98419d29d97694425fa3d122f6a9f3dc1ea205f15422e2b02a8ff19e4adb09074040cd2e8ec6268f6c4952f78747bb10d6643b7f52b3c29790cc5329168665097683c26da94fa22ad3eddc83a56cc1ee7350c7587fa4ca6e95d9e6272daaed00b8a41ec45eec51351c44dfb18ad52efd909016f0607afe5026fa0308d65e348b313d65324804934403acfef7ebb6220a519c87455e2e828407.f1463ca443266285165677fa0ef74f33f9dce606b3e4fd2bf5203019aaa1afa2, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cc065830faaae14885a663c90dd9ec44e916c06edfa725b2f4ccc6b27512db4d17078b074389ea835b4daf4b26a436b8f82f175c0392a8a98419d29d97694425fa3d122f6a9f3dc1ea205f15422e2b02a8ff19e4adb09074040cd2e8ec6268f6c4952f78747bb10d6643b7f52b3c29790a099d76e2415bf6b9b8d4090dc2c2c95c4d73371d07b931926902a9ebe974ac8bc54b15ed9b278cd71b4f21d981ddf3a8cdb024c1da387319f90a2b0fc06a2ac890dc349365fe95fda06df96559597961370f26d76117456742731383bf4fed3.31f97814b625d938fca5dbc9844fb01af5be02af9abf75b7f4bef7f0a9f2a907, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+

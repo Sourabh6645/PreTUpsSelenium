@@ -1,0 +1,1813 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Feb 14, 2022 08:54:06 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>24</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>125</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]GETO2CPRODUCTS</span>
+						<span class='test-time'>Feb 14, 2022 08:54:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 14, 2022 08:54:09 PM</span>
+	<span class='label end-time'>Feb 14, 2022 08:54:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+790ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:09 PM</span>
+						<span class='node-duration'>0h 0m 1s+959ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:10 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUwLjg1NS45MTciLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ0ODcxOTcwLCJqdGkiOiIyN2Y0OWVlZi1mOWFjLTQ0NzAtYTBmNS01ZmE0ZWYxZWJkNGEifQ.HyH5Uot4j871kydWE6Nt1z6MMBC6wWzyAVua03Jqwdo","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUwLjg1NS45MTciLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjMyODQ2NjEzMjg0MjEiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ0ODcxOTcwLCJqdGkiOiJhM2QxODVkMS1lNWIyLTRhYjUtYmMyYi1mZDU0MzFiM2MxNjMifQ.insFhJnVej_TVHm5VTx_xlgf2glnBcijP0GKI-_zxQA","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852251459.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852251459.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Super Channel Admin.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:11 PM</span>
+						<span class='node-duration'>0h 0m 0s+618ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:11 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852252082.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852252082.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:12 PM</span>
+						<span class='node-duration'>0h 0m 0s+568ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUyLjU0My43NTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3MiwianRpIjoiOWEwYTFjN2EtNzJlOC00OTEyLTlkMWQtZjI4NThlNGYzZTlhIn0.dlyMHUWdw_0CYwCBVPpu-L9-KtYoEYIintEl6o2uM7M","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUyLjU0My43NTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3MiwianRpIjoiMTNkMmY2YjctM2E2Ni00NzQzLTkwNmQtZTcxODQzNGM0N2M0In0.lCSz4hNmFqhrh3EBv8Bqd5Aaqx54Yny0F_qQSg8mzEw","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852252967.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852252967.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Super Distributor.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:12 PM</span>
+						<span class='node-duration'>0h 0m 0s+574ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:12 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852253543.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852253543.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:13 PM</span>
+						<span class='node-duration'>0h 0m 0s+532ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzE5OTk1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUzLjc2NC40MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI0Njk5MDg1NzUwMTU5IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3MywianRpIjoiZWVhMDBjOGEtYTQ3YS00ZTRlLWExNGMtZDljYTFiM2U2NjY3In0.TwKbkcnNC1nh6R7vTNwj5kbZ9ROkm83dS5GQUSWkbkM","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzE5OTk1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjUzLjc2NC40MTE2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI0Njk5MDg1NzUwMTU5IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3MywianRpIjoiZWY1MGI2ZDktZWY3Zi00MmY1LWI3MTUtMTBiODEwNzVjODAzIn0.gPwJ6OdGiOHFQqX6gMMh2tyVQrrLAbaAsEHVeprf56w","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:13 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852254152.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852254152.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Dealer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:14 PM</span>
+						<span class='node-duration'>0h 0m 0s+584ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852254738.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852254738.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:14 PM</span>
+						<span class='node-duration'>0h 0m 0s+555ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:14 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU0Ljk4My41MjgwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3NCwianRpIjoiMWM4NWYwZjgtZGJjMC00ZDI1LWE0NjgtMmIyN2UzOWI4MzlhIn0.U9YHLSLe5IfETT7s6VMsFuC3B7viw7NqF4v2ZiHYKDQ","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU0Ljk4My41MjgwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3NCwianRpIjoiOGIxZDMwMDQtYjhlZC00YmFlLTk3ZTQtMzQyNjc2ZTNiZTFjIn0.2DMjWUMUEthqfQhT64_aJ3GaCxzwSW1ZsH1V-mwV7N4","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852255385.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852255385.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:15 PM</span>
+						<span class='node-duration'>0h 0m 0s+568ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:15 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852255954.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852255954.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:16 PM</span>
+						<span class='node-duration'>0h 0m 0s+556ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU2LjE5MC4yNDciLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjM5MzIwNDkxOTk2MjUiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ0ODcxOTc2LCJqdGkiOiIwNjNjODJlNS04MmQzLTQ0YmQtOGE5ZS1jNmNiZmFhYWE5ODQifQ.dAZGzHcsKSkvz3XLV1emYhv_X23TY7tPr4HqN6GKzfw","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU2LjE5MC4yNDciLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3MjM5MzIwNDkxOTk2MjUiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ0ODcxOTc2LCJqdGkiOiI0YTU5ODIwMS00ZmJmLTQ0MzktOWViMC0yNGY2ZDc5MGIxMTIifQ.AemCi8lI6p-kuvSEUJuzptt2pqpOVKqpf1HsGQ5D5tQ","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852256600.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852256600.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:16 PM</span>
+						<span class='node-duration'>0h 0m 0s+580ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:16 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852257185.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852257185.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:17 PM</span>
+						<span class='node-duration'>0h 0m 0s+569ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU3LjQxMi45MDI5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3NywianRpIjoiNGQyODc5NGUtOGFkYi00YWZmLWE2Y2QtN2UzNWI0YzIwZDJmIn0.6aa4L9notVbksismdAX9K-B-j2MUnK06FCI0xpCRzUg","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU3LjQxMi45MDI5IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3NywianRpIjoiZThkMWZiOTctMjRjMS00MDM5LTkyMTItYjVkMmEzNTFmMTFmIn0.zSHC1t3TDjtPQ8hYhrGG-kkLlMdemxK166c_HvivYqU","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852257827.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852257827.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Retailer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:17 PM</span>
+						<span class='node-duration'>0h 0m 1s+31ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:17 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>{"service":"O2CPRODUCTDOWNLOADRESP","referenceId":null,"status":"200","messageCode":"9020","message":"Success","errorMap":null,"successList":[],"productsList":[{"code":"ETOPUP","shortCode":101,"name":"eTopUP"},{"code":"POSTETOPUP","shortCode":102,"name":"Post eTopUP"}]}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852258414.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852258414.jpg'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>Trying to get User with Access: R_O2C,E_PURCHASE</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>Entered :: getUserNameByLogin()</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>Exception while fetching UserName:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'><pre>org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+	at org.postgresql.jdbc.PgResultSet.checkResultSet(PgResultSet.java:2772)
+	at org.postgresql.jdbc.PgResultSet.getString(PgResultSet.java:1894)
+	at com.mchange.v2.c3p0.impl.NewProxyResultSet.getString(NewProxyResultSet.java:4865)
+	at com.dbrepository.PostGreSQLRepository.getUserNameByLogin(PostGreSQLRepository.java:2239)
+	at com.classes.UserAccessRevamp.getUserWithAccessRevamp(UserAccessRevamp.java:106)
+	at restassuredapi.test.GetO2CProducts.TestDataFeed(GetO2CProducts.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>Query Repository Returns: USER_NAME (null)</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>UserAccess Returns: PARENT_NAME(Super Admin) | CATEGORY_NAME(Super Channel Admin) | USER_NAME(null) | LOGIN_ID(AUT_60804) | PASSWORD(Com@2468)</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:18 PM</span>
+						<span class='node-duration'>0h 0m 0s+579ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:18 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU5LjA1MC4xMjI1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3OSwianRpIjoiYmE2ZGY1MTMtMTVhYS00NzJmLWFjNjItNjVmMzZkNjg3MzkzIn0.kjqadG5--TaRl4Acqo7zZ9ljA-UoGol2LYc-rCj8idg","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzYwODA0IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MjU5LjA1MC4xMjI1IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzMjg0NjYxMzI4NDIxIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk3OSwianRpIjoiZWZkMGQxNjYtMDFjMi00ZGE5LTlkOGEtZmQyY2Q3ZDE0MmZjIn0.kCPHe7y9uJggOs6w_TKUt-gNQ5I0agqZ-78H0Z5hLhQ","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852259434.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852259434.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Super Channel Admin when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:19 PM</span>
+						<span class='node-duration'>0h 0m 0s+568ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:19 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852260016.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852260016.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:20 PM</span>
+						<span class='node-duration'>0h 0m 0s+659ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAwLjI4My44ODUzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MCwianRpIjoiMGI1ZTk4ZjQtMTUwMC00ODA5LWEzYzUtNWIzYTVjMjBjNjNkIn0.TuncuQ5YK4UVoHQfWx8iQmyANA_iUnu8aK5Ybr2gtLQ","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAwLjI4My44ODUzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MCwianRpIjoiYmZjMmMwMzItNGRmNS00NjlhLWJkNDgtMzM0YzgzZjE0YjA0In0.dI04k-iy0nTmtUM96j7PKqER60wFG7e7wKhbR_dJSA8","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852260767.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852260767.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Super Distributor when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:20 PM</span>
+						<span class='node-duration'>0h 0m 0s+706ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:20 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852261469.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852261469.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:21 PM</span>
+						<span class='node-duration'>0h 0m 0s+561ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzE5OTk1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAxLjc2MC43NjAzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI0Njk5MDg1NzUwMTU5IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MSwianRpIjoiY2ZkMGI5Y2MtMjY1My00MGU1LWE4OTQtMzA2YzY1MGI1NTFjIn0.8KFYUpfBLc_BN1PKtcu6nD2ZZj3DYICYHkZy3vR_ZmM","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzE5OTk1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAxLjc2MC43NjAzIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI0Njk5MDg1NzUwMTU5IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MSwianRpIjoiYjI3NzU3ZjYtZDg0MC00MTc4LWFmN2YtZjdlZGU4N2ZkYmRiIn0.5xYPrFjbPybQa3fHzBpL1yv5wAITgYFi67SFLDwRO_w","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:21 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852262132.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852262132.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Dealer when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:22 PM</span>
+						<span class='node-duration'>0h 0m 0s+590ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852262724.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852262724.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:22 PM</span>
+						<span class='node-duration'>0h 0m 0s+594ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:22 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAyLjk2MS4xOTI3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MiwianRpIjoiMzJjOTEyNDMtYmUzMS00YWQ0LWJjMjEtMGE4MWZkYzhkMzE1In0.Ww2UKP-dVilD3915qnuHePBHjP0GYdS4OLSGsQQ8Xok","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzAyLjk2MS4xOTI3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4MiwianRpIjoiNzNhNDdkNTMtMmRkYy00YTkyLWIyMWItOGYwZWVhYzYxNDAwIn0.8yvnADn_lGT17p9gJe2Gt-DSHfOPYgyfIBKpVZS3kFU","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852263411.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852263411.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Agent when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:23 PM</span>
+						<span class='node-duration'>0h 0m 0s+549ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:23 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852263957.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852263957.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:24 PM</span>
+						<span class='node-duration'>0h 0m 0s+548ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzA0LjE4My4yNTI3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4NCwianRpIjoiNDI3M2Q3NGMtOWY0MC00MmJlLTk1NmMtMmE2NGU2NWU3MzQ4In0.fkM_dlfSEzr2FlpTS23NcwcCt6xVi5nGdBNATN3L3X4","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzA0LjE4My4yNTI3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4NCwianRpIjoiZWFmN2E1NWQtYzY3OS00ZTg5LWI2M2UtMjRhYzg2Yjk4NzYxIn0.5iI2mS5o4UOmxhKaPLHEHyNNV5hWo4axeQW5Kd8r9E8","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852264589.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852264589.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='23'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Agent when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:24 PM</span>
+						<span class='node-duration'>0h 0m 0s+536ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:24 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852265126.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852265126.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='24'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:25 PM</span>
+						<span class='node-duration'>0h 0m 0s+570ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzA1LjM1OS41NjQwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4NSwianRpIjoiOTQ2YWJjNmMtZDNmZC00MGE1LTgxMWMtNDQ1MzQwZDExYTkwIn0.OagQbYM080_alIDiYFlnP2sk22sFoTjKyElnkzZIy5Q","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMjE0MjA1MzA1LjM1OS41NjQwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NDg3MTk4NSwianRpIjoiMDA2NTQ1NGMtM2MzMi00ZjJlLThiODYtYTYxNmU1NGQ2NDhmIn0.KLvBBktE3xGZFQmGz3Un-rVDWQFg8fQtPtEf7i5i6ps","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852265778.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852265778.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='25'>
+					<div class='collapsible-header'>
+						<div class='node-name'>GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Retailer when token is invalid.</div>						
+						<span class='node-time'>Feb 14, 2022 08:54:25 PM</span>
+						<span class='node-duration'>0h 0m 0s+501ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/o2c/getO2CProducts</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:25 PM</td>
+													<td class='step-details'>{"service":null,"referenceId":null,"status":"401","messageCode":"241018","message":"Invalid Token format.","errorMap":null,"successList":[],"productsList":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:26 PM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:26 PM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:54:26 PM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1644852266280.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1644852266280.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>24</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 24</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 14, 2022 08:54:09 PM</td>
+										<td class='linked' test-id='2'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:11 PM</td>
+										<td class='linked' test-id='3'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:12 PM</td>
+										<td class='linked' test-id='4'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:12 PM</td>
+										<td class='linked' test-id='5'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:13 PM</td>
+										<td class='linked' test-id='6'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:14 PM</td>
+										<td class='linked' test-id='7'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Dealer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:14 PM</td>
+										<td class='linked' test-id='8'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:15 PM</td>
+										<td class='linked' test-id='9'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:16 PM</td>
+										<td class='linked' test-id='10'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:16 PM</td>
+										<td class='linked' test-id='11'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:17 PM</td>
+										<td class='linked' test-id='12'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:17 PM</td>
+										<td class='linked' test-id='13'>[REST]GETO2CPRODUCTS.GETO2CPRO1: To verify that getO2CProductsApi is working successfully for Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:18 PM</td>
+										<td class='linked' test-id='14'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Channel Admin.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:19 PM</td>
+										<td class='linked' test-id='15'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Super Channel Admin when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:20 PM</td>
+										<td class='linked' test-id='16'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:20 PM</td>
+										<td class='linked' test-id='17'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Super Distributor when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:21 PM</td>
+										<td class='linked' test-id='18'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:22 PM</td>
+										<td class='linked' test-id='19'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Dealer when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:22 PM</td>
+										<td class='linked' test-id='20'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:23 PM</td>
+										<td class='linked' test-id='21'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Agent when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:24 PM</td>
+										<td class='linked' test-id='22'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:24 PM</td>
+										<td class='linked' test-id='23'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Agent when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:25 PM</td>
+										<td class='linked' test-id='24'>[REST]GETO2CPRODUCTS.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Feb 14, 2022 08:54:25 PM</td>
+										<td class='linked' test-id='25'>[REST]GETO2CPRODUCTS.GETO2CPRO2: To verify that getO2CProductsApi is not working successfully for Retailer when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>24</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>125</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 14, 2022 08:54:06 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 14, 2022 08:54:26 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>19,962ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>24</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 24,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 125,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,1583 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>[PreTUPS]RoadMap_7.19.0 Automation Report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>[PreTUPS]RoadMap_7.19.0 Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 10, 2022 11:06:09 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>REST</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='88.889%'><span class='strong'>16</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='4.878%'>4</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='95.122%'>78</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>[REST]FIXEDRECHARGE</span>
+						<span class='test-time'>Mar 10, 2022 11:06:13 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 10, 2022 11:06:13 AM</span>
+	<span class='label end-time'>Mar 10, 2022 11:07:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 1s+943ms</span>
+</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:13 AM</span>
+						<span class='node-duration'>0h 0m 3s+853ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:15 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:17 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMjUxLjkyMy4zOTAxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE3MSwianRpIjoiYzc5ODA1MDMtNzI3Ni00ODdlLTkwYzQtMjUxNDNmMTQxMTMxIn0.Y8Mj48WPUoLOyY6FYS2AytSyJGjGQFiiIa5ox0PH3gs","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMjUxLjkyMy4zOTAxIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE3MSwianRpIjoiZGJkNjM0MjUtYTNmYi00ODRiLTg2NzEtMGRjMTc1YzEzZmM4In0.t5BMStk4OjwBJetMW9DMi9IadMoG7B_DclpzAgOTV4E","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:17 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:17 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:17 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890577735.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890577735.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS1: To check if staff user service is working successfully for Super Distributor.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:17 AM</span>
+						<span class='node-duration'>0h 0m 1s+0ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:18 AM</td>
+													<td class='step-details'>{"serviceList":[{"label":"Digital Voucher Distribution","value":"DVD","codeName":"DVD|Digital Voucher Distribution","labelWithValue":"Digital Voucher Distribution(DVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"ELECTRONIC VOUCHER","value":"EVD","codeName":"EVD|ELECTRONIC VOUCHER","labelWithValue":"ELECTRONIC VOUCHER(EVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Voucher Recharge","value":"EVR","codeName":"EVR|Voucher Recharge","labelWithValue":"Voucher Recharge(EVR)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"C2S Gift Recharge","value":"GRC","codeName":"GRC|C2S Gift Recharge","labelWithValue":"C2S Gift Recharge(GRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Internet","value":"INTRRC","codeName":"INTRRC|Internet","labelWithValue":"Internet(INTRRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Enquiry","value":"LMSPTENQ","codeName":"LMSPTENQ|User LMS Enquiry","labelWithValue":"User LMS Enquiry(LMSPTENQ)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Redemption","value":"LMSPTRED","codeName":"LMSPTRED|User LMS Redemption","labelWithValue":"User LMS Redemption(LMSPTRED)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Multiple Voucher Distribution","value":"MVD","codeName":"MVD|Multiple Voucher Distribution","labelWithValue":"Multiple Voucher Distribution(MVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Postpaid Bill Payment","value":"PPB","codeName":"PPB|Postpaid Bill Payment","labelWithValue":"Postpaid Bill Payment(PPB)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Fix line","value":"PSTNRC","codeName":"PSTNRC|Customer Recharge Fix line","labelWithValue":"Customer Recharge Fix line(PSTNRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge","value":"RC","codeName":"RC|Customer Recharge","labelWithValue":"Customer Recharge(RC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Reversal","value":"RCREV","codeName":"RCREV|Customer Recharge Reversal","labelWithValue":"Customer Recharge Reversal(RCREV)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null}],"status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:18 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:18 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:18 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890578746.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890578746.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:19 AM</span>
+						<span class='node-duration'>0h 0m 21s+733ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:19 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:20 AM</td>
+													<td class='step-details'>{"token":null,"refreshToken":null,"status":401,"messageCode":"5005","message":"Details of user AUT_19995 not found","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:06:20 AM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [401]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:547)
+	at org.testng.Assert.assertEquals(Assert.java:557)
+	at restassuredapi.test.StaffUserService.BeforeMethod(StaffUserService.java:112)
+	at restassuredapi.test.StaffUserService.A_01_Test_success(StaffUserService.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:06:41 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:06:41 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646890601786.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890601786.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:41 AM</span>
+						<span class='node-duration'>0h 0m 0s+784ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:41 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzE2Ljk2NS41OTM2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE5NiwianRpIjoiNjMzY2Y3ZjAtODA1Zi00ODRiLTkyYzItMDNlNmIyOTcyMDM1In0.eQ8ABxC45MVH797bqcuF7NJmAI9TbYJH6uvYcz5u3CA","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzE2Ljk2NS41OTM2IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI4OTE2ODk5NzQyNTAwIiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE5NiwianRpIjoiNmIxODcxZjgtOTFjZS00MGMwLTk3YzEtZTU1OGRiZmY2YmY5In0.fcmzna3e2L286HiTRxFY1GISGygQWEhJEoqqqBT-7IY","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890602637.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890602637.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS1: To check if staff user service is working successfully for Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:42 AM</span>
+						<span class='node-duration'>0h 0m 0s+885ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'>{"serviceList":[{"label":"Digital Voucher Distribution","value":"DVD","codeName":"DVD|Digital Voucher Distribution","labelWithValue":"Digital Voucher Distribution(DVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"ELECTRONIC VOUCHER","value":"EVD","codeName":"EVD|ELECTRONIC VOUCHER","labelWithValue":"ELECTRONIC VOUCHER(EVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"C2S Gift Recharge","value":"GRC","codeName":"GRC|C2S Gift Recharge","labelWithValue":"C2S Gift Recharge(GRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Internet","value":"INTRRC","codeName":"INTRRC|Internet","labelWithValue":"Internet(INTRRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Enquiry","value":"LMSPTENQ","codeName":"LMSPTENQ|User LMS Enquiry","labelWithValue":"User LMS Enquiry(LMSPTENQ)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Redemption","value":"LMSPTRED","codeName":"LMSPTRED|User LMS Redemption","labelWithValue":"User LMS Redemption(LMSPTRED)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Multiple Voucher Distribution","value":"MVD","codeName":"MVD|Multiple Voucher Distribution","labelWithValue":"Multiple Voucher Distribution(MVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Postpaid Bill Payment","value":"PPB","codeName":"PPB|Postpaid Bill Payment","labelWithValue":"Postpaid Bill Payment(PPB)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Fix line","value":"PSTNRC","codeName":"PSTNRC|Customer Recharge Fix line","labelWithValue":"Customer Recharge Fix line(PSTNRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge","value":"RC","codeName":"RC|Customer Recharge","labelWithValue":"Customer Recharge(RC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Reversal","value":"RCREV","codeName":"RCREV|Customer Recharge Reversal","labelWithValue":"Customer Recharge Reversal(RCREV)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null}],"status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:42 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:43 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890603518.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890603518.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:43 AM</span>
+						<span class='node-duration'>0h 0m 0s+973ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:43 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzE4Ljg4OC41NTkwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE5OCwianRpIjoiMjdlNmEyMmQtNDU4Zi00YTE0LWEzZjItMmNiOWNhNTk0NjgzIn0.bt95t1mgrAgHNHI9NNfcuEkxHtx_S7LucEgYRsQzb80","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzE4Ljg4OC41NTkwIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDE5OCwianRpIjoiNDYwOGIxODQtMDUxYS00NTk5LThjMTktOWQzZjc1MTkyYzc4In0.9rReb4HkbBlObtPy-xodD5gMV6HLVdlXe2JlSW12z8U","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890604636.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890604636.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS1: To check if staff user service is working successfully for Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:44 AM</span>
+						<span class='node-duration'>0h 0m 0s+842ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'>{"serviceList":[{"label":"Digital Voucher Distribution","value":"DVD","codeName":"DVD|Digital Voucher Distribution","labelWithValue":"Digital Voucher Distribution(DVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"ELECTRONIC VOUCHER","value":"EVD","codeName":"EVD|ELECTRONIC VOUCHER","labelWithValue":"ELECTRONIC VOUCHER(EVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"C2S Gift Recharge","value":"GRC","codeName":"GRC|C2S Gift Recharge","labelWithValue":"C2S Gift Recharge(GRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Internet","value":"INTRRC","codeName":"INTRRC|Internet","labelWithValue":"Internet(INTRRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Enquiry","value":"LMSPTENQ","codeName":"LMSPTENQ|User LMS Enquiry","labelWithValue":"User LMS Enquiry(LMSPTENQ)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Redemption","value":"LMSPTRED","codeName":"LMSPTRED|User LMS Redemption","labelWithValue":"User LMS Redemption(LMSPTRED)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Multiple Voucher Distribution","value":"MVD","codeName":"MVD|Multiple Voucher Distribution","labelWithValue":"Multiple Voucher Distribution(MVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Postpaid Bill Payment","value":"PPB","codeName":"PPB|Postpaid Bill Payment","labelWithValue":"Postpaid Bill Payment(PPB)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Fix line","value":"PSTNRC","codeName":"PSTNRC|Customer Recharge Fix line","labelWithValue":"Customer Recharge Fix line(PSTNRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge","value":"RC","codeName":"RC|Customer Recharge","labelWithValue":"Customer Recharge(RC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Reversal","value":"RCREV","codeName":"RCREV|Customer Recharge Reversal","labelWithValue":"Customer Recharge Reversal(RCREV)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null}],"status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:44 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:45 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890605483.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890605483.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:45 AM</span>
+						<span class='node-duration'>0h 0m 0s+898ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:45 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:45 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzIwLjc3MS42MzM0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIwMCwianRpIjoiOWMzZTg3NDctOWU2Ny00YzJhLTkzNmQtMTZjNjVlZjQ0OTUzIn0.tL16n5mr1ZMEbdkIW46TTGlk5hpNQW5oeJd-JomEui0","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzIwLjc3MS42MzM0IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIwMCwianRpIjoiMWNkYWJiNjItYjY0Mi00M2FhLTlkZDgtZDhmZDU5ZWVmYzU5In0.3zYPJrfJOYK1H6hOZkHzwchoZE0sicCSBV0RTztsH3E","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:45 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:45 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:46 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890606534.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890606534.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS1: To check if staff user service is working successfully for Retailer.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:46 AM</span>
+						<span class='node-duration'>0h 0m 0s+940ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:46 AM</td>
+													<td class='step-details'>{"serviceList":[{"label":"Digital Voucher Distribution","value":"DVD","codeName":"DVD|Digital Voucher Distribution","labelWithValue":"Digital Voucher Distribution(DVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"ELECTRONIC VOUCHER","value":"EVD","codeName":"EVD|ELECTRONIC VOUCHER","labelWithValue":"ELECTRONIC VOUCHER(EVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"C2S Gift Recharge","value":"GRC","codeName":"GRC|C2S Gift Recharge","labelWithValue":"C2S Gift Recharge(GRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Internet","value":"INTRRC","codeName":"INTRRC|Internet","labelWithValue":"Internet(INTRRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Enquiry","value":"LMSPTENQ","codeName":"LMSPTENQ|User LMS Enquiry","labelWithValue":"User LMS Enquiry(LMSPTENQ)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"User LMS Redemption","value":"LMSPTRED","codeName":"LMSPTRED|User LMS Redemption","labelWithValue":"User LMS Redemption(LMSPTRED)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Multiple Voucher Distribution","value":"MVD","codeName":"MVD|Multiple Voucher Distribution","labelWithValue":"Multiple Voucher Distribution(MVD)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Postpaid Bill Payment","value":"PPB","codeName":"PPB|Postpaid Bill Payment","labelWithValue":"Postpaid Bill Payment(PPB)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Fix line","value":"PSTNRC","codeName":"PSTNRC|Customer Recharge Fix line","labelWithValue":"Customer Recharge Fix line(PSTNRC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge","value":"RC","codeName":"RC|Customer Recharge","labelWithValue":"Customer Recharge(RC)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null},{"label":"Customer Recharge Reversal","value":"RCREV","codeName":"RCREV|Customer Recharge Reversal","labelWithValue":"Customer Recharge Reversal(RCREV)","otherInfo2":null,"idvalue":null,"otherInfo":null,"statusType":null,"typeName":null,"singleStep":null,"status":null,"type":null}],"status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:46 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:46 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:47 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890607477.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890607477.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:47 AM</span>
+						<span class='node-duration'>0h 0m 0s+915ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:47 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:47 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzIyLjgzMi4yNzQ4IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIwMiwianRpIjoiYTFjMDA1NTYtMDRmMy00YTY4LTgxMjctNjZjZDA2YmU5MTY4In0.6TwMTvzwvKtC5azqDr_DFdw9gIAajhCvl9NcFjcFwcE","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQ4Njc1IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzIyLjgzMi4yNzQ4IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIwMjMxMzQyMjE2Mjg0IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIwMiwianRpIjoiM2IyZWYxNTktYWIyMy00NWMyLWI2ZjktMWEyMTgzMzI1MTI5In0.DX0Pfy5vV0_wObRoNoXUNwCuAJ89KsLIpos0QkQBOkc","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:47 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:47 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:48 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890608623.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890608623.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS2: To check if staff user service is working successfully for Super Distributor when token is invalid.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:48 AM</span>
+						<span class='node-duration'>0h 0m 0s+840ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:48 AM</td>
+													<td class='step-details'>{"serviceList":[],"status":401,"messageCode":"241018","message":"Invalid Token format.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:48 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:48 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:49 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890609468.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890609468.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</div>						
+						<span class='node-time'>Mar 10, 2022 11:06:49 AM</span>
+						<span class='node-duration'>0h 0m 21s+295ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:49 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:06:49 AM</td>
+													<td class='step-details'>{"token":null,"refreshToken":null,"status":401,"messageCode":"5005","message":"Details of user AUT_19995 not found","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:06:49 AM</td>
+													<td class='step-details'><pre>java.lang.AssertionError: expected [200] but found [401]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:547)
+	at org.testng.Assert.assertEquals(Assert.java:557)
+	at restassuredapi.test.StaffUserService.BeforeMethod(StaffUserService.java:112)
+	at restassuredapi.test.StaffUserService.A_02_Test_invalid_token(StaffUserService.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></td>
+												</tr>
+												<tr class='log' status='error'>
+													<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+													<td class='timestamp'>11:07:10 AM</td>
+													<td class='step-details'>Error while getting SSH Server Instance : com.jcraft.jsch.JSchException: java.net.ConnectException: Connection timed out: connect</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>11:07:10 AM</td>
+													<td class='step-details'><a href='null'><b><h6><font color='red'>Catalina Log</font></h6></b></a></td>
+												</tr>
+										</tbody>
+									</table>
+										<ul class='screenshots'>
+												<li><img data-featherlight='..//Output//Screenshots//Screenshot_1646890631200.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890631200.jpg'></li>
+										</ul>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:11 AM</span>
+						<span class='node-duration'>0h 0m 0s+501ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ2LjM3NS4xMjAiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3Mjg5MTY4OTk3NDI1MDAiLCJleHAiOjMwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2OTEwMjI2LCJqdGkiOiI1YTk1YjAyMi0wM2M2LTQ3ZDItOWExMC03NTZhYjM3ZDc5OTAifQ.KHADJB10lO7sskAjfZQazL4C0AKSuJMhzDxIPDFZW-I","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzA4ODM3IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ2LjM3NS4xMjAiLCJyZXFHYXRld2F5VHlwZSI6IlJFU1QiLCJpc3MiOiJwcmV0dXBzLm9hdXRoIiwic2VydmljZVBvcnQiOiIxOTAiLCJtc2lzZG4iOiI3Mjg5MTY4OTk3NDI1MDAiLCJleHAiOjYwMDAwMCwicmVxR2F0ZXdheUNvZGUiOiJSRVNUIiwiaWF0IjoxNjQ2OTEwMjI2LCJqdGkiOiIwMzVjMTdjNC1hNzVhLTQ0N2ItYWVmOS03MGEwNDQ5MDUyMjMifQ.NDuTLbigYPFH6usjN1c8vI8_BsyXo4NI7O_ScsW1Zp0","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890631763.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890631763.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS2: To check if staff user service is working successfully for Agent when token is invalid.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:11 AM</span>
+						<span class='node-duration'>0h 0m 0s+739ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'>{"serviceList":[],"status":401,"messageCode":"241018","message":"Invalid Token format.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:11 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:12 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890632504.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890632504.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:12 AM</span>
+						<span class='node-duration'>0h 0m 0s+778ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:12 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:12 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ3LjY4MS45MDE3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIyNywianRpIjoiODNkZDdlNzQtYTU4ZS00MjY1LWJkNWUtMmRlMTZlNGRkMTM5In0.uL2ekIjlq8LSDL4dkv1m_sRYzI1hXWNQzx0spHSaLLE","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzg3NTcwIiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ3LjY4MS45MDE3IiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzIzOTMyMDQ5MTk5NjI1IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIyNywianRpIjoiYzkxYTNjOWItOTU0Yy00YjkxLThhYTMtMzgxMDQ1Y2U5OTJmIn0.cv6Gc-JuvlOBU_YpKBqcE7wYo5fD3SDdY6PLeWdqjv8","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:12 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:12 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:13 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890633355.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890633355.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS2: To check if staff user service is working successfully for Agent when token is invalid.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:13 AM</span>
+						<span class='node-duration'>0h 0m 0s+762ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:13 AM</td>
+													<td class='step-details'>{"serviceList":[],"status":401,"messageCode":"241018","message":"Invalid Token format.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:13 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:13 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890634118.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890634118.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:14 AM</span>
+						<span class='node-duration'>0h 0m 0s+794ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'>API URL: http://172.30.38.232:6789/pretups/rstapi/v1/generateTokenAPI</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'>{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ5LjI4My4yODExIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjozMDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIyOSwianRpIjoiMzIwYmRhYzktMTc0MS00ZjYyLWFiYWEtZjI2YjgwNjFkOWUxIn0.aYLakdXJC7MHVTf7AupAPVz66EendFLJdvCRe4VQr_k","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbklkIjoiQVVUXzQxNzI2IiwicmVxR2F0ZXdheUxvZ2luSWQiOiJwcmV0dXBzIiwidG9rZW5JZCI6IjIwMjIwMzEwMTEwMzQ5LjI4My4yODExIiwicmVxR2F0ZXdheVR5cGUiOiJSRVNUIiwiaXNzIjoicHJldHVwcy5vYXV0aCIsInNlcnZpY2VQb3J0IjoiMTkwIiwibXNpc2RuIjoiNzI2MTQyODEzNTQ2ODg2IiwiZXhwIjo2MDAwMDAsInJlcUdhdGV3YXlDb2RlIjoiUkVTVCIsImlhdCI6MTY0NjkxMDIyOSwianRpIjoiMjQ0NzBlODgtZDY1OC00MGRhLTk5YzAtMGI0ZGVhMDQyMTY3In0.Hy2EeCNP6s12lioUaKms-Ho-LopE9dvA9FWczv2VL6U","status":200,"messageCode":"9020","message":"Success","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>200<br><b>Found: </b>200</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:14 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890634973.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890634973.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>SUS2: To check if staff user service is working successfully for Retailer when token is invalid.</div>						
+						<span class='node-time'>Mar 10, 2022 11:07:14 AM</span>
+						<span class='node-duration'>0h 0m 0s+802ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>REST</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:15 AM</td>
+													<td class='step-details'>{"serviceList":[],"status":401,"messageCode":"241018","message":"Invalid Token format.","errorMap":null}</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:15 AM</td>
+													<td class='step-details'><pre><b>Expected: </b>Invalid Token format.<br><b>Found: </b>Invalid Token format.</pre></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:15 AM</td>
+													<td class='step-details'><span class='label white-text green'>Message Validation Success</span></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>11:07:15 AM</td>
+													<td class='step-details'><img data-featherlight='..//Output//Screenshots//Screenshot_1646890635775.jpg' width='10%' src='' data-src='..//Output//Screenshots//Screenshot_1646890635775.jpg'></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>REST</span>
+						<span class='category-status right'>
+							<span class='label pass'>16</span>
+							<span class='label fail'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 16</span>
+							<span class='label red lighten-1 white-text'>Failed: 2</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 10, 2022 11:06:13 AM</td>
+										<td class='linked' test-id='2'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:17 AM</td>
+										<td class='linked' test-id='3'>[REST]FIXEDRECHARGE.SUS1: To check if staff user service is working successfully for Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:19 AM</td>
+										<td class='linked' test-id='4'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:41 AM</td>
+										<td class='linked' test-id='5'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:42 AM</td>
+										<td class='linked' test-id='6'>[REST]FIXEDRECHARGE.SUS1: To check if staff user service is working successfully for Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:43 AM</td>
+										<td class='linked' test-id='7'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:44 AM</td>
+										<td class='linked' test-id='8'>[REST]FIXEDRECHARGE.SUS1: To check if staff user service is working successfully for Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:45 AM</td>
+										<td class='linked' test-id='9'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:46 AM</td>
+										<td class='linked' test-id='10'>[REST]FIXEDRECHARGE.SUS1: To check if staff user service is working successfully for Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:47 AM</td>
+										<td class='linked' test-id='11'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Super Distributor.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:48 AM</td>
+										<td class='linked' test-id='12'>[REST]FIXEDRECHARGE.SUS2: To check if staff user service is working successfully for Super Distributor when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:06:49 AM</td>
+										<td class='linked' test-id='13'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:11 AM</td>
+										<td class='linked' test-id='14'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:11 AM</td>
+										<td class='linked' test-id='15'>[REST]FIXEDRECHARGE.SUS2: To check if staff user service is working successfully for Agent when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:12 AM</td>
+										<td class='linked' test-id='16'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Agent.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:13 AM</td>
+										<td class='linked' test-id='17'>[REST]FIXEDRECHARGE.SUS2: To check if staff user service is working successfully for Agent when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:14 AM</td>
+										<td class='linked' test-id='18'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Retailer.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 10, 2022 11:07:14 AM</td>
+										<td class='linked' test-id='19'>[REST]FIXEDRECHARGE.SUS2: To check if staff user service is working successfully for Retailer when token is invalid.</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>java.lang.AssertionError</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Mar 10, 2022 11:06:19 AM</td>
+                                                        <td class='linked' test-id='4'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [401]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:547)
+	at org.testng.Assert.assertEquals(Assert.java:557)
+	at restassuredapi.test.StaffUserService.BeforeMethod(StaffUserService.java:112)
+	at restassuredapi.test.StaffUserService.A_01_Test_success(StaffUserService.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mar 10, 2022 11:06:49 AM</td>
+                                                        <td class='linked' test-id='13'>[REST]FIXEDRECHARGE.OAUTHETICATION1: To check if OAuthentication API is working successfully for user Dealer.</td>
+                                                        <td><pre><pre>java.lang.AssertionError: expected [200] but found [401]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:547)
+	at org.testng.Assert.assertEquals(Assert.java:557)
+	at restassuredapi.test.StaffUserService.BeforeMethod(StaffUserService.java:112)
+	at restassuredapi.test.StaffUserService.A_02_Test_invalid_token(StaffUserService.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>18</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>82</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 10, 2022 11:06:09 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 10, 2022 11:07:15 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>66,151ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>http://172.30.38.232:6789/pretups/</td>
+							</tr>
+							<tr>
+								<td>Client</td>
+								<td>RoadMap</td>
+							</tr>
+							<tr>
+								<td>Application Version</td>
+								<td>7.19.0</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>REST</td>
+							<td>16</td>
+							<td>2</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 16,
+				failParent: 2,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 2,
+				
+				passChild: 0,
+				failChild: 4,
+				fatalChild: 0,
+				errorChild: 2,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 76,
+				exceptionsChild: 6,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+	</body>
+	
+</html>

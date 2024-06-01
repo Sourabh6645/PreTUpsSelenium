@@ -1,0 +1,1001 @@
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 104 more
+
+2023-04-25 16:56:55,481 http-nio-6789-exec-2 ERROR An exception occurred processing Appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:388)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:63)
+	at org.apache.logging.log4j.core.Logger.logMessage(Logger.java:153)
+	at org.jboss.logging.Log4j2Logger.doLog(Log4j2Logger.java:54)
+	at org.jboss.logging.Logger.debug(Logger.java:552)
+	at org.jboss.logging.DelegatingBasicLogger.debug(DelegatingBasicLogger.java:284)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:269)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:553)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:662)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:304)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at com.btsl.user.businesslogic.LoginUsersRespositoryImpl.getloadUserDetails(LoginUsersRespositoryImpl.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy124.getloadUserDetails(Unknown Source)
+	at com.btsl.user.businesslogic.LoginService.loadUserDetails(LoginService.java:1009)
+	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:239)
+	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$88e37243.execute(<generated>)
+	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:249)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 104 more
+
+2023-04-25 16:56:55,535 http-nio-6789-exec-20 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:388)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:63)
+	at org.apache.logging.log4j.core.Logger.logMessage(Logger.java:153)
+	at org.jboss.logging.Log4j2Logger.doLog(Log4j2Logger.java:54)
+	at org.jboss.logging.Logger.debug(Logger.java:552)
+	at org.jboss.logging.DelegatingBasicLogger.debug(DelegatingBasicLogger.java:284)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:269)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:553)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:662)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:304)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at com.btsl.user.businesslogic.LoginUsersRespositoryImpl.getloadUserDetails(LoginUsersRespositoryImpl.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy124.getloadUserDetails(Unknown Source)
+	at com.btsl.user.businesslogic.LoginService.loadUserDetails(LoginService.java:1009)
+	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:239)
+	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$88e37243.execute(<generated>)
+	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:249)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 104 more
+
+2023-04-25 16:56:55,539 http-nio-6789-exec-20 ERROR An exception occurred processing Appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:388)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:63)
+	at org.apache.logging.log4j.core.Logger.logMessage(Logger.java:153)
+	at org.jboss.logging.Log4j2Logger.doLog(Log4j2Logger.java:54)
+	at org.jboss.logging.Logger.debug(Logger.java:552)
+	at org.jboss.logging.DelegatingBasicLogger.debug(DelegatingBasicLogger.java:284)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:269)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:553)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:662)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor98.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:304)
+	at com.sun.proxy.$Proxy72.createQuery(Unknown Source)
+	at com.btsl.user.businesslogic.LoginUsersRespositoryImpl.getloadUserDetails(LoginUsersRespositoryImpl.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy124.getloadUserDetails(Unknown Source)
+	at com.btsl.user.businesslogic.LoginService.loadUserDetails(LoginService.java:1009)
+	at com.btsl.user.businesslogic.LoginService.execute(LoginService.java:239)
+	at com.btsl.user.businesslogic.LoginService$$FastClassBySpringCGLIB$$c122b809.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.btsl.user.businesslogic.LoginService$$EnhancerBySpringCGLIB$$88e37243.execute(<generated>)
+	at com.restapi.oauth.services.OAuthenticationController.login(OAuthenticationController.java:249)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 104 more
+
+userId >>>>>>>>>>>>>>>>>>>>>>. SU0001
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 16:56:56.177
+userId >>>>>>>>>>>>>>>>>>>>>>. SU0001
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 16:56:56.208
+POST
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c100f477de0c0e68d14a4c3676d7525a695b5cad4d8e40992c0bfef07f90a69785f51a7056f3d7522f88eaf9b17679a3e8594fcb0c1cb6d329f1aa9a8ecbd1650529932c6672972a2b7341387a325021712e1b47e1e43e3d591216c758f8553827c0c306d5473d41e2ca77ed16722bfc490dff8589881af5a9eddbd8089ee163c7b20d78ad33c631b5ed6f6f5f338c60120f6f22165dc6c67ebe6f2edaa03386dc048bf84cb76447401196cf123205943709f5701ac6a88fb0082e89ff044b03f866ca044d21f0c5a2c53ff603054b58be2.94b14b2931e9d1dd955df03e16ee1581332865c1b807f63c24900a1c02f1fb16, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c100f477de0c0e68d14a4c3676d7525a695b5cad4d8e40992c0bfef07f90a69785f51a7056f3d7522f88eaf9b17679a3e8594fcb0c1cb6d329f1aa9a8ecbd1650529932c6672972a2b7341387a325021712e1b47e1e43e3d591216c758f8553827c0c306d5473d41e2cd4f2350620a510dec7afe75db057720b661c3dfc1e887ec818b5a4e9d3e5cac7e2b440e81399e574309a2e3eb0ad37dc3aaad20cac9b581c3baf658d7c3bcce93111ada24aaed66765d95c74d8d628bd5c5d4feb893ddb1c6e2971516d6d2adfd8141df58ca143c4.f811f53942f1e59747f0210f13b4711a3917d75d4c7766e1d2c521f3692863c2, status=200, messageCode=9020, message=Success]
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c100f477de0c0e68d1443883f2cf423b98083ddb907efe40fb57245a1060f220628b0c90ae8d685d0e2d9c19f6c018f5fd8d773151bac8f94262d1ffd7d7415dc5525e2a65f70ccc9e371e37f3c5e561d4e7face7c218a36185e96dbeadb1427155d80cd47fc28d7e165a71e9f2a547445004bc76b2300f713286545a2282a48656d4c7831f6ff4c8261d72e28a541e262d7dc48086ba02ebb514f831833cd741c05d57955d58c41d4cdc2f6795479d0319ae695c9467827b342c25ff5eb7249c8f152bd38026c3afa3052666c28c48b278.62279d9651c3c01f35e4143eb0ef62d29596f9d9c81f8631c75b72a5aa07e87b, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c100f477de0c0e68d1443883f2cf423b98083ddb907efe40fb57245a1060f220628b0c90ae8d685d0e2d9c19f6c018f5fd8d773151bac8f94262d1ffd7d7415dc5525e2a65f70ccc9e371e37f3c5e561d4e7face7c218a36185e96dbeadb1427155d80cd47fc28d7e1623d61ab269adee430d3bcce903118c33d54ec1b105de97d4b886aa3ab173fab9aab00f0ed5e0bef133e541115eee47aef5905b1ebf7afcde0e34012b38deac59d1371e0d83e2a6818a58fc08221ee4c21dd0b53023d8f1cf47c0e1e8348835797c5779bbdea3fa02.6506a9c503b7d6df5b6197784737cd01224eb6a6c003e2d940d2515df09fdfc0, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. SU0001
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 16:57:41.683
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c10099afca1053e33725da0ac36842a20a2ee79e226f1f5dccaf6314e90216305795c96acacb253dbc7a833ccd2758f2da76692e7a7ee68c1778fdb3f6e4cc59362f476dc4da9adcdf020ea52c79e896ba1a5cc43557818871299474dbac2eb33931770df5eaf20c42514f5fe061e4acbca185a312668c5a59edbb14e0d2262e5e2b4840264429064225fcf98d96751399522b50412c01f2ac266438d1bdd1ecf2d31ad5ad2e519e5598db46ab8f7200511787e613daa074fc526033f2966819b1463e2d27811f9007c360a2d8dead40106.8012793ea904db2999eda4a762303019a6e68a4355da8172c3886c758285a764, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc28850d6398cc322da9d2c57f8f19cc45cf5885ae448f6603480c2a273359a300c391515477aee76015039ca029058ac6c39bb72142ff75dfb2ec75d53552f9b7c10099afca1053e33725da0ac36842a20a2ee79e226f1f5dccaf6314e90216305795c96acacb253dbc7a833ccd2758f2da76692e7a7ee68c1778fdb3f6e4cc59362f476dc4da9adcdf020ea52c79e896ba1a5cc43557818871299474dbac2eb33931770df5eaf20c425a082c34a73e6c9c3e16bcfb481d1d4b07a93bff02cb552021daab11380cf5be602a962352cb04ce0fe6ceb4aa29a9cb4812ab96bd4d83df18597c11db996977155668af393f2bb16aa5ed1bcf73fa51b692edb6aed7b60fa5d21ab6f49f0392b9d767b977e3dcfbc.cf7c48bf09667b02b7b4b9af9998abfbb9204def405542eadcc0c627f162e1ee, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES
+  --,MODULES MODULE
+WHERE 
+
+CATEGORY_ROLES.category_code= ? 
+AND CATEGORY_ROLES.role_code    =ROLES.role_code
+AND ROLES.domain_type           = ? 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND PAGES.PAGE_TYPE IS NULL 
+ORDER BY 
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:00:10.59
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1267e1d57bcb3acf115739a5a0032a716ccea429130dad97207c25ca6f9983f571f7a60e31c9d2c116c580d333538878ec05f30faf9c431ce5ecd605490a8cfeb29e5fae30a9fbe966c406178c8ef6b2d1512565431143c6f2955c729ef4c5a3bf2ada0779bd229d854650f47cef5bc7c245707f7c3ad2a9b93d6f69ef5be91028579171e15f77a1ef17ac1c357e9ed2078d71118fd14e71d2d452f08a63344f980d2fd30db0cd33479d68f34d2d888c90ed8fc983c9316abb5e4c11d36fa0fe5bd09da1e63ca3b0ad5cafae4dc0188262db541e7c8ba63bc1c.ec1bdfedad33a7bf4d6ca104dc0578e807cd55f5895f5ce93258dcc4d99defdf, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec1267e1d57bcb3acf115739a5a0032a716ccea429130dad97207c25ca6f9983f571f7a60e31c9d2c116c580d333538878ec05f30faf9c431ce5ecd605490a8cfeb29e5fae30a9fbe966c406178c8ef6b2d1512565431143c6f2955c729ef4c5a3bf2ada0779bd229d854650f47cef5bc7c24d050a90f60a6016a74f19ccd381bb5d92f3cb55051bdf05284b8822273bbc301006398fd7c7863276cb79d8c306e8194ca097445a2dfa6a4fe05c7bfd9249ba252824c13cd779e7ccffbee81ad796ee6b72b508b2d0709e6ed6f665edb5b4b7942b4c23888d65802.e2992b87a7f369576f03a083f2772d999ae9f9a1fa1324275a5603f79c591cbf, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+.....2
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+.....2
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:01:12.441
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c02e5fed2b461ad8167df5bf70df80bc672cc193c20f0d45f3355991121a41a07a801ad38a819b86c0118878e7aba827d2e6ede48c772683c1634091d3903ced68077a4aeb6089ddefbd82c5e49af456c7302fbed0742ea1d116b9cce599c17e68c6ec773a66a12c74299d9a5174c10bf47c7a92cfaaf3f6ed06eda650c2084a68a2dabc703cfc0f8c14158db682d3759854bd177bd289de02f264119ba4cc535cf4d87638c789279a7835c0ef26e1754e18d4189b109989a68069419d9dd17277d3911eef8e7d43ba05125dc3b858859.1c54defa84b8c19ed7abf693b7342ff10eea74c10d61d060fc15fe031c3397af, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c02e5fed2b461ad8167df5bf70df80bc672cc193c20f0d45f3355991121a41a07a801ad38a819b86c0118878e7aba827d2e6ede48c772683c1634091d3903ced68077a4aeb6089ddefbd82c5e49af456c7302fbed0742ea1d116b9cce599c17e68c6ec773a66a12c74299d9a5174c10bfa32d94fb1e9cc50b1036aa0750a01e0b34d3541cdb4ca732a53bdc4dc054563994f9c92806854b162ad59cfc5b789b062d214e634e910d065cc72bd391b03edfe5a3b167b9566b48ab58010a62c01c122b56f91d22c875f2587f419cd993271d.eac4b9cd8edc73605a0889a0b7f80a86b966ae2a5f242bcfaa8cd797a9a9f15c, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+ashu loadGeographyList size = 112
+{"GRADE_LIST":[{"category_code":"DIST","grade_code":"GOOD","grade_name":"Good"},{"category_code":"DIST","grade_code":"AUT04295","grade_name":"AUT9538"},{"category_code":"DIST","grade_code":"AUT92179","grade_name":"AUT70013"},{"category_code":"DIST","grade_code":"AUT15857","grade_name":"AUT4465"},{"category_code":"DIST","grade_code":"AUT99765","grade_name":"AUT47288"},{"category_code":"DIST","grade_code":"AUT79237","grade_name":"AUT98618"},{"category_code":"DIST","grade_code":"AUT81637","grade_name":"AUT1343"},{"category_code":"DIST","grade_code":"AUT35682","grade_name":"AUT71789"},{"category_code":"DIST","grade_code":"AUT03205","grade_name":"AUT20634"},{"category_code":"DIST","grade_code":"AUT47360","grade_name":"AUT3251"},{"category_code":"DIST","grade_code":"AUT47884","grade_name":"AUT07246"},{"category_code":"DIST","grade_code":"AUT12826","grade_name":"AUT12194"},{"category_code":"DIST","grade_code":"AUT34919","grade_name":"AUT8094"},{"category_code":"DIST","grade_code":"AUT99637","grade_name":"AUT10787"},{"category_code":"DIST","grade_code":"AUT50003","grade_name":"AUT90725"},{"category_code":"DIST","grade_code":"AUT11799","grade_name":"AUT64217"},{"category_code":"DIST","grade_code":"AUT87542","grade_name":"AUT3889"},{"category_code":"DIST","grade_code":"AUT34501","grade_name":"AUT7352"},{"category_code":"DIST","grade_code":"AUT28981","grade_name":"AUT56772"},{"category_code":"DIST","grade_code":"AUT97314","grade_name":"AUT92570"},{"category_code":"DIST","grade_code":"AUT27600","grade_name":"AUT96406"},{"category_code":"DIST","grade_code":"AUT81751","grade_name":"AUT57955"},{"category_code":"DIST","grade_code":"AUT60131","grade_name":"AUT5842"},{"category_code":"DIST","grade_code":"AUT89333","grade_name":"AUT4054"},{"category_code":"DIST","grade_code":"AUT69285","grade_name":"AUT5450"},{"category_code":"DIST","grade_code":"AUT36295","grade_name":"AUT67479"},{"category_code":"DIST","grade_code":"AUT24062","grade_name":"AUT3319"},{"category_code":"DIST","grade_code":"AUT96887","grade_name":"AUT95427"},{"category_code":"DIST","grade_code":"AUT59044","grade_name":"AUT94521"},{"category_code":"DIST","grade_code":"AUT86076","grade_name":"AUT14248"},{"category_code":"DIST","grade_code":"AUT75216","grade_name":"AUT2709"},{"category_code":"DIST","grade_code":"AUT76898","grade_name":"AUT59478"},{"category_code":"DIST","grade_code":"AUT63904","grade_name":"AUT44216"},{"category_code":"DIST","grade_code":"AUT81786","grade_name":"AUT81007"},{"category_code":"DIST","grade_code":"AUT31620","grade_name":"AUT5004"},{"category_code":"DIST","grade_code":"AUT10479","grade_name":"AUT5801"},{"category_code":"DIST","grade_code":"AUT53958","grade_name":"AUT30067"},{"category_code":"DIST","grade_code":"AUT67468","grade_name":"AUT9233"},{"category_code":"DIST","grade_code":"AUT26502","grade_name":"AUT9308"},{"category_code":"DIST","grade_code":"AUT83360","grade_name":"AUT06428"},{"category_code":"DIST","grade_code":"AUT19808","grade_name":"AUT87160"},{"category_code":"DIST","grade_code":"AUT64114","grade_name":"AUT5240"},{"category_code":"DIST","grade_code":"AUT80791","grade_name":"AUT03850"},{"category_code":"DIST","grade_code":"DISTGRADE","grade_name":"distgrade"},{"category_code":"DIST","grade_code":"AUT10410","grade_name":"AUT21660"},{"category_code":"DIST","grade_code":"AUT52540","grade_name":"AUT63885"},{"category_code":"DIST","grade_code":"AUT96885","grade_name":"AUT72063"},{"category_code":"DIST","grade_code":"AUT17093","grade_name":"AUT77952"},{"category_code":"DIST","grade_code":"AUT49410","grade_name":"AUT8973"},{"category_code":"DIST","grade_code":"AUT16949","grade_name":"AUT77655"},{"category_code":"DIST","grade_code":"AUT84076","grade_name":"AUT8947"},{"category_code":"DIST","grade_code":"AUT96570","grade_name":"AUT31226"},{"category_code":"DIST","grade_code":"AUT24670","grade_name":"AUT26562"},{"category_code":"DIST","grade_code":"AUT39503","grade_name":"AUT9301"},{"category_code":"DIST","grade_code":"AUT52898","grade_name":"AUT23375"},{"category_code":"DIST","grade_code":"AUT86214","grade_name":"AUT42070"},{"category_code":"DIST","grade_code":"AUT09291","grade_name":"AUT32837"},{"category_code":"DIST","grade_code":"AUT03859","grade_name":"AUT0582"},{"category_code":"DIST","grade_code":"AUT02081","grade_name":"AUT28878"},{"category_code":"DIST","grade_code":"AUT49686","grade_name":"AUT19339"},{"category_code":"DIST","grade_code":"AUT85496","grade_name":"AUT49246"},{"category_code":"DIST","grade_code":"AUT99572","grade_name":"AUT54747"},{"category_code":"DIST","grade_code":"AUT81024","grade_name":"AUT65971"},{"category_code":"DIST","grade_code":"AUT97675","grade_name":"AUT16436"},{"category_code":"DIST","grade_code":"AUT66520","grade_name":"AUT33102"},{"category_code":"DIST","grade_code":"AUT87546","grade_name":"AUT40202"},{"category_code":"DIST","grade_code":"AUT09868","grade_name":"AUT49606"},{"category_code":"DIST","grade_code":"AUT75799","grade_name":"AUT10030"},{"category_code":"DIST","grade_code":"AUT99432","grade_name":"AUT52023"},{"category_code":"DIST","grade_code":"AUT24615","grade_name":"AUT4548"},{"category_code":"DIST","grade_code":"AUT58115","grade_name":"AUT5952"},{"category_code":"DIST","grade_code":"AUT55758","grade_name":"AUT89580"},{"category_code":"DIST","grade_code":"AUT05599","grade_name":"AUT24160"},{"category_code":"DIST","grade_code":"AUT33447","grade_name":"AUT14220"},{"category_code":"DIST","grade_code":"AUT87164","grade_name":"AUT1483"},{"category_code":"DIST","grade_code":"AUT95931","grade_name":"AUT77850"},{"category_code":"DIST","grade_code":"AUT28022","grade_name":"AUT5223"},{"category_code":"DIST","grade_code":"AUT72445","grade_name":"AUT5821"},{"category_code":"DIST","grade_code":"AUT49100","grade_name":"AUT48173"},{"category_code":"DIST","grade_code":"AUT91675","grade_name":"AUT5344"},{"category_code":"DIST","grade_code":"AUT18427","grade_name":"AUT42890"},{"category_code":"DIST","grade_code":"AUT01449","grade_name":"AUT4122"},{"category_code":"DIST","grade_code":"AUT79140","grade_name":"AUT25011"},{"category_code":"DIST","grade_code":"AUT33623","grade_name":"AUT62523"},{"category_code":"DIST","grade_code":"AUT91883","grade_name":"AUT7891"},{"category_code":"DIST","grade_code":"AUT65965","grade_name":"AUT0708"},{"category_code":"DIST","grade_code":"AUT59753","grade_name":"AUT44193"},{"category_code":"DIST","grade_code":"AUT12821","grade_name":"AUT82221"},{"category_code":"DIST","grade_code":"AUT37498","grade_name":"AUT45634"},{"category_code":"DIST","grade_code":"AUT00284","grade_name":"AUT6208"},{"category_code":"DIST","grade_code":"AUT97024","grade_name":"AUT05424"},{"category_code":"DIST","grade_code":"AUT31890","grade_name":"AUT21048"},{"category_code":"DIST","grade_code":"AUT50241","grade_name":"AUT50076"},{"category_code":"DIST","grade_code":"AUT16901","grade_name":"AUT8728"},{"category_code":"DIST","grade_code":"AUT22177","grade_name":"AUT28105"},{"category_code":"DIST","grade_code":"AUT45241","grade_name":"AUT32683"},{"category_code":"DIST","grade_code":"AUT04827","grade_name":"AUT0901"},{"category_code":"DIST","grade_code":"AUT48856","grade_name":"AUT05707"},{"category_code":"DIST","grade_code":"AUT08658","grade_name":"AUT23036"},{"category_code":"DIST","grade_code":"AUT96944","grade_name":"AUT23778"},{"category_code":"DIST","grade_code":"AUT37089","grade_name":"AUT81958"},{"category_code":"DIST","grade_code":"AUT22528","grade_name":"AUT9618"},{"category_code":"DIST","grade_code":"AUT26087","grade_name":"AUT97834"},{"category_code":"DIST","grade_code":"AUT57382","grade_name":"AUT70261"},{"category_code":"DIST","grade_code":"AUT60167","grade_name":"AUT67377"},{"category_code":"DIST","grade_code":"AUT47920","grade_name":"AUT92123"},{"category_code":"DIST","grade_code":"AUT75425","grade_name":"AUT68584"},{"category_code":"DIST","grade_code":"AUT08141","grade_name":"AUT19672"},{"category_code":"DIST","grade_code":"AUT91799","grade_name":"AUT24269"},{"category_code":"DIST","grade_code":"AUT42647","grade_name":"AUT22248"},{"category_code":"DIST","grade_code":"AUT64921","grade_name":"AUT95601"},{"category_code":"DIST","grade_code":"AUT36558","grade_name":"AUT23997"},{"category_code":"DIST","grade_code":"AUT93698","grade_name":"AUT81833"},{"category_code":"DIST","grade_code":"AUT47444","grade_name":"AUT63923"},{"category_code":"DIST","grade_code":"AUT23542","grade_name":"AUT95320"},{"category_code":"DIST","grade_code":"AUT54972","grade_name":"AUT54989"},{"category_code":"DIST","grade_code":"AUT43926","grade_name":"AUT79190"},{"category_code":"DIST","grade_code":"AUT37272","grade_name":"AUT85479"},{"category_code":"DIST","grade_code":"AUT18100","grade_name":"AUT41605"},{"category_code":"DIST","grade_code":"AUT27877","grade_name":"AUT65747"},{"category_code":"DIST","grade_code":"AUT17353","grade_name":"AUT66761"},{"category_code":"DIST","grade_code":"AUT78056","grade_name":"AUT22665"},{"category_code":"DIST","grade_code":"AUT57820","grade_name":"AUT48136"},{"category_code":"DIST","grade_code":"AUT92374","grade_name":"AUT49204"},{"category_code":"DIST","grade_code":"AUT60011","grade_name":"AUT84352"},{"category_code":"DIST","grade_code":"AUT21428","grade_name":"AUT64221"},{"category_code":"DIST","grade_code":"AUT55293","grade_name":"AUT96497"},{"category_code":"DIST","grade_code":"AUT73709","grade_name":"AUT17346"},{"category_code":"DIST","grade_code":"AUT74256","grade_name":"AUT6119"},{"category_code":"DIST","grade_code":"AUT57156","grade_name":"AUT78150"},{"category_code":"DIST","grade_code":"AUT51943","grade_name":"AUT48374"},{"category_code":"DIST","grade_code":"AUT34898","grade_name":"AUT30364"},{"category_code":"DIST","grade_code":"AUT01374","grade_name":"AUT44055"},{"category_code":"DIST","grade_code":"AUT15338","grade_name":"AUT60689"},{"category_code":"DIST","grade_code":"AUT60174","grade_name":"AUT13915"},{"category_code":"DIST","grade_code":"AUT77357","grade_name":"AUT97101"},{"category_code":"DIST","grade_code":"AUT39426","grade_name":"AUT21353"},{"category_code":"DIST","grade_code":"AUT86315","grade_name":"AUT2105"},{"category_code":"DIST","grade_code":"AUT56294","grade_name":"AUT05673"},{"category_code":"DIST","grade_code":"AUT47379","grade_name":"AUT0221"},{"category_code":"DIST","grade_code":"AUT64918","grade_name":"AUT83038"},{"category_code":"DIST","grade_code":"AUT08976","grade_name":"AUT85445"},{"category_code":"DIST","grade_code":"AUT04272","grade_name":"AUT94206"},{"category_code":"DIST","grade_code":"AUT94425","grade_name":"AUT80789"},{"category_code":"DIST","grade_code":"AUT88877","grade_name":"AUT32738"},{"category_code":"DIST","grade_code":"AUT46836","grade_name":"AUT84391"},{"category_code":"DIST","grade_code":"AUT77986","grade_name":"AUT78837"},{"category_code":"DIST","grade_code":"AUT69866","grade_name":"AUT2576"},{"category_code":"DIST","grade_code":"AUT37673","grade_name":"AUT80397"},{"category_code":"DIST","grade_code":"AUT21791","grade_name":"AUT2476"},{"category_code":"DIST","grade_code":"AUT67741","grade_name":"AUT85065"},{"category_code":"DIST","grade_code":"AUT65421","grade_name":"AUT86257"},{"category_code":"DIST","grade_code":"AUT60284","grade_name":"AUT89321"},{"category_code":"DIST","grade_code":"AUT84700","grade_name":"AUT84700"},{"category_code":"DIST","grade_code":"AUT84500","grade_name":"AUT84500"},{"category_code":"DIST","grade_code":"AUT84590","grade_name":"AUT84590"},{"category_code":"DIST","grade_code":"AUT84591","grade_name":"AUT84591"},{"category_code":"DIST","grade_code":"T2","grade_name":"t2"},{"category_code":"DIST","grade_code":"AUT33977","grade_name":"AUT03064"},{"category_code":"DIST","grade_code":"T1","grade_name":"t1"},{"category_code":"DIST","grade_code":"T3","grade_name":"t3"},{"category_code":"DIST","grade_code":"AUT20400","grade_name":"AUT10012"},{"category_code":"DIST","grade_code":"AUT44395","grade_name":"AUT04983"},{"category_code":"DIST","grade_code":"UNIK02","grade_name":"unique02"},{"category_code":"DIST","grade_code":"AUT84600","grade_name":"AUT01829"},{"category_code":"DIST","grade_code":"UNIK01","grade_name":"unique01"}],"GEOGRAPHY_LIST":[{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AR","GRPH_DOMAIN_NAME":"Area","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5LJJ","GRPH_DOMAIN_NAME":"AUT0fd6n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNIMD","GRPH_DOMAIN_NAME":"AUT106Kc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDEED","GRPH_DOMAIN_NAME":"AUT118Ig","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4HJ0","GRPH_DOMAIN_NAME":"AUT1e468","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFGLK","GRPH_DOMAIN_NAME":"AUT1Fl5c","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTL5C7","GRPH_DOMAIN_NAME":"AUT2b4jm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNLB3","GRPH_DOMAIN_NAME":"AUT3OMmn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1OO8","GRPH_DOMAIN_NAME":"AUT4BFjd","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT8F68","GRPH_DOMAIN_NAME":"AUT50Dob","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4I6C","GRPH_DOMAIN_NAME":"AUT59aFk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7DBA","GRPH_DOMAIN_NAME":"AUT63dCN","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT3468","GRPH_DOMAIN_NAME":"AUT6amoL","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJGIL","GRPH_DOMAIN_NAME":"AUT6N14j","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTF8DO","GRPH_DOMAIN_NAME":"AUT7hgod","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTIKGD","GRPH_DOMAIN_NAME":"AUT7LneF","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEE5K","GRPH_DOMAIN_NAME":"AUT83jd6","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTO35J","GRPH_DOMAIN_NAME":"AUT8h95c","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJ5AF","GRPH_DOMAIN_NAME":"AUT951a0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJ8J7","GRPH_DOMAIN_NAME":"AUT97a0N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMFMC","GRPH_DOMAIN_NAME":"AUT9iaAa","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5GF8","GRPH_DOMAIN_NAME":"AUT9kHof","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOMOM","GRPH_DOMAIN_NAME":"AUTA76E9","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6OMG","GRPH_DOMAIN_NAME":"AUTAdBBK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBMME","GRPH_DOMAIN_NAME":"AUTAeFK1","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBHKN","GRPH_DOMAIN_NAME":"AUTAHhib","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTKKL9","GRPH_DOMAIN_NAME":"AUTal9L9","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTA4OL","GRPH_DOMAIN_NAME":"AUTb3naH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT2JIM","GRPH_DOMAIN_NAME":"AUTB7H5d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGM9O","GRPH_DOMAIN_NAME":"AUTb7OFD","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHHGD","GRPH_DOMAIN_NAME":"AUTb8DHG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHL2J","GRPH_DOMAIN_NAME":"AUTbAm6B","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN2D2","GRPH_DOMAIN_NAME":"AUTBcKk7","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6NB1","GRPH_DOMAIN_NAME":"AUTBGnka","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7AAH","GRPH_DOMAIN_NAME":"AUTbo1jM","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTC80M","GRPH_DOMAIN_NAME":"AUTca5oG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMN4B","GRPH_DOMAIN_NAME":"AUTCb848","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOELG","GRPH_DOMAIN_NAME":"AUTCBo2b","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTL4DC","GRPH_DOMAIN_NAME":"AUTCG15A","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT0GBI","GRPH_DOMAIN_NAME":"AUTCmCAc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBGO2","GRPH_DOMAIN_NAME":"AUTd6a8D","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN03H","GRPH_DOMAIN_NAME":"AUTd6m6G","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNMCE","GRPH_DOMAIN_NAME":"AUTD9G2C","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1CFJ","GRPH_DOMAIN_NAME":"AUTDeHHb","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOCIL","GRPH_DOMAIN_NAME":"AUTDFl20","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOOEK","GRPH_DOMAIN_NAME":"AUTDG89f","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOIHL","GRPH_DOMAIN_NAME":"AUTecOOl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7AIC","GRPH_DOMAIN_NAME":"AUTEGHhG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTIF2H","GRPH_DOMAIN_NAME":"AUTEjn30","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMD20","GRPH_DOMAIN_NAME":"AUTeK7jB","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGBHC","GRPH_DOMAIN_NAME":"AUTelHJj","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHEF2","GRPH_DOMAIN_NAME":"AUTEO5C6","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6H2F","GRPH_DOMAIN_NAME":"AUTF7oAg","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1E7A","GRPH_DOMAIN_NAME":"AUTFAHjG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4AMH","GRPH_DOMAIN_NAME":"AUTFm5HK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTILK1","GRPH_DOMAIN_NAME":"AUTfoe68","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGI20","GRPH_DOMAIN_NAME":"AUTg2La5","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAJAN","GRPH_DOMAIN_NAME":"AUTGEBng","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT9A8N","GRPH_DOMAIN_NAME":"AUTGFG2K","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMOOM","GRPH_DOMAIN_NAME":"AUTGIg29","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT3OKM","GRPH_DOMAIN_NAME":"AUTh2i9G","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGJN6","GRPH_DOMAIN_NAME":"AUThCIa0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN25J","GRPH_DOMAIN_NAME":"AUTHCl7n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT2JNN","GRPH_DOMAIN_NAME":"AUThfdIn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNHKJ","GRPH_DOMAIN_NAME":"AUThg494","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHEHK","GRPH_DOMAIN_NAME":"AUTHjH10","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOIN1","GRPH_DOMAIN_NAME":"AUTHMCHO","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNLC7","GRPH_DOMAIN_NAME":"AUTHoKiF","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFF2O","GRPH_DOMAIN_NAME":"AUTi25KI","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAMKL","GRPH_DOMAIN_NAME":"AUTifEch","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5HJE","GRPH_DOMAIN_NAME":"AUTIjnnl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTF2EL","GRPH_DOMAIN_NAME":"AUTjBkej","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT89D6","GRPH_DOMAIN_NAME":"AUTjce1n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTB0BL","GRPH_DOMAIN_NAME":"AUTJe8lm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJHNO","GRPH_DOMAIN_NAME":"AUTJKm5d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTME4F","GRPH_DOMAIN_NAME":"AUTK3FLl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTD2JF","GRPH_DOMAIN_NAME":"AUTK9fea","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTK74A","GRPH_DOMAIN_NAME":"AUTkb3nc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAA8D","GRPH_DOMAIN_NAME":"AUTKcMAn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHGFK","GRPH_DOMAIN_NAME":"AUTkF9e2","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDFAB","GRPH_DOMAIN_NAME":"AUTkFKBk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHJ7E","GRPH_DOMAIN_NAME":"AUTL1NNl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFOJ8","GRPH_DOMAIN_NAME":"AUTLEBAm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHLD2","GRPH_DOMAIN_NAME":"AUTLJA5N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7M4I","GRPH_DOMAIN_NAME":"AUTLJa9d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEJEI","GRPH_DOMAIN_NAME":"AUTlo0nl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMMGK","GRPH_DOMAIN_NAME":"AUTmagcK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDN3K","GRPH_DOMAIN_NAME":"AUTmbhoJ","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNB2O","GRPH_DOMAIN_NAME":"AUTn1i5N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEFLM","GRPH_DOMAIN_NAME":"AUTNc1n0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT0HJE","GRPH_DOMAIN_NAME":"AUTNd3eO","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFJMK","GRPH_DOMAIN_NAME":"AUTnEmle","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTKIAL","GRPH_DOMAIN_NAME":"AUTNkHbo","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT9KL8","GRPH_DOMAIN_NAME":"AUTO2nEn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBOIH","GRPH_DOMAIN_NAME":"AUTo8oao","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTCBN6","GRPH_DOMAIN_NAME":"AUToEjIo","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTB6KC","GRPH_DOMAIN_NAME":"AUTOFo8I","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTII09","GRPH_DOMAIN_NAME":"AUTOjFdn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNNA9","GRPH_DOMAIN_NAME":"AUToJIIb","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"BFIQH","GRPH_DOMAIN_NAME":"BfiQH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"BOMAK","GRPH_DOMAIN_NAME":"BOmaK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"CBSVK","GRPH_DOMAIN_NAME":"CbSVk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"CSDGP","GRPH_DOMAIN_NAME":"cSdGP","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"FIJTH","GRPH_DOMAIN_NAME":"fiJTH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"MHNNGRCD","GRPH_DOMAIN_NAME":"Ghazia","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"HARYANA","GRPH_DOMAIN_NAME":"Haryana","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"OCKJZ","GRPH_DOMAIN_NAME":"ockJZ","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"PA","GRPH_DOMAIN_NAME":"Panjim","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"UAFFV","GRPH_DOMAIN_NAME":"UAFfV","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"VLMGM","GRPH_DOMAIN_NAME":"VLMgm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"VNFMS","GRPH_DOMAIN_NAME":"VnFmS","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"XPBGS","GRPH_DOMAIN_NAME":"XPBGS","GRPH_DOMAIN_TYPE":"AR"}]}
+java.lang.NullPointerException
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:955)
+	at org.apache.jsp.unAuthorisedAccessCommon_jsp._jspService(unAuthorisedAccessCommon_jsp.java:737)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:477)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:05:39.192
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c02e5fed2b461ad813997f6d34789d71b86ed2c971b5dcf4e0466a08ce953c2fa70595b01d6675230abe4c0b3a3b28c84e2c1ba95f1c13375a35484893068f2edcd9df24b87f1c2176bc92543f1eb68639b628f703d62330592280fcc14c014830a165d87f4169a76cac9e1f649d0bd61eb6c1d4c2eb8491c40b506095af037c2e5485c511f9243c2a9d41478b1ce41885dfe93c17a4a4a59a1658f05deea942c7644b9b62487da255ffeed5030dcdcbb472518280f38b42f62e989c61dcec71de15ce97128995597cd8d15965682c363.4218f541531774fd14c419f83c24db636c3f4a0d8b239f804581519d02f7e097, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c02e5fed2b461ad813997f6d34789d71b86ed2c971b5dcf4e0466a08ce953c2fa70595b01d6675230abe4c0b3a3b28c84e2c1ba95f1c13375a35484893068f2edcd9df24b87f1c2176bc92543f1eb68639b628f703d62330592280fcc14c014830a165d87f4169a76cac9e1f649d0bd61cdf414c2686e5ae8f3d82051e062ebde8e2663538e96f77dcfdb9d1c1fdfb6fe61627675d2bae3c9b0eb865487549277f5e4b92d9ab45d01cb1931fcfcc5f7f0c2664f9bf29be605f009f85ecd287537701cf5d36fc18c3b8034c209687cbcd8.b9c4c28767bcd919958228d45e16899e89b24b3dc432aed8491a77267fb807f2, status=200, messageCode=9020, message=Success]
+ashu loadGeographyList size = 112
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+.....2
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58
+.....2
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58
+.....2
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+OK
+ashu loadGeographyList size = 127
+[Pretups,ERROR ,4/25 17:10:51,#00002] [ParamFilteredRequest]: Exception catched: 
+[Pretups,ERROR ,4/25 17:10:51,#00002] org.apache.catalina.connector.ClientAbortException: java.io.EOFException
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.InputBuffer.realReadBytes(InputBuffer.java:340)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.InputBuffer.checkByteBufferEof(InputBuffer.java:632)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.InputBuffer.read(InputBuffer.java:362)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.CoyoteInputStream.read(CoyoteInputStream.java:132)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.io.BufferedReader.fill(BufferedReader.java:161)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.io.BufferedReader.read1(BufferedReader.java:212)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.io.BufferedReader.read(BufferedReader.java:286)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.io.Reader.read(Reader.java:140)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at com.btsl.pretups.filters.ParamWrapperFilter$ParamFilteredRequest.<init>(ParamWrapperFilter.java:106)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at com.btsl.pretups.filters.ParamWrapperFilter.doFilter(ParamWrapperFilter.java:74)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at com.btsl.pretups.filters.ParamFilter.doFilter(ParamFilter.java:59)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at java.lang.Thread.run(Thread.java:745)
+[Pretups,TRACE ,4/25 17:10:51,#00002] Caused by: java.io.EOFException
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1233)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1158)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:736)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.Http11InputBuffer.access$300(Http11InputBuffer.java:42)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.Http11InputBuffer$SocketInputBuffer.doRead(Http11InputBuffer.java:1099)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.filters.IdentityInputFilter.doRead(IdentityInputFilter.java:102)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.http11.Http11InputBuffer.doRead(Http11InputBuffer.java:247)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.coyote.Request.doRead(Request.java:551)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	at org.apache.catalina.connector.InputBuffer.realReadBytes(InputBuffer.java:336)
+[Pretups,TRACE ,4/25 17:10:51,#00002] 	... 38 more
+[Apache Struts,ERROR ,4/25 17:10:53,#00002] Failed to parse multipart request
+[Apache Struts,ERROR ,4/25 17:10:53,#00002] org.apache.commons.fileupload.FileUploadBase$IOFileUploadException: Processing of multipart/form-data request failed. Stream ended unexpectedly
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:351)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:288)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.upload.CommonsMultipartRequestHandler.handleRequest(CommonsMultipartRequestHandler.java:195)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.util.RequestUtils.populate(RequestUtils.java:445)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.action.RequestProcessor.processPopulate(RequestProcessor.java:798)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:205)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1164)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:415)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at com.btsl.pretups.filters.ValidateSalt.doFilter(ValidateSalt.java:50)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at com.btsl.pretups.filters.LoadSalt.doFilter(LoadSalt.java:62)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at com.btsl.pretups.filters.ParamWrapperFilter.doFilter(ParamWrapperFilter.java:74)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at com.btsl.pretups.filters.ParamFilter.doFilter(ParamFilter.java:59)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at java.lang.Thread.run(Thread.java:745)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] Caused by: org.apache.commons.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.MultipartStream$ItemInputStream.makeAvailable(MultipartStream.java:1003)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.MultipartStream$ItemInputStream.read(MultipartStream.java:901)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at java.io.InputStream.read(InputStream.java:101)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.util.Streams.copy(Streams.java:101)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.util.Streams.copy(Streams.java:70)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	at org.apache.commons.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:347)
+[Apache Struts,TRACE ,4/25 17:10:53,#00002] 	... 46 more
+exception topjavax.servlet.ServletException: java.lang.IllegalStateException: Cannot create a session after the response has been committed
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+.....2
+ashu loadGeographyList size = 127
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.58
+.....2
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+.....2
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:19:13.918
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c31ed28b0707189d9a7a090cc887a1d4cc8b37a05051e2629d2f2c3b6ceb8a8274873d8d469e35f03178a6869b82886d1115ad9bd89ee916994623e147841f082b8cd4a394c40ebdb82a674238e94fd4270dfe4c09f50ee0b0c3ab1f542e4ef0e71ece700f9bf8767a563ae0bd076ace0cb767bfd401ce2653a87dc31e28dcf9e32b8e78e9e42970bd5d5010ef2a1a077d067dcb6c287f82889d6debdabc8a9a8e69dc726a7aaf9cf51f75855f9308751707a6ed7dfae3b13f53f8185cf5a935a785577f0ff16d0f30d3266b3cae957d0.36caf8a5417db195b7b68b073088b29597f53eff4e1fe7bad84e1bf7476ce6c5, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c31ed28b0707189d9a7a090cc887a1d4cc8b37a05051e2629d2f2c3b6ceb8a8274873d8d469e35f03178a6869b82886d1115ad9bd89ee916994623e147841f082b8cd4a394c40ebdb82a674238e94fd4270dfe4c09f50ee0b0c3ab1f542e4ef0e71ece700f9bf8767a563ae0bd076ace093c0ef5611d49bb96b32d2ff2dab9374872947d2884450e9db75d17b8a74753cb5c20031e40862eafc1bea7e884d88549aa62c362abe87389cd9d01508063d055d99fbe979259884e1a2390a96a81700e8bc88a7cfbcac0a9a487152e9949e23.279f3e7668c36913015ce4d2c7b7671062b3519cf897412aa9c81d4000e42c60, status=200, messageCode=9020, message=Success]
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+.....2
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:28:53.43
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca0d5343833c1cca71c4d32894ae6cd1cba8dfd9d1a536315f7fe85e0851fa591a9751b5db9afe653d0329b6321388883a9fdf96ffc346ca8fafd9b49e40adff32264f2d8be43845d3dfb4e97974d8355a840b3a85c0e46e2f4cf468d3ceb70b66a4758cadc14493e37851429f787a3183e2932406ce001b44339c6d01eb6a7a25cef302272d64f2755914cbdf0a2654a06b19ef60462e47e3013c8d88146bfe3c5a3b06a6a3e29d680f68a6af4b6c937bb351fc2aaf7f42edba0e0209f6ec1d5e3bb3851f54b7eb0ca466cd447a840b5.9874aa13cedddada2f1b82b92f98ec88861e6ed074ebd263533812f8abc39f3c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca0d5343833c1cca71c4d32894ae6cd1cba8dfd9d1a536315f7fe85e0851fa591a9751b5db9afe653d0329b6321388883a9fdf96ffc346ca8fafd9b49e40adff32264f2d8be43845d3dfb4e97974d8355a840b3a85c0e46e2f4cf468d3ceb70b66a4758cadc14493e37851429f787a31813530a46a61e7aa173ba4db27693ebe3a2da517e523449efe69365177b2ff2ffdb1f40798245599c2bd2027d21766e1cea52d416b6348c91d295ff6bbd03657f28273f4a608ed5b1e5a24aa22f69d9f90fc991f94b8bd00be70c9adcf62b8e2b.ac2440766c04a809106cb8f5242430be19b525a59c400dc43bcebc4ef2b6d0ca, status=200, messageCode=9020, message=Success]
+25-Apr-2023 17:28:54.512 INFO [http-nio-6789-exec-28] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: The HTTP header line [country:USS0x0d0x0aX-XSS-Protection: 1; mode=block] does not conform to RFC 7230 and has been ignored.
+		at org.apache.coyote.http11.Http11InputBuffer.skipLine(Http11InputBuffer.java:986)
+		at org.apache.coyote.http11.Http11InputBuffer.parseHeader(Http11InputBuffer.java:905)
+		at org.apache.coyote.http11.Http11InputBuffer.parseHeaders(Http11InputBuffer.java:565)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:277)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:745)
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+.....2
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:33:43.221
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c425b9dde5d72679f6adb4823bba9813814c702b5f2fc56345bee37bb892d393f5827d8670847a97c4b203d6996aba26ec6de784d7110d8fb7d540311455b8c7bf10602a04d1c345d1142b56530b319e93cfc3ee5e5063380dcdbaf88a4c8b66889f775ea369f03e96e22f1dde734f651c579f8f94057a8e41594f00eb440fea7c03ac938c7c22b74d6cda01eed4a2c493f06ce0380544cf728d9138f96d27b6857ca778186edf8cb95fe496daa58262000eb3ba803b7df1eb0ade9831ff504a01293fc7acedf1139c7e8a4f449295f30.66dc7d827a2c265427f4205e6e74b265066f82dad5a9efd9057e60a30fdd4547, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c425b9dde5d72679f6adb4823bba9813814c702b5f2fc56345bee37bb892d393f5827d8670847a97c4b203d6996aba26ec6de784d7110d8fb7d540311455b8c7bf10602a04d1c345d1142b56530b319e93cfc3ee5e5063380dcdbaf88a4c8b66889f775ea369f03e96e22f1dde734f651385f9709e0bf9bcaadd2f151ada54012f1b5f5b72b2e3beed53ebc975d5e7d6771ce68e5b8346ea72a75700f9025838ab108b726b4dfb814b1b5124af9f9f3eaf49974c57cfd44b3cdc642a172d203369bede4c8241715b3fd93e06525fa7b16.d06eb709ff815de76fb3b16293eda7e7a6dd26fd9dfa621f0c1f338a3649a579, status=200, messageCode=9020, message=Success]
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 127
+{"GRADE_LIST":[{"category_code":"AUTAMHY","grade_code":"AUTZE01","grade_name":"testAUTZE01"}],"GEOGRAPHY_LIST":[{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AOBAD","GRPH_DOMAIN_NAME":"AObaD","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT1N60","GRPH_DOMAIN_NAME":"AUT1lDdM","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT8IAJ","GRPH_DOMAIN_NAME":"AUT20KN9","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT2K21","GRPH_DOMAIN_NAME":"AUT2CB16","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTI1GL","GRPH_DOMAIN_NAME":"AUT2f9BD","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTB1GA","GRPH_DOMAIN_NAME":"AUT2ND1E","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT7JE5","GRPH_DOMAIN_NAME":"AUT347G5","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTEK31","GRPH_DOMAIN_NAME":"AUT4di2E","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTOOEO","GRPH_DOMAIN_NAME":"AUT4IeLF","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJ885","GRPH_DOMAIN_NAME":"AUT4LbEd","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT3FBO","GRPH_DOMAIN_NAME":"AUT4Lean","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDBOH","GRPH_DOMAIN_NAME":"AUT53gF7","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTAG8J","GRPH_DOMAIN_NAME":"AUT5BF8k","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTNACF","GRPH_DOMAIN_NAME":"AUT6iHII","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDL79","GRPH_DOMAIN_NAME":"AUT6o6LG","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJ23A","GRPH_DOMAIN_NAME":"AUT80AnI","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTA9L4","GRPH_DOMAIN_NAME":"AUT8G5Cf","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTBDG0","GRPH_DOMAIN_NAME":"AUT8J2c8","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTK0JJ","GRPH_DOMAIN_NAME":"AUT96i03","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTD3MK","GRPH_DOMAIN_NAME":"AUT9B3H1","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTHLK0","GRPH_DOMAIN_NAME":"AUT9DCEa","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTM8A2","GRPH_DOMAIN_NAME":"AUT9ihlk","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT1N7K","GRPH_DOMAIN_NAME":"AUTa4J50","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTEID3","GRPH_DOMAIN_NAME":"AUTa5Gi8","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTEMD2","GRPH_DOMAIN_NAME":"AUTABGi3","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTON2K","GRPH_DOMAIN_NAME":"AUTAc44b","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJ6MG","GRPH_DOMAIN_NAME":"AUTAdEdM","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTE9OM","GRPH_DOMAIN_NAME":"AUTalmnb","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTLE2L","GRPH_DOMAIN_NAME":"AUTBbOjc","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT0DM1","GRPH_DOMAIN_NAME":"AUTbeBFJ","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTA84F","GRPH_DOMAIN_NAME":"AUTbGG2f","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTCH9H","GRPH_DOMAIN_NAME":"AUTbieJG","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDGAH","GRPH_DOMAIN_NAME":"AUTbKC62","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJNMK","GRPH_DOMAIN_NAME":"AUTBll5B","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTFBFO","GRPH_DOMAIN_NAME":"AUTBOfCH","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTGFE9","GRPH_DOMAIN_NAME":"AUTc5F1n","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTGF2D","GRPH_DOMAIN_NAME":"AUTc5mNa","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDB7N","GRPH_DOMAIN_NAME":"AUTcAmA8","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTCHHB","GRPH_DOMAIN_NAME":"AUTcL2L0","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT07NF","GRPH_DOMAIN_NAME":"AUTCO86B","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTGADC","GRPH_DOMAIN_NAME":"AUTda3jJ","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT9GMA","GRPH_DOMAIN_NAME":"AUTdDhhL","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTGNFA","GRPH_DOMAIN_NAME":"AUTdfkhH","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTECH0","GRPH_DOMAIN_NAME":"AUTdlNBI","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTKBGD","GRPH_DOMAIN_NAME":"AUTdMl5L","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJGOK","GRPH_DOMAIN_NAME":"AUTe0im0","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTAHCD","GRPH_DOMAIN_NAME":"AUTE33Io","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTNC64","GRPH_DOMAIN_NAME":"AUTea027","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTLHHG","GRPH_DOMAIN_NAME":"AUTeh0ag","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTN3HK","GRPH_DOMAIN_NAME":"AUTeJb5k","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTEJBH","GRPH_DOMAIN_NAME":"AUTEOeo0","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTKLMO","GRPH_DOMAIN_NAME":"AUTF1ejO","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT6G7G","GRPH_DOMAIN_NAME":"AUTF5MlC","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT9EA1","GRPH_DOMAIN_NAME":"AUTfbLba","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT3JNJ","GRPH_DOMAIN_NAME":"AUTFcc10","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTKHJ8","GRPH_DOMAIN_NAME":"AUTfhB5I","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT4NCG","GRPH_DOMAIN_NAME":"AUTG31B1","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTKDLH","GRPH_DOMAIN_NAME":"AUTG7m8H","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTN8HD","GRPH_DOMAIN_NAME":"AUTg8M1d","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTL70N","GRPH_DOMAIN_NAME":"AUTG9hfK","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTHK9M","GRPH_DOMAIN_NAME":"AUTGDg5e","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTNHNB","GRPH_DOMAIN_NAME":"AUTGG0JM","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTO85B","GRPH_DOMAIN_NAME":"AUTGnO7A","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT0J8H","GRPH_DOMAIN_NAME":"AUTHAil8","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTFJIJ","GRPH_DOMAIN_NAME":"AUThGDLN","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTHFJG","GRPH_DOMAIN_NAME":"AUTHgLKI","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDG15","GRPH_DOMAIN_NAME":"AUThOkab","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJF37","GRPH_DOMAIN_NAME":"AUTi8i7m","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT4JND","GRPH_DOMAIN_NAME":"AUTi9G4b","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTID7A","GRPH_DOMAIN_NAME":"AUTIFdFJ","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT317E","GRPH_DOMAIN_NAME":"AUTih4Bn","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTEBCL","GRPH_DOMAIN_NAME":"AUTJ11DO","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTOOHK","GRPH_DOMAIN_NAME":"AUTJ7C1N","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTKIIA","GRPH_DOMAIN_NAME":"AUTja4e4","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTA8IJ","GRPH_DOMAIN_NAME":"AUTK5F22","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTCOC1","GRPH_DOMAIN_NAME":"AUTkcJFJ","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTLOC7","GRPH_DOMAIN_NAME":"AUTKcji8","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT1G8L","GRPH_DOMAIN_NAME":"AUTl483K","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT75AE","GRPH_DOMAIN_NAME":"AUTLcO58","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT2E19","GRPH_DOMAIN_NAME":"AUTLKF9e","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT9BKG","GRPH_DOMAIN_NAME":"AUTloEc2","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTGBBG","GRPH_DOMAIN_NAME":"AUTm4e94","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTL6DG","GRPH_DOMAIN_NAME":"AUTmaICA","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDB7D","GRPH_DOMAIN_NAME":"AUTMbCe3","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTCD2D","GRPH_DOMAIN_NAME":"AUTMDnNi","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTOKA9","GRPH_DOMAIN_NAME":"AUTmEcKo","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTE0DE","GRPH_DOMAIN_NAME":"AUTmGM39","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDFK6","GRPH_DOMAIN_NAME":"AUTmI16a","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTB4BB","GRPH_DOMAIN_NAME":"AUTMi5CA","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTHJBM","GRPH_DOMAIN_NAME":"AUTMmJ8D","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTJ1BH","GRPH_DOMAIN_NAME":"AUTn6gO6","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT1JLO","GRPH_DOMAIN_NAME":"AUTn78m4","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTE8MJ","GRPH_DOMAIN_NAME":"AUTN8nkn","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTACLJ","GRPH_DOMAIN_NAME":"AUTnDaAg","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT99BF","GRPH_DOMAIN_NAME":"AUTNE85C","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT9C8E","GRPH_DOMAIN_NAME":"AUTneaM4","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTBHA8","GRPH_DOMAIN_NAME":"AUTneCh9","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT8FKB","GRPH_DOMAIN_NAME":"AUTo222F","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUT4H0J","GRPH_DOMAIN_NAME":"AUToAgHI","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTBEC1","GRPH_DOMAIN_NAME":"AUTOFJNA","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTBKLI","GRPH_DOMAIN_NAME":"AUToKa1C","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTG67N","GRPH_DOMAIN_NAME":"AUToL9Kj","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTDIB4","GRPH_DOMAIN_NAME":"AUTOo2nn","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"AUTH3GB","GRPH_DOMAIN_NAME":"AUTOOe1M","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"BANG","GRPH_DOMAIN_NAME":"Bangalore","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"DELHI","GRPH_DOMAIN_NAME":"Delhi-Ncr","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"EXDBL","GRPH_DOMAIN_NAME":"eXdblIHBhB","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"SDD","GRPH_DOMAIN_NAME":"fsa","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"GA","GRPH_DOMAIN_NAME":"Goa","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"GZBA","GRPH_DOMAIN_NAME":"GZBA Domain","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"IKAON","GRPH_DOMAIN_NAME":"IKAON","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"NEFZZ","GRPH_DOMAIN_NAME":"nEfZZ","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"NJMID","GRPH_DOMAIN_NAME":"njmid","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"ONGZL","GRPH_DOMAIN_NAME":"onGZL","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"OVNJD","GRPH_DOMAIN_NAME":"OVNJD","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"QWE","GRPH_DOMAIN_NAME":"qwe","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"QZZYC","GRPH_DOMAIN_NAME":"QZZYc","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"RMNRL","GRPH_DOMAIN_NAME":"RmNRL","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"SDGFO","GRPH_DOMAIN_NAME":"Sdgfo","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TEST45","GRPH_DOMAIN_NAME":"test451","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TEST22","GRPH_DOMAIN_NAME":"testdomain","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TEST33","GRPH_DOMAIN_NAME":"testdomain2","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TESTDOMAIN","GRPH_DOMAIN_NAME":"testdomain33","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TESTGEO11","GRPH_DOMAIN_NAME":"testgeo","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"TESTGEO02","GRPH_DOMAIN_NAME":"TestGeo02","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"YAVCL","GRPH_DOMAIN_NAME":"YAVCL","GRPH_DOMAIN_TYPE":"ZO"},{"CATEGORY_CODE":"AUTAMHY","GRPH_DOMAIN_CODE":"ZLWZI","GRPH_DOMAIN_NAME":"ZlWZi","GRPH_DOMAIN_TYPE":"ZO"}]}
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting class org/apache/jsp/jsp/profile/commissionProfileDetail_jsp.
+	at org.jacoco.agent.rt.internal_932a715.CoverageTransformer.transform(CoverageTransformer.java:86)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:128)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:59)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:159)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:193)
+	at org.apache.jasper.servlet.JspServletWrapper.getDependants(JspServletWrapper.java:332)
+	at org.apache.jasper.compiler.Compiler.isOutDated(Compiler.java:500)
+	at org.apache.jasper.compiler.Compiler.isOutDated(Compiler.java:434)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:598)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:459)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.struts.action.RequestProcessor.doForward(RequestProcessor.java:1056)
+	at org.apache.struts.action.RequestProcessor.processForwardConfig(RequestProcessor.java:388)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:231)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1164)
+	at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:415)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ValidateSalt.doFilter(ValidateSalt.java:50)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.LoadSalt.doFilter(LoadSalt.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ParamWrapperFilter.doFilter(ParamWrapperFilter.java:74)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.pretups.filters.ParamFilter.doFilter(ParamFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:399)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Error while instrumenting class org/apache/jsp/jsp/profile/commissionProfileDetail_jsp.
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrumentError(Instrumenter.java:152)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:103)
+	at org.jacoco.agent.rt.internal_932a715.CoverageTransformer.transform(CoverageTransformer.java:84)
+	... 76 more
+Caused by: java.lang.RuntimeException: java.lang.ClassNotFoundException: javax.servlet.jsp.PageContext
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.getCommonSuperClass(ClassWriter.java:1684)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.getMergedType(ClassWriter.java:1654)
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1426)
+	at org.jacoco.agent.rt.internal_932a715.asm.Frame.merge(Frame.java:1331)
+	at org.jacoco.agent.rt.internal_932a715.asm.MethodWriter.visitMaxs(MethodWriter.java:1475)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readCode(ClassReader.java:1554)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.readMethod(ClassReader.java:1017)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:693)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassReader.accept(ClassReader.java:506)
+	at org.jacoco.agent.rt.internal_932a715.asm.ClassWriter.toByteArray(ClassWriter.java:995)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:84)
+	at org.jacoco.agent.rt.internal_932a715.core.instr.Instrumenter.instrument(Instrumenter.java:101)
+	... 77 more
+index.jsp explorerStr=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+.....2
+POST
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:36:52.105
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c425b9dde5d72679fabad114a511666683aa617652d9d5cd70f0687e158120ca6a381c259570b159d83c647d03d720c60610ab0e4df81b3eb38bf80d2fc1399619795bc0cc55e251f59674ea3f199e556b259c953761530ee2fed17e983fde15f58460911fe8a91355732f757cc78636d02445c7993d749d7eec69c027f85a17ab70d4c5a68b900551b0097fd6ccd5a5420dbd6ed7887a50ba325f31076f6457cdcda9f64579fb39fd053a8c02650e593d499051d9405e1a5797e1330a9157b1b379f0ad6e37459bc6bf5600792444541.f147c9621dd60c1a88a21e35966805a9f834a3e9a79a9724fb0961ebc0be6a5d, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c425b9dde5d72679fabad114a511666683aa617652d9d5cd70f0687e158120ca6a381c259570b159d83c647d03d720c60610ab0e4df81b3eb38bf80d2fc1399619795bc0cc55e251f59674ea3f199e556b259c953761530ee2fed17e983fde15f58460911fe8a91355732f757cc78636d044093f9fa8b5e432c9537e490fb1be4a3f497127054ef235e99dc49401e4bd6f1edff4647d02358584a7006f45ed68f4e99931ca01fdbd5d669403ad32f8f5574312c536fa63118adf15a79247e6ad70202e1f040ec4c1558c0dcf1e69a19e9.40071aeb4c1f71d671de83f9e18c9eb4b2dc5b450ef2ee2f9bdf326fa831d0b1, status=200, messageCode=9020, message=Success]
+POST
+POST
+POST
+ashu loadGeographyList size = 112
+ashu loadGeographyList size = 112
+{"GRADE_LIST":[{"category_code":"DIST","grade_code":"GOOD","grade_name":"Good"},{"category_code":"DIST","grade_code":"AUT04295","grade_name":"AUT9538"},{"category_code":"DIST","grade_code":"AUT92179","grade_name":"AUT70013"},{"category_code":"DIST","grade_code":"AUT15857","grade_name":"AUT4465"},{"category_code":"DIST","grade_code":"AUT99765","grade_name":"AUT47288"},{"category_code":"DIST","grade_code":"AUT79237","grade_name":"AUT98618"},{"category_code":"DIST","grade_code":"AUT81637","grade_name":"AUT1343"},{"category_code":"DIST","grade_code":"AUT35682","grade_name":"AUT71789"},{"category_code":"DIST","grade_code":"AUT03205","grade_name":"AUT20634"},{"category_code":"DIST","grade_code":"AUT47360","grade_name":"AUT3251"},{"category_code":"DIST","grade_code":"AUT47884","grade_name":"AUT07246"},{"category_code":"DIST","grade_code":"AUT12826","grade_name":"AUT12194"},{"category_code":"DIST","grade_code":"AUT34919","grade_name":"AUT8094"},{"category_code":"DIST","grade_code":"AUT99637","grade_name":"AUT10787"},{"category_code":"DIST","grade_code":"AUT50003","grade_name":"AUT90725"},{"category_code":"DIST","grade_code":"AUT11799","grade_name":"AUT64217"},{"category_code":"DIST","grade_code":"AUT87542","grade_name":"AUT3889"},{"category_code":"DIST","grade_code":"AUT34501","grade_name":"AUT7352"},{"category_code":"DIST","grade_code":"AUT28981","grade_name":"AUT56772"},{"category_code":"DIST","grade_code":"AUT97314","grade_name":"AUT92570"},{"category_code":"DIST","grade_code":"AUT27600","grade_name":"AUT96406"},{"category_code":"DIST","grade_code":"AUT81751","grade_name":"AUT57955"},{"category_code":"DIST","grade_code":"AUT60131","grade_name":"AUT5842"},{"category_code":"DIST","grade_code":"AUT89333","grade_name":"AUT4054"},{"category_code":"DIST","grade_code":"AUT69285","grade_name":"AUT5450"},{"category_code":"DIST","grade_code":"AUT36295","grade_name":"AUT67479"},{"category_code":"DIST","grade_code":"AUT24062","grade_name":"AUT3319"},{"category_code":"DIST","grade_code":"AUT96887","grade_name":"AUT95427"},{"category_code":"DIST","grade_code":"AUT59044","grade_name":"AUT94521"},{"category_code":"DIST","grade_code":"AUT86076","grade_name":"AUT14248"},{"category_code":"DIST","grade_code":"AUT75216","grade_name":"AUT2709"},{"category_code":"DIST","grade_code":"AUT76898","grade_name":"AUT59478"},{"category_code":"DIST","grade_code":"AUT63904","grade_name":"AUT44216"},{"category_code":"DIST","grade_code":"AUT81786","grade_name":"AUT81007"},{"category_code":"DIST","grade_code":"AUT31620","grade_name":"AUT5004"},{"category_code":"DIST","grade_code":"AUT10479","grade_name":"AUT5801"},{"category_code":"DIST","grade_code":"AUT53958","grade_name":"AUT30067"},{"category_code":"DIST","grade_code":"AUT67468","grade_name":"AUT9233"},{"category_code":"DIST","grade_code":"AUT26502","grade_name":"AUT9308"},{"category_code":"DIST","grade_code":"AUT83360","grade_name":"AUT06428"},{"category_code":"DIST","grade_code":"AUT19808","grade_name":"AUT87160"},{"category_code":"DIST","grade_code":"AUT64114","grade_name":"AUT5240"},{"category_code":"DIST","grade_code":"AUT80791","grade_name":"AUT03850"},{"category_code":"DIST","grade_code":"DISTGRADE","grade_name":"distgrade"},{"category_code":"DIST","grade_code":"AUT10410","grade_name":"AUT21660"},{"category_code":"DIST","grade_code":"AUT52540","grade_name":"AUT63885"},{"category_code":"DIST","grade_code":"AUT96885","grade_name":"AUT72063"},{"category_code":"DIST","grade_code":"AUT17093","grade_name":"AUT77952"},{"category_code":"DIST","grade_code":"AUT49410","grade_name":"AUT8973"},{"category_code":"DIST","grade_code":"AUT16949","grade_name":"AUT77655"},{"category_code":"DIST","grade_code":"AUT84076","grade_name":"AUT8947"},{"category_code":"DIST","grade_code":"AUT96570","grade_name":"AUT31226"},{"category_code":"DIST","grade_code":"AUT24670","grade_name":"AUT26562"},{"category_code":"DIST","grade_code":"AUT39503","grade_name":"AUT9301"},{"category_code":"DIST","grade_code":"AUT52898","grade_name":"AUT23375"},{"category_code":"DIST","grade_code":"AUT86214","grade_name":"AUT42070"},{"category_code":"DIST","grade_code":"AUT09291","grade_name":"AUT32837"},{"category_code":"DIST","grade_code":"AUT03859","grade_name":"AUT0582"},{"category_code":"DIST","grade_code":"AUT02081","grade_name":"AUT28878"},{"category_code":"DIST","grade_code":"AUT49686","grade_name":"AUT19339"},{"category_code":"DIST","grade_code":"AUT85496","grade_name":"AUT49246"},{"category_code":"DIST","grade_code":"AUT99572","grade_name":"AUT54747"},{"category_code":"DIST","grade_code":"AUT81024","grade_name":"AUT65971"},{"category_code":"DIST","grade_code":"AUT97675","grade_name":"AUT16436"},{"category_code":"DIST","grade_code":"AUT66520","grade_name":"AUT33102"},{"category_code":"DIST","grade_code":"AUT87546","grade_name":"AUT40202"},{"category_code":"DIST","grade_code":"AUT09868","grade_name":"AUT49606"},{"category_code":"DIST","grade_code":"AUT75799","grade_name":"AUT10030"},{"category_code":"DIST","grade_code":"AUT99432","grade_name":"AUT52023"},{"category_code":"DIST","grade_code":"AUT24615","grade_name":"AUT4548"},{"category_code":"DIST","grade_code":"AUT58115","grade_name":"AUT5952"},{"category_code":"DIST","grade_code":"AUT55758","grade_name":"AUT89580"},{"category_code":"DIST","grade_code":"AUT05599","grade_name":"AUT24160"},{"category_code":"DIST","grade_code":"AUT33447","grade_name":"AUT14220"},{"category_code":"DIST","grade_code":"AUT87164","grade_name":"AUT1483"},{"category_code":"DIST","grade_code":"AUT95931","grade_name":"AUT77850"},{"category_code":"DIST","grade_code":"AUT28022","grade_name":"AUT5223"},{"category_code":"DIST","grade_code":"AUT72445","grade_name":"AUT5821"},{"category_code":"DIST","grade_code":"AUT49100","grade_name":"AUT48173"},{"category_code":"DIST","grade_code":"AUT91675","grade_name":"AUT5344"},{"category_code":"DIST","grade_code":"AUT18427","grade_name":"AUT42890"},{"category_code":"DIST","grade_code":"AUT01449","grade_name":"AUT4122"},{"category_code":"DIST","grade_code":"AUT79140","grade_name":"AUT25011"},{"category_code":"DIST","grade_code":"AUT33623","grade_name":"AUT62523"},{"category_code":"DIST","grade_code":"AUT91883","grade_name":"AUT7891"},{"category_code":"DIST","grade_code":"AUT65965","grade_name":"AUT0708"},{"category_code":"DIST","grade_code":"AUT59753","grade_name":"AUT44193"},{"category_code":"DIST","grade_code":"AUT12821","grade_name":"AUT82221"},{"category_code":"DIST","grade_code":"AUT37498","grade_name":"AUT45634"},{"category_code":"DIST","grade_code":"AUT00284","grade_name":"AUT6208"},{"category_code":"DIST","grade_code":"AUT97024","grade_name":"AUT05424"},{"category_code":"DIST","grade_code":"AUT31890","grade_name":"AUT21048"},{"category_code":"DIST","grade_code":"AUT50241","grade_name":"AUT50076"},{"category_code":"DIST","grade_code":"AUT16901","grade_name":"AUT8728"},{"category_code":"DIST","grade_code":"AUT22177","grade_name":"AUT28105"},{"category_code":"DIST","grade_code":"AUT45241","grade_name":"AUT32683"},{"category_code":"DIST","grade_code":"AUT04827","grade_name":"AUT0901"},{"category_code":"DIST","grade_code":"AUT48856","grade_name":"AUT05707"},{"category_code":"DIST","grade_code":"AUT08658","grade_name":"AUT23036"},{"category_code":"DIST","grade_code":"AUT96944","grade_name":"AUT23778"},{"category_code":"DIST","grade_code":"AUT37089","grade_name":"AUT81958"},{"category_code":"DIST","grade_code":"AUT22528","grade_name":"AUT9618"},{"category_code":"DIST","grade_code":"AUT26087","grade_name":"AUT97834"},{"category_code":"DIST","grade_code":"AUT57382","grade_name":"AUT70261"},{"category_code":"DIST","grade_code":"AUT60167","grade_name":"AUT67377"},{"category_code":"DIST","grade_code":"AUT47920","grade_name":"AUT92123"},{"category_code":"DIST","grade_code":"AUT75425","grade_name":"AUT68584"},{"category_code":"DIST","grade_code":"AUT08141","grade_name":"AUT19672"},{"category_code":"DIST","grade_code":"AUT91799","grade_name":"AUT24269"},{"category_code":"DIST","grade_code":"AUT42647","grade_name":"AUT22248"},{"category_code":"DIST","grade_code":"AUT64921","grade_name":"AUT95601"},{"category_code":"DIST","grade_code":"AUT36558","grade_name":"AUT23997"},{"category_code":"DIST","grade_code":"AUT93698","grade_name":"AUT81833"},{"category_code":"DIST","grade_code":"AUT47444","grade_name":"AUT63923"},{"category_code":"DIST","grade_code":"AUT23542","grade_name":"AUT95320"},{"category_code":"DIST","grade_code":"AUT54972","grade_name":"AUT54989"},{"category_code":"DIST","grade_code":"AUT43926","grade_name":"AUT79190"},{"category_code":"DIST","grade_code":"AUT37272","grade_name":"AUT85479"},{"category_code":"DIST","grade_code":"AUT18100","grade_name":"AUT41605"},{"category_code":"DIST","grade_code":"AUT27877","grade_name":"AUT65747"},{"category_code":"DIST","grade_code":"AUT17353","grade_name":"AUT66761"},{"category_code":"DIST","grade_code":"AUT78056","grade_name":"AUT22665"},{"category_code":"DIST","grade_code":"AUT57820","grade_name":"AUT48136"},{"category_code":"DIST","grade_code":"AUT92374","grade_name":"AUT49204"},{"category_code":"DIST","grade_code":"AUT60011","grade_name":"AUT84352"},{"category_code":"DIST","grade_code":"AUT21428","grade_name":"AUT64221"},{"category_code":"DIST","grade_code":"AUT55293","grade_name":"AUT96497"},{"category_code":"DIST","grade_code":"AUT73709","grade_name":"AUT17346"},{"category_code":"DIST","grade_code":"AUT74256","grade_name":"AUT6119"},{"category_code":"DIST","grade_code":"AUT57156","grade_name":"AUT78150"},{"category_code":"DIST","grade_code":"AUT51943","grade_name":"AUT48374"},{"category_code":"DIST","grade_code":"AUT34898","grade_name":"AUT30364"},{"category_code":"DIST","grade_code":"AUT01374","grade_name":"AUT44055"},{"category_code":"DIST","grade_code":"AUT15338","grade_name":"AUT60689"},{"category_code":"DIST","grade_code":"AUT60174","grade_name":"AUT13915"},{"category_code":"DIST","grade_code":"AUT77357","grade_name":"AUT97101"},{"category_code":"DIST","grade_code":"AUT39426","grade_name":"AUT21353"},{"category_code":"DIST","grade_code":"AUT86315","grade_name":"AUT2105"},{"category_code":"DIST","grade_code":"AUT56294","grade_name":"AUT05673"},{"category_code":"DIST","grade_code":"AUT47379","grade_name":"AUT0221"},{"category_code":"DIST","grade_code":"AUT64918","grade_name":"AUT83038"},{"category_code":"DIST","grade_code":"AUT08976","grade_name":"AUT85445"},{"category_code":"DIST","grade_code":"AUT04272","grade_name":"AUT94206"},{"category_code":"DIST","grade_code":"AUT94425","grade_name":"AUT80789"},{"category_code":"DIST","grade_code":"AUT88877","grade_name":"AUT32738"},{"category_code":"DIST","grade_code":"AUT46836","grade_name":"AUT84391"},{"category_code":"DIST","grade_code":"AUT77986","grade_name":"AUT78837"},{"category_code":"DIST","grade_code":"AUT69866","grade_name":"AUT2576"},{"category_code":"DIST","grade_code":"AUT37673","grade_name":"AUT80397"},{"category_code":"DIST","grade_code":"AUT21791","grade_name":"AUT2476"},{"category_code":"DIST","grade_code":"AUT67741","grade_name":"AUT85065"},{"category_code":"DIST","grade_code":"AUT65421","grade_name":"AUT86257"},{"category_code":"DIST","grade_code":"AUT60284","grade_name":"AUT89321"},{"category_code":"DIST","grade_code":"AUT84700","grade_name":"AUT84700"},{"category_code":"DIST","grade_code":"AUT84500","grade_name":"AUT84500"},{"category_code":"DIST","grade_code":"AUT84590","grade_name":"AUT84590"},{"category_code":"DIST","grade_code":"AUT84591","grade_name":"AUT84591"},{"category_code":"DIST","grade_code":"T2","grade_name":"t2"},{"category_code":"DIST","grade_code":"AUT33977","grade_name":"AUT03064"},{"category_code":"DIST","grade_code":"T1","grade_name":"t1"},{"category_code":"DIST","grade_code":"T3","grade_name":"t3"},{"category_code":"DIST","grade_code":"AUT20400","grade_name":"AUT10012"},{"category_code":"DIST","grade_code":"AUT44395","grade_name":"AUT04983"},{"category_code":"DIST","grade_code":"UNIK02","grade_name":"unique02"},{"category_code":"DIST","grade_code":"AUT84600","grade_name":"AUT01829"},{"category_code":"DIST","grade_code":"UNIK01","grade_name":"unique01"}],"GEOGRAPHY_LIST":[{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AR","GRPH_DOMAIN_NAME":"Area","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5LJJ","GRPH_DOMAIN_NAME":"AUT0fd6n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNIMD","GRPH_DOMAIN_NAME":"AUT106Kc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDEED","GRPH_DOMAIN_NAME":"AUT118Ig","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4HJ0","GRPH_DOMAIN_NAME":"AUT1e468","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFGLK","GRPH_DOMAIN_NAME":"AUT1Fl5c","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTL5C7","GRPH_DOMAIN_NAME":"AUT2b4jm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNLB3","GRPH_DOMAIN_NAME":"AUT3OMmn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1OO8","GRPH_DOMAIN_NAME":"AUT4BFjd","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT8F68","GRPH_DOMAIN_NAME":"AUT50Dob","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4I6C","GRPH_DOMAIN_NAME":"AUT59aFk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7DBA","GRPH_DOMAIN_NAME":"AUT63dCN","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT3468","GRPH_DOMAIN_NAME":"AUT6amoL","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJGIL","GRPH_DOMAIN_NAME":"AUT6N14j","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTF8DO","GRPH_DOMAIN_NAME":"AUT7hgod","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTIKGD","GRPH_DOMAIN_NAME":"AUT7LneF","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEE5K","GRPH_DOMAIN_NAME":"AUT83jd6","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTO35J","GRPH_DOMAIN_NAME":"AUT8h95c","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJ5AF","GRPH_DOMAIN_NAME":"AUT951a0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJ8J7","GRPH_DOMAIN_NAME":"AUT97a0N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMFMC","GRPH_DOMAIN_NAME":"AUT9iaAa","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5GF8","GRPH_DOMAIN_NAME":"AUT9kHof","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOMOM","GRPH_DOMAIN_NAME":"AUTA76E9","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6OMG","GRPH_DOMAIN_NAME":"AUTAdBBK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBMME","GRPH_DOMAIN_NAME":"AUTAeFK1","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBHKN","GRPH_DOMAIN_NAME":"AUTAHhib","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTKKL9","GRPH_DOMAIN_NAME":"AUTal9L9","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTA4OL","GRPH_DOMAIN_NAME":"AUTb3naH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT2JIM","GRPH_DOMAIN_NAME":"AUTB7H5d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGM9O","GRPH_DOMAIN_NAME":"AUTb7OFD","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHHGD","GRPH_DOMAIN_NAME":"AUTb8DHG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHL2J","GRPH_DOMAIN_NAME":"AUTbAm6B","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN2D2","GRPH_DOMAIN_NAME":"AUTBcKk7","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6NB1","GRPH_DOMAIN_NAME":"AUTBGnka","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7AAH","GRPH_DOMAIN_NAME":"AUTbo1jM","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTC80M","GRPH_DOMAIN_NAME":"AUTca5oG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMN4B","GRPH_DOMAIN_NAME":"AUTCb848","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOELG","GRPH_DOMAIN_NAME":"AUTCBo2b","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTL4DC","GRPH_DOMAIN_NAME":"AUTCG15A","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT0GBI","GRPH_DOMAIN_NAME":"AUTCmCAc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBGO2","GRPH_DOMAIN_NAME":"AUTd6a8D","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN03H","GRPH_DOMAIN_NAME":"AUTd6m6G","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNMCE","GRPH_DOMAIN_NAME":"AUTD9G2C","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1CFJ","GRPH_DOMAIN_NAME":"AUTDeHHb","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOCIL","GRPH_DOMAIN_NAME":"AUTDFl20","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOOEK","GRPH_DOMAIN_NAME":"AUTDG89f","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOIHL","GRPH_DOMAIN_NAME":"AUTecOOl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7AIC","GRPH_DOMAIN_NAME":"AUTEGHhG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTIF2H","GRPH_DOMAIN_NAME":"AUTEjn30","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMD20","GRPH_DOMAIN_NAME":"AUTeK7jB","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGBHC","GRPH_DOMAIN_NAME":"AUTelHJj","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHEF2","GRPH_DOMAIN_NAME":"AUTEO5C6","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT6H2F","GRPH_DOMAIN_NAME":"AUTF7oAg","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT1E7A","GRPH_DOMAIN_NAME":"AUTFAHjG","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT4AMH","GRPH_DOMAIN_NAME":"AUTFm5HK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTILK1","GRPH_DOMAIN_NAME":"AUTfoe68","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGI20","GRPH_DOMAIN_NAME":"AUTg2La5","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAJAN","GRPH_DOMAIN_NAME":"AUTGEBng","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT9A8N","GRPH_DOMAIN_NAME":"AUTGFG2K","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMOOM","GRPH_DOMAIN_NAME":"AUTGIg29","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT3OKM","GRPH_DOMAIN_NAME":"AUTh2i9G","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTGJN6","GRPH_DOMAIN_NAME":"AUThCIa0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTN25J","GRPH_DOMAIN_NAME":"AUTHCl7n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT2JNN","GRPH_DOMAIN_NAME":"AUThfdIn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNHKJ","GRPH_DOMAIN_NAME":"AUThg494","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHEHK","GRPH_DOMAIN_NAME":"AUTHjH10","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTOIN1","GRPH_DOMAIN_NAME":"AUTHMCHO","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNLC7","GRPH_DOMAIN_NAME":"AUTHoKiF","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFF2O","GRPH_DOMAIN_NAME":"AUTi25KI","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAMKL","GRPH_DOMAIN_NAME":"AUTifEch","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT5HJE","GRPH_DOMAIN_NAME":"AUTIjnnl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTF2EL","GRPH_DOMAIN_NAME":"AUTjBkej","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT89D6","GRPH_DOMAIN_NAME":"AUTjce1n","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTB0BL","GRPH_DOMAIN_NAME":"AUTJe8lm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTJHNO","GRPH_DOMAIN_NAME":"AUTJKm5d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTME4F","GRPH_DOMAIN_NAME":"AUTK3FLl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTD2JF","GRPH_DOMAIN_NAME":"AUTK9fea","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTK74A","GRPH_DOMAIN_NAME":"AUTkb3nc","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTAA8D","GRPH_DOMAIN_NAME":"AUTKcMAn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHGFK","GRPH_DOMAIN_NAME":"AUTkF9e2","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDFAB","GRPH_DOMAIN_NAME":"AUTkFKBk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHJ7E","GRPH_DOMAIN_NAME":"AUTL1NNl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFOJ8","GRPH_DOMAIN_NAME":"AUTLEBAm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTHLD2","GRPH_DOMAIN_NAME":"AUTLJA5N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT7M4I","GRPH_DOMAIN_NAME":"AUTLJa9d","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEJEI","GRPH_DOMAIN_NAME":"AUTlo0nl","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTMMGK","GRPH_DOMAIN_NAME":"AUTmagcK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTDN3K","GRPH_DOMAIN_NAME":"AUTmbhoJ","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNB2O","GRPH_DOMAIN_NAME":"AUTn1i5N","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTEFLM","GRPH_DOMAIN_NAME":"AUTNc1n0","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT0HJE","GRPH_DOMAIN_NAME":"AUTNd3eO","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTFJMK","GRPH_DOMAIN_NAME":"AUTnEmle","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTKIAL","GRPH_DOMAIN_NAME":"AUTNkHbo","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUT9KL8","GRPH_DOMAIN_NAME":"AUTO2nEn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTBOIH","GRPH_DOMAIN_NAME":"AUTo8oao","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTCBN6","GRPH_DOMAIN_NAME":"AUToEjIo","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTB6KC","GRPH_DOMAIN_NAME":"AUTOFo8I","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTII09","GRPH_DOMAIN_NAME":"AUTOjFdn","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"AUTNNA9","GRPH_DOMAIN_NAME":"AUToJIIb","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"BFIQH","GRPH_DOMAIN_NAME":"BfiQH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"BOMAK","GRPH_DOMAIN_NAME":"BOmaK","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"CBSVK","GRPH_DOMAIN_NAME":"CbSVk","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"CSDGP","GRPH_DOMAIN_NAME":"cSdGP","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"FIJTH","GRPH_DOMAIN_NAME":"fiJTH","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"MHNNGRCD","GRPH_DOMAIN_NAME":"Ghazia","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"HARYANA","GRPH_DOMAIN_NAME":"Haryana","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"OCKJZ","GRPH_DOMAIN_NAME":"ockJZ","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"PA","GRPH_DOMAIN_NAME":"Panjim","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"UAFFV","GRPH_DOMAIN_NAME":"UAFfV","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"VLMGM","GRPH_DOMAIN_NAME":"VLMgm","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"VNFMS","GRPH_DOMAIN_NAME":"VnFmS","GRPH_DOMAIN_TYPE":"AR"},{"CATEGORY_CODE":"DIST","GRPH_DOMAIN_CODE":"XPBGS","GRPH_DOMAIN_NAME":"XPBGS","GRPH_DOMAIN_TYPE":"AR"}]}
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+POST
+POST
+POST
+POST
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+POST
+POST
+POST
+ashu loadGeographyList size = 127
+ashu loadGeographyList size = 127
+POST
+POST
+ashu loadGeographyList size = 127
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-04-25 17:43:06.279
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c95f4b5bb9ce9c150cd0fb5e5ad220f5fa883d0a37576a87f07af019c8236858af6cb8241aeb3ae3f6b0e895806cc2b34d959921434827281886ec68aadd00b68c79e4bb333cc7c22c71a6a24e14a343ce74dffc75d6c51235356531a9bee3da50187c6d252525778ffe1a1080e71781fc4aa0f56bf6982555d390cad075935887cb613f540d629a188d932eecf3d10c4fb4ed32cfa47e0fbe0044330b1389eae358026e8b12aa81040339b79c4bcc56f8965d9a8bb6e0b8b98f2b6e9f604dd26661a47991467298454c428143e681378.126e925d9c702878de1ca222e44a68ff4cac5f67f1c7b5145b86f0efc8b641b7, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c95f4b5bb9ce9c150cd0fb5e5ad220f5fa883d0a37576a87f07af019c8236858af6cb8241aeb3ae3f6b0e895806cc2b34d959921434827281886ec68aadd00b68c79e4bb333cc7c22c71a6a24e14a343ce74dffc75d6c51235356531a9bee3da50187c6d252525778ffe1a1080e71781f2cb6c6546ce52519a2b75638c402ef072b96220a5aa8066c3db4e1ef06ff12d225ada11c0e34882548699b5290661455654a0a5722ea677077b18b697c9af5323b01757983c3409f10e2e1b0b27f645b14384cc8b9dc7c7c103ff54edc0389b6.e8157762220cc478e16ec29e6ad3012140650cd7c8ecd2f3215b013e8a7f044a, status=200, messageCode=9020, message=Success]
+25-Apr-2023 17:43:07.303 INFO [http-nio-6789-exec-11] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: The HTTP header line [country:USS0x0d0x0aX-XSS-Protection: 1; mode=block] does not conform to RFC 7230 and has been ignored.
+		at org.apache.coyote.http11.Http11InputBuffer.skipLine(Http11InputBuffer.java:986)
+		at org.apache.coyote.http11.Http11InputBuffer.parseHeader(Http11InputBuffer.java:905)
+		at org.apache.coyote.http11.Http11InputBuffer.parseHeaders(Http11InputBuffer.java:565)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:277)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:745)
+POST
+POST
+ashu loadGeographyList size = 112
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+POST
+

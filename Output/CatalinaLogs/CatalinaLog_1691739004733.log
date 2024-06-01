@@ -1,0 +1,1001 @@
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+2023-08-11 11:45:52,612 http-nio-6789-exec-6 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1994)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1852)
+	at org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1647)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:70)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:74)
+	at com.btsl.pretups.cardgroup.businesslogic.BatchModifyCardGroupDAO.loadCardGroupProfileDetails(BatchModifyCardGroupDAO.java:1159)
+	at com.restapi.networkadmin.service.ModifyBatchC2SCardGroupServiceImpl.downloadCardGroupFile(ModifyBatchC2SCardGroupServiceImpl.java:143)
+	at com.restapi.networkadmin.ModifyBatchC2SCardGroupController.downloadC2SCardGroupFile(ModifyBatchC2SCardGroupController.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:459)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 69 more
+
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:46:30.106
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2383fb5f82e76bb2f81864e29637a0af6d31e905b35ce38ab886aac530c8e82642cd3c60140ead4588275f9f093ceafc5cdfdef15577006776abe3fdec82c683630667c131e16c6bccb79dd12be93eaa823669b7ab6b1512b9e7d013e1f0611494b9feeebea044964cec9eadfe5d3a6307fd8f5b090d5ad030b1c06565658080f2e1234b2cc0ab1bc6a305e1c34a5c9ca6d5e3327c92d9874043103eb6e7a2cbe3e97a1f5863ceabd298f4d18670d558c80c649af024b36b20ef5825c63c1bde85a0fbce237d34a0ded18e12296811ca.5ae5ddfdcc9544d1bb450861bf4cb3e8cb042efc82c0bc08a7b235ff6be48d91, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2383fb5f82e76bb2f81864e29637a0af6d31e905b35ce38ab886aac530c8e82642cd3c60140ead4588275f9f093ceafc5cdfdef15577006776abe3fdec82c683630667c131e16c6bccb79dd12be93eaa823669b7ab6b1512b9e7d013e1f0611494b9feeebea044964cec9eadfe5d3a63d5834f4310ef800a751b74dc2f40b310be5828b96d6e1700fd6140967ac9de9485cf037ac11f93ac0a1a384cefb6baa541c4151a1b65a4abb9859631941f49ef425a978ad0fab90c4c098c847bb2e3a3f66dea4ce28a1db3f10231471c46b169.c80839d3483c9564f93edb5558d6d66f96ecc181a60b60374984c58406ae39c0, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:52:04.216
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1fc9eff817d04718e51dab553031d4b7e4ed73f2509793b7f2a8adf2d9464c483a7df2bdcfe3e4ffcaeb7f9a6db53fd5029f87ef0719b88a0582a9e823a9dc7e841f2959ab30fb6eb3b63649803118d890f8fb596210e625f3092a222fdf73c5cf101df7f5e00684ddcc1f8c276fbba912290b5f15f600d0395fda03da0a3c5487c8a2c2fecd3c569372a76090f7fd77c079d42806f8a0aa93f74333e2764afa45e566b141d21ed16306f201d2f06de2e6875f944f5ecbb6eb3f19ca3ec92ff4441aa6166a94f5b50.1aa60f25d091412aa7323cc1488f49083b0dd919fb3090ee797957026e699a8f, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1fc9eff817d04718e51dab553031d4b7e4ed73f2509793b7f2a8adf2d9464c483a7df2bdcfe3e4ffcaeb7f9a6db53fd5029f87ef0719b88a0582a9e823a9dc7e841f2959ab30fb6eb3b63649803118d890f8fb596210e625f3092a222fdf73c5cf101df7f5e00684d6d0fae345b3a39840ec6054f0ddec9dbf09a17db5e0d5a5fe88220e354041db030beb3ae7e03637a32f7a56f843e5e455b63831c927bd768ddc7b005b70afe8aa48915dd3d6fb31666dd3af6ddfdf6cf370c5bbc1acb3b08d34c47288180258f.8333f9715d9692a6bd60e31ddc37ad001845f51b01915e066e9723fc5a7a428b, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:53:03.331
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1222afae6f8aa74d5b59f75e5bc73435b403ef2002e4f54d1f3a137e74bb86e749f6c0dc24231d4682141a04e2722ef560c1644eb1b94aa65f31da47e20ae9fcba260c79fc55ca1c4e35233f443108216b5d218f2ba271709c4e4c31157cfb411087cbe76290de3694f682843fe7d86bad38ca10725a1ef9aa65e7346de9532e647fac77af1bda8d9f4a17164423ed3b78961cb426727054b41d211c0fbab98a8f1f1f6f96c3807a726ca83b80c7a4aa3078c92a5a5294a407c1cf9a5921707c58e51b12049375b21.cf81e4fe9835cda1e78d764b130e2af693d2a431b70ae32a13994f024cfa47a2, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1222afae6f8aa74d5b59f75e5bc73435b403ef2002e4f54d1f3a137e74bb86e749f6c0dc24231d4682141a04e2722ef560c1644eb1b94aa65f31da47e20ae9fcba260c79fc55ca1c4e35233f443108216b5d218f2ba271709c4e4c31157cfb411087cbe76290de36968ece908462d77f8f895a9c0d473b1071c8d2899d2fc3dab842edfb64fcfc75fac1285fa36095366c352f20db05eccf5932ca4eb13343af5c411d2005c339ac4527630e018c848623bf21d24e5725edacf3b86c42fbf9c2406180de37b9959fa.4d99eb0933097522b2e62fe6c524f94d2e0ab46af6b10c06c2af195e7bf1a8f5, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:57:21.697
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1b57e36d476aed7955cb08f8e9e6e634d94de6f28b319f467a9a5f3fa3448b2f7c28a9f1e1045b0a2a381c4550e0398f8fb7f9e114b5c6f2ff0c33d38a45b4c48cb8f90d91d540158b1022b0c9f82c1b2874faa810d8ddd68f77b5936992a8407dd94aee6ec5e6d87cf1b3ee9605260aeacc0f15d6193ff8fc19114ff78984834507e7cfad13ec1edc91984d7dcf6a8c1f7b9e86df8e1bcf49c128ea52d354b803ac4ffdd1aaa142e6ef848a638d5ace3648ad9bc91121370a5c902882c90ecb0b53e66d4bd98efec.471890d6b68f1dab56618ed747d40e33627d55ab39207e192af0dfcf55704726, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1b57e36d476aed7955cb08f8e9e6e634d94de6f28b319f467a9a5f3fa3448b2f7c28a9f1e1045b0a2a381c4550e0398f8fb7f9e114b5c6f2ff0c33d38a45b4c48cb8f90d91d540158b1022b0c9f82c1b2874faa810d8ddd68f77b5936992a8407dd94aee6ec5e6d87263d9813280293a519c27bd090b2ce42082bbf4dbe747cf5c78f39b6ae8b431cdaf40c297194884f312dbd5e7420d34afdaba711bf76c047fe2367b67808bd5b8c925d2348bc386418ab21d01f77a064e967940587197e35af43362d9ffefe95.3417324e3861b24b7d5ee03cce1c40e6c875d5b67b7f0a68d5ac4b0c04ec8fbc, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:58:03.483
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1190d8b683a753f4a4a7ba92c68bb564b76dc0abb33e0f8ac7998791caae93bddea92ad34c4e4f81d4544339d161be36018209d9d3201d7bc4a3671b25320c6d8a17c971ecb19931eaa2f3eca6fb4910ad029c773024735d6a314315da626c6a2d65fa5ba9471e7238d63d2d42b1d30c265538a826380e78f77f5e143243d77b3cc96c21afb05a6d2dc9bc18359e1db0f7930193aa1f9d42832693acc1e813af9def937130a5d20a93e9fdacf3445c77e241bd6584ba40854f3c6175e32a6f746a0849327f3f93efe.dbacad6eda38218501ec1f820f82d5781d83dec1f8ad43c133250b2dee2a2373, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1190d8b683a753f4a4a7ba92c68bb564b76dc0abb33e0f8ac7998791caae93bddea92ad34c4e4f81d4544339d161be36018209d9d3201d7bc4a3671b25320c6d8a17c971ecb19931eaa2f3eca6fb4910ad029c773024735d6a314315da626c6a2d65fa5ba9471e7237e1bc2e03ee3425c7fb9e08041d0d901667360c7c9131794bb1fb337803ac530ac679f9c4f4fef432a25375f8352360a6ae7c2664cd649cf8345094a4c8e5f8fb00036699b810c0ca64f5c29d78815e8372626e1dcf5c0f39e2ee71dec689ae2.f4c62931a976b9a8bb08d7393fd4c63f1f8a2ee42a6afb662da5bed98e31a173, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:58:16.107
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1fcb106a58c8a92868d129ecb46d5da0c7fa1ba4c69c41ecc63c57ec5510f662b491ae19d179ddcb4edb5d9047832607b0fbf1ad9cfb55268a6a8c393aba724c929bae8b5e46f9cd79cbe5cea42dc44ee3f976fb4b607ec2454c90409d22efc5870f12f7785bef9d0b58bd04e98522e8800c9520e0a59a936689d7afd1dba41206ac299bc27cf5964c859cba0b2c839169270d509a66257b81962197f0c5feea50d40ec0b54e09c903a125640d247d27a1cd4fb833bc99318d9f227d10901677d63cf9b605350f6b4.474774af519d7849b41256f1fcbb450ab23d968c8246b15c8474ea85041b1c63, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1fcb106a58c8a92868d129ecb46d5da0c7fa1ba4c69c41ecc63c57ec5510f662b491ae19d179ddcb4edb5d9047832607b0fbf1ad9cfb55268a6a8c393aba724c929bae8b5e46f9cd79cbe5cea42dc44ee3f976fb4b607ec2454c90409d22efc5870f12f7785bef9d010046dcfb8f0e6bbc58e5178967c74e2bb8c8467ee66a77c7f0988fe6dbe00f3163ea07d1d1fa6f03ce2ef38cd3ce33d94c20a59a10fee92e271c028eed57c702374cedf8137e0fca96adea92be37eb27e45a6a734663899e515243d112e88f6.d06727ef04c6aff6b765bc50161c4bbaa79bc137133dd07b81f2b1aff5f751eb, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 11:59:58.78
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1d11bc478577c9742bb0acd8f135389a5c3aaad020d31780ddcbbbea7c69c9de8ba6f606ba5bb7f1040318f0bf23c82bb9b860e71965948af9ec6ade2249f9dbe6f7013db01e7f7e2d0e123d87dc560baa3cf65d52e8e8c0a1c6a0cac753e5004ceeb3bb19679d4a92390eef16203d30dc518165c508bf6c51e43564a2e10f33e86e5b723ef385d4028d1a4edf96cd2f426fa6135a8186f774495b2136e89fdb94b3c63487f6ffbb382e1b1138006f9c1f54c543e5b164545feeb703c006bf58cc69daa5e211c2c06.5ed8b24ae6d61f32d24a1a4a56132215c7a42030d1c319f327cb0d9e71d8dc41, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1ca6ab8e0dd940cff1d11bc478577c9742bb0acd8f135389a5c3aaad020d31780ddcbbbea7c69c9de8ba6f606ba5bb7f1040318f0bf23c82bb9b860e71965948af9ec6ade2249f9dbe6f7013db01e7f7e2d0e123d87dc560baa3cf65d52e8e8c0a1c6a0cac753e5004ceeb3bb19679d4a9540995f12b9f099e047abc3e4e0e890ec716b6e6c75cd3f6f2b44140e46ffc7d4cc19d2071571a2183177aabc59e751d38d05ddb59f8c8d9036bf42a4506525e719a026d3b2009cc42032ddae9431a402f8356a965d8bbe4d812afdaf8ee46be.b15ec1adecaed07d4d9fb2c5296dfb3a7cd40f98a14c2c36ad93d0cd6f57da08, status=200, messageCode=9020, message=Success]
+2023-08-11 12:01:15,935 http-nio-6789-exec-24 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1994)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1852)
+	at org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1647)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:70)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:74)
+	at com.btsl.pretups.cardgroup.businesslogic.BatchModifyCardGroupDAO.loadCardGroupProfileDetails(BatchModifyCardGroupDAO.java:1159)
+	at com.restapi.networkadmin.service.ModifyBatchC2SCardGroupServiceImpl.downloadCardGroupFile(ModifyBatchC2SCardGroupServiceImpl.java:143)
+	at com.restapi.networkadmin.ModifyBatchC2SCardGroupController.downloadC2SCardGroupFile(ModifyBatchC2SCardGroupController.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:459)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 69 more
+
+POST
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:08:02.538
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5df33a04c8a155f966047fb97cbf14a34fa52116d5745f4147a50f405263fb28ff690b37a37c6dd197a1d949d6c5ac632fee8c5d244689378862c5e48fe42c9b90acea7ed0b6ae7641f58ad1728d9f28041c94775e929082bd9bb8c449ae8dc0f96c17c57b8404707f4ae3f382158e5d43ae77717bdbe3b408a5fd9f0fc4d04ebc9ba84bcc01c312004822ecfb23df306614c175eda9f85e2f9bcfe654fe11f88381a4b440dae422c1c3e699c900a1d5567eef3d12f39fb381c072b755486398057fa950d9e84ce5f81ca7b077dc5c65.d95c50fd45b8cf69e0dec5c6680e5d106b83079d3b256beeadc16dff31ba8b39, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c5df33a04c8a155f966047fb97cbf14a34fa52116d5745f4147a50f405263fb28ff690b37a37c6dd197a1d949d6c5ac632fee8c5d244689378862c5e48fe42c9b90acea7ed0b6ae7641f58ad1728d9f28041c94775e929082bd9bb8c449ae8dc0f96c17c57b8404707f4ae3f382158e5ddc569f7dcc077c0ed636aa015c83a81e7ef6dfd6c71bc624185a05ac0cb91a740d55a9334d8aa54b74949e80a57e23f1c1f801fa462ff4526a15a5e2e97656738b422da3ce4af4ad51ff7b4712b2855a3cb71859c6c6392b3af3be0bbcab3f82.8c5054f01025eaa58941aaf5959530833fff1de95f83c56b576024fc591df8a8, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:13:12.557
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2c5b165bbe37af80140f39ac872c6e0f353ecb08f80fa8afd6c685748f0fddc389861a8c77566f5d19d22d7781a49afe52f28efe44a2edf04fe4baf2fe880e484883b8015b58b2f1df1188fee51c99feb98dcf85d9e146c8f63d7504f8a22a9d3089c6184f45c0f0d65d2f3ad91bd1b5ecb6d1eeef6659908e07f4324ec4b5f43d8a3eb74489fd227da6f0b56ab557388e08b321d3850e93e6d7ac8f06296ab2ee9a1d3ab0d831757330f74c887cc23ea479508067bfdfd9b66e99a0c8a42622966d8b6db14faea4a.a96b4b86b1647c4ff33682828313a043e19050d532361331392aed7dad02b2db, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2c5b165bbe37af80140f39ac872c6e0f353ecb08f80fa8afd6c685748f0fddc389861a8c77566f5d19d22d7781a49afe52f28efe44a2edf04fe4baf2fe880e484883b8015b58b2f1df1188fee51c99feb98dcf85d9e146c8f63d7504f8a22a9d3089c6184f45c0f0dc7e0967430b229c1f51247298cf4de4fc8a6f33651d00998a1b74ecb00c1c81334348d1ffc8da89642ae85e5c33dc4c5b696dc1a956f41a2010ce551d555c2d966d28a824ef0b6843c7035a8ab361ce3574ec59fdb35c9869115bb16d78871df.adb1cc345844751efe107fc1c52815e658586575a7422866ac7e75df048384af, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:13:47.446
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2d85b5127b2c761e4c79b2f0d434b5ee008841e58fd7952941479dc5cd2fde70e81c4b04f94681f6487cdebb3d9b7d45d1388e7e9d0bec63112a8d5516f513bf079df2ee7c0fba4e9b2187f14aa48a35c138fd07ada9916f88f856baf72573b53cdc6dae23fb4a8ffac624eee89d0df171af85d72db8b8e7b9bb0e8197ccc2cbbea0ed80b825fe73d8ffc854813fd68306b18dcf9b53c5bd0dc4d0f523fb767c34b4d1c99ff2f6bd030279b82be410340435379c8145b71df4908ede6cd314d8c69789aac900ee1fb.af86b38f87d8efc6135d661673056656537ca473b7ea3e591cf088290a31a956, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2d85b5127b2c761e4c79b2f0d434b5ee008841e58fd7952941479dc5cd2fde70e81c4b04f94681f6487cdebb3d9b7d45d1388e7e9d0bec63112a8d5516f513bf079df2ee7c0fba4e9b2187f14aa48a35c138fd07ada9916f88f856baf72573b53cdc6dae23fb4a8ff0f0e8cc6b31dc7260a520bf70a9b10be432222524cb8d47b4838f974a6f533798218389ce51a4e34c3b8bf6b47114940b8ddf81071c1eb15b4e5aa84ac10c08701fe7c2936b03eb265edf7f8445dfed6249a6e32c3086d352122e0ece6c8d5fc.0a8fad425737567e2e075d5e60357381720732ef25501101c0f994041e9b5675, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:15:50.297
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2b553db79c3a3a23f443a2c4083492788c9d261f11d75eda27e2d15fbd0ef38bc56aa0c72380ff8af2e3a28373919546ae811bbcb2d81e6fb98aa666dc01c79a4bb7c219c9e35ede176298f8993d1fc615ec1b0676356731f391f0ace473a31569742596ded4edab61896a8eb8f028f0f22a2e5cad59983567b2ce5859067bc07ba8adaf1ff655e27acf5fc97ea4cf5a73d3b23c3e17f815fbc9b4ba3955305d223d4b864e42a836ffdf21638ff0bcce9c09fae643a2be9ee339fb1d5a08fc07cd682693b26e9cec6.9fa5a25327ba3f98bae84c396ec500c37107a0941d75bce779d8919ed3fd43f2, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2b553db79c3a3a23f443a2c4083492788c9d261f11d75eda27e2d15fbd0ef38bc56aa0c72380ff8af2e3a28373919546ae811bbcb2d81e6fb98aa666dc01c79a4bb7c219c9e35ede176298f8993d1fc615ec1b0676356731f391f0ace473a31569742596ded4edab60ee9122951aff633900f0248c5eb2e56eadb840be23ad67b447dcb368c0c593812986e4ef9f2ac3796fff094d30df3d3c0c117773593fc1859698c1985ea1a1aab243b507ba8150fbf0bf4808f4bf96652d7c3693c65cf73347eb46618483127.8190ce01edf43a9823393229ea9a6585f78ff4099f8e08eddf76beca42b7c8f2, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+2023-08-11 12:18:22,051 http-nio-6789-exec-11 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1994)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1852)
+	at org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1647)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:70)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:74)
+	at com.btsl.pretups.cardgroup.businesslogic.BatchModifyCardGroupDAO.loadCardGroupProfileDetails(BatchModifyCardGroupDAO.java:1159)
+	at com.restapi.networkadmin.service.ModifyBatchC2SCardGroupServiceImpl.downloadCardGroupFile(ModifyBatchC2SCardGroupServiceImpl.java:143)
+	at com.restapi.networkadmin.ModifyBatchC2SCardGroupController.downloadC2SCardGroupFile(ModifyBatchC2SCardGroupController.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:459)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 69 more
+
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:18:34.078
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2cbea3b83d3793d081a2dd23db41358fee5a7028f22fcc795911940fbf440cfa19310175f3aa8aa3754b77f8d2faf1805ac3e271e67b011e98205d134be48d205ecfaf5134c124dd4ef43e613050c570c8c05efce7ada4482b21fd9194a158992e5801f562bbcd1ba3608f509fbc76db5ed72b646100363a986b830ca4e3beedc1edeed27638179dab00c8f4ea78a9e3106113176b6dd49d3a3fb871d4191ea1a010888c7ffecab0e433115e3e589e573da287bdbaa721867e589f26c9464d89e106137941bcff1e2.30b50a69f267636853f6f852b8d55344b04db13d6b5f4f92b2227cd3fdd19a7c, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c9c01ccae0b88a9a2cbea3b83d3793d081a2dd23db41358fee5a7028f22fcc795911940fbf440cfa19310175f3aa8aa3754b77f8d2faf1805ac3e271e67b011e98205d134be48d205ecfaf5134c124dd4ef43e613050c570c8c05efce7ada4482b21fd9194a158992e5801f562bbcd1bacb6c5d84c36b02ef3405104bce5e4608893fd5373cf1299311b6ae68fdb0fe5801145e18c9eb4b6882d072d2de61e0eb6980948e82fb190e0496260435c7f4a57d109babeef126eaaf12ebce3488ce9a8d3247548128b59fde5722c9effa595e.e06dc06ac89e87b008e4633070b39f320bc5b236ada75587c98dfa3ed26a7445, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:26:31.755
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd7a537d316caf198b42d172eb243c2ca1ce419764ce751f4dafd7c4e310f004031bafaf66ed64333081ce1162f102f6d36cc1cbc7e166660110b6314574834e0e2c152f65e945a4eead3f98ec6abaf7b5c9760a0e2ae75e95f509b02df023f3631f0c5d02c35dd34cdd0ed3a596f0cdece5952fdf27e0ea926af1acdb053678469fdfcc64cfaf8dcc8dd9848ce6bda1b5ce90f21565d263289841598729ffde599519d365e81bfe23d051fa974115d65a23c35f3fdbdf71c7dec4a56c62efa1a5a439a2ac4a9c34ebc4067a579e6bc60.eaa069ee7d9e53daf430ba5c67656d69c6924f8932fbf78c7c4f186f809493ec, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cd7a537d316caf198b42d172eb243c2ca1ce419764ce751f4dafd7c4e310f004031bafaf66ed64333081ce1162f102f6d36cc1cbc7e166660110b6314574834e0e2c152f65e945a4eead3f98ec6abaf7b5c9760a0e2ae75e95f509b02df023f3631f0c5d02c35dd34cdd0ed3a596f0cdeb6531ed2c11be5fe55f138cac3fe15cf7fcd4e7e355f58a7d3694a53d3b55fa729e745786731ef7ec54fe77f3e22a068a70beb0ea50b08666d54e9d90cf99a41532a9000062b18bce8f56be6e4a35bd018029d966ea644603baa4b941397b3d2.c78e57aab12d7e016948b9cc8a433a95643370e67541771ce657f16d6a80329a, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:31:09.265
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c177b892ba89414c1a7366ec62f7b6627f2ffc04d85641113c8a22c275e160dd46fffa8115f1377cc252354e171cd5c2fc8adcfde8bbff027604a2f475becdac10bda88d2bf19a956b84332a2dfb7fe999bcbe7eac097642e2892d6f8d09c6b16d2f7a0278062154e2da9af48ece916cdd0a6ddfe981bcf55d7b1f6746776e3052081fabea7325461f9674506efceab05f98996e3cd26eca1d1f9990eee606d34a9787821b3cd770fe2009290310b2564eeb6073b7e443d0716293e61d8b52911981bf7372170934f.ea3cb36c5f850945ef9526c6cf0323c8d30a29848e7299f153552235911e50a3, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c177b892ba89414c1a7366ec62f7b6627f2ffc04d85641113c8a22c275e160dd46fffa8115f1377cc252354e171cd5c2fc8adcfde8bbff027604a2f475becdac10bda88d2bf19a956b84332a2dfb7fe999bcbe7eac097642e2892d6f8d09c6b16d2f7a0278062154e1fe62699136e4f6a5381d86b282699e0faa9ebdd29b001d7365a9726a962ec5ff031d0763cc1b2958697fb6a87e47e05cee4046bb0d44718f5e94f552cf7733cca33900eb90a99fd5126ea16eef458b0509c8aa042e1b8cdb7e490d33cfb6e72.8764f1c4c9da0daef3fa80b987e4d9fad746dfbbc63073ce33904cc4eccd9335, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:31:32.538
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7cd926b51990d986544db0a91deca10c70ecf7121977f2968bca7f1410aa62c4e1740fab00f8c2e094d8bac1e3143ab7d6c227f6b20afd8ed78575f55232909c9f8d21fee01246ee36064abe1c80ae6233cbe94f505df7625c2ce0b0bae1d59800dbf9a87a9d715c2ef098d9d09b4caa42f3b254c624beae314f9c2f85f41ee531dbbaaa472c9a1fd6c3a84540493553c09d457590d6a6e50a9dc947c2e737579c3f70a0d7abba067840ec8d4071997f84d49bacfbfc508747be9818f445d9aa4dfcac6109b4b8e3e3.9fb305fad9f96fd3ff167969aea7537909cc4f5ba5e3f9d89030654f2a487b03, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7cd926b51990d986544db0a91deca10c70ecf7121977f2968bca7f1410aa62c4e1740fab00f8c2e094d8bac1e3143ab7d6c227f6b20afd8ed78575f55232909c9f8d21fee01246ee36064abe1c80ae6233cbe94f505df7625c2ce0b0bae1d59800dbf9a87a9d715c2edfe7cf8d4397db5cb283fd547cdb7a75a6eea57aa3ceec757cc9e1b0f7ebc79b26fad6e7c106c4972a3b9e952adcf4f8162163feded704c6414ec66e26d095345a9ecc06c5910cbe071f92304c1ad51dea5bd2212ee09b7d0af7a1b1c5129978.77a75ec92f60fdf664fac86c437865d42a219c9f3ac2793ec46952368cdef342, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:32:09.734
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7ca22fe36cafa8525d2d956400625fbcc208d024821b2be5349d5ccdf811a76aff10f743a50677c7c8249a41981a6ccb065c152b6ee974584c0f28ae074282c07c88714301c1eec6d766c4aff48f80296e30ef8f5cc372074360d971ee4ff93dacf1d4db58230de50eaff7a1f3f0919e27192dd6eaea7f4bd04ddc2a5ffba4814083388de34d114db5599e4a5fe09813f720ed665558d4b56bff27c11cd1a86258778f481e64d5ee93b21ae4082ee045e2c1412b38d091c37a73be88cd884e938016fef20884c4895b.2242626143856343123362643dd59db41b74aaf02a6493667ea9cb0d25bfa7f3, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7ca22fe36cafa8525d2d956400625fbcc208d024821b2be5349d5ccdf811a76aff10f743a50677c7c8249a41981a6ccb065c152b6ee974584c0f28ae074282c07c88714301c1eec6d766c4aff48f80296e30ef8f5cc372074360d971ee4ff93dacf1d4db58230de50e54ad9eccbd8cdcfb1dd6e72ce56c90e4f9a03762e881b210545361a4978840eca694a3792c1a5fb1d6594cb04fb9a6d6aa58b49d6256240e8e3e4ff572ac525261c08e24d2d5cf0dcad7c24d46e5c5652d8d1c2458e9b44af487d07a147090ea.fd2c425230fbe1904e639e6b7d548844a2cb804a36bd7a101b1fce8ce5352425, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:32:23.264
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c9ca28c820e5bc7392d0218b1bf1b90a49585b7711492437d7101c8b635060ea95289aed9e1978377d5a44a6098f7d98606de7ea840f62654142965de3d75b1bf3b2173167e38d38ae28dda8c1589dcad573263182e6b449d636f486f7576b1a0cf3e450c057fe61e52fc330124dd7aec3bb08ed27f4dc5894839d9a8c6bee4975d7dfb8a4eb777c6c31c9cd4847a15bb20cbda1a70ef88ef229bf130e0931ee881f50016abfbdf44bba10735966c433a47dbc9ce92fb1be7a9cf08c92592dcb3407d8d1989601d94.cf2c3d48209f9dd4c3c78c52f2dc53045ff11d798c0e1aee48b5f159fb9d9fc7, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c9ca28c820e5bc7392d0218b1bf1b90a49585b7711492437d7101c8b635060ea95289aed9e1978377d5a44a6098f7d98606de7ea840f62654142965de3d75b1bf3b2173167e38d38ae28dda8c1589dcad573263182e6b449d636f486f7576b1a0cf3e450c057fe61e06365169cd809b6064421d44c033428131c4471c05579652b886ce24afaa9f8df4c3debff74ef4063ff5d8459b6dc39090b37b232a625403b1ebfe881e9e0c8e1684e4bba8447358073a1ad08d62afda6d217371b263469ee2c86465deb45bc0.b44c6bd8ee2c519e6d33b41f147568d6e7c84edebce1767e8643bae083c0f156, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+2023-08-11 12:37:36,245 http-nio-6789-exec-26 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1994)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1852)
+	at org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1647)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:70)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:74)
+	at com.btsl.pretups.cardgroup.businesslogic.BatchModifyCardGroupDAO.loadCardGroupProfileDetails(BatchModifyCardGroupDAO.java:1159)
+	at com.restapi.networkadmin.service.ModifyBatchC2SCardGroupServiceImpl.downloadCardGroupFile(ModifyBatchC2SCardGroupServiceImpl.java:143)
+	at com.restapi.networkadmin.ModifyBatchC2SCardGroupController.downloadC2SCardGroupFile(ModifyBatchC2SCardGroupController.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:459)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 69 more
+
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:38:08.687
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c8bd6b5e1d8de6d0c68be3d48b67136d2cd87595604a9f456c0e4143b58ba175d0fe724beee3beb35cc1c83f5e27a9ca830634737f4c3526a8828b7b27cd560f8090e33cf13aceb4d37e75cf2abbd5f93cea590265e7128d55bb3f9c331999935a781d4b1de2d584455473ca064928c5bbcf3eb66818819c15510220127226aa9b321dbaeecc15000c41c569a77c85cc7435b3f0eec7bbc9938bfe7c9e398d18c9f335871609814330d884cba4c54494e3edd8f219085e286dccf099453dcef29e85f8647fa5c5f16.2ca74794bced33184db87089778ee5cfa761a86569baabb72ef45b5d61066f38, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1cb3fc75f4df121d7c8bd6b5e1d8de6d0c68be3d48b67136d2cd87595604a9f456c0e4143b58ba175d0fe724beee3beb35cc1c83f5e27a9ca830634737f4c3526a8828b7b27cd560f8090e33cf13aceb4d37e75cf2abbd5f93cea590265e7128d55bb3f9c331999935a781d4b1de2d5844f890f0851f569d65a098f8920916be1f57c9f04494f6178153364f8596b07addfa3ef1c632a9d897cc721e2fd6f157328b88b5349f3522c438444bf6ffc5cfb4390001adb60dba0dd15c019c9016489120f973bc829f25d6941706517467a7e1.77c88a4925378a2ff50fec8d912ad93e7f4539af2718dcf78ba4056dac260eb9, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:45:43.086
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c066633135d1d7a0cb00c596a990c25c694afc8ab9298e99abe24ebf06b34f738b9fa9480cccd489e14bb7ae034dabe3fb87c3df845a0f5f67556afd19f156dd43cb697b524d9a3a6a9bedfaf8051c5176eb09fa49e3abd7342ea1e6c12f5c7563cf1dbe7dca4542229191fa2604db5d25bac56089da92dbae1b4a6d8023c474d960b360fa33c43e23944eb0b80c6a3f4dab4318bca1f6d08ebeca93725568974009489fc4161b4af60915b87d6775fc20de8e7e9706975401448d66f24edabc9003292cda69ec12ff258ee48aeb1de12.fd43c7d2bb32e86a2d9a93240a5dcdd7822008079b6934996b944aff04d80595, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c066633135d1d7a0cb00c596a990c25c694afc8ab9298e99abe24ebf06b34f738b9fa9480cccd489e14bb7ae034dabe3fb87c3df845a0f5f67556afd19f156dd43cb697b524d9a3a6a9bedfaf8051c5176eb09fa49e3abd7342ea1e6c12f5c7563cf1dbe7dca4542229191fa2604db5d2a749d66add8b4deebc39b6fe33b3d0f69a84fece4b79938fbd320acadb52d7d8c69e02f356220409e495b2bffad9af71be67de32ad05ab4e13a7928a127e60648814d1b157c5c15ee8e24ab56b5ce34a245fd348ec895afe021f3bf5e682eff7.08defad6d0e9aaca480d0f782bcac98caf94aeb1a5e224d168365ac6e90594e9, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:48:41.55
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e75e5771d9a1d385862c87fd7b93b831b5a6283949ec29bb09fa8bdc00a1557a8421810c0302f4099eecceb4f6f9af4539ba573794373ee27c2b730b055fea2fc7c7833f9981aa0dd37cb4b5f0e6e04b8d5910507bcdd5d8814373bd1fb51df53577f49225fec00dea2d249134b3a54b8b2144b261c04194a8708eebec290c02abc04436afc1615205654ece1441a15dfa6fc74dffc67d2ad10a951a343717840e8ff563bc6c70b39b942185182d777309bd3fc6a768ce504fa6a5ce0f143c39e21ce6cdc833d44251fafa088acdefa11cc.b76444ea35d4613e4176b8072d1a25606cf4683036a4a897ceb7b82296f2fb79, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e75e5771d9a1d385862c87fd7b93b831b5a6283949ec29bb09fa8bdc00a1557a8421810c0302f4099eecceb4f6f9af4539ba573794373ee27c2b730b055fea2fc7c7833f9981aa0dd37cb4b5f0e6e04b8d5910507bcdd5d8814373bd1fb51df53577f49225fec00dea2fa3e5693948328d7f27b82847806e6ad42334a725c5dcf57a8ad9e138fdbafee1ddf46f6e9625e5785ac598be27ade2eb34f1fce5b1e5ee27b980ae0b25183d28c14bc52df2327a8eb29a85c6f8262687639a7cdbb54b7516eeaf61970f3149c35d4d60b7e734e7f.531a71c1037bdf88035fa450ff071ea28cff3bce61b711fd6568929e6592570c, status=200, messageCode=9020, message=Success]
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:48:46.354
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e7533723927b572a184ee290d642a4e0cb24c98d33504779317ecd3db04f322db06b25cf3f71605500a17330735814af29697cc567f70da9397e4847a6745f6eca1ae2dfc2be56736c88872684357c0ecfb039c425c102588e3ecef99d1ae8b3eef211ded53a1d2e7d0374ef8d47c36c4894486ac11400b6d642a5dd1c9db13fe29362353928d0e241361f03b5ec184e4f71c27f6cbdad5681c3d8dc7d5d58139a6a980b12a64c335e5ff47dcb0d0343ae760e7510d1ca90dc036b2e073c4b9ff102240f7739043c39f75f45013031ee81d.f9155e9f5eebb6ddb9cff513e2cf7519962168dece6a0e02b5c7611073feca1a, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e7533723927b572a184ee290d642a4e0cb24c98d33504779317ecd3db04f322db06b25cf3f71605500a17330735814af29697cc567f70da9397e4847a6745f6eca1ae2dfc2be56736c88872684357c0ecfb039c425c102588e3ecef99d1ae8b3eef211ded53a1d2e7d03b867562a770972918c9c804fc113b94ec74ecc5bb68c12ed1f31c14b476800635ae73baff3156c0602e9fe106693bb991f928a65964da720e8aa37c52300279122e98773947cb6dc9462b68bd95fcff28940995e441c196cd22291527f9e8c21e25117b17542eae.ffa84fca4a0513109ba55ec655bb876512c3152239ca045396721f16eaf89063, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGLA0000001752
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:50:45.486
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2e1d468616189ba70a402ee5093c88939e893beed86e011639e86723b14abf7235bc65631757d8ec7c793f690d8d3b7d60ff5879ca8dd59e88457d8a0dd1002410bf6c6bcbad1a37a0850a06f31725751cfd5899ed8d3f5994f368fc232ab5216ac68453adeee30a6f2c42d44ab25407ceb80c496bd79b2b22d6e4061734c9542d2aafe11d2eb18b390889ee11cc8c695d929fb55dce395763bb50769115ca7e0d94cac6ef9d347b9ec1e740b962074f4f05e2506c2fc76b87351d0f3f78de515a7539685a0556378e14ed07bfabf78e.ef55614aa519a01890fb910d0bfa544c378115f01ee6ad9c6058d107f739a252, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288fccd2d4886fc57075d9eb834d30372206fa4d012d014550bc91be7f5d5f431b5c0c907744e41fafaab7eed2239cac21aad0852c3619a8b1c2e1d468616189ba70a402ee5093c88939e893beed86e011639e86723b14abf7235bc65631757d8ec7c793f690d8d3b7d60ff5879ca8dd59e88457d8a0dd1002410bf6c6bcbad1a37a0850a06f31725751cfd5899ed8d3f5994f368fc232ab5216ac68453adeee30a6f2c42d44ab25407f79b9ccf08b02f30568a847ad46821892ab55c63c1238dd0ad1c1b475ae6850e44be333fbf0d550afd8a7c6e73589e8b474a7a5f63f4ec4f31dc03e9f31d1c7d9c3edffd8a02903b5d0db74cde27a21938c5c9423f000eb0b56eafbb51771f9c.5ffed176908a742ed51006e2a37d2045bc915ce38246b47ed01703221b5c05e1, status=200, messageCode=9020, message=Success]
+sqlSelect  >>>> SELECT distinct PAGES.page_code,
+  PAGES.module_code,
+  PAGES.page_url,
+  PAGES.menu_name,
+  PAGES.PAGE_URL,
+  PAGES.IMAGE,
+  PAGES.PARENT_PAGE_CODE,
+  PAGES.SHOW_MENU,
+  PAGES.sequence_no,
+  --MODULE.module_name,
+  PAGES.menu_level,
+  coalesce (ROLES.from_hour :: INTEGER, 0) from_hour,
+  coalesce (ROLES.to_hour :: INTEGER, 24) to_hour,
+  --MODULE.sequence_no MSEQ,
+  ROLES.ACCESS_TYPE, 
+ PAGES.APP_NAME FROM CATEGORY_ROLES,
+  USER_ROLES,
+  ROLES ,
+  PAGE_UI_ROLES PAGE_ROLES,
+  PAGES_UI PAGES,
+ GROUP_ROLES 
+  --,MODULES MODULE
+WHERE 
+USER_ROLES.user_id        =? AND ((PAGES.DOMAIN_TYPE IS NULL) OR PAGES.DOMAIN_TYPE = ?)
+AND ((PAGES.CATEGORY_CODE IS NULL) OR PAGES.CATEGORY_CODE = ?)
+AND USER_ROLES.role_code=ROLES.role_code
+AND ROLES.domain_type           =? AND CATEGORY_ROLES.category_code= ? AND CATEGORY_ROLES.role_code=USER_ROLES.role_code 
+AND ROLES.role_code             =PAGE_ROLES.role_code
+AND (ROLES.status              IS NULL
+OR ROLES.status                 ='Y')
+AND PAGE_ROLES.page_code        =PAGES.page_code
+--AND PAGES.module_code           =MODULE.module_code
+AND (ROLES.role_type           IS NULL
+OR ROLES.role_type              =(case 'ALL' when 'ALL' then ROLES.role_type else 'ALL' end))
+AND ROLES.gateway_types LIKE '%WEB%'
+AND PAGES.PAGE_TYPE IS NULL  ORDER BY 
+--MODULE.application_id,
+  --MODULE.sequence_no,
+  PAGES.sequence_no
+pretups123>>>>>>>>>>>>>>pretups123
+abc/data1/pretupsapp/tomcat_trunk_springboot/vms/vmsdev/logs/cookies/
+userId >>>>>>>>>>>>>>>>>>>>>>. NGBC0000003721
+userId >>>>>>>>>>>>>>>>>>>>>>. 2023-08-11 12:52:17.555
+POST
+TokenResponseVO [token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e75085ce2c5e6fc727815cb5f82e8e717ed533767edac52b95fe000595b6798da2369c82308bab8cc9e844f8a9b96bb938f41a4f93badb37227a6791cc47ffc94d5e77e628a8a5256b2d3489c342d07a0d4a8476ca42b120aa007bc4390747d89d8f6828049b995df7fc4ad2393a4ed4c953d5fe9ae42a24544837b0a60d5e513d820b85ca9108100ac2ae2f4ab043cc30a02d4db4f8788229baa12a77ee040ef91e564efb6e27b64b8cbd4ced3934092bdad8bd7e37d88d386d6e776705ac41810da40864cf3e741bb9c681da73d416b86.08a1a84614513eb9fc70550369d32c21a981ace55b90ad43442add8f285e6746, refreshToken=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc2887fa326a5a9e7e184942a839cb7ca387895aadaedcb56d9f4eaf11c66de7c53ab3f954b1f6702dcba21b5f3dd96a43397e02a1c660b6ec126d30d5c9306f70e75085ce2c5e6fc727815cb5f82e8e717ed533767edac52b95fe000595b6798da2369c82308bab8cc9e844f8a9b96bb938f41a4f93badb37227a6791cc47ffc94d5e77e628a8a5256b2d3489c342d07a0d4a8476ca42b120aa007bc4390747d89d8f6828049b995df7f2a5e9d5eafe20871781da780f14bb8a96272b77843fb64a192cd1dae7a606c4dbc3dde19a55c5c95f834e79a08b51488e39e1444da29a6e61f1ca74c86d930de4bcc004a4a07154a0de6f980338b0e459d49523ddea47bd574e90c0dfe1b5cfb8f81918e40108798.7680ea42fff5ed228b66931df133d8139f6ba8abbda64b3e81e6accf30d1aeb8, status=200, messageCode=9020, message=Success]
+2023-08-11 12:53:59,124 http-nio-6789-exec-24 ERROR Unable to write to stream UDP:172.30.38.232:6789 for appender PreTUPsOut org.apache.logging.log4j.core.appender.AppenderLoggingException: Error flushing stream UDP:172.30.38.232:6789
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:266)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:222)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.write(OutputStreamManager.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.writeByteArrayToManager(AbstractOutputStreamAppender.java:206)
+	at org.apache.logging.log4j.core.appender.SocketAppender.directEncodeEvent(SocketAppender.java:459)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1994)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1852)
+	at org.apache.logging.log4j.spi.AbstractLogger.log(AbstractLogger.java:1647)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:70)
+	at com.btsl.logging.impl.Log4JLogger.debug(Log4JLogger.java:74)
+	at com.btsl.pretups.cardgroup.businesslogic.BatchModifyCardGroupDAO.loadCardGroupProfileDetails(BatchModifyCardGroupDAO.java:1159)
+	at com.restapi.networkadmin.service.ModifyBatchC2SCardGroupServiceImpl.downloadCardGroupFile(ModifyBatchC2SCardGroupServiceImpl.java:143)
+	at com.restapi.networkadmin.ModifyBatchC2SCardGroupController.downloadC2SCardGroupFile(ModifyBatchC2SCardGroupController.java:250)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:459)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Message too long
+	at java.net.PlainDatagramSocketImpl.send(Native Method)
+	at java.net.DatagramSocket.send(DatagramSocket.java:693)
+	at org.apache.logging.log4j.core.net.DatagramOutputStream.flush(DatagramOutputStream.java:103)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushDestination(OutputStreamManager.java:264)
+	... 69 more
+
+

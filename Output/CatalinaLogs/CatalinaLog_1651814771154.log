@@ -1,0 +1,1001 @@
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,786 : 90650445 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=4634300
+2022-05-06 10:49:24,787 : 90650446 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.util.PretupsBL  - getDisplayAmount :: Entered: p_amountStr=4595700
+2022-05-06 10:49:24,788 : 90650447 [http-nio-6789-exec-121] ERROR com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUsersForHierarchyFixedCat(C2CBatchTransferDAO.java:4656)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUserListForC2CXfr(C2CBatchTransferDAO.java:4114)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListServiceImpl.downloadC2CBatch(DownloadUserListServiceImpl.java:224)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController.downloadUsersList(DownloadUserListController.java:204)
+	at sun.reflect.GeneratedMethodAccessor3101.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:412)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,790 : 90650449 [http-nio-6789-exec-121] ERROR com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUsersForHierarchyFixedCat(C2CBatchTransferDAO.java:4656)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUserListForC2CXfr(C2CBatchTransferDAO.java:4114)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListServiceImpl.downloadC2CBatch(DownloadUserListServiceImpl.java:224)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController.downloadUsersList(DownloadUserListController.java:204)
+	at sun.reflect.GeneratedMethodAccessor3101.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:412)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,791 : 90650450 [http-nio-6789-exec-121] ERROR com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUsersForHierarchyFixedCat(C2CBatchTransferDAO.java:4656)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUserListForC2CXfr(C2CBatchTransferDAO.java:4114)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListServiceImpl.downloadC2CBatch(DownloadUserListServiceImpl.java:224)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController.downloadUsersList(DownloadUserListController.java:204)
+	at sun.reflect.GeneratedMethodAccessor3101.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:412)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,793 : 90650452 [http-nio-6789-exec-121] ERROR com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUsersForHierarchyFixedCat(C2CBatchTransferDAO.java:4656)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUserListForC2CXfr(C2CBatchTransferDAO.java:4114)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListServiceImpl.downloadC2CBatch(DownloadUserListServiceImpl.java:224)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController.downloadUsersList(DownloadUserListController.java:204)
+	at sun.reflect.GeneratedMethodAccessor3101.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:412)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,795 : 90650454 [http-nio-6789-exec-121] ERROR com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.parseLong(Long.java:631)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUsersForHierarchyFixedCat(C2CBatchTransferDAO.java:4656)
+	at com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO.loadUserListForC2CXfr(C2CBatchTransferDAO.java:4114)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListServiceImpl.downloadC2CBatch(DownloadUserListServiceImpl.java:224)
+	at com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController.downloadUsersList(DownloadUserListController.java:204)
+	at sun.reflect.GeneratedMethodAccessor3101.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.btsl.security.EncodingFilter.doFilter(EncodingFilter.java:412)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:688)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-05-06 10:49:24,797 : 90650456 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.channel.transfer.businesslogic.C2CBatchTransferDAO  - loadUsersForHierarchyFixedCat :: Exiting:  arrayList Size =49
+2022-05-06 10:49:24,798 : 90650457 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,799 : 90650458 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.msisdn args: null
+2022-05-06 10:49:24,800 : 90650459 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,800 : 90650459 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.msisdn
+2022-05-06 10:49:24,801 : 90650460 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,802 : 90650461 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Mobile number**
+2022-05-06 10:49:24,803 : 90650462 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,804 : 90650463 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Mobile number**
+2022-05-06 10:49:24,805 : 90650464 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,805 : 90650464 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.loginid args: null
+2022-05-06 10:49:24,806 : 90650465 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,807 : 90650466 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.loginid
+2022-05-06 10:49:24,808 : 90650467 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,809 : 90650468 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Login ID**
+2022-05-06 10:49:24,810 : 90650469 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,810 : 90650469 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Login ID**
+2022-05-06 10:49:24,811 : 90650470 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,812 : 90650471 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.usercategory args: null
+2022-05-06 10:49:24,813 : 90650472 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,816 : 90650475 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.usercategory
+2022-05-06 10:49:24,817 : 90650476 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,818 : 90650477 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: User category
+2022-05-06 10:49:24,818 : 90650477 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,819 : 90650478 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: User category
+2022-05-06 10:49:24,820 : 90650479 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,821 : 90650480 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.externalcode args: null
+2022-05-06 10:49:24,822 : 90650481 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,823 : 90650482 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.externalcode
+2022-05-06 10:49:24,824 : 90650483 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,825 : 90650484 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: External code**
+2022-05-06 10:49:24,826 : 90650485 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,826 : 90650485 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: External code**
+2022-05-06 10:49:24,827 : 90650486 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,828 : 90650487 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.balance args: null
+2022-05-06 10:49:24,829 : 90650488 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,830 : 90650489 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.balance
+2022-05-06 10:49:24,830 : 90650489 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,831 : 90650490 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Available balance
+2022-05-06 10:49:24,832 : 90650491 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,833 : 90650492 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Available balance
+2022-05-06 10:49:24,834 : 90650493 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,835 : 90650494 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.quantity args: null
+2022-05-06 10:49:24,835 : 90650494 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,836 : 90650495 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.quantity
+2022-05-06 10:49:24,837 : 90650496 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,838 : 90650497 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Quantity*
+2022-05-06 10:49:24,839 : 90650498 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,840 : 90650499 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Quantity*
+2022-05-06 10:49:24,841 : 90650500 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,842 : 90650501 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.product args: null
+2022-05-06 10:49:24,842 : 90650501 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,843 : 90650502 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.product
+2022-05-06 10:49:24,844 : 90650503 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,845 : 90650504 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: ProductCode*
+2022-05-06 10:49:24,846 : 90650505 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,847 : 90650506 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: ProductCode*
+2022-05-06 10:49:24,848 : 90650507 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,849 : 90650508 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.remarks args: null
+2022-05-06 10:49:24,849 : 90650508 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,850 : 90650509 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.remarks
+2022-05-06 10:49:24,851 : 90650510 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,852 : 90650511 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Remarks
+2022-05-06 10:49:24,853 : 90650512 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,854 : 90650513 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Remarks
+2022-05-06 10:49:24,855 : 90650514 [http-nio-6789-exec-121] DEBUG com.btsl.common.FileWriteUtil  - writeinXLS ::  p_excelID: BATCH_C2C_INITIATE p_strArr:[[Ljava.lang.String;@1fb322c p_strArr length: 98 p_fileName: /data1/pretupsapp/tomcat_trunk_springboot/vms/logs/BatchC2CDownload/userList1651814364798.xls
+2022-05-06 10:49:24,859 : 90650518 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,860 : 90650519 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,861 : 90650520 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,862 : 90650521 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,863 : 90650522 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,864 : 90650523 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,864 : 90650523 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,865 : 90650524 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,866 : 90650525 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,867 : 90650526 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,868 : 90650527 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,869 : 90650528 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,869 : 90650528 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,870 : 90650529 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,871 : 90650530 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,872 : 90650531 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,873 : 90650532 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,874 : 90650533 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,875 : 90650534 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,875 : 90650534 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,876 : 90650535 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,877 : 90650536 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,878 : 90650537 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,879 : 90650538 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,880 : 90650539 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,881 : 90650540 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,881 : 90650540 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,882 : 90650541 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,883 : 90650542 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,884 : 90650543 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,885 : 90650544 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,886 : 90650545 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,886 : 90650545 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,887 : 90650546 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,888 : 90650547 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,889 : 90650548 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,890 : 90650549 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,891 : 90650550 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,892 : 90650551 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,892 : 90650551 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,893 : 90650552 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,894 : 90650553 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,895 : 90650554 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,896 : 90650555 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,897 : 90650556 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,897 : 90650556 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,898 : 90650557 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,899 : 90650558 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,900 : 90650559 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:24,901 : 90650560 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:24,902 : 90650561 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,902 : 90650561 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:24,903 : 90650562 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchdirectpayout.xlsheading.label.bonustype
+2022-05-06 10:49:24,904 : 90650563 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:24,905 : 90650564 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Bonus type*
+2022-05-06 10:49:24,906 : 90650565 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Bonus type*
+2022-05-06 10:49:25,693 : 90651352 [http-nio-6789-exec-121] DEBUG com.btsl.common.FileWriteUtil  - writeExcel :: Total memory :754.0   free memmory :561.0 Used memory:193.0
+2022-05-06 10:49:25,696 : 90651355 [http-nio-6789-exec-121] DEBUG com.btsl.common.FileWriteUtil  - writeExcel ::  Exiting
+2022-05-06 10:49:25,697 : 90651356 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-06 10:49:25,697 : 90651356 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:25,700 : 90651359 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-06 10:49:25,700 : 90651359 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:25,701 : 90651360 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-06 10:49:25,701 : 90651360 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:25,702 : 90651361 [http-nio-6789-exec-121] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:25,702 : 90651361 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:25,703 : 90651362 [http-nio-6789-exec-121] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:25,703 : 90651362 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:25,705 : 90651364 [http-nio-6789-exec-121] DEBUG com.btsl.pretups.channel.transfer.requesthandler.DownloadUserListController  - downloadUsersList ::  Exited 
+2022-05-06 10:49:26,376 : 90652035 [Thread-15099] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:49:26,377 : 90652036 [Thread-15099] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+/pretups/rstapi/v1/c2cFileServices/downloadTemplate/WITHDRAW validNonce  true
+2022-05-06 10:49:29,212 : 90654871 [http-nio-6789-exec-117] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................GET
+2022-05-06 10:49:29,214 : 90654873 [http-nio-6789-exec-117] DEBUG com.btsl.security.EncodingFilter  -  :: skip security Header validation value : {} :: null
+2022-05-06 10:49:29,214 : 90654873 [http-nio-6789-exec-117] DEBUG com.btsl.security.EncodingFilter  - preHandle :: checksum hash validation enabled : {} :: false
+2022-05-06 10:49:29,215 : 90654874 [http-nio-6789-exec-117] DEBUG com.btsl.security.EncodingFilter  - preHandle :: uri /pretups/rstapi/v1/c2cFileServices/downloadTemplate/WITHDRAW :: false
+/pretups/rstapi/v1/c2cFileServices/downloadTemplate/WITHDRAW valid  true
+2022-05-06 10:49:29,222 : 90654881 [http-nio-6789-exec-117] DEBUG com.restapi.user.service.DownloadTemplateController  - getFileBatchC2C :: Entered
+2022-05-06 10:49:29,223 : 90654882 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - validateTokenApi :: Entered 
+2022-05-06 10:49:29,224 : 90654883 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - host :: 172.30.38.232:6789
+2022-05-06 10:49:29,224 : 90654883 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - connection :: keep-alive
+2022-05-06 10:49:29,225 : 90654884 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - pragma :: no-cache
+2022-05-06 10:49:29,226 : 90654885 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - nonce :: bfe0b58fb0cd78de
+2022-05-06 10:49:29,227 : 90654886 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - user-agent :: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+2022-05-06 10:49:29,228 : 90654887 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - accept :: application/json, text/plain, */*
+2022-05-06 10:49:29,229 : 90654888 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - cache-control :: no-store, no-cache
+2022-05-06 10:49:29,229 : 90654888 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - logheader :: {"logData":[]}
+2022-05-06 10:49:29,230 : 90654889 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - authorization :: Bearer f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc
+2022-05-06 10:49:29,231 : 90654890 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - signature :: 
+2022-05-06 10:49:29,232 : 90654891 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - origin :: http://172.30.38.232:9747
+2022-05-06 10:49:29,233 : 90654892 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - referer :: http://172.30.38.232:9747/
+2022-05-06 10:49:29,234 : 90654893 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - accept-encoding :: gzip, deflate
+2022-05-06 10:49:29,234 : 90654893 [http-nio-6789-exec-117] DEBUG com.btsl.util.OAuthenticationUtil  - accept-language :: en-US,en;q=0.9
+2022-05-06 10:49:29,236 : 90654895 [http-nio-6789-exec-117] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-06 10:49:29,237 : 90654896 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-06 10:49:29,239 : 90654898 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:13
+2022-05-06 10:49:29,240 : 90654899 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@29d292 [wrapping: org.postgresql.jdbc.PgConnection@1f972a9] active size:2 cache size:13
+2022-05-06 10:49:29,241 : 90654900 [http-nio-6789-exec-117] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Query: SELECT expires, modified_on from oauth_access_token where token_id = ? 
+2022-05-06 10:49:29,243 : 90654902 [http-nio-6789-exec-117] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Exiting: insertCount=0
+2022-05-06 10:49:29,245 : 90654904 [http-nio-6789-exec-117] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-06 10:49:29,246 : 90654905 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-06 10:49:29,248 : 90654907 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:13
+2022-05-06 10:49:29,249 : 90654908 [http-nio-6789-exec-117] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@cb362a [wrapping: org.postgresql.jdbc.PgConnection@1f972a9] active size:2 cache size:13
+2022-05-06 10:49:29,250 : 90654909 [http-nio-6789-exec-117] DEBUG com.btsl.user.businesslogic.ProductTypeDAO  - getProductsDetails :: Entered product_code=
+2022-05-06 10:49:29,251 : 90654910 [http-nio-6789-exec-117] DEBUG com.btsl.user.businesslogic.ProductTypeDAO  - getProductsDetails :: Exiting: getProductShortCode
+2022-05-06 10:49:29,252 : 90654911 [http-nio-6789-exec-117] DEBUG com.btsl.common.FileWriteUtil  - writeinXLSTemplate ::  p_excelID: BATCH_C2C_INITIATE p_strArr:[[[[Ljava.lang.String;@129cba8 p_strArr length: 1 p_fileName: /data1/pretupsapp/tomcat_trunk_springboot/vms/logs/BatchC2CDownload/userTemplateList1651814369252.xls
+2022-05-06 10:49:29,256 : 90654915 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,257 : 90654916 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.msisdn args: null
+2022-05-06 10:49:29,258 : 90654917 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,259 : 90654918 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.msisdn
+2022-05-06 10:49:29,260 : 90654919 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,261 : 90654920 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Mobile number**
+2022-05-06 10:49:29,262 : 90654921 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,263 : 90654922 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Mobile number**
+2022-05-06 10:49:29,264 : 90654923 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,265 : 90654924 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsfile.details.msisdn.comment args: null
+2022-05-06 10:49:29,266 : 90654925 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,267 : 90654926 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsfile.details.msisdn.comment
+2022-05-06 10:49:29,268 : 90654927 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,269 : 90654928 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Mobile number of channel user. If mobile number is not specified then login ID or external code needs to be specified.
+2022-05-06 10:49:29,270 : 90654929 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,271 : 90654930 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Mobile number of channel user. If mobile number is not specified then login ID or external code needs to be specified.
+2022-05-06 10:49:29,272 : 90654931 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,273 : 90654932 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.loginid args: null
+2022-05-06 10:49:29,274 : 90654933 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,275 : 90654934 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.loginid
+2022-05-06 10:49:29,275 : 90654934 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,276 : 90654935 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Login ID**
+2022-05-06 10:49:29,277 : 90654936 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,278 : 90654937 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Login ID**
+2022-05-06 10:49:29,279 : 90654938 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,280 : 90654939 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsfile.details.loginID.comment args: null
+2022-05-06 10:49:29,281 : 90654940 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,282 : 90654941 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsfile.details.loginID.comment
+2022-05-06 10:49:29,283 : 90654942 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,283 : 90654942 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Login ID of channel user. If login ID is not specified then mobile number or external code needs to be specified.
+2022-05-06 10:49:29,284 : 90654943 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,285 : 90654944 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Login ID of channel user. If login ID is not specified then mobile number or external code needs to be specified.
+2022-05-06 10:49:29,286 : 90654945 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,287 : 90654946 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.externalcode args: null
+2022-05-06 10:49:29,288 : 90654947 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,289 : 90654948 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.externalcode
+2022-05-06 10:49:29,289 : 90654948 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,290 : 90654949 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: External code**
+2022-05-06 10:49:29,291 : 90654950 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,292 : 90654951 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: External code**
+2022-05-06 10:49:29,293 : 90654952 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,294 : 90654953 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsfile.details.externalCode.comment args: null
+2022-05-06 10:49:29,294 : 90654953 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,295 : 90654954 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsfile.details.externalCode.comment
+2022-05-06 10:49:29,297 : 90654956 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,298 : 90654957 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: External code of channel user. If external code is not specified then mobile number or login ID needs to be specified.
+2022-05-06 10:49:29,299 : 90654958 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,300 : 90654959 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: External code of channel user. If external code is not specified then mobile number or login ID needs to be specified.
+2022-05-06 10:49:29,301 : 90654960 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,302 : 90654961 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.quantity args: null
+2022-05-06 10:49:29,302 : 90654961 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,303 : 90654962 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.quantity
+2022-05-06 10:49:29,304 : 90654963 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,305 : 90654964 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Quantity*
+2022-05-06 10:49:29,306 : 90654965 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,307 : 90654966 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Quantity*
+2022-05-06 10:49:29,308 : 90654967 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,308 : 90654967 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.product args: null
+2022-05-06 10:49:29,309 : 90654968 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,310 : 90654969 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.product
+2022-05-06 10:49:29,311 : 90654970 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,312 : 90654971 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: ProductCode*
+2022-05-06 10:49:29,313 : 90654972 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,313 : 90654972 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: ProductCode*
+2022-05-06 10:49:29,314 : 90654973 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,315 : 90654974 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.product.comment args: [Ljava.lang.String;@3a86d4
+2022-05-06 10:49:29,316 : 90654975 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,317 : 90654976 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.product.comment
+2022-05-06 10:49:29,318 : 90654977 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,319 : 90654978 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: The Product codes for Products {0} are {1} respectively.
+2022-05-06 10:49:29,319 : 90654978 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,320 : 90654979 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: The Product codes for Products VoucherTracking,eTopUP,Post eTopUP are VOUCHTRACK,ETOPUP,POSTETOPUP respectively.
+2022-05-06 10:49:29,321 : 90654980 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:29,322 : 90654981 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: batchc2c.xlsheading.label.remarks args: null
+2022-05-06 10:49:29,323 : 90654982 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:29,324 : 90654983 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = batchc2c.xlsheading.label.remarks
+2022-05-06 10:49:29,324 : 90654983 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,325 : 90654984 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: Remarks
+2022-05-06 10:49:29,326 : 90654985 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:29,327 : 90654986 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: Remarks
+2022-05-06 10:49:30,091 : 90655750 [http-nio-6789-exec-117] DEBUG com.btsl.common.FileWriteUtil  - writeinXLSTemplate :: Total memory :755.0   free memmory :564.0 Used memory:191.0
+2022-05-06 10:49:30,093 : 90655752 [http-nio-6789-exec-117] DEBUG com.btsl.common.FileWriteUtil  - writeinXLSTemplate ::  Exiting
+2022-05-06 10:49:30,094 : 90655753 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-06 10:49:30,095 : 90655754 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:30,096 : 90655755 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-06 10:49:30,097 : 90655756 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:30,098 : 90655757 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-06 10:49:30,099 : 90655758 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:30,099 : 90655758 [http-nio-6789-exec-117] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:30,100 : 90655759 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:30,101 : 90655760 [http-nio-6789-exec-117] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:30,102 : 90655761 [http-nio-6789-exec-117] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:30,103 : 90655762 [http-nio-6789-exec-117] DEBUG com.restapi.user.service.DownloadTemplateServiceImpl  - downloadC2CBatchTemplate :: Download ResponseSuccess
+2022-05-06 10:49:30,104 : 90655763 [http-nio-6789-exec-117] DEBUG com.restapi.user.service.DownloadTemplateServiceImpl  - downloadC2CBatchTemplate ::  Exiting
+2022-05-06 10:49:30,105 : 90655764 [http-nio-6789-exec-117] DEBUG com.restapi.user.service.DownloadTemplateServiceImpl  - downloadC2CBatchTemplate :: Exiting:
+2022-05-06 10:49:31,385 : 90657044 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:49:31,386 : 90657045 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:31,387 : 90657046 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:49:31,387 : 90657046 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:31,388 : 90657047 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:31,388 : 90657047 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:31,388 : 90657047 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:49:31,388 : 90657047 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:49:31,389 : 90657048 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:31,389 : 90657048 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:31,389 : 90657048 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:49:31,390 : 90657049 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:49:31,390 : 90657049 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:49:31,390 : 90657049 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:31,391 : 90657050 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:31,391 : 90657050 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:49:41,393 : 90667052 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:49:41,395 : 90667054 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:41,395 : 90667054 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:49:41,396 : 90667055 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:41,396 : 90667055 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:41,397 : 90667056 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:41,397 : 90667056 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:49:41,397 : 90667056 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:41,398 : 90667057 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62393284 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:49:41,398 : 90667057 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:41,398 : 90667057 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62393284 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:49:41,399 : 90667058 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:49:41,399 : 90667058 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:49:41,399 : 90667058 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:49:41,400 : 90667059 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:49:41,400 : 90667059 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:49:41,400 : 90667059 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:49:41,400 : 90667059 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:49:41,401 : 90667060 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:49:41,401 : 90667060 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:49:41,401 : 90667060 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:49:41,402 : 90667061 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:41,402 : 90667061 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:41,402 : 90667061 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:49:41,403 : 90667062 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:49:41,403 : 90667062 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:49:41,403 : 90667062 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:41,404 : 90667063 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:41,404 : 90667063 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:49:51,414 : 90677073 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:49:51,415 : 90677074 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:51,416 : 90677075 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:49:51,417 : 90677076 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:51,417 : 90677076 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:49:51,417 : 90677076 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:49:51,418 : 90677077 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62393284 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:49:51,418 : 90677077 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:49:51,418 : 90677077 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:51,419 : 90677078 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62393284 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:49:51,419 : 90677078 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62393284 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:49:51,420 : 90677079 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:49:51,421 : 90677080 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:49:51,421 : 90677080 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62393284 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:51,421 : 90677080 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:49:51,422 : 90677081 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462393284&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:49:53,194 : 90678853 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - skipSecurityHeaderName = {},skipSecurityHeaderValue = {} :: true :: null
+/pretups//rstapi/v1/c2cFileServices/uploadFile validNonce  true
+2022-05-06 10:49:53,197 : 90678856 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Inside Interceptor preHandle for signature validation....................POST
+2022-05-06 10:49:53,198 : 90678857 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  -  :: skip security Header validation value : {} :: null
+2022-05-06 10:49:53,199 : 90678858 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: checksum hash validation enabled : {} :: false
+2022-05-06 10:49:53,200 : 90678859 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: uri /pretups//rstapi/v1/c2cFileServices/uploadFile :: false
+2022-05-06 10:49:53,201 : 90678860 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: Start validating checksum hash........Bearer f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc
+2022-05-06 10:49:53,202 : 90678861 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle uri /pretups//rstapi/v1/c2cFileServices/uploadFile :: KEY f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc
+2022-05-06 10:49:53,203 : 90678862 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: uri /pretups//rstapi/v1/c2cFileServices/uploadFile  nonce Optional[2cb216ab9cabd721]
+2022-05-06 10:49:53,204 : 90678863 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  -  :: Generating server-side checksum hash
+2022-05-06 10:49:53,205 : 90678864 [http-nio-6789-exec-124] DEBUG com.btsl.security.EncodingFilter  - preHandle :: KEY f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc.2cb216ab9cabd721
+/pretups//rstapi/v1/c2cFileServices/uploadFile valid  true
+2022-05-06 10:49:53,209 : 90678868 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - uploadC2CBatchFile :: Entered 
+2022-05-06 10:49:53,211 : 90678870 [http-nio-6789-exec-124] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-06 10:49:53,212 : 90678871 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-06 10:49:53,215 : 90678874 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:2 cache size:13
+2022-05-06 10:49:53,216 : 90678875 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@16a6d59 [wrapping: org.postgresql.jdbc.PgConnection@1f972a9] active size:2 cache size:13
+2022-05-06 10:49:53,217 : 90678876 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - validateTokenApi :: Entered 
+2022-05-06 10:49:53,219 : 90678878 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - host :: 172.30.38.232:6789
+2022-05-06 10:49:53,220 : 90678879 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - connection :: keep-alive
+2022-05-06 10:49:53,221 : 90678880 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - content-length :: 13141
+2022-05-06 10:49:53,222 : 90678881 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - pragma :: no-cache
+2022-05-06 10:49:53,223 : 90678882 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - nonce :: 2cb216ab9cabd721
+2022-05-06 10:49:53,224 : 90678883 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - authorization :: Bearer f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc
+2022-05-06 10:49:53,225 : 90678884 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - content-type :: application/json
+2022-05-06 10:49:53,227 : 90678886 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - accept :: application/json, text/plain, */*
+2022-05-06 10:49:53,228 : 90678887 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - cache-control :: no-store, no-cache
+2022-05-06 10:49:53,229 : 90678888 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - logheader :: {"logData":[]}
+2022-05-06 10:49:53,230 : 90678889 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - user-agent :: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
+2022-05-06 10:49:53,231 : 90678890 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - signature :: 77e9f5b7c9b0f3b8b1898ea51ed7de7dbd0879008c0a6873f1746e70781e4603
+2022-05-06 10:49:53,232 : 90678891 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - origin :: http://172.30.38.232:9747
+2022-05-06 10:49:53,233 : 90678892 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - referer :: http://172.30.38.232:9747/
+2022-05-06 10:49:53,234 : 90678893 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - accept-encoding :: gzip, deflate
+2022-05-06 10:49:53,235 : 90678894 [http-nio-6789-exec-124] DEBUG com.btsl.util.OAuthenticationUtil  - accept-language :: en-US,en;q=0.9
+2022-05-06 10:49:53,237 : 90678896 [http-nio-6789-exec-124] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-06 10:49:53,238 : 90678897 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-06 10:49:53,240 : 90678899 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:3 cache size:12
+2022-05-06 10:49:53,242 : 90678901 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@1449ab1 [wrapping: org.postgresql.jdbc.PgConnection@b65d1a] active size:3 cache size:12
+2022-05-06 10:49:53,243 : 90678902 [http-nio-6789-exec-124] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Entered: p_userVO=dataStkTrf = null ,token=f7ebdf1d78e7da6a7681ea64c4b06b5fb3e1804c290bdfe003766c5ad41d4d53.a8b11d52631cc288da56fe364b189940c8c0f876ed7bef49f6fb53a712f13d6d51f58e05bd34d17a65b7573d3149898c066ec83a01d1c800aff88ee8cf02d34ba24d593be1b0b57da7b18cf67ca958e13fd3361ccd32b4ffd67666edc4dcd4e856ec5ca18068d95bb585fd448f7726a2cc5a3d342d0ff4a135a544f67db3fc746716faeecca730b976ddf610af83c56d62997924acc090df2c4eaeebb8cf238cbfce300d647d41aa9b3436ebb3d947666689ab5af86f06da50187f3fdc7219be33e4b4856eb3a97371281167fc4541c9e80b478a225be12d374390b40097a1beddcb7d3819f8a414ddb763f6a503290d799a65430f4fb42700f4f73dd30c5d2eaf05c964a88013729cb412b8e1103da8d624057e51d096fa.43fdde4bcdbe46fcf22fe59183b4b55ad14a8fdd3f5936c7ac7f530df3a181cc
+2022-05-06 10:49:53,244 : 90678903 [http-nio-6789-exec-124] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Query: SELECT ou.request_gateway_type,ou.request_gateway_code,ou.request_gateway_login_id,ou.service_port,ou.request_gateway_password,ou.source_type,ou.login_id,ou.msisdn,ou.ext_code,ou.user_id,oat.modified_on, oat.expires from oauth_access_token  oat, oauth_users_login_info ou where oat.token_id = ou.token_id and oat.token_id = ?
+2022-05-06 10:49:53,246 : 90678905 [http-nio-6789-exec-124] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - tokenid :: 20220506104920.856.5152
+2022-05-06 10:49:53,249 : 90678908 [http-nio-6789-exec-124] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: get():: Entered getPinPassword:
+2022-05-06 10:49:53,251 : 90678910 [http-nio-6789-exec-124] DEBUG com.btsl.user.businesslogic.UserDAO  - getPinPassword :: Exiting userName:User ID =null,User Name =null,Network ID =null,Login ID =null,Category Code =null,Parent ID =null,Parent Name =null,Owner ID =null,Allowed IPs =null,Allowed Days =null,From Time =null,To Time =null,Last Log On =null,Parent ID =null,Emp Code =null,Status =null,Previous Status =null,Email =null,Password Modified On =null,Contact No =null,Designation =null,Division Code =null,Department Code =null,Msisdn =null,User Type =null,Cretated On =null,Created By =null,Address 1 =null,Address 2 =null,City=null,State =null,Country =null,SSN =null,User Name Prefix =null,External Code =null,User Code =null,Short Name =null,Reference ID =null,Domain ID =null,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =null,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =null,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment Typenull
+2022-05-06 10:49:53,253 : 90678912 [http-nio-6789-exec-124] DEBUG com.btsl.oauth.businesslogic.OAuthDao  - validateToken :: Exiting: insertCount=0
+2022-05-06 10:49:53,254 : 90678913 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Entered: p_info =AUT_48675
+2022-05-06 10:49:53,255 : 90678914 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Query =SELECT U.USER_ID,U.MSISDN,U.CATEGORY_CODE,U.USER_TYPE,U.EMAIL , UP.DECRYPTION_KEY,UP.IMEI,UP.MHASH,UP.TOKEN,UP.TOKEN_LASTUSED_DATE,UP.SMS_PIN, U.NETWORK_CODE  FROM USERS U,USER_PHONES UP WHERE U.USER_ID=UP.USER_ID AND  U.LOGIN_ID=? AND   U.STATUS <> 'N' AND  U.STATUS <> 'C' AND U.USER_TYPE IN ('CHANNEL', 'STAFF','OPERATOR')
+2022-05-06 10:49:53,257 : 90678916 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Exiting channelUserVo:User ID =NGD0000032308,User Name =null,Network ID =null,Login ID =null,Category Code =DIST,Parent ID =null,Parent Name =null,Owner ID =null,Allowed IPs =null,Allowed Days =null,From Time =null,To Time =null,Last Log On =null,Parent ID =null,Emp Code =null,Status =null,Previous Status =null,Email =55adh@mail.com,Password Modified On =null,Contact No =null,Designation =null,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =null,Created By =null,Address 1 =null,Address 2 =null,City=null,State =null,Country =null,SSN =null,User Name Prefix =null,External Code =null,User Code =null,Short Name =null,Reference ID =null,Domain ID =null,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =null,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =null,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =null,TransferProfileID =null,CommissionProfileSetID =null,InSuspend =null,OutSuspened=null,GeographicalCode =null,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=null,MpayProfileID=null,UserProfileID=null,AccessType=null,M-Commerce Service Allow=null,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-06 10:49:53,258 : 90678917 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Entered: Msisdn =720231342216284
+2022-05-06 10:49:53,259 : 90678918 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserPostgresQry  - loadChannelUserDetailsQry ::  SELECT u.user_id, u.password webpassword,u.user_name, u.network_code,u.login_id, u.category_code, u.parent_id, u.owner_id, u.msisdn, u.employee_code,u.status userstatus,u.created_by,u.created_on,u.email,u.modified_by,u.modified_on, cusers.contact_person,u.contact_no,u.designation,u.division,u.department,u.user_type,cusers.in_suspend,cusers.out_suspend, u.address1,u.address2,u.city,u.state,u.country,u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.LONGITUDE, cat.domain_code,dom.domain_type_code,cat.sequence_no catseq,cat.sms_interface_allowed,geo.grph_domain_code,gdomains.status geostatus,u.company,u.fax,u.firstname,u.lastname,  uphones.user_phones_id,uphones.primary_number, uphones.sms_pin, uphones.pin_required, uphones.phone_profile, uphones.phone_language phlang, uphones.country phcountry, uphones.invalid_pin_count, uphones.last_transaction_status, uphones.last_transaction_on, uphones.pin_modified_on,uphones.last_transfer_id, uphones.last_transfer_type,uphones.prefix_id,uphones.temp_transfer_id, uphones.first_invalid_pin_time,  cat.agent_allowed,cat.hierarchy_allowed, cat.category_type,cat.category_name,cat.grph_domain_type,cusers.comm_profile_set_id,cusers.transfer_profile_id, tp.profile_name, cusers.sos_allowed,cusers.sos_allowed_amount,cusers.sos_threshold_limit,cusers.lr_allowed,cusers.lr_max_amount, tp.status tpstatus,cusers.user_grade,cset.status csetstatus,  cset.language_1_message comprf_lang_1_msg,cset.language_2_message   comprf_lang_2_msg,cset.COMM_PROFILE_SET_NAME, cset.last_dual_comm_type,cat.restricted_msisdns,gdt.sequence_no grphSeq, cat.transfertolistonly, cat.USER_ID_PREFIX, cpsv.applicable_from, cpsv.comm_profile_set_version,  uphones.access_type, uphones.created_on, cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow,cusers.low_bal_alert_allow, uphones.created_on userphone_created_on  ,uphones.PIN_RESET,uphones.last_access_on,uphones.modified_on,uphones.modified_by,u.from_time,u.to_time,u.allowed_days,u.invalid_password_count,u.pswd_modified_on, cusers.auto_c2c_allow, cusers.auto_c2c_quantity  , cusers.trf_rule_type   , cusers.lms_profile   , ou.category_code own_category_code, ou.msisdn own_msisdn, ou.user_name owner_name, ou.company owner_company , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP, gdomains.GRPH_DOMAIN_NAME  FROM user_geographies geo,categories cat,domains dom, user_phones uphones right join users u on  u.user_id=uphones.user_id left join channel_users cusers on  cusers.user_id=u.user_id  left join transfer_profile tp on  cusers.transfer_profile_id=tp.profile_id  left join commission_profile_set cset on cusers.comm_profile_set_id=cset.comm_profile_set_id  ,geographical_domains gdomains,geographical_domain_types gdt,commission_profile_set_version cpsv  , users ou WHERE uphones.msisdn=? AND u.user_type=?  AND u.status <> ? AND u.status <> ?  AND u.category_code = cat.category_code AND u.user_id=geo.user_id AND geo.grph_domain_code=gdomains.grph_domain_code  AND cat.domain_code= dom.domain_code AND gdt.grph_domain_type=gdomains.grph_domain_type  AND cpsv.applicable_from = (select COALESCE ((select max( applicable_from ) from commission_profile_set_version where applicable_from <= ? and comm_profile_set_id = cusers.comm_profile_set_id ),cpsv.applicable_from))  AND ou.user_id=u.owner_id
+2022-05-06 10:49:53,260 : 90678919 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Before Result =720231342216284
+2022-05-06 10:49:53,275 : 90678934 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: After Result =720231342216284
+2022-05-06 10:49:53,277 : 90678936 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: entered p_categoryCode: DIST
+2022-05-06 10:49:53,278 : 90678937 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: exited messageGatewayForCategoryList: [EXTGW, MAPPGW, REST, SMSC, USSD, WEB]
+2022-05-06 10:49:53,279 : 90678938 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGD0000032308
+2022-05-06 10:49:53,280 : 90678939 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-06 10:49:53,282 : 90678941 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:12
+2022-05-06 10:49:53,283 : 90678942 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Exiting channelUserVO:User ID =NGD0000032308,User Name =AUTFN1393 AUTLN2379,Network ID =NG,Login ID =AUT_48675,Category Code =DIST,Parent ID =ROOT,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =null,Parent ID =ROOT,Emp Code =555349,Status =Y,Previous Status =null,Email =55adh@mail.com,Password Modified On =2022-03-22 13:29:59.931,Contact No =287399,Designation =,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =Wed Jan 13 12:50:49 IST 2021,Created By =NGSB0000032298,Address 1 =Add16744,Address 2 =Add25655,City=City3438,State =State8409,Country =Country19,SSN =,User Name Prefix =MR,External Code =052013798,User Code =720231342216284,Short Name =AUTSN1495,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =Y,Appointment Date =null,Owner Msisdn720231342216284,Owner CategoryName =DIST,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =ROOT,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT60284,TransferProfileID =1100,CommissionProfileSetID =3792,InSuspend =N,OutSuspened=N,GeographicalCode =AUT7DBA,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGD0000032308,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=N,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = N, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-06 10:49:53,284 : 90678943 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserBL  - validatePIN :: Entered with p_channelUserVO:User ID =NGD0000032308,User Name =AUTFN1393 AUTLN2379,Network ID =NG,Login ID =AUT_48675,Category Code =DIST,Parent ID =ROOT,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =null,Parent ID =ROOT,Emp Code =555349,Status =Y,Previous Status =null,Email =55adh@mail.com,Password Modified On =2022-03-22 13:29:59.931,Contact No =287399,Designation =,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =Wed Jan 13 12:50:49 IST 2021,Created By =NGSB0000032298,Address 1 =Add16744,Address 2 =Add25655,City=City3438,State =State8409,Country =Country19,SSN =,User Name Prefix =MR,External Code =052013798,User Code =720231342216284,Short Name =AUTSN1495,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =Y,Appointment Date =null,Owner Msisdn720231342216284,Owner CategoryName =DIST,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =ROOT,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT60284,TransferProfileID =1100,CommissionProfileSetID =3792,InSuspend =N,OutSuspened=N,GeographicalCode =AUT7DBA,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGD0000032308,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=N,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = N, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null p_requestPin=lQ46pVwyhRHF8mr0YROZng==
+2022-05-06 10:49:53,285 : 90678944 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.util.OperatorUtil  - validatePIN :: Entered with p_userPhoneVO:User ID =NGD0000032308,User Name =AUTFN1393 AUTLN2379,Network ID =NG,Login ID =AUT_48675,Category Code =DIST,Parent ID =ROOT,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =null,Parent ID =ROOT,Emp Code =555349,Status =Y,Previous Status =null,Email =55adh@mail.com,Password Modified On =2022-03-22 13:29:59.931,Contact No =287399,Designation =,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =Wed Jan 13 12:50:49 IST 2021,Created By =NGSB0000032298,Address 1 =Add16744,Address 2 =Add25655,City=City3438,State =State8409,Country =Country19,SSN =,User Name Prefix =MR,External Code =052013798,User Code =720231342216284,Short Name =AUTSN1495,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =Y,Appointment Date =null,Owner Msisdn720231342216284,Owner CategoryName =DIST,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =ROOT,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT60284,TransferProfileID =1100,CommissionProfileSetID =3792,InSuspend =N,OutSuspened=N,GeographicalCode =AUT7DBA,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGD0000032308,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=N,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = N, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null p_requestPin=1357
+2022-05-06 10:49:53,287 : 90678946 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.util.OperatorUtil  - validatePIN :: Modified Time=:Tue Mar 22 15:25:12 IST 2022 userPhoneVO.getPinModifiedOn()=Mon Apr 18 00:24:09 IST 2022userPhoneVO.getCreatedOn()Wed Jan 13 12:50:49 IST 2021, Service Type=null, Reset PIN=N
+2022-05-06 10:49:53,288 : 90678947 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.util.OperatorUtil  - validatePIN :: Sender MSISDN:720231342216284 decrypted PIN of database=1357 p_requestPin =1357
+2022-05-06 10:49:53,289 : 90678948 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.util.OperatorUtil  - validatePIN :: Exiting with increase invalid Pin Count flag=false
+2022-05-06 10:49:53,291 : 90678950 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserBL  - validatePIN :: Exiting 
+2022-05-06 10:49:53,293 : 90678952 [http-nio-6789-exec-124] DEBUG com.web.pretups.channel.transfer.businesslogic.ChannelTransferRuleWebDAO  - loadTransferRulesCategoryList :: Entered  From Category Code DIST Network Code NG
+2022-05-06 10:49:53,294 : 90678953 [http-nio-6789-exec-124] DEBUG com.web.pretups.channel.transfer.businesslogic.ChannelTransferRuleWebDAO  - loadTransferRulesCategoryList :: QUERY sqlSelect= SELECT ctr.domain_code, ctr.to_category, ctr.parent_association_allowed,  ctr.direct_transfer_allowed, ctr.transfer_chnl_bypass_allowed,ctr.withdraw_allowed,  ctr.withdraw_chnl_bypass_allowed, ctr.return_allowed, ctr.return_chnl_bypass_allowed,  ctr.approval_required, ctr.first_approval_limit, ctr.second_approval_limit,transfer_rule_id,  ctr.transfer_type, ctr.transfer_allowed, ctr.foc_transfer_type, ctr.foc_allowed ,ctr.restricted_msisdn_access, restricted_recharge_allowed,  c.category_name,ctr.uncntrl_transfer_allowed,ctr.to_domain_code,ctr.uncntrl_return_level, ctr.cntrl_return_level  FROM  chnl_transfer_rules ctr ,categories c  WHERE  ctr.from_category = ? AND ctr.network_code=?  AND  ctr.status = 'Y' AND ctr.to_category = c.category_code  ORDER BY to_domain_code, c.sequence_no 
+2022-05-06 10:49:53,296 : 90678955 [http-nio-6789-exec-124] DEBUG com.web.pretups.channel.transfer.businesslogic.ChannelTransferRuleWebDAO  - loadTransferRulesCategoryList :: Exiting:  arrayList Size =4
+2022-05-06 10:49:53,297 : 90678956 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - decodeFile:  :: 0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAOwADAP7/CQAGAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAgAAAAEAAAD+////AAAAAAEAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9SAG8AbwB0ACAARQBuAHQAcgB5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgAFAf//////////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAADADAAAAAAAAFcAbwByAGsAYgBvAG8AawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAIB////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAMAAAAAAAABQBEAG8AYwB1AG0AZQBuAHQAUwB1AG0AbQBhAHIAeQBJAG4AZgBvAHIAbQBhAHQAaQBvAG4AAAAAAAAAAAAAADgAAgEBAAAA//////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7////9/////v///wQAAAAFAAAABgAAAAcAAAAIAAAACQAAAP7///8LAAAADAAAAA0AAAAOAAAADwAAABAAAAARAAAA/v//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAAEAAAABEAAAASAAAAEwAAABQAAAAVAAAAFgAAABcAAAAYAAAAGQAAABoAAAAbAAAAHAAAAB0AAAAeAAAAHwAAACAAAAAhAAAAIgAAACMAAAAkAAAAJQAAACYAAAAnAAAAKAAAACkAAAAqAAAAKwAAACwAAAAtAAAALgAAAC8AAAAwAAAAMQAAADIAAAD+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8JCBAAAAYFAPIVzAcAAAAABgAAAOEAAgCwBMEAAgAAAOIAAABcAHAAEwAASmF2YSBFeGNlbCBBUEkgdjIuNiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEIAAgDkBGEBAgAAAD0BAgABAJwAAgAOABkAAgAAABIAAgAAABMAAgAAAK8BAgAAALwBAgAAAD0AEgBoAQ4BXDq+IzgAAAAAAAEAWAJAAAIAAACNAAIAAAAiAAIAAAAOAAIAAQC3AQIAAADaAAIAAAAxABUAyAAAAP9/kAEAAAAAAAAFAEFyaWFsMQAVAMgAAAD/f5ABAAAAAAAABQBBcmlhbDEAFQDIAAAA/3+QAQAAAAAAAAUAQXJpYWwxABUAyAAAAP9/kAEAAAAAAAAFAEFyaWFsMQAfAPAAAgD/f7wCAAAAAAAADwBUaW1lcyBOZXcgUm9tYW7gABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAgAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAwAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAPX/IAAAAAAAAAAAAAAAwCDgABQAAAAAAAEAIAAAAAAAAAAAAAAAwCDgABQAAQArAPX/IAAAAAAAAAAAAAAAwCDgABQAAQApAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAsAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAqAPX/IAAAAAAAAAAAAAAAwCDgABQAAQAJAPX/IAAAAAAAAAAAAAAAwCDgABQABQAAAAEAIAAAAAAAAAAAAAAAwCCTAgQAEIAD/5MCBAARgAb/kwIEABKABP+TAgQAE4AH/5MCBAAAgAD/kwIEABSABf9gAQIAAQCFABQA3QQAAAAABgFTAGgAZQBlAHQAMQCMAAQAAQAsAOsASAAPAADwQAAAAAAABvAYAAAAAQQAAAIAAAABAAAAAQAAAAEAAAABAAAAAwAL8AAAAABAAB7xEAAAAA0AAAgMAAAIFwAACPcAABD8AH4ACgAAAAoAAAAPAABNb2JpbGUgbnVtYmVyKioKAABMb2dpbiBJRCoqDwAARXh0ZXJuYWwgY29kZSoqCQAAUXVhbnRpdHkqDAAAUHJvZHVjdENvZGUqBwAAUmVtYXJrcwAAAAwAADU3NTM3Mzg2MTU4NwIAADAzBgAARVRPUFVQ/wASAAgATQQAAAwAAAC1BAAAdAAAAAoAAAAJCBAAAAYQAPIVzAcAAAAABgAAAAsCFAAAAAAAAAAAAAIAAAAAAAAAlQYAAA0AAgABAAwAAgBkAA8AAgABABEAAgAAABAACAD8qfHSTWJQP18AAgABACoAAgAAACsAAgAAAIIAAgABAIAACAAAAAAAAAAAACUCBAAAAP8AgQACAMEEFAAAABUAAACDAAIAAACEAAIAAAChACIACQAAAAAAAAAAAAIALAEsAQAAAAAAAOA/AAAAAAAA4D8BAFUAAgAIAH0ADAAAAAAA3RIPAAIAAgB9AAwAAwADABALDwACAAIAfQAMAAQABABUDw8AAgACAAACDgAAAAAAAgAAAAAABwAAAAgCEAAAAAAABwD/AAAAAAAAAQAACAIQAAEAAAAFAP8AAAAAAAABDwD9AAoAAAAAABUAAAAAAP0ACgAAAAEAFQABAAAA/QAKAAAAAgAVAAIAAAD9AAoAAAADABUAAwAAAP0ACgAAAAQAFQAEAAAA/QAKAAAABQAVAAUAAAD9AAoAAAAGABUABgAAAP0ACgABAAAADwAHAAAA/QAKAAEAAwAPAAgAAAD9AAoAAQAEAA8ACQAAANcACAC0AAAAFABiAOwAqgAPAALw0AEAABAACPAIAAAABQAAAAYEAAAPAAPwuAEAAA8ABPAoAAAAAQAJ8BAAAAAAAAAAAAAAAAAAAAAAAAAAAgAK8AgAAAAABAAABQAAAA8ABPBaAAAAogwK8AgAAAABBAAAAAoAAEMAC/AYAAAAWAEAAAAAgQFQAAAIgwFQAAAIvwMCAAIAAAAQ8BIAAAABAAEAMwEAAAAACwAzAQUAAAAAABHwAAAAAF0ANAAVABIAGQACABFAAAAAAAAAAAAAAAAADQAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7AAIAAAADfAAAAAAtgESABICAAAAAAAAAAB2ABAAAAAAADwAdwAATW9iaWxlIG51bWJlciBvZiBjaGFubmVsIHVzZXIuIElmIG1vYmlsZSBudW1iZXIgaXMgbm90IHNwZWNpZmllZCB0aGVuIGxvZ2luIElEIG9yIGV4dGVybmFsIGNvZGUgbmVlZHMgdG8gYmUgc3BlY2lmaWVkLjwAEAAAAAAAAAAAAHYAAAAAAAAA7ABaAA8ABPBaAAAAogwK8AgAAAACBAAAAAoAAEMAC/AYAAAAWAEAAAAAgQFQAAAIgwFQAAAIvwMCAAIAAAAQ8BIAAAABAAIAMwEAAAAADAAzAQUAAAAAABHwAAAAAF0ANAAVABIAGQADABFAAAAAAAAAAAAAAAAADQAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7AAIAAAADfAAAAAAtgESABICAAAAAAAAAABxABAAAAAAADwAcgAATG9naW4gSUQgb2YgY2hhbm5lbCB1c2VyLiBJZiBsb2dpbiBJRCBpcyBub3Qgc3BlY2lmaWVkIHRoZW4gbW9iaWxlIG51bWJlciBvciBleHRlcm5hbCBjb2RlIG5lZWRzIHRvIGJlIHNwZWNpZmllZC48ABAAAAAAAAAAAABxAAAAAAAAAOwAWgAPAATwWgAAAKIMCvAIAAAAAwQAAAAKAABDAAvwGAAAAFgBAAAAAIEBUAAACIMBUAAACL8DAgACAAAAEPASAAAAAQADADMBAAAAAA0AMwEFAAAAAAAR8AAAAABdADQAFQASABkABAARQAAAAAAAAAAAAAAAAA0AFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOwACAAAAA3wAAAAALYBEgASAgAAAAAAAAAAdgAQAAAAAAA8AHcAAEV4dGVybmFsIGNvZGUgb2YgY2hhbm5lbCB1c2VyLiBJZiBleHRlcm5hbCBjb2RlIGlzIG5vdCBzcGVjaWZpZWQgdGhlbiBtb2JpbGUgbnVtYmVyIG9yIGxvZ2luIElEIG5lZWRzIHRvIGJlIHNwZWNpZmllZC48ABAAAAAAAAAAAAB2AAAAAAAAAOwAWgAPAATwWgAAAKIMCvAIAAAABAQAAAAKAABDAAvwGAAAAFgBAAAAAIEBUAAACIMBUAAACL8DAgACAAAAEPASAAAAAQAFADMBAAAAAA8AMwEFAAAAAAAR8AAAAABdADQAFQASABkABQARQAAAAAAAAAAAAAAAAA0AFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOwACAAAAA3wAAAAALYBEgASAgAAAAAAAAAAcAAQAAAAAAA8AHEAAFRoZSBQcm9kdWN0IGNvZGVzIGZvciBQcm9kdWN0cyBWb3VjaGVyVHJhY2tpbmcsZVRvcFVQLFBvc3QgZVRvcFVQIGFyZSBWT1VDSFRSQUNLLEVUT1BVUCxQT1NURVRPUFVQIHJlc3BlY3RpdmVseS48ABAAAAAAAAAAAABwAAAAAAAAABwADAAAAAAAAAACAAAAAAAcAAwAAAABAAAAAwAAAAAAHAAMAAAAAgAAAAQAAAAAABwADAAAAAQAAAAFAAAAAAA+AhIAvgcAAAAAQAAAAAAAAAAAAAAAQQAKAAoAAQABAAoAAAAdAA8AAwAAAAAAAAEAAAAAAAAAHQAPAAEAAAoAAAABAAAAAAAKCh0ADwACAQAAAAAAAQABAAEAAAAdAA8AAAEACgAAAAEAAQABAAoK7wAGAAAANwAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+2022-05-06 10:49:53,299 : 90678958 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - base64Bytes:  :: [B@e91adf
+2022-05-06 10:49:53,300 : 90678959 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - filepathtemp: :: /data1/pretupsapp/tomcat_trunk_springboot/vms/logs/BatchC2CUpload/temp/userTemplateList1651814369252.xls
+2022-05-06 10:49:53,300 : 90678959 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - base64Bytes: :: [B@e91adf
+2022-05-06 10:49:53,301 : 90678960 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - writeByteArrayToFile:  :: /data1/pretupsapp/tomcat_trunk_springboot/vms/logs/BatchC2CUpload/temp/userTemplateList1651814369252.xls
+2022-05-06 10:49:53,302 : 90678961 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - writeByteArrayToFile:  :: [B@e91adf
+2022-05-06 10:49:53,313 : 90678972 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - uploadAndValidateFile ::  Exited 
+2022-05-06 10:49:53,315 : 90678974 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=9020
+2022-05-06 10:49:53,316 : 90678975 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:53,317 : 90678976 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 9020 args: null
+2022-05-06 10:49:53,317 : 90678976 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:53,318 : 90678977 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 9020
+2022-05-06 10:49:53,319 : 90678978 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,320 : 90678979 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:53,321 : 90678980 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,322 : 90678981 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7618:Success
+2022-05-06 10:49:53,323 : 90678982 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,324 : 90678983 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Entered: p_info =AUT_48675
+2022-05-06 10:49:53,326 : 90678985 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Query =SELECT U.USER_ID,U.MSISDN,U.CATEGORY_CODE,U.USER_TYPE,U.EMAIL , UP.DECRYPTION_KEY,UP.IMEI,UP.MHASH,UP.TOKEN,UP.TOKEN_LASTUSED_DATE,UP.SMS_PIN, U.NETWORK_CODE  FROM USERS U,USER_PHONES UP WHERE U.USER_ID=UP.USER_ID AND  U.LOGIN_ID=? AND   U.STATUS <> 'N' AND  U.STATUS <> 'C' AND U.USER_TYPE IN ('CHANNEL', 'STAFF','OPERATOR')
+2022-05-06 10:49:53,328 : 90678987 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadActiveUserId :: Exiting channelUserVo:User ID =NGD0000032308,User Name =null,Network ID =null,Login ID =null,Category Code =DIST,Parent ID =null,Parent Name =null,Owner ID =null,Allowed IPs =null,Allowed Days =null,From Time =null,To Time =null,Last Log On =null,Parent ID =null,Emp Code =null,Status =null,Previous Status =null,Email =55adh@mail.com,Password Modified On =null,Contact No =null,Designation =null,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =null,Created By =null,Address 1 =null,Address 2 =null,City=null,State =null,Country =null,SSN =null,User Name Prefix =null,External Code =null,User Code =null,Short Name =null,Reference ID =null,Domain ID =null,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =null,Appointment Date =null,Owner Msisdnnull,Owner CategoryName =null,OwnerID =null,OwnerName =null,Parent Msisdnnull,ParentCategoryName =null,ParentID =null,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =null,TransferProfileID =null,CommissionProfileSetID =null,InSuspend =null,OutSuspened=null,GeographicalCode =null,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=null,MpayProfileID=null,UserProfileID=null,AccessType=null,M-Commerce Service Allow=null,Low Balance Alert Allow=null,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = null, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-06 10:49:53,329 : 90678988 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Entered: Msisdn =720231342216284
+2022-05-06 10:49:53,330 : 90678989 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserPostgresQry  - loadChannelUserDetailsQry ::  SELECT u.user_id, u.password webpassword,u.user_name, u.network_code,u.login_id, u.category_code, u.parent_id, u.owner_id, u.msisdn, u.employee_code,u.status userstatus,u.created_by,u.created_on,u.email,u.modified_by,u.modified_on, cusers.contact_person,u.contact_no,u.designation,u.division,u.department,u.user_type,cusers.in_suspend,cusers.out_suspend, u.address1,u.address2,u.city,u.state,u.country,u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.LONGITUDE, cat.domain_code,dom.domain_type_code,cat.sequence_no catseq,cat.sms_interface_allowed,geo.grph_domain_code,gdomains.status geostatus,u.company,u.fax,u.firstname,u.lastname,  uphones.user_phones_id,uphones.primary_number, uphones.sms_pin, uphones.pin_required, uphones.phone_profile, uphones.phone_language phlang, uphones.country phcountry, uphones.invalid_pin_count, uphones.last_transaction_status, uphones.last_transaction_on, uphones.pin_modified_on,uphones.last_transfer_id, uphones.last_transfer_type,uphones.prefix_id,uphones.temp_transfer_id, uphones.first_invalid_pin_time,  cat.agent_allowed,cat.hierarchy_allowed, cat.category_type,cat.category_name,cat.grph_domain_type,cusers.comm_profile_set_id,cusers.transfer_profile_id, tp.profile_name, cusers.sos_allowed,cusers.sos_allowed_amount,cusers.sos_threshold_limit,cusers.lr_allowed,cusers.lr_max_amount, tp.status tpstatus,cusers.user_grade,cset.status csetstatus,  cset.language_1_message comprf_lang_1_msg,cset.language_2_message   comprf_lang_2_msg,cset.COMM_PROFILE_SET_NAME, cset.last_dual_comm_type,cat.restricted_msisdns,gdt.sequence_no grphSeq, cat.transfertolistonly, cat.USER_ID_PREFIX, cpsv.applicable_from, cpsv.comm_profile_set_version,  uphones.access_type, uphones.created_on, cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow,cusers.low_bal_alert_allow, uphones.created_on userphone_created_on  ,uphones.PIN_RESET,uphones.last_access_on,uphones.modified_on,uphones.modified_by,u.from_time,u.to_time,u.allowed_days,u.invalid_password_count,u.pswd_modified_on, cusers.auto_c2c_allow, cusers.auto_c2c_quantity  , cusers.trf_rule_type   , cusers.lms_profile   , ou.category_code own_category_code, ou.msisdn own_msisdn, ou.user_name owner_name, ou.company owner_company , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP, gdomains.GRPH_DOMAIN_NAME  FROM user_geographies geo,categories cat,domains dom, user_phones uphones right join users u on  u.user_id=uphones.user_id left join channel_users cusers on  cusers.user_id=u.user_id  left join transfer_profile tp on  cusers.transfer_profile_id=tp.profile_id  left join commission_profile_set cset on cusers.comm_profile_set_id=cset.comm_profile_set_id  ,geographical_domains gdomains,geographical_domain_types gdt,commission_profile_set_version cpsv  , users ou WHERE uphones.msisdn=? AND u.user_type=?  AND u.status <> ? AND u.status <> ?  AND u.category_code = cat.category_code AND u.user_id=geo.user_id AND geo.grph_domain_code=gdomains.grph_domain_code  AND cat.domain_code= dom.domain_code AND gdt.grph_domain_type=gdomains.grph_domain_type  AND cpsv.applicable_from = (select COALESCE ((select max( applicable_from ) from commission_profile_set_version where applicable_from <= ? and comm_profile_set_id = cusers.comm_profile_set_id ),cpsv.applicable_from))  AND ou.user_id=u.owner_id
+2022-05-06 10:49:53,331 : 90678990 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Before Result =720231342216284
+2022-05-06 10:49:53,347 : 90679006 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: After Result =720231342216284
+2022-05-06 10:49:53,351 : 90679010 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: entered p_categoryCode: DIST
+2022-05-06 10:49:53,355 : 90679014 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayForCategoryCache  - getMessagegatewayforcategoryList() :: exited messageGatewayForCategoryList: [EXTGW, MAPPGW, REST, SMSC, USSD, WEB]
+2022-05-06 10:49:53,358 : 90679017 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Entered:UserId =NGD0000032308
+2022-05-06 10:49:53,363 : 90679022 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Select Query= SELECT US.service_type,US.status FROM user_services US,users U,category_service_type CST WHERE US.user_id = ? AND US.status <> 'N' AND U.user_id=US.user_id AND U.category_code=CST.category_code AND CST.service_type=US.service_type and CST.network_code=U.network_code
+2022-05-06 10:49:53,368 : 90679027 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadUserServicesList :: Exiting userServicesList size:12
+2022-05-06 10:49:53,369 : 90679028 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Exiting channelUserVO:User ID =NGD0000032308,User Name =AUTFN1393 AUTLN2379,Network ID =NG,Login ID =AUT_48675,Category Code =DIST,Parent ID =ROOT,Parent Name =null,Owner ID =NGD0000032308,Allowed IPs =null,Allowed Days =1,2,3,4,5,6,7,From Time =00:00,To Time =23:59,Last Log On =null,Parent ID =ROOT,Emp Code =555349,Status =Y,Previous Status =null,Email =55adh@mail.com,Password Modified On =2022-03-22 13:29:59.931,Contact No =287399,Designation =,Division Code =null,Department Code =null,Msisdn =720231342216284,User Type =CHANNEL,Cretated On =Wed Jan 13 12:50:49 IST 2021,Created By =NGSB0000032298,Address 1 =Add16744,Address 2 =Add25655,City=City3438,State =State8409,Country =Country19,SSN =,User Name Prefix =MR,External Code =052013798,User Code =720231342216284,Short Name =AUTSN1495,Reference ID =null,Domain ID =DIST,Domain Name =null,Network Name =null,Message =null,Valid Request URLs =null,Valid Status =0,Geographical Status =Y,Appointment Date =null,Owner Msisdn720231342216284,Owner CategoryName =DIST,OwnerID =NGD0000032308,OwnerName =AUTFN1393 AUTLN2379,Parent Msisdnnull,ParentCategoryName =null,ParentID =ROOT,ParentName =null,UsingNewSTK =false,FxedInfoStr =null,UpdateSimRequired =false,InvalidPasswordCount =0,FxedInfoStr =null,PasswordCountUpdatedOn =null,Report Header Namenull,Logger Messgenull,Remote Addressnull,Browser Typenull,Login Timenull,Active UserIDnull,Document Typenull,Document Nonull,Payment TypenullUser Grade =AUT60284,TransferProfileID =1100,CommissionProfileSetID =3792,InSuspend =N,OutSuspened=N,GeographicalCode =AUT7DBA,OutletCode =null,SubOutletCode=null,ActivatedOn=null,UserBalance=null,Application ID=2,MpayProfileID=,UserProfileID=NGD0000032308,AccessType=PHONE,M-Commerce Service Allow=N,Low Balance Alert Allow=N,PrimaryMsisdnPin=null,Alert Msisdn=null,_lmsProfile=null,_lmsProfileId=null, sosAllowed = N, sosAllowedAmount = 0, sosThresholdLimit = 0, catgeoryList = null
+2022-05-06 10:49:53,370 : 90679029 [http-nio-6789-exec-124] DEBUG com.btsl.user.businesslogic.ProductTypeDAO  - getProductsDetails :: Entered product_code=
+2022-05-06 10:49:53,372 : 90679031 [http-nio-6789-exec-124] DEBUG com.btsl.user.businesslogic.ProductTypeDAO  - getProductsDetails :: Exiting: getProductShortCode
+2022-05-06 10:49:53,373 : 90679032 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessBL  - checkProcessUnderProcessNetworkWise: ::  Entered with Process ID=C2CBATCH Network code=NG
+2022-05-06 10:49:53,374 : 90679033 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - loadProcessDetailNetworkWise ::  Entered Process Id=: C2CBATCH Network code=NG
+2022-05-06 10:49:53,374 : 90679033 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - loadProcessDetailNetworkWise ::  QUERY sqlSelect:SELECT process_id,start_date,scheduler_status,executed_upto,executed_on,expiry_time,before_interval,network_code,record_count FROM process_status WHERE process_id=? and network_code=?
+2022-05-06 10:49:53,377 : 90679036 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - loadProcessDetailNetworkWise ::  Exiting processStatusVO=_processID=C2CBATCH_startDate=2022-05-06 10:46:10.3,_processStatus=C,_executedUpto=Wed Aug 02 00:00:00 IST 2017,_executedOn=2006-08-08,_expiryTime=60,_beforeInterval=1440,_statusOkBool=false,_recordCount0
+2022-05-06 10:49:53,378 : 90679037 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise:  :: Entered p_processStatusVO=_processID=C2CBATCH_startDate=Fri May 06 10:49:53 IST 2022,_processStatus=U,_executedUpto=Wed Aug 02 00:00:00 IST 2017,_executedOn=2006-08-08,_expiryTime=60,_beforeInterval=1440,_statusOkBool=false,_recordCount0 Process_ID=C2CBATCH Network_Code=NG
+2022-05-06 10:49:53,380 : 90679039 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise ::  QUERY sqlUpdate= UPDATE process_status SET start_date=?,scheduler_status=?,executed_upto=?,executed_on=? WHERE process_id=? and network_code=?
+2022-05-06 10:49:53,381 : 90679040 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Entered  utilDate=2006-08-08
+2022-05-06 10:49:53,383 : 90679042 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Entered Catch Block utilDate: 2006-08-08
+2022-05-06 10:49:53,385 : 90679044 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Exiting message Final Unchanged utilDate: 2006-08-08
+2022-05-06 10:49:53,387 : 90679046 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise  :: Exiting updateCount:1
+2022-05-06 10:49:53,389 : 90679048 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessBL  - checkProcessUnderProcessNetworkWise:  :: Exiting processStatusVO=_processID=C2CBATCH_startDate=Fri May 06 10:49:53 IST 2022,_processStatus=U,_executedUpto=Wed Aug 02 00:00:00 IST 2017,_executedOn=2006-08-08,_expiryTime=60,_beforeInterval=1440,_statusOkBool=true,_recordCount0
+2022-05-06 10:49:53,392 : 90679051 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - genrateC2CBatchMasterTransferID :: Entered p_batchMasterVO=_batchId =null,_networkCode=NG,_networkCodeFor=NG,_batchName=AUTBN31533,_status=UNDPROCESS,_domainCode=DIST,_productCode=ETOPUP,_batchFileName=userTemplateList1651814369252,_batchTotalRecord=1,_batchDate=Fri May 06 10:49:53 IST 2022,_createdBy=null,_createdOn=Fri May 06 10:49:53 IST 2022,_userId=NGD0000032308,_modifiedBy=null,_modifiedOn=Fri May 06 10:49:53 IST 2022,_newRecords=0,_approvedRecords=0,_rejectedRecords=0,_closedRecords=0,_productName=null,_productMrp=0,_productMrpStr=null,_c2cBatchItemsVO=null,_productType=null,_productShortName=null
+2022-05-06 10:49:53,393 : 90679052 [http-nio-6789-exec-124] DEBUG com.btsl.db.pool.C3p0PoolManager  - getConnection :: Creating postgres connection pool
+2022-05-06 10:49:53,394 : 90679053 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection :: Before getting connection
+2022-05-06 10:49:53,396 : 90679055 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - getConnection ::  active size:3 cache size:12
+2022-05-06 10:49:53,398 : 90679057 [http-nio-6789-exec-124] ERROR com.btsl.db.pool.C3p0PoolManager  - methodName :: DB Connections  getting connection from connection pool :com.mchange.v2.c3p0.impl.NewProxyConnection@19de0d6 [wrapping: org.postgresql.jdbc.PgConnection@b65d1a] active size:3 cache size:12
+2022-05-06 10:49:53,399 : 90679058 [http-nio-6789-exec-124] DEBUG com.btsl.common.IDGeneratorDAO  - getNextID :: Entered p_idType:CB p_year:2022 p_networkID:NG
+2022-05-06 10:49:53,400 : 90679059 [http-nio-6789-exec-124] DEBUG com.btsl.common.IDGeneratorDAO  - select query: :: SELECT last_no,frequency,last_initialised_date,CURRENT_TIMESTAMP currentdate FROM ids WHERE id_year=? AND id_type=? AND network_code=? FOR UPDATE 
+2022-05-06 10:49:53,402 : 90679061 [http-nio-6789-exec-124] DEBUG com.btsl.common.IDGeneratorDAO  - update query: :: UPDATE ids SET last_no=? WHERE id_year=? AND id_type=? AND network_code=?
+2022-05-06 10:49:53,404 : 90679063 [http-nio-6789-exec-124] DEBUG com.btsl.common.IDGeneratorDAO  - getNextID :: Exiting currentDBDate: 2022-05-06 10:56:01.590971 seriesNum: 2 currentDateinMinut: 27530246 last_mod_date_minut: 27530242 moddate: 2022-05-06 10:52:18.507
+2022-05-06 10:49:53,407 : 90679066 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - padZeroesToLeft() :: Entered with p_strValue= 2 p_strLength:3
+2022-05-06 10:49:53,408 : 90679067 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - padZeroesToLeft() :: Exiting with p_strValue= 002
+2022-05-06 10:49:53,409 : 90679068 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - genrateC2CBatchMasterTransferID :: Exited  NGCB220506.002
+2022-05-06 10:49:53,410 : 90679069 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - insertInC2CBatch :: strBuffInsertBatchMaster Query =INSERT INTO c2c_batches (batch_id, network_code, network_code_for, batch_name, status, domain_code, product_code, batch_file_name, batch_total_record, batch_date, created_by, created_on,  modified_by, modified_on,sms_default_lang,sms_second_lang,user_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+2022-05-06 10:49:53,414 : 90679073 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Entered: Msisdn =575373861587
+2022-05-06 10:49:53,415 : 90679074 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserPostgresQry  - loadChannelUserDetailsQry ::  SELECT u.user_id, u.password webpassword,u.user_name, u.network_code,u.login_id, u.category_code, u.parent_id, u.owner_id, u.msisdn, u.employee_code,u.status userstatus,u.created_by,u.created_on,u.email,u.modified_by,u.modified_on, cusers.contact_person,u.contact_no,u.designation,u.division,u.department,u.user_type,cusers.in_suspend,cusers.out_suspend, u.address1,u.address2,u.city,u.state,u.country,u.ssn,u.user_name_prefix,u.external_code,u.user_code,u.short_name,u.reference_id,u.LONGITUDE, cat.domain_code,dom.domain_type_code,cat.sequence_no catseq,cat.sms_interface_allowed,geo.grph_domain_code,gdomains.status geostatus,u.company,u.fax,u.firstname,u.lastname,  uphones.user_phones_id,uphones.primary_number, uphones.sms_pin, uphones.pin_required, uphones.phone_profile, uphones.phone_language phlang, uphones.country phcountry, uphones.invalid_pin_count, uphones.last_transaction_status, uphones.last_transaction_on, uphones.pin_modified_on,uphones.last_transfer_id, uphones.last_transfer_type,uphones.prefix_id,uphones.temp_transfer_id, uphones.first_invalid_pin_time,  cat.agent_allowed,cat.hierarchy_allowed, cat.category_type,cat.category_name,cat.grph_domain_type,cusers.comm_profile_set_id,cusers.transfer_profile_id, tp.profile_name, cusers.sos_allowed,cusers.sos_allowed_amount,cusers.sos_threshold_limit,cusers.lr_allowed,cusers.lr_max_amount, tp.status tpstatus,cusers.user_grade,cset.status csetstatus,  cset.language_1_message comprf_lang_1_msg,cset.language_2_message   comprf_lang_2_msg,cset.COMM_PROFILE_SET_NAME, cset.last_dual_comm_type,cat.restricted_msisdns,gdt.sequence_no grphSeq, cat.transfertolistonly, cat.USER_ID_PREFIX, cpsv.applicable_from, cpsv.comm_profile_set_version,  uphones.access_type, uphones.created_on, cusers.application_id, cusers.mpay_profile_id, cusers.user_profile_id, cusers.mcommerce_service_allow,cusers.low_bal_alert_allow, uphones.created_on userphone_created_on  ,uphones.PIN_RESET,uphones.last_access_on,uphones.modified_on,uphones.modified_by,u.from_time,u.to_time,u.allowed_days,u.invalid_password_count,u.pswd_modified_on, cusers.auto_c2c_allow, cusers.auto_c2c_quantity  , cusers.trf_rule_type   , cusers.lms_profile   , ou.category_code own_category_code, ou.msisdn own_msisdn, ou.user_name owner_name, ou.company owner_company , cusers.OPT_IN_OUT_STATUS  , cusers.CONTROL_GROUP, gdomains.GRPH_DOMAIN_NAME  FROM user_geographies geo,categories cat,domains dom, user_phones uphones right join users u on  u.user_id=uphones.user_id left join channel_users cusers on  cusers.user_id=u.user_id  left join transfer_profile tp on  cusers.transfer_profile_id=tp.profile_id  left join commission_profile_set cset on cusers.comm_profile_set_id=cset.comm_profile_set_id  ,geographical_domains gdomains,geographical_domain_types gdt,commission_profile_set_version cpsv  , users ou WHERE uphones.msisdn=? AND u.user_type=?  AND u.status <> ? AND u.status <> ?  AND u.category_code = cat.category_code AND u.user_id=geo.user_id AND geo.grph_domain_code=gdomains.grph_domain_code  AND cat.domain_code= dom.domain_code AND gdt.grph_domain_type=gdomains.grph_domain_type  AND cpsv.applicable_from = (select COALESCE ((select max( applicable_from ) from commission_profile_set_version where applicable_from <= ? and comm_profile_set_id = cusers.comm_profile_set_id ),cpsv.applicable_from))  AND ou.user_id=u.owner_id
+2022-05-06 10:49:53,417 : 90679076 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Before Result =575373861587
+2022-05-06 10:49:53,419 : 90679078 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: After Result =575373861587
+2022-05-06 10:49:53,421 : 90679080 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.user.businesslogic.ChannelUserDAO  - loadChannelUserDetails :: Exiting channelUserVO:null
+2022-05-06 10:49:53,423 : 90679082 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=7901
+2022-05-06 10:49:53,424 : 90679083 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:53,425 : 90679084 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 7901 args: null
+2022-05-06 10:49:53,426 : 90679085 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:53,427 : 90679086 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 7901
+2022-05-06 10:49:53,428 : 90679087 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,429 : 90679088 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:7901:No such user exists, MSISDN is invalid.
+2022-05-06 10:49:53,430 : 90679089 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,431 : 90679090 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:7901:No such user exists, MSISDN is invalid.
+2022-05-06 10:49:53,432 : 90679091 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,434 : 90679093 [http-nio-6789-exec-124] INFO  com.btsl.pretups.logging.BatchC2CFileProcessLog  -  :: [ACTION = uploadC2CBatchFile] [NETWORK_ID = NG] [BATCH_NAME = AUTBN31533] [PRODUCT = ETOPUP] [ACTION_BY = ] [BATCH_DETAIL_ID = NGCB220506.001.00006] [MSISDN = 721068166078287] [USER_ID = ] [EXTERNAL_CODE = 061114233] [QTY = 944] [RESULT = No such user exists, MSISDN is invalid.] [OTHER INFO = ] 
+2022-05-06 10:49:53,435 : 90679094 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.gateway.util.RestAPIStringParser  - getMessage :: Entered: p_requestVO=241073
+2022-05-06 10:49:53,436 : 90679095 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Entered
+2022-05-06 10:49:53,437 : 90679096 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: entered locale English (United States) key: 241073 args: null
+2022-05-06 10:49:53,439 : 90679098 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCaches  - get :: p_locale: en_US
+2022-05-06 10:49:53,440 : 90679099 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Entered: key is = 241073
+2022-05-06 10:49:53,441 : 90679100 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,442 : 90679101 [http-nio-6789-exec-124] DEBUG com.btsl.util.MessagesCache  - getProperty :: Bundle messages =: mclass^2&pid^61:241073:ALL records contain error.Kindly check logs.
+2022-05-06 10:49:53,443 : 90679102 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,444 : 90679103 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getMessage :: Exiting message: mclass^2&pid^61:241073:ALL records contain error.Kindly check logs.
+2022-05-06 10:49:53,446 : 90679105 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:49:53,447 : 90679106 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - filedelete :: ******** Method uploadAndProcessFile :: Got exception and deleted the file
+2022-05-06 10:49:53,448 : 90679107 [http-nio-6789-exec-124] INFO  com.btsl.pretups.logging.BatchC2CFileProcessLog  -  :: [ACTION = uploadC2CBatchFile] [NETWORK_ID = NG] [PRODUCT = ETOPUP] [BATCH_ID = NGCB220506.002] [BATCH_NAME = AUTBN31533] [ACTION_BY = ] [RESULT = FAIL : All records contains DB error in batch] [OTHER INFO = TOTAL RECORDS=0, FILE NAME=userTemplateList1651814369252] 
+2022-05-06 10:49:53,449 : 90679108 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  -  :: strBuffUpdateBatchMaster Query =UPDATE c2c_batches SET batch_total_record=? , status =? WHERE batch_id=?
+2022-05-06 10:49:53,451 : 90679110 [http-nio-6789-exec-124] ERROR com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  -  :: ALL the records conatins errors and cannot be inserted in db
+2022-05-06 10:49:53,452 : 90679111 [http-nio-6789-exec-124] INFO  com.btsl.pretups.logging.BatchC2CFileProcessLog  -  :: [ACTION = ] [NETWORK_ID = NG] [PRODUCT = ETOPUP] [BATCH_ID = NGCB220506.002] [BATCH_NAME = AUTBN31533] [ACTION_BY = ] [RESULT = FAIL : ALL the records conatins errors and cannot be inserted in DB ] [OTHER INFO = ] 
+2022-05-06 10:49:53,456 : 90679115 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise:  :: Entered p_processStatusVO=_processID=C2CBATCH_startDate=Fri May 06 10:49:53 IST 2022,_processStatus=C,_executedUpto=Wed Aug 02 00:00:00 IST 2017,_executedOn=2006-08-08,_expiryTime=60,_beforeInterval=1440,_statusOkBool=true,_recordCount0 Process_ID=C2CBATCH Network_Code=NG
+2022-05-06 10:49:53,457 : 90679116 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise ::  QUERY sqlUpdate= UPDATE process_status SET start_date=?,scheduler_status=?,executed_upto=?,executed_on=? WHERE process_id=? and network_code=?
+2022-05-06 10:49:53,458 : 90679117 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Entered  utilDate=2006-08-08
+2022-05-06 10:49:53,460 : 90679119 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Entered Catch Block utilDate: 2006-08-08
+2022-05-06 10:49:53,461 : 90679120 [http-nio-6789-exec-124] DEBUG com.btsl.util.BTSLUtil  - getSQLDateFromUtilDate :: Exiting message Final Unchanged utilDate: 2006-08-08
+2022-05-06 10:49:53,463 : 90679122 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.processes.businesslogic.ProcessStatusDAO  - updateProcessDetailNetworkWise  :: Exiting updateCount:1
+2022-05-06 10:49:53,465 : 90679124 [http-nio-6789-exec-124] DEBUG com.btsl.pretups.channel.transfer.requesthandler.C2CFileUploadApiController  - uploadC2CBatchFile ::  Exited 
+2022-05-06 10:50:01,433 : 90687092 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:50:01,434 : 90687093 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:50:01,436 : 90687095 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:50:01,437 : 90687096 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:50:01,437 : 90687096 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:50:01,437 : 90687096 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:50:01,438 : 90687097 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Exception while sending message=FAILED
+2022-05-06 10:50:01,438 : 90687097 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1774)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:50:01,489 : 90687148 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2,3,10,11,12,13,14  string=2
+2022-05-06 10:50:01,489 : 90687148 [Thread-15151] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Entered p_componentName: System p_alarmID: 2 p_alarmState: RAISED p_alarmMessage: --UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:50:01,490 : 90687149 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=2
+2022-05-06 10:50:01,491 : 90687150 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=2  with=2
+2022-05-06 10:50:01,491 : 90687150 [Thread-15151] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: messagePacket: 00109System|RAISED|2|1651814401|--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:50:01,491 : 90687150 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: Entered commaStr=1,2  string=1
+2022-05-06 10:50:01,492 : 90687151 [Thread-7] DEBUG com.btsl.util.BTSLUtil  - isStringContain :: comparing allowed=1  with=1
+2022-05-06 10:50:01,492 : 90687151 [Thread-15151] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: packet.getLength(): 114 messagePacket.length(): 114
+2022-05-06 10:50:01,492 : 90687151 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - PushMessage[pushMessage]  at line 141 :: Entered : p_msisdn=62248142 p_requestCode=null p_transactionID=null p_requestCode=null p_locale=en_US
+2022-05-06 10:50:01,493 : 90687152 [Thread-7] DEBUG com.btsl.pretups.master.businesslogic.LocaleMasterCache  - getLocaleDetailsFromlocale() :: Entered p_key=en_US
+2022-05-06 10:50:01,493 : 90687152 [Thread-15151] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Successfully Sent Message Packet
+2022-05-06 10:50:01,493 : 90687152 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Entered : _msisdn=62248142 _requestCode=null _transactionID=null _messageKey=null _args=null _locale=en_US _message=--UpdateCacheServlet[doPost]----Exception:Connection refused--FATAL--[Instance:10]
+2022-05-06 10:50:01,494 : 90687153 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: Picked default message gateway for _networkCode=null _requestCode=SMSC
+2022-05-06 10:50:01,494 : 90687153 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: entered SMSC
+2022-05-06 10:50:01,494 : 90687153 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getMappingObject() :: exited nullRequest CodenullSMSCnullResponse CodenullSMSCnullAlternate CodenullSMSC
+2022-05-06 10:50:01,494 : 90687153 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSC
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm :: after message cache not null for network _networkCode=null _requestCode=SMSCrun after checking message key equal to null _transactionID=null _messageKey=null _messageClass=null _pid=null _locale=en_US _locale language=en
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushAlarm ::  _transactionID=null _messageKey=null _messageClass=null _pid=null
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=false
+2022-05-06 10:50:01,495 : 90687154 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:50:01,496 : 90687155 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:50:01,496 : 90687155 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:50:01,496 : 90687155 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:50:01,497 : 90687156 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:50:01,497 : 90687156 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:50:01,497 : 90687156 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:50:01,497 : 90687156 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:50:01,497 : 90687156 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+2022-05-06 10:50:06,499 : 90692158 [Thread-15151] ERROR com.btsl.alarm.AlarmManager  - waitForAcknowledgment
+java.net.SocketTimeoutException: Receive timed out
+	at java.net.PlainDatagramSocketImpl.receive0(Native Method)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(AbstractPlainDatagramSocketImpl.java:143)
+	at java.net.DatagramSocket.receive(DatagramSocket.java:812)
+	at com.btsl.alarm.AlarmManager.waitForAcknowledgment(AlarmManager.java:212)
+	at com.btsl.alarm.AlarmManager.sendAlarm(AlarmManager.java:148)
+	at com.btsl.alarm.AlarmManager.run(AlarmManager.java:70)
+2022-05-06 10:50:06,500 : 90692159 [Thread-15151] DEBUG com.btsl.alarm.AlarmManager  - sendAlarm :: Request Time Out :: Closing The Connection status: false
+2022-05-06 10:50:11,502 : 90697161 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exception=connect timed out
+2022-05-06 10:50:11,503 : 90697162 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse
+java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1169)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1105)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:999)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:933)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1513)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:942)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:50:11,504 : 90697163 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Exiting response str:
+2022-05-06 10:50:11,504 : 90697163 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:50:11,505 : 90697164 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage
+class=null,method=null,message=FAILED,date=nullerrorCode=0
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.getResponse(PushMessage.java:981)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushGatewayMessage(PushMessage.java:677)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.sendAlarmMessage(PushMessage.java:1734)
+	at com.btsl.pretups.gateway.businesslogic.PushMessage.pushAlarm(PushMessage.java:1615)
+	at com.btsl.alarm.AlarmSender.run(AlarmSender.java:305)
+2022-05-06 10:50:11,505 : 90697164 [Thread-7] ERROR com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage ::  _transactionID=null Exception=FAILED
+2022-05-06 10:50:11,505 : 90697164 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Entered : _msisdn=62248142 _requestCode=SMSC _transactionID=null _messageType=PLAIN _message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_useAlternate=true
+2022-05-06 10:50:11,505 : 90697164 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: entered SMSC
+2022-05-06 10:50:11,506 : 90697165 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.MessageGatewayCache  - getObject() :: exited _gatewayCode=SMSC,_gatewayName=null,_gatewaySubType=SMPP,_gatewayType=SMSC,_handlerClass=com.btsl.pretups.gateway.parsers.SMSCParsers,_host=172.30.24.113,_networkCode=NG,_protocol=HTTP,_binaryMsgAllowed=Y,_plainMsgAllowed=Y,_accessFrom=PHONE,_gatewaySubTypeName=SMPP SMSC,_createdBy=null,_createdOn=null,_modifiedBy=null,_modifiedOn=2010-10-28
+_requestGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=pretups,_encryptionLevel=NA,_encryptionKey=null,_contentType=PLAIN,_authType=LOGIN,_status=Y
+_responseGatewayVO=>_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:50:11,506 : 90697165 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - sendAlarmMessage :: Using Gateway for _msisdn=62248142 Details=_gatewayCode=SMSC,_port=7409,_servicePort=190,_loginID=test,_destNo=8080,_status=Y
+2022-05-06 10:50:11,506 : 90697165 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Entered : p_ipaddress=HTTP://172.30.24.113:7409 p_msisdn=62248142 p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D p_locale=en_US
+2022-05-06 10:50:11,507 : 90697166 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: After encoding :  p_message=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D
+2022-05-06 10:50:11,507 : 90697166 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL ::  _smsServiceTypesSenderName=null
+2022-05-06 10:50:11,507 : 90697166 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getPlainMessageURL :: Exiting for p_msisdn=62248142 urlBuff=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:50:11,508 : 90697167 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - pushGatewayMessage :: Entered : _transactionID=null p_messageString=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080
+2022-05-06 10:50:11,508 : 90697167 [Thread-7] DEBUG com.btsl.pretups.gateway.businesslogic.PushMessage  - getResponse :: Entered : p_url=HTTP://172.30.24.113:7409/pretups/test.html?user=test&pass=test&to=22462248142&text=--UpdateCacheServlet%5BdoPost%5D----Exception%3AConnection+refused--FATAL--%5BInstance%3A10%5D&smsc=SMSC&from=8080 p_timeout=10000
+
